@@ -1,0 +1,24 @@
+{
+  "scope": "G",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "config.json",
+    "doPut.py",
+    "doTrace.py",
+    "doHead.py",
+    "doPatch.py",
+    "doPost.py",
+    "doOptions.py",
+    "doGet.py",
+    "doDelete.py"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "rdll",
+      "timestamp": "2023-05-17T19:50:28Z"
+    },
+    "lastModificationSignature": "eb50bfce037f49facb72c5cd4717459179eddd77818c5920fee2c923dbeffa00"
+  }
+}

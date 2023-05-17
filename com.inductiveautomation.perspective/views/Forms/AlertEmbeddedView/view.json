@@ -1,0 +1,79 @@
+{
+  "custom": {},
+  "params": {
+    "color": "#FF0000",
+    "text": "ERROR: Enter data correctly!"
+  },
+  "propConfig": {
+    "params.color": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.text": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.style.background-color": {
+            "binding": {
+              "config": {
+                "path": "view.params.color"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn value + \u0027FA\u0027",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.text"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "border": "1px solid black",
+            "borderRadius": "7px",
+            "color": "white",
+            "key": "value",
+            "padding-left": "10px"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "padding": "5px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

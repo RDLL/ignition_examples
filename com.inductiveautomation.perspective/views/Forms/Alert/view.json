@@ -1,0 +1,730 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "EmbeddedView"
+            },
+            "position": {
+              "basis": "320px",
+              "grow": 1
+            },
+            "props": {
+              "params": {
+                "color": "#0000FF",
+                "text": "ERROR: You encountered an error while submitting"
+              },
+              "path": "Forms/AlertEmbeddedView"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "flexAlert"
+        },
+        "position": {
+          "basis": "50px",
+          "display": false
+        },
+        "scripts": {
+          "customMethods": [],
+          "extensionFunctions": null,
+          "messageHandlers": [
+            {
+              "messageType": "showAlert",
+              "pageScope": false,
+              "script": "\t# implement your handler here\n\tsystem.perspective.print(\u0027message received with payload\u0027 + str(payload))\n\timport time\n\t\n\ttimeout \u003d payload[\u0027timeout\u0027]\n\tcolor \u003d payload[\u0027color\u0027] \n\ttext \u003d payload[\u0027text\u0027]\n\t\n\tself.getChild(\"EmbeddedView\").props.params.color \u003d color\n\tself.getChild(\"EmbeddedView\").props.params.text \u003d text\n\t\n\tself.position.display \u003d True\n\ttime.sleep(int(timeout))\n\tself.position.display \u003d False",
+              "sessionScope": false,
+              "viewScope": true
+            }
+          ]
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#009306",
+                "color": "#FFFBFB",
+                "padding-left": "10px"
+              },
+              "text": "Form Collection for QC"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "basis": "50px"
+                        },
+                        "props": {
+                          "text": "Label"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "TextField"
+                        },
+                        "position": {
+                          "basis": "150px",
+                          "grow": 1
+                        },
+                        "type": "ia.input.text-field"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "position": {
+                      "basis": "50px"
+                    },
+                    "props": {
+                      "style": {
+                        "padding": "5px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "basis": "50px"
+                        },
+                        "props": {
+                          "text": "Label"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "TextField"
+                        },
+                        "position": {
+                          "basis": "150px",
+                          "grow": 1
+                        },
+                        "type": "ia.input.text-field"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "position": {
+                      "basis": "50px"
+                    },
+                    "props": {
+                      "style": {
+                        "padding": "5px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "basis": "50px"
+                        },
+                        "props": {
+                          "text": "Label"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "TextField"
+                        },
+                        "position": {
+                          "basis": "150px",
+                          "grow": 1
+                        },
+                        "type": "ia.input.text-field"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_1"
+                    },
+                    "position": {
+                      "basis": "50px"
+                    },
+                    "props": {
+                      "style": {
+                        "padding": "5px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "basis": "50px"
+                        },
+                        "props": {
+                          "text": "Label"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "TextField"
+                        },
+                        "position": {
+                          "basis": "150px",
+                          "grow": 1
+                        },
+                        "type": "ia.input.text-field"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_2"
+                    },
+                    "position": {
+                      "basis": "50px"
+                    },
+                    "props": {
+                      "style": {
+                        "padding": "5px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "basis": "50px"
+                        },
+                        "props": {
+                          "text": "Label"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "TextField"
+                        },
+                        "position": {
+                          "basis": "150px",
+                          "grow": 1
+                        },
+                        "type": "ia.input.text-field"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_3"
+                    },
+                    "position": {
+                      "basis": "50px"
+                    },
+                    "props": {
+                      "style": {
+                        "padding": "5px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "basis": "50px"
+                        },
+                        "props": {
+                          "text": "Label"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "TextField"
+                        },
+                        "position": {
+                          "basis": "150px",
+                          "grow": 1
+                        },
+                        "type": "ia.input.text-field"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_4"
+                    },
+                    "position": {
+                      "basis": "50px"
+                    },
+                    "props": {
+                      "style": {
+                        "padding": "5px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "basis": "50px"
+                        },
+                        "props": {
+                          "text": "Label"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "TextField"
+                        },
+                        "position": {
+                          "basis": "150px",
+                          "grow": 1
+                        },
+                        "type": "ia.input.text-field"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_5"
+                    },
+                    "position": {
+                      "basis": "50px"
+                    },
+                    "props": {
+                      "style": {
+                        "padding": "5px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "flexFormLeft"
+                },
+                "position": {
+                  "basis": "200px",
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "basis": "50px"
+                        },
+                        "props": {
+                          "text": "Label"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "TextField"
+                        },
+                        "position": {
+                          "basis": "150px",
+                          "grow": 1
+                        },
+                        "type": "ia.input.text-field"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "position": {
+                      "basis": "50px"
+                    },
+                    "props": {
+                      "style": {
+                        "padding": "5px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "basis": "50px"
+                        },
+                        "props": {
+                          "text": "Label"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "TextField"
+                        },
+                        "position": {
+                          "basis": "150px",
+                          "grow": 1
+                        },
+                        "type": "ia.input.text-field"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "position": {
+                      "basis": "50px"
+                    },
+                    "props": {
+                      "style": {
+                        "padding": "5px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "basis": "50px"
+                        },
+                        "props": {
+                          "text": "Label"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "TextField"
+                        },
+                        "position": {
+                          "basis": "150px",
+                          "grow": 1
+                        },
+                        "type": "ia.input.text-field"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_1"
+                    },
+                    "position": {
+                      "basis": "50px"
+                    },
+                    "props": {
+                      "style": {
+                        "padding": "5px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "basis": "50px"
+                        },
+                        "props": {
+                          "text": "Label"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "TextField"
+                        },
+                        "position": {
+                          "basis": "150px",
+                          "grow": 1
+                        },
+                        "type": "ia.input.text-field"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_2"
+                    },
+                    "position": {
+                      "basis": "50px"
+                    },
+                    "props": {
+                      "style": {
+                        "padding": "5px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "basis": "50px"
+                        },
+                        "props": {
+                          "text": "Label"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "TextField"
+                        },
+                        "position": {
+                          "basis": "150px",
+                          "grow": 1
+                        },
+                        "type": "ia.input.text-field"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_3"
+                    },
+                    "position": {
+                      "basis": "50px"
+                    },
+                    "props": {
+                      "style": {
+                        "padding": "5px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "basis": "50px"
+                        },
+                        "props": {
+                          "text": "Label"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "TextField"
+                        },
+                        "position": {
+                          "basis": "150px",
+                          "grow": 1
+                        },
+                        "type": "ia.input.text-field"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_4"
+                    },
+                    "position": {
+                      "basis": "50px"
+                    },
+                    "props": {
+                      "style": {
+                        "padding": "5px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "basis": "50px"
+                        },
+                        "props": {
+                          "text": "Label"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "TextField"
+                        },
+                        "position": {
+                          "basis": "150px",
+                          "grow": 1
+                        },
+                        "type": "ia.input.text-field"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_5"
+                    },
+                    "position": {
+                      "basis": "50px"
+                    },
+                    "props": {
+                      "style": {
+                        "padding": "5px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "flexFormRight"
+                },
+                "position": {
+                  "basis": "200px",
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column"
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "flexFormData"
+            },
+            "position": {
+              "basis": "200px",
+              "grow": 1
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "events": {
+                  "component": {
+                    "onActionPerformed": {
+                      "config": {
+                        "script": "\tsystem.perspective.closePopup(\u0027\u0027)"
+                      },
+                      "scope": "G",
+                      "type": "script"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "btnCancel"
+                },
+                "position": {
+                  "basis": "80px"
+                },
+                "props": {
+                  "text": "Cancel"
+                },
+                "type": "ia.input.button"
+              },
+              {
+                "events": {
+                  "component": {
+                    "onActionPerformed": {
+                      "config": {
+                        "script": "\t#TODO: Sende message to flexAlert to display\n\t#alert, messafe, and timeout on error\n\tisError \u003d system.date.toMillis(system.date.now()) % 2\n\tsystem.perspective.print(\u0027isError: \u0027 + str(isError))\n\tif isError:\n\t\t# error state\n\t\tsystem.perspective.sendMessage(\n\t\t\t\u0027showAlert\u0027,\n\t\t\tpayload \u003d {\n\t\t\t\t\u0027timeout\u0027:5,\n\t\t\t\t\u0027color\u0027:\u0027#FF0000\u0027,\n\t\t\t\t\u0027text\u0027:\u0027ERROR: Please check your text input and resolve before submitting!\u0027\n\t\t\t},\n\t\t\tscope \u003d \u0027view\u0027\n\t\t) \n\telse:\n\t\tsystem.perspective.sendMessage(\n\t\t\t\t\t\u0027showAlert\u0027,\n\t\t\t\t\tpayload \u003d {\n\t\t\t\t\t\t\u0027timeout\u0027:5,\n\t\t\t\t\t\t\u0027color\u0027:\u002700FF00\u0027,\n\t\t\t\t\t\t\u0027text\u0027:\u0027INFO: Succesfully submitted QC record\u0027\n\t\t\t\t\t},\n\t\t\t\t\tscope \u003d \u0027view\u0027\n\t\t\t\t)"
+                      },
+                      "scope": "G",
+                      "type": "script"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "btnSubmit"
+                },
+                "position": {
+                  "basis": "80px"
+                },
+                "props": {
+                  "style": {
+                    "margin-right": "5px"
+                  },
+                  "text": "Submit"
+                },
+                "type": "ia.input.button"
+              }
+            ],
+            "meta": {
+              "name": "flexButtons"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "props": {
+              "direction": "row-reverse",
+              "style": {
+                "padding": "5px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "flexForm"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

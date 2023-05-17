@@ -1,0 +1,256 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 720,
+      "width": 1080
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Image"
+            },
+            "position": {
+              "basis": "100px"
+            },
+            "type": "ia.display.image"
+          },
+          {
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "basis": "34px"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_0"
+            },
+            "position": {
+              "basis": "34px"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_1"
+            },
+            "position": {
+              "basis": "34px"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Image"
+                },
+                "position": {
+                  "basis": "100px"
+                },
+                "props": {
+                  "style": {
+                    "backgroundColor": "#FFF0F0"
+                  }
+                },
+                "type": "ia.display.image"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "517px",
+              "grow": 1
+            },
+            "props": {
+              "direction": "column-reverse"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "flexNav"
+        },
+        "position": {
+          "basis": "200px",
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "background-color": "gray"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "props": {
+                  "path": "material/insert_emoticon"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "Icon_0"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "props": {
+                  "path": "material/insert_emoticon"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "Button"
+                },
+                "position": {
+                  "basis": "80px"
+                },
+                "type": "ia.input.button"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "50px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#6666FF"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "60px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#50B750"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Button"
+                },
+                "position": {
+                  "basis": "80px"
+                },
+                "type": "ia.input.button"
+              },
+              {
+                "meta": {
+                  "name": "Button_0"
+                },
+                "position": {
+                  "basis": "80px"
+                },
+                "type": "ia.input.button"
+              },
+              {
+                "meta": {
+                  "name": "Button_1"
+                },
+                "position": {
+                  "basis": "80px"
+                },
+                "type": "ia.input.button"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "position": {
+              "basis": "100px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#F3FF98"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "FlexContainer_2"
+            },
+            "position": {
+              "basis": "200px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FF5151"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "FlexContainer_3"
+            },
+            "position": {
+              "basis": "300px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#C2F39A"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "flexContent"
+        },
+        "position": {
+          "basis": "880px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}
