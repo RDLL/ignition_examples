@@ -4,13 +4,13 @@
   "restricted": false,
   "overridable": true,
   "files": [
-    "config.json"
+    "props.json"
   ],
   "attributes": {
     "lastModification": {
       "actor": "rdll",
-      "timestamp": "2023-05-17T19:10:34Z"
+      "timestamp": "2023-05-18T15:05:49Z"
     },
-    "lastModificationSignature": "97b029484ef3dd17e43d8f8b5d231b74b14378cdca4ba1a05f0197145ad66337"
+    "lastModificationSignature": "455724b575a11c335199f75ea218b7567a36492c76d4fede9269f25eaaa62a6a"
   }
 }

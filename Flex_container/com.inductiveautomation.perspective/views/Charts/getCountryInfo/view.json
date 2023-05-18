@@ -56,7 +56,7 @@
         },
         "position": {
           "basis": "200px",
-          "grow": "1 "
+          "grow": 1
         },
         "props": {
           "source": "Welcome to _Markdown_",

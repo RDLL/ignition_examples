@@ -14,6 +14,9 @@
       "title": "",
       "viewPath": "Forms/AlertEmbeddedView"
     },
+    "/dashboard": {
+      "viewPath": "dashboard"
+    },
     "/getCountryInfo": {
       "title": "Charts",
       "viewPath": "Charts/getCountryInfo"
