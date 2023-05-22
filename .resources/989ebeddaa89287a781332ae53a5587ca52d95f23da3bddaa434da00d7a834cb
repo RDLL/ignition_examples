@@ -1,0 +1,197 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 913
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Embedded Views"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The Embedded view component allows you to include an entire view inside another. You can select a view to display and pass parameters into the view. Because of this, views can act as templates for information. The embedded view is different than a container because you cannot alter the contents of a view using the Embedded View."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Ramp 4"
+            },
+            "props": {
+              "params": {
+                "tagPath": "[Sample_Tags]Ramp/Ramp4"
+              },
+              "path": "ignition-101/feature-views/framework/motor",
+              "style": {
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderWidth": "2px",
+                "marginTop": "20px"
+              },
+              "useDefaultViewWidth": true
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Ramp 5"
+            },
+            "props": {
+              "params": {
+                "tagPath": "[Sample_Tags]Ramp/Ramp5"
+              },
+              "path": "ignition-101/feature-views/framework/motor",
+              "style": {
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderWidth": "2px",
+                "marginTop": "20px"
+              },
+              "useDefaultViewWidth": true
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Ramp 6"
+            },
+            "props": {
+              "params": {
+                "tagPath": "[Sample_Tags]Ramp/Ramp6"
+              },
+              "path": "ignition-101/feature-views/framework/motor",
+              "style": {
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderWidth": "2px",
+                "marginTop": "20px"
+              },
+              "useDefaultViewWidth": true
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Ramp 7"
+            },
+            "props": {
+              "params": {
+                "tagPath": "[Sample_Tags]Ramp/Ramp7"
+              },
+              "path": "ignition-101/feature-views/framework/motor",
+              "style": {
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderWidth": "2px",
+                "marginTop": "20px"
+              },
+              "useDefaultViewWidth": true
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Ramp Motors"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "justify": "space-around",
+          "style": {
+            "overflow": "visible"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Examples"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "path": "ignition-101/feature-views/perspective-features/containers",
+              "style": {
+                "borderColor": "#D5D5D5",
+                "borderStyle": "dashed",
+                "borderWidth": "4px",
+                "marginTop": "20px",
+                "paddingBottom": "10px",
+                "paddingLeft": "10px",
+                "paddingRight": "10px"
+              },
+              "useDefaultViewHeight": true
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Container Types"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "overflow": "visible"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "overflow": "visible"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

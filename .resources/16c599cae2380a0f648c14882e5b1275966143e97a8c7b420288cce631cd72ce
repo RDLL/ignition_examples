@@ -1,0 +1,13 @@
+{
+  "base": {
+    "style": {
+      "borderColor": "#1F0808",
+      "borderStyle": "double",
+      "borderWidth": "1px",
+      "fontFamily": "Merriweather",
+      "fontSize": "16pt",
+      "fontWeight": "bold",
+      "textAlign": "center"
+    }
+  }
+}

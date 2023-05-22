@@ -1,0 +1,234 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Title"
+            },
+            "position": {
+              "basis": "56px",
+              "shrink": 0
+            },
+            "props": {
+              "params": {
+                "text": "Horizontal Menu"
+              },
+              "path": "framework/page-title"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "text": "Horizontal Menu component enables you to build a menu structure by setting up multiple links to different page URLs from the component. The Horizontal Menu occupies a large amount of horizontal space and a comparatively small amount of vertical space. The menu starts with a list of root-level menu items that make up the main display area of the component. Menu items can show up as enabled or disabled. You can choose whether to include certain menu items based on a users role, location, or a variety of other factors."
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "HorizontalMenu"
+                    },
+                    "position": {
+                      "height": 0.3879,
+                      "width": 0.8575,
+                      "x": 0.0525,
+                      "y": 0.2394
+                    },
+                    "props": {
+                      "items": [
+                        {
+                          "enabled": true,
+                          "icon": {},
+                          "label": "Ignition Demo Project",
+                          "target": "https://demo.ia.io/data/perspective/client/OnlineDemo/"
+                        },
+                        {
+                          "enabled": true,
+                          "icon": {
+                            "color": "",
+                            "path": "material/link"
+                          },
+                          "items": [],
+                          "label": "Ignition Exchange",
+                          "target": "https://inductiveautomation.com/exchange"
+                        },
+                        {
+                          "enabled": false,
+                          "icon": {},
+                          "items": [],
+                          "label": "Disabled Menu Item",
+                          "target": ""
+                        },
+                        {
+                          "enabled": true,
+                          "icon": {},
+                          "items": [],
+                          "label": "IA Website",
+                          "target": "https://inductiveautomation.com/"
+                        }
+                      ]
+                    },
+                    "type": "ia.navigation.horizontalmenu"
+                  }
+                ],
+                "meta": {
+                  "name": "CoordinateContainer"
+                },
+                "position": {
+                  "basis": "200px",
+                  "shrink": 0
+                },
+                "props": {
+                  "aspectRatio": "800:200",
+                  "mode": "percent"
+                },
+                "type": "ia.container.coord"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "204px",
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "marginTop": 5
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "HorizontalMenu"
+                    },
+                    "position": {
+                      "height": 0.3879,
+                      "width": 0.8575,
+                      "x": 0.0525,
+                      "y": 0.2394
+                    },
+                    "props": {
+                      "items": [
+                        {
+                          "enabled": true,
+                          "icon": {
+                            "color": "#E0840C",
+                            "path": "material/description"
+                          },
+                          "label": "Case Studies",
+                          "target": "https://inductiveautomation.com/resources/casestudy"
+                        },
+                        {
+                          "enabled": true,
+                          "icon": {
+                            "color": "#0005D2",
+                            "path": "material/video_library"
+                          },
+                          "label": "Webinars",
+                          "target": "https://inductiveautomation.com/resources/webinar"
+                        },
+                        {
+                          "enabled": true,
+                          "icon": {
+                            "color": "#669421",
+                            "path": "material/volume_up"
+                          },
+                          "items": [],
+                          "label": "Podcast Episodes",
+                          "target": "https://www.inductiveautomation.com/resources/podcast"
+                        },
+                        {
+                          "enabled": true,
+                          "icon": {
+                            "color": "#EDC55D",
+                            "path": "material/highlight"
+                          },
+                          "items": [],
+                          "label": "About IA",
+                          "style": {
+                            "classes": ""
+                          },
+                          "target": "https://inductiveautomation.com/about/"
+                        }
+                      ],
+                      "style": {
+                        "fontFamily": "Verdana",
+                        "fontStyle": "italic",
+                        "fontWeight": "bold"
+                      }
+                    },
+                    "type": "ia.navigation.horizontalmenu"
+                  }
+                ],
+                "meta": {
+                  "name": "CoordinateContainer"
+                },
+                "position": {
+                  "basis": "200px",
+                  "shrink": 0
+                },
+                "props": {
+                  "aspectRatio": "800:200",
+                  "mode": "percent"
+                },
+                "type": "ia.container.coord"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "28.7%",
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "marginTop": 5
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "704px"
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

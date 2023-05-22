@@ -1,0 +1,429 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 1200,
+      "width": 858
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Accordion"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The Accordion Component allows the embedding of expandable/collapsible views which can be toggled with a click or a tap of their headers. The headers may contain text or a view."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Accordion"
+                },
+                "position": {
+                  "basis": "364px",
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "props": {
+                  "items": [
+                    {
+                      "body": {
+                        "height": "auto",
+                        "style": {
+                          "classes": "",
+                          "margin": "16px"
+                        },
+                        "useDefaultViewHeight": true,
+                        "useDefaultViewWidth": false,
+                        "viewParams": {},
+                        "viewPath": "components/component-views/framework/simple-gauge"
+                      },
+                      "expanded": false,
+                      "header": {
+                        "content": {
+                          "style": {
+                            "classes": ""
+                          },
+                          "text": "Use the Accordion Component to embed useful views",
+                          "type": "text",
+                          "useDefaultViewHeight": false,
+                          "useDefaultViewWidth": false,
+                          "viewParams": {},
+                          "viewPath": "ignition-101/landing-page"
+                        },
+                        "height": "40px",
+                        "reverse": false,
+                        "style": {
+                          "classes": ""
+                        },
+                        "toggle": {
+                          "collapsedIcon": {
+                            "color": "",
+                            "path": "material/expand_more",
+                            "style": {
+                              "classes": ""
+                            }
+                          },
+                          "enabled": true,
+                          "expandedIcon": {
+                            "color": "",
+                            "path": "material/expand_less",
+                            "style": {
+                              "classes": ""
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "body": {
+                        "height": "auto",
+                        "style": {
+                          "classes": ""
+                        },
+                        "useDefaultViewHeight": true,
+                        "useDefaultViewWidth": false,
+                        "viewParams": {},
+                        "viewPath": "components/component-views/framework/led-display"
+                      },
+                      "expanded": false,
+                      "header": {
+                        "content": {
+                          "style": {
+                            "classes": ""
+                          },
+                          "text": "These views can be simple or complex depending on your needs",
+                          "type": "text",
+                          "useDefaultViewHeight": false,
+                          "useDefaultViewWidth": false,
+                          "viewParams": {},
+                          "viewPath": ""
+                        },
+                        "height": "40px",
+                        "reverse": false,
+                        "style": {
+                          "classes": ""
+                        },
+                        "toggle": {
+                          "collapsedIcon": {
+                            "color": "",
+                            "path": "material/expand_more",
+                            "style": {
+                              "classes": ""
+                            }
+                          },
+                          "enabled": true,
+                          "expandedIcon": {
+                            "color": "",
+                            "path": "material/expand_less",
+                            "style": {
+                              "classes": ""
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "body": {
+                        "height": "auto",
+                        "style": {
+                          "classes": ""
+                        },
+                        "useDefaultViewHeight": true,
+                        "useDefaultViewWidth": false,
+                        "viewParams": {},
+                        "viewPath": "components/component-views/framework/chart-two"
+                      },
+                      "expanded": false,
+                      "header": {
+                        "content": {
+                          "style": {
+                            "classes": ""
+                          },
+                          "text": "Using this component, views will be displayed in neat and accessible way",
+                          "type": "text",
+                          "useDefaultViewHeight": false,
+                          "useDefaultViewWidth": false,
+                          "viewParams": {},
+                          "viewPath": ""
+                        },
+                        "height": "50px",
+                        "reverse": false,
+                        "style": {
+                          "classes": ""
+                        },
+                        "toggle": {
+                          "collapsedIcon": {
+                            "color": "",
+                            "path": "material/expand_more",
+                            "style": {
+                              "classes": ""
+                            }
+                          },
+                          "enabled": true,
+                          "expandedIcon": {
+                            "color": "",
+                            "path": "material/expand_less",
+                            "style": {
+                              "classes": ""
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "type": "ia.display.accordion"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "400px",
+              "shrink": 0
+            },
+            "props": {
+              "justify": "space-around",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Accordion"
+                },
+                "position": {
+                  "basis": "339px",
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "props": {
+                  "items": [
+                    {
+                      "body": {
+                        "height": "auto",
+                        "style": {
+                          "classes": "",
+                          "margin": "16px"
+                        },
+                        "useDefaultViewHeight": true,
+                        "useDefaultViewWidth": false,
+                        "viewParams": {},
+                        "viewPath": "components/component-views/framework/chart-two"
+                      },
+                      "expanded": false,
+                      "header": {
+                        "content": {
+                          "style": {
+                            "classes": ""
+                          },
+                          "text": "XY Chart",
+                          "type": "text",
+                          "useDefaultViewHeight": false,
+                          "useDefaultViewWidth": false,
+                          "viewParams": {},
+                          "viewPath": "ignition-101/landing-page"
+                        },
+                        "height": "40px",
+                        "reverse": true,
+                        "style": {
+                          "classes": "components/accordion"
+                        },
+                        "toggle": {
+                          "collapsedIcon": {
+                            "color": "",
+                            "path": "material/expand_more",
+                            "style": {
+                              "classes": ""
+                            }
+                          },
+                          "enabled": true,
+                          "expandedIcon": {
+                            "color": "",
+                            "path": "material/expand_less",
+                            "style": {
+                              "classes": ""
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "body": {
+                        "height": "auto",
+                        "style": {
+                          "classes": ""
+                        },
+                        "useDefaultViewHeight": true,
+                        "useDefaultViewWidth": false,
+                        "viewParams": {},
+                        "viewPath": "components/component-views/framework/barcode"
+                      },
+                      "expanded": false,
+                      "header": {
+                        "content": {
+                          "style": {
+                            "classes": ""
+                          },
+                          "text": "Barcode Component",
+                          "type": "text",
+                          "useDefaultViewHeight": false,
+                          "useDefaultViewWidth": false,
+                          "viewParams": {},
+                          "viewPath": ""
+                        },
+                        "height": "40px",
+                        "reverse": true,
+                        "style": {
+                          "classes": "components/accordion"
+                        },
+                        "toggle": {
+                          "collapsedIcon": {
+                            "color": "",
+                            "path": "material/expand_more",
+                            "style": {
+                              "classes": ""
+                            }
+                          },
+                          "enabled": true,
+                          "expandedIcon": {
+                            "color": "",
+                            "path": "material/expand_less",
+                            "style": {
+                              "classes": ""
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "body": {
+                        "height": "auto",
+                        "style": {
+                          "classes": ""
+                        },
+                        "useDefaultViewHeight": true,
+                        "useDefaultViewWidth": false,
+                        "viewParams": {},
+                        "viewPath": "components/component-views/framework/map"
+                      },
+                      "expanded": false,
+                      "header": {
+                        "content": {
+                          "style": {
+                            "classes": ""
+                          },
+                          "text": "Map Component",
+                          "type": "text",
+                          "useDefaultViewHeight": false,
+                          "useDefaultViewWidth": false,
+                          "viewParams": {},
+                          "viewPath": ""
+                        },
+                        "height": "40px",
+                        "reverse": true,
+                        "style": {
+                          "classes": "components/accordion"
+                        },
+                        "toggle": {
+                          "collapsedIcon": {
+                            "color": "",
+                            "path": "material/expand_more",
+                            "style": {
+                              "classes": ""
+                            }
+                          },
+                          "enabled": true,
+                          "expandedIcon": {
+                            "color": "",
+                            "path": "material/expand_less",
+                            "style": {
+                              "classes": ""
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "style": {
+                    "classes": "components/accordion"
+                  },
+                  "unusedSpaceStyle": {
+                    "classes": "components/accordion"
+                  }
+                },
+                "type": "ia.display.accordion"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "400px",
+              "shrink": 0
+            },
+            "props": {
+              "justify": "space-around",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "justify": "space-around",
+          "style": {
+            "marginTop": 10,
+            "paddingLeft": 20
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

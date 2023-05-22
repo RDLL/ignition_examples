@@ -1,0 +1,149 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 56,
+      "width": 600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "logoImage"
+            },
+            "position": {
+              "height": 40,
+              "width": 40,
+              "x": 8,
+              "y": 8
+            },
+            "props": {
+              "fit": {
+                "height": 40,
+                "mode": "absolute",
+                "width": 40
+              },
+              "source": "/system/images/sample-images/Icon-Gateway_128.png"
+            },
+            "type": "ia.display.image"
+          },
+          {
+            "meta": {
+              "name": "logoLabel"
+            },
+            "position": {
+              "height": 32,
+              "width": 126,
+              "x": 56,
+              "y": 12
+            },
+            "props": {
+              "style": {
+                "fontSize": "16px"
+              },
+              "text": "Explore Ignition"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "draggable": false,
+                    "id": "ELsSyAN9",
+                    "modal": true,
+                    "overlayDismiss": true,
+                    "position": {
+                      "height": 180
+                    },
+                    "positionType": "exact",
+                    "resizable": false,
+                    "showCloseIcon": false,
+                    "type": "toggle",
+                    "viewPath": "framework/popup-info"
+                  },
+                  "scope": "C",
+                  "type": "popup"
+                }
+              }
+            },
+            "meta": {
+              "name": "Icon-info"
+            },
+            "position": {
+              "height": 22,
+              "width": 22,
+              "x": 184,
+              "y": 17
+            },
+            "props": {
+              "color": "var(--info)",
+              "path": "material/info_outline"
+            },
+            "type": "ia.display.icon"
+          }
+        ],
+        "meta": {
+          "name": "logo"
+        },
+        "position": {
+          "basis": "210px",
+          "shrink": 0
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "id": "dock-main-nav",
+                "type": "toggle"
+              },
+              "scope": "C",
+              "type": "dock"
+            }
+          }
+        },
+        "meta": {
+          "name": "menuButton"
+        },
+        "position": {
+          "basis": "88px",
+          "shrink": 0
+        },
+        "props": {
+          "image": {
+            "icon": {
+              "path": "material/menu"
+            },
+            "position": "right"
+          },
+          "justify": "space-around",
+          "primary": false,
+          "style": {
+            "margin": "8px 0"
+          },
+          "text": "Menu"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "justify": "space-between",
+      "style": {
+        "classes": "framework/header",
+        "paddingRight": "8px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

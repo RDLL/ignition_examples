@@ -1,0 +1,196 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 811,
+      "width": 728
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "File Upload"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Description"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "source": "The File Upload component allows users to upload files to the Gateway from a Perspective Session. These files can be handled and saved via a script action on the onFileReceived component event.\n\nThe component has three different appearances based on its width: at its smallest, the component appears as a simple \"Cloud\" icon, and converts to a \"Browse\" button at larger widths."
+        },
+        "type": "ia.display.markdown"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Large Display:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Result"
+                },
+                "position": {
+                  "basis": "32px",
+                  "shrink": 0
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "events": {
+                  "component": {
+                    "onFileReceived": {
+                      "config": {
+                        "script": "\tself.getSibling(\u0027Result\u0027).props.text \u003d event.file.name"
+                      },
+                      "scope": "G",
+                      "type": "script"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "FileUpload"
+                },
+                "position": {
+                  "basis": "400px",
+                  "shrink": 0
+                },
+                "type": "ia.input.fileupload"
+              }
+            ],
+            "meta": {
+              "name": "Large"
+            },
+            "position": {
+              "basis": "400px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Small Display:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Result"
+                },
+                "position": {
+                  "basis": "32px",
+                  "shrink": 0
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "events": {
+                  "component": {
+                    "onFileReceived": {
+                      "config": {
+                        "script": "\tself.getSibling(\u0027Result\u0027).props.text \u003d event.file.name"
+                      },
+                      "scope": "G",
+                      "type": "script"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "FileUpload"
+                },
+                "position": {
+                  "basis": "159px",
+                  "shrink": 0
+                },
+                "type": "ia.input.fileupload"
+              }
+            ],
+            "meta": {
+              "name": "Small"
+            },
+            "position": {
+              "basis": "159px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Examples"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "alignContent": "flex-start",
+          "alignItems": "flex-start",
+          "justify": "space-evenly",
+          "style": {
+            "overflow": "visible",
+            "padding": "10px"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

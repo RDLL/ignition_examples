@@ -1,0 +1,241 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px"
+        },
+        "props": {
+          "params": {
+            "text": "Thermometer"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "props": {
+          "text": "The Thermometer component displays a temperature value depicted as a level in a mercury thermometer."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Thermometer"
+                    },
+                    "position": {
+                      "basis": "98px"
+                    },
+                    "type": "ia.display.thermometer"
+                  },
+                  {
+                    "meta": {
+                      "name": "Thermometer_0"
+                    },
+                    "position": {
+                      "basis": "98px"
+                    },
+                    "props": {
+                      "value": 75
+                    },
+                    "type": "ia.display.thermometer"
+                  },
+                  {
+                    "meta": {
+                      "name": "Thermometer_1"
+                    },
+                    "position": {
+                      "basis": "98px"
+                    },
+                    "props": {
+                      "value": 100
+                    },
+                    "type": "ia.display.thermometer"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "position": {
+                  "basis": "230px"
+                },
+                "props": {
+                  "justify": "space-evenly"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": 32
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "HelpText"
+                },
+                "position": {
+                  "basis": "87px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Three temperature intervals can optionally be defined with their own colors so that the mercury color changes based on the temperature range that it is in."
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance1"
+            },
+            "position": {
+              "basis": "500px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Thermometer"
+                    },
+                    "position": {
+                      "basis": "98px"
+                    },
+                    "props": {
+                      "unit": "F"
+                    },
+                    "type": "ia.display.thermometer"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "basis": "230px"
+                },
+                "props": {
+                  "justify": "center"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "HelpText"
+                },
+                "position": {
+                  "basis": "87px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Use the unit property to change the degree unit from C to F."
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance2"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "justify": "space-evenly",
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "wrap": "wrap"
+    },
+    "type": "ia.container.flex"
+  }
+}

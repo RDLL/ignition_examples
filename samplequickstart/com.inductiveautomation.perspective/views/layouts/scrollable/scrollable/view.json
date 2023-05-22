@@ -1,0 +1,94 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 2000,
+      "width": 2000
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "id": "deets",
+                "type": "toggle",
+                "viewParams": {
+                  "label": "details a",
+                  "styleClass": "layouts/container-D"
+                }
+              },
+              "scope": "C",
+              "type": "dock"
+            }
+          }
+        },
+        "meta": {
+          "name": "EmbeddedView"
+        },
+        "position": {
+          "height": 150,
+          "width": 150,
+          "x": 64,
+          "y": 64
+        },
+        "props": {
+          "params": {
+            "label": "toggle details a",
+            "styleClass": "layouts/container-D"
+          },
+          "path": "layouts/framework/container-label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "id": "deets",
+                "type": "toggle",
+                "viewParams": {
+                  "label": "details b",
+                  "styleClass": "layouts/container-E"
+                }
+              },
+              "scope": "C",
+              "type": "dock"
+            }
+          }
+        },
+        "meta": {
+          "name": "EmbeddedView_0"
+        },
+        "position": {
+          "height": 150,
+          "width": 150,
+          "x": 1023.98,
+          "y": 755.006
+        },
+        "props": {
+          "params": {
+            "label": "toggle details b",
+            "styleClass": "layouts/container-E"
+          },
+          "path": "layouts/framework/container-label"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "background": "url(/system/images/sample-images/layouts/scrollable-background.png) top left no-repeat",
+        "backgroundSize": "cover"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

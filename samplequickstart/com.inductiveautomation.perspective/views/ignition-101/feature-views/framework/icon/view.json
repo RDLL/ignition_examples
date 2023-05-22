@@ -1,0 +1,69 @@
+{
+  "custom": {},
+  "params": {
+    "classes": "PDFManuals/Icon"
+  },
+  "propConfig": {
+    "params.classes": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 30,
+      "width": 30
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "config": {
+                  "type": "ANY",
+                  "uuid": "0d7a59ba-eeb6-42bd-9053-f997a77a0b5b"
+                },
+                "context": {
+                  "type": "pdfmanuals"
+                }
+              },
+              "scope": "C",
+              "type": "native/barcode"
+            }
+          }
+        },
+        "meta": {
+          "name": "Icon"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "view.params.classes"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "material/photo_camera"
+        },
+        "type": "ia.display.icon"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "center"
+    },
+    "type": "ia.container.flex"
+  }
+}

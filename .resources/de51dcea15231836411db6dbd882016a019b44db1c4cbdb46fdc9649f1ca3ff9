@@ -1,0 +1,10 @@
+{
+  "pages": {
+    "/": {
+      "viewPath": "dynamic_Flex/main"
+    }
+  },
+  "sharedDocks": {
+    "cornerPriority": "top-bottom"
+  }
+}

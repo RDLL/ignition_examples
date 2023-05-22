@@ -1,0 +1,16 @@
+{
+  "scope": "G",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "config.json"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "rdll",
+      "timestamp": "2023-05-16T15:12:13Z"
+    },
+    "lastModificationSignature": "0fec94d94b54f850a6defe8a09cc30d6e6fc224d561974b9742a40f84a30297c"
+  }
+}

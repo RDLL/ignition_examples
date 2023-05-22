@@ -1,0 +1,1192 @@
+{
+  "custom": {},
+  "params": {
+    "station": "KSMF"
+  },
+  "propConfig": {
+    "params.curentData": {
+      "paramDirection": "input"
+    },
+    "params.currentData": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.station": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 195,
+      "width": 343
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "LabelDate"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "if({/root.custom.currentData.success},\r\n  concat(toStr(dateFormat(addHours(addHours(now(60000), toInt({/root.custom.currentData.timezone})), toInt(-{/root.custom.currentData.serverTimezone})), \u0027EEEE, hh:mm a\u0027))),\r\n  \"Waiting for weather station...\")"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif value is None:\n\t\treturn \"Waiting for weather station...\"\n\treturn value",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "paddingBottom": "10px"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "LabelLocation"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "if({/root.custom..currentData.success},\r\n  toStr({/root.custom..currentData.location}),\r\n  \"Waiting for weather station...\")"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif value is None:\n\t\treturn \"Waiting for weather station...\"\n\treturn value",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "alignItems": "flex-start",
+          "direction": "column",
+          "style": {
+            "fontSize": "18px",
+            "fontWeight": "bold",
+            "overflow": "visible",
+            "padding": "5px 0px 0px 10px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "Label"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "{/root.custom.currentData.temp}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif not value:\n\t\treturn \"\"\n\treturn str(value) + u\"°\"",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "40px",
+                    "paddingBottom": "10px",
+                    "textShadow": "1px 1px 2px #000000"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "{/root.custom.currentData.humidity}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif not value:\n\t\treturn \"\" \n\treturn \"Humidity:   \" + str(value)",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "paddingBottom": "5px",
+                    "paddingLeft": "5px",
+                    "paddingRight": "5px",
+                    "paddingTop": "5px"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "TempHum"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "center",
+              "alignItems": "center",
+              "direction": "column",
+              "justify": "center"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "path"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#F7E07E",
+                                "rule": "evenodd"
+                              },
+                              "path": "M69.0919,30.9081c10.5442,10.5442 10.5442,27.6396 0,38.1838c-10.5442,10.5442 -27.6396,10.5442 -38.1838,0c-10.5442,-10.5442 -10.5442,-27.6396 -7.10543e-15,-38.1838c10.5442,-10.5442 27.6396,-10.5442 38.1838,-7.10543e-15",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_0"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M50,0v16",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_1"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M50,84v16",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_2"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M100,50h-16",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_3"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M16,50h-16",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_4"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M85.3553,14.6447l-11.3137,11.3137",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_5"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M25.9584,74.0416l-11.3137,11.3137",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_6"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M85.3553,85.3553l-11.3137,-11.3137",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_7"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M25.9584,25.9584l-11.3137,-11.3137",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          }
+                        ],
+                        "meta": {
+                          "name": "group"
+                        },
+                        "props": {
+                          "transform": "matrix(1,0,0,1,300,550)"
+                        },
+                        "type": "ia.shapes.group"
+                      }
+                    ],
+                    "meta": {
+                      "name": "group"
+                    },
+                    "props": {
+                      "transform": "matrix(1,0,0,1,-298,-548)"
+                    },
+                    "type": "ia.shapes.group"
+                  }
+                ],
+                "meta": {
+                  "name": "Weather Sun 22"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "expression": "{/root.custom.currentData.success} \u0026\u0026 {parent.custom.weatherImage} \u003d \u0027sun\u0027"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "viewBox": "0 0 104 104"
+                },
+                "type": "ia.container.drawing"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "path"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#EBF1F5",
+                                "rule": "evenodd"
+                              },
+                              "path": "M15.1852,31.3243c0,-10.6551 8.856,-19.3243 19.7407,-19.3243c7.4043,0 14.0736,3.99122 17.4675,10.3103c1.60507,-0.90527 3.43641,-1.39135 5.31026,-1.39135c5.85996,0 10.6296,4.66905 10.6296,10.4054c0,0.185811 -0.0045555,0.371622 -0.0151852,0.557433c8.01019,1.99932 13.6819,9.05419 13.6819,17.2804c0,9.83608 -8.17419,17.8378 -18.2222,17.8378c0,0 -47.4643,-0.0401351 -47.6374,-0.114459c-9.23107,-1.0227 -16.1403,-8.56959 -16.1403,-17.7234c0,-8.69743 6.56152,-16.1596 15.1867,-17.5896c-0.0015185,-0.0832433 -0.0015185,-0.165 -0.0015185,-0.248243Z",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_0"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#CFD8DC",
+                                "rule": "evenodd"
+                              },
+                              "path": "M80.4797,42h5.7425c7.5973,0 13.7778,-6.11043 13.7778,-13.6216c0,-6.28184 -4.28833,-11.6692 -10.3448,-13.1959c0.008037,-0.141892 0.0114815,-0.283784 0.0114815,-0.425676c0,-4.38049 -3.60633,-7.94595 -8.03704,-7.94595c-1.41681,0 -2.80148,0.371189 -4.01507,1.06249c-2.56611,-4.82546 -7.60878,-7.8733 -13.2071,-7.8733c-8.22993,0 -14.9259,6.62011 -14.9259,14.7568c0,0.0635675 0,0.126 0.0011481,0.189568c-0.989166,0.165633 -1.94244,0.437241 -2.84794,0.802042c2.36509,1.7038 4.34579,3.93111 5.75875,6.5619c1.60507,-0.90527 3.43641,-1.39135 5.31026,-1.39135c5.85996,0 10.6296,4.66905 10.6296,10.4054c0,0.185811 -0.0045555,0.371622 -0.0151852,0.557433c5.54006,1.38279 9.9615,5.18388 12.1616,10.1182v0Z",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          }
+                        ],
+                        "meta": {
+                          "name": "group"
+                        },
+                        "props": {
+                          "transform": "matrix(1,0,0,1,1100,340)"
+                        },
+                        "type": "ia.shapes.group"
+                      }
+                    ],
+                    "meta": {
+                      "name": "group"
+                    },
+                    "props": {
+                      "transform": "matrix(1,0,0,1,-1098,-338)"
+                    },
+                    "type": "ia.shapes.group"
+                  }
+                ],
+                "meta": {
+                  "name": "Weather Cloudy 16"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "expression": "{/root.custom.currentData.success} \u0026\u0026 {parent.custom.weatherImage} \u003d \u0027cloudy\u0027"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "viewBox": "0 0 104 71"
+                },
+                "type": "ia.container.drawing"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "path"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M50,0v16",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_0"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M100,50h-16",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_1"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M16,50h-16",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_2"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M85.3553,14.6447l-11.3137,11.3137",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_3"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M25.9584,74.0416l-11.3137,11.3137",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_4"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M25.9584,25.9584l-11.3137,-11.3137",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_5"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#FFF",
+                                "rule": "evenodd"
+                              },
+                              "path": "M45.4086,71.0139c-0.0012407,-0.0681081 -0.0012407,-0.135 -0.0012407,-0.203108c0,-8.71784 7.236,-15.8108 16.1296,-15.8108c6.04985,0 11.4992,3.26554 14.2722,8.43568c1.31146,-0.740676 2.8078,-1.13838 4.33887,-1.13838c4.78802,0 8.68519,3.82014 8.68519,8.51351c0,0.152027 -0.0037222,0.304054 -0.0124074,0.456081c6.54491,1.63581 11.1791,7.40797 11.1791,14.1385c0,8.0477 -6.67891,14.5946 -14.8889,14.5946h-38.463c-0.162537,0 -0.31887,-0.0328378 -0.460315,-0.0936486c-7.54246,-0.836757 -13.1878,-7.01149 -13.1878,-14.5009c0,-7.11608 5.36124,-13.2215 12.4086,-14.3915v0v0Z",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_6"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#F7E07E",
+                                "rule": "evenodd"
+                              },
+                              "path": "M74.4922,61.379c1.60928,-3.45797 2.5078,-7.31354 2.5078,-11.379c0,-14.9117 -12.0883,-27 -27,-27c-14.9117,0 -27,12.0883 -27,27c0,10.7008 6.22502,19.9476 15.2513,24.3167c1.99952,-1.67931 4.45442,-2.85404 7.15736,-3.30278c-0.0012407,-0.0681081 -0.0012407,-0.135 -0.0012407,-0.203108c0,-8.71784 7.236,-15.8108 16.1296,-15.8108c5.20245,0 9.96083,2.4148 12.9552,6.37898l1.4e-06,-3.1e-06Z",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          }
+                        ],
+                        "meta": {
+                          "name": "group"
+                        },
+                        "props": {
+                          "transform": "matrix(1,0,0,1,700,550)"
+                        },
+                        "type": "ia.shapes.group"
+                      }
+                    ],
+                    "meta": {
+                      "name": "group"
+                    },
+                    "props": {
+                      "transform": "matrix(1,0,0,1,-698,-548)"
+                    },
+                    "type": "ia.shapes.group"
+                  }
+                ],
+                "meta": {
+                  "name": "Weather Sun Cloud Day 24"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "expression": "{/root.custom.currentData.success} \u0026\u0026 {parent.custom.weatherImage} \u003d \u0027partly cloudy\u0027"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "viewBox": "0 0 104 104"
+                },
+                "type": "ia.container.drawing"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "path"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#EBF1F5",
+                                "rule": "evenodd"
+                              },
+                              "path": "M18.5185,23.5405c0,-12.9799 10.8,-23.5405 24.0741,-23.5405c9.02963,0 17.163,4.86203 21.3019,12.5598c1.95741,-1.10278 4.19074,-1.69492 6.47593,-1.69492c7.1463,0 12.963,5.68776 12.963,12.6757c0,0.226351 -0.0055555,0.452703 -0.0185185,0.679054c9.76852,2.43554 16.6852,11.0296 16.6852,21.0507c0,11.9821 -9.96852,21.7297 -22.2222,21.7297c0,0 -57.8833,-0.0488919 -58.0944,-0.139432c-11.2574,-1.24584 -19.6833,-10.4393 -19.6833,-21.5903c0,-10.5951 8.00185,-19.6853 18.5204,-21.4273c-0.0018519,-0.101405 -0.0018519,-0.201 -0.0018519,-0.302405Z",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_0"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#D0E6FF",
+                                "rule": "evenodd"
+                              },
+                              "path": "M34,83.2572c0,9.24681 7.2296,16.7428 16.1478,16.7428c8.91825,0 16.1438,-7.49594 16.1438,-16.7428c0,-9.24681 -16.1478,-33.2572 -16.1478,-33.2572c0,0 -16.1438,24.0104 -16.1438,33.2572v0Z",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_1"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M41.6904,79.7356c0,0 -1.22654,3.33119 0.0142951,6.85353c1.24083,3.52234 3.7598,4.58513 3.7598,4.58513",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          }
+                        ],
+                        "meta": {
+                          "name": "group"
+                        },
+                        "props": {
+                          "transform": "matrix(1,0,0,1,1300,956)"
+                        },
+                        "type": "ia.shapes.group"
+                      }
+                    ],
+                    "meta": {
+                      "name": "group"
+                    },
+                    "props": {
+                      "transform": "matrix(1,0,0,1,-1298,-954)"
+                    },
+                    "type": "ia.shapes.group"
+                  }
+                ],
+                "meta": {
+                  "name": "Weather Rain 47"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "expression": "{/root.custom.currentData.success} \u0026\u0026 {parent.custom.weatherImage} \u003d \u0027light rain\u0027"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "viewBox": "0 0 104 104"
+                },
+                "type": "ia.container.drawing"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "path"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#EBF1F5",
+                                "rule": "evenodd"
+                              },
+                              "path": "M23.0214,67h-6.31765c-0.198926,0 -0.390259,-0.0401351 -0.56337,-0.114459c-9.23107,-1.0227 -16.1403,-8.56959 -16.1403,-17.7234c0,-8.69743 6.56152,-16.1596 15.1867,-17.5896c-0.0015185,-0.0832433 -0.0015185,-0.165 -0.0015185,-0.248243c0,-10.6551 8.856,-19.3243 19.7407,-19.3243c7.4043,0 14.0736,3.99122 17.4675,10.3103c1.60507,-0.90527 3.43641,-1.39135 5.31026,-1.39135c5.85996,0 10.6296,4.66905 10.6296,10.4054c0,0.185811 -0.0045555,0.371622 -0.0151852,0.557433c8.01019,1.99932 13.6819,9.05419 13.6819,17.2804c0,9.83608 -8.17419,17.8378 -18.2222,17.8378h-8.28924",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_0"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#F7E07E",
+                                "rule": "evenodd"
+                              },
+                              "path": "M34.861,76.6071l-6.04733,23.3929l24.1863,-28.5534h-10.7416l1.78918,-22.4466l-20.0475,27.6071Z",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_1"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#CFD8DC",
+                                "rule": "evenodd"
+                              },
+                              "path": "M80.4797,42h5.7425c7.5973,0 13.7778,-6.11043 13.7778,-13.6216c0,-6.28184 -4.28833,-11.6692 -10.3448,-13.1959c0.008037,-0.141892 0.0114815,-0.283784 0.0114815,-0.425676c0,-4.38049 -3.60633,-7.94595 -8.03704,-7.94595c-1.41681,0 -2.80148,0.371189 -4.01507,1.06249c-2.56611,-4.82546 -7.60878,-7.8733 -13.2071,-7.8733c-8.22993,0 -14.9259,6.62011 -14.9259,14.7568c0,0.0635675 0,0.126 0.0011481,0.189568c-0.989166,0.165633 -1.94244,0.437241 -2.84794,0.802042c2.36509,1.7038 4.34579,3.93111 5.75875,6.5619c1.60507,-0.90527 3.43641,-1.39135 5.31026,-1.39135c5.85996,0 10.6296,4.66905 10.6296,10.4054c0,0.185811 -0.0045555,0.371622 -0.0151852,0.557433c5.54006,1.38279 9.9615,5.18388 12.1616,10.1182v0Z",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          }
+                        ],
+                        "meta": {
+                          "name": "group"
+                        },
+                        "props": {
+                          "transform": "matrix(1,0,0,1,1700,340)"
+                        },
+                        "type": "ia.shapes.group"
+                      }
+                    ],
+                    "meta": {
+                      "name": "group"
+                    },
+                    "props": {
+                      "transform": "matrix(1,0,0,1,-1698,-338)"
+                    },
+                    "type": "ia.shapes.group"
+                  }
+                ],
+                "meta": {
+                  "name": "Weather Cloud Thunder Lighting 19"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "expression": "{/root.custom.currentData.success} \u0026\u0026 {parent.custom.weatherImage} \u003d \u0027storm\u0027"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "viewBox": "0 0 104 104"
+                },
+                "type": "ia.container.drawing"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "path"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#EBF1F5",
+                                "rule": "evenodd"
+                              },
+                              "path": "M15.1852,31.3243c0,-10.6551 8.856,-19.3243 19.7407,-19.3243c7.4043,0 14.0736,3.99122 17.4675,10.3103c1.60507,-0.90527 3.43641,-1.39135 5.31026,-1.39135c5.85996,0 10.6296,4.66905 10.6296,10.4054c0,0.185811 -0.0045555,0.371622 -0.0151852,0.557433c8.01019,1.99932 13.6819,9.05419 13.6819,17.2804c0,9.83608 -8.17419,17.8378 -18.2222,17.8378c0,0 -47.4643,-0.0401351 -47.6374,-0.114459c-9.23107,-1.0227 -16.1403,-8.56959 -16.1403,-17.7234c0,-8.69743 6.56152,-16.1596 15.1867,-17.5896c-0.0015185,-0.0832433 -0.0015185,-0.165 -0.0015185,-0.248243Z",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_0"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#CFD8DC",
+                                "rule": "evenodd"
+                              },
+                              "path": "M80.4797,42h5.7425c7.5973,0 13.7778,-6.11043 13.7778,-13.6216c0,-6.28184 -4.28833,-11.6692 -10.3448,-13.1959c0.008037,-0.141892 0.0114815,-0.283784 0.0114815,-0.425676c0,-4.38049 -3.60633,-7.94595 -8.03704,-7.94595c-1.41681,0 -2.80148,0.371189 -4.01507,1.06249c-2.56611,-4.82546 -7.60878,-7.8733 -13.2071,-7.8733c-8.22993,0 -14.9259,6.62011 -14.9259,14.7568c0,0.0635675 0,0.126 0.0011481,0.189568c-0.989166,0.165633 -1.94244,0.437241 -2.84794,0.802042c2.36509,1.7038 4.34579,3.93111 5.75875,6.5619c1.60507,-0.90527 3.43641,-1.39135 5.31026,-1.39135c5.85996,0 10.6296,4.66905 10.6296,10.4054c0,0.185811 -0.0045555,0.371622 -0.0151852,0.557433c5.54006,1.38279 9.9615,5.18388 12.1616,10.1182v0Z",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_1"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M49.4941,77.2215l-5.95284,22.2163",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_2"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M32.7176,77.1193l-3.88229,14.4889",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_3"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M16.8117,77l-1.81173,6.76148",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          },
+                          {
+                            "meta": {
+                              "name": "path_4"
+                            },
+                            "props": {
+                              "fill": {
+                                "paint": "#E2F3FB",
+                                "rule": "evenodd"
+                              },
+                              "path": "M64.7176,77.1193l-4.1411,15.4548",
+                              "stroke": {
+                                "linecap": "round",
+                                "paint": "var(--neutral-100)",
+                                "width": "3.5"
+                              }
+                            },
+                            "type": "ia.shapes.path"
+                          }
+                        ],
+                        "meta": {
+                          "name": "group"
+                        },
+                        "props": {
+                          "transform": "matrix(1,0,0,1,1300,340)"
+                        },
+                        "type": "ia.shapes.group"
+                      }
+                    ],
+                    "meta": {
+                      "name": "group"
+                    },
+                    "props": {
+                      "transform": "matrix(1,0,0,1,-1298,-338)"
+                    },
+                    "type": "ia.shapes.group"
+                  }
+                ],
+                "meta": {
+                  "name": "Weather Cloud Rain 17"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "expression": "{/root.custom.currentData.success} \u0026\u0026 {parent.custom.weatherImage} \u003d \u0027rain\u0027"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "viewBox": "0 0 104 104"
+                },
+                "type": "ia.container.drawing"
+              }
+            ],
+            "meta": {
+              "name": "Icons"
+            },
+            "position": {
+              "basis": "75px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "custom.weatherImage": {
+                "binding": {
+                  "config": {
+                    "expression": "if( {/root.custom..currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/skc.png\u0027 ||\r\n \t{/root.custom..currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nskc.png\u0027, \t\r\n\t\t\u0027sun\u0027, \t\r\n\tif( {/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/sct.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nsct.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/few.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nfew.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/bkn.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nbkn.png\u0027,\r\n\t\u0027partly cloudy\u0027,\r\n\tif( {/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/ovc.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/novc.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/fg.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nfg.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/wind.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nwind.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/haze.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/dust.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/smoke.png\u0027,\r\n\t\u0027cloudy\u0027,\r\n\tif( {/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/hi_shwrs.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/hi_nshwrs.png\u0027,\r\n\t\u0027light rain\u0027,\r\n\tif( {/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/shra.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/ra.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/ra1.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nra.png\u0027,\r\n\t\u0027rain\u0027,\r\n\tif( {/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/hi_tsra.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/hi_ntsra.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nsvrtsra.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/tsra.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/ntsra.png\u0027,\r\n\t\u0027storm\u0027,\r\n\tif( {/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/sn.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nsn.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/fzra.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/raip.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/rasn.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nrasn.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/fzrara.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/ip.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nip.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/mix.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nmix.png\u0027,\r\n\t\u0027snow\u0027,\r\n\t\u0027sun\u0027\r\n\t) \t\t\t\t\t) \t\t\t\t) \t\t\t) \t\t)\t\t \t)\t\t )"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "justify": "center",
+              "style": {
+                "marginLeft": "10px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "LabelCondition"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({/root.custom.currentData.success}, \nconcat(\"Condition:   \" ,\n{/root.custom.currentData.condition}),\n\"\")"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif value is None:\n\t\treturn \"\"\n\treturn value",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "alignVertical": "bottom",
+                  "style": {
+                    "fontSize": "12px",
+                    "paddingBottom": "2px",
+                    "paddingLeft": "5%",
+                    "paddingTop": "auto"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "LabelWind"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({/root.custom.currentData.success}, \nconcat(\"Wind:   \", \n{/root.custom.currentData.wind}),\n\"\")"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif value is None:\n\t\treturn \"\"\n\treturn value",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "12px",
+                    "paddingBottom": "auto",
+                    "paddingLeft": "5%",
+                    "paddingTop": "auto"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "Condition_Wind"
+            },
+            "position": {
+              "basis": "200px",
+              "grow": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_1"
+        },
+        "position": {
+          "basis": "150px",
+          "grow": 1
+        },
+        "props": {
+          "alignContent": "center",
+          "justify": "center",
+          "style": {
+            "marginTop": "10px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "custom.currentData": {
+        "binding": {
+          "config": {
+            "struct": {
+              "station": "{view.params.station}",
+              "timer": "now(300000)"
+            },
+            "waitOnAll": true
+          },
+          "transforms": [
+            {
+              "code": "\treturn self.getWeather(value[\"station\"])",
+              "type": "script"
+            }
+          ],
+          "type": "expr-struct"
+        }
+      }
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "color": "var(--neutral-100)",
+        "padding": "10px"
+      }
+    },
+    "scripts": {
+      "customMethods": [
+        {
+          "name": "getWeather",
+          "params": [
+            "station"
+          ],
+          "script": "\timport system\n\timport xml.etree.ElementTree as ET\n\t\n\tcurrentData \u003d {}\n\t\n\t# retrieve weather station data\n\turl \u003d \"https://w1.weather.gov/xml/current_obs/%s.xml\" %station\n\ttry:\n\t\tresponse \u003d system.net.httpGet(url)\n\t\n\t\t# build ETree from XML response\n\t\troot \u003d ET.fromstring(response)\n\texcept:\n\t\tcurrentData[\u0027success\u0027] \u003d False\n\t\tcurrentData[\u0027location\u0027] \u003d \"\"\n\t\tcurrentData[\u0027temp\u0027] \u003d \"\"\n\t\tcurrentData[\u0027humidity\u0027] \u003d \"\"\n\t\tcurrentData[\u0027wind\u0027] \u003d \"\"\n\t\tcurrentData[\u0027date\u0027] \u003d \"\"\n\t\tcurrentData[\u0027icon\u0027] \u003d \"\"\n\t\tcurrentData[\u0027condition\u0027] \u003d \"\"\n\t\tcurrentData[\u0027timezone\u0027] \u003d \"-0700\"\n\t\tcurrentData[\u0027serverTimezone\u0027] \u003d int(system.date.getTimezoneOffset())\n\t\treturn currentData\n\t\n\tcurrentData[\u0027location\u0027] \u003d root.find(\"location\").text if root.find(\"location\") is not None else \"\"\n\t\n\tcurrentData[\u0027temp\u0027] \u003d float(root.find(\"temp_f\").text) if root.find(\"temp_f\") is not None else 67.8\n\t\n\tcurrentData[\u0027humidity\u0027] \u003d float(root.find(\"relative_humidity\").text) if root.find(\"relative_humidity\") is not None else 0.0\n\t\n\twind_dir \u003d root.find(\"wind_dir\").text if root.find(\"wind_dir\") is not None else \"\"\n\twind_mph \u003d root.find(\"wind_mph\").text if root.find(\"wind_mph\") is not None else \"\"\n\tif wind_dir and wind_mph:\n\t\tcurrentData[\u0027wind\u0027] \u003d wind_mph + \" mph \" + wind_dir\n\telse:\n\t\tcurrentData[\u0027wind\u0027] \u003d \"\"\n\t\n\turl_base \u003d root.find(\"icon_url_base\").text if root.find(\"icon_url_base\") is not None else \"\"\n\turl_name \u003d root.find(\"icon_url_name\").text if root.find(\"icon_url_name\") is not None else \"\"\n\tcurrentData[\u0027icon\u0027] \u003d url_base + url_name\n\t\n\tcurrentData[\u0027condition\u0027] \u003d root.find(\"weather\").text if root.find(\"weather\") is not None else \"Sunny\"\n\t\n\tcurrentData[\u0027date\u0027] \u003d root.find(\"observation_time_rfc822\").text if root.find(\"observation_time_rfc822\") is not None else str(system.date.now())\n\t# timezone is at the end of the datetime string, -#### format\n\tcurrentData[\u0027timezone\u0027] \u003d int(currentData[\u0027date\u0027][-5:-2])\n\tcurrentData[\u0027serverTimezone\u0027] \u003d int(system.date.getTimezoneOffset())\n\tcurrentData[\u0027success\u0027] \u003d True\n\t\t\n\treturn currentData"
+        }
+      ],
+      "messageHandlers": []
+    },
+    "type": "ia.container.flex"
+  }
+}

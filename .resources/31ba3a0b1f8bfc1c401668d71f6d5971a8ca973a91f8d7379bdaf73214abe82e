@@ -1,0 +1,682 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 787,
+      "width": 997
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Gauge"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The Gauge component provides a way to show realtime values in a range as they change. The gauge has the option to show one or two axis. It is fully customizable in its appearance, from colors, line widths, needle length, radius, and more. "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Single Gauge"
+                },
+                "position": {
+                  "basis": "250px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Sine/Sine1"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "backgroundColor": "",
+                  "endAngle": 400,
+                  "innerAxis": {
+                    "data": "secondaryValue",
+                    "maxValue": 80,
+                    "percentRadius": 85,
+                    "show": false,
+                    "width": 1
+                  },
+                  "outerAxis": {
+                    "data": "value",
+                    "maxValue": 350,
+                    "needle": {
+                      "origin": 75
+                    },
+                    "percentRadius": 100,
+                    "ranges": [
+                      {
+                        "color": "#77B6D8CC",
+                        "end": 280,
+                        "start": 0,
+                        "width": 8
+                      },
+                      {
+                        "color": "#6E94D7CC",
+                        "end": 320,
+                        "start": 280,
+                        "width": 12
+                      },
+                      {
+                        "color": "#7A6BD5CC",
+                        "end": 350,
+                        "start": 320,
+                        "width": 16
+                      }
+                    ],
+                    "show": true,
+                    "width": 1
+                  },
+                  "startAngle": 140,
+                  "style": {
+                    "classes": []
+                  }
+                },
+                "type": "ia.chart.gauge"
+              },
+              {
+                "meta": {
+                  "name": "Double Gauge"
+                },
+                "position": {
+                  "basis": "250px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.secondaryValue": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Sine/Sine9"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Ramp/Ramp1"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "backgroundColor": "",
+                  "endAngle": 400,
+                  "innerAxis": {
+                    "data": "secondaryValue",
+                    "maxValue": 5,
+                    "minValue": -5,
+                    "needle": {
+                      "origin": 82
+                    },
+                    "percentRadius": 60,
+                    "ranges": [
+                      {
+                        "color": "#FF8A8ACC",
+                        "end": -1,
+                        "start": -5,
+                        "width": 12
+                      },
+                      {
+                        "color": "#FFCA8ACC",
+                        "end": 0,
+                        "start": -1,
+                        "width": 8
+                      },
+                      {
+                        "color": "#8AFF8ACC",
+                        "end": 3.5,
+                        "start": 0,
+                        "width": 6,
+                        "zIndex": 999
+                      },
+                      {
+                        "color": "#FFCA8ACC",
+                        "end": 4.5,
+                        "start": 3.5,
+                        "width": 8
+                      },
+                      {
+                        "color": "#FF8A8ACC",
+                        "end": 5,
+                        "start": 4.5,
+                        "width": 12
+                      }
+                    ],
+                    "show": true,
+                    "width": 1
+                  },
+                  "outerAxis": {
+                    "data": "value",
+                    "maxValue": 140,
+                    "needle": {
+                      "origin": 75
+                    },
+                    "percentRadius": 100,
+                    "ranges": [
+                      {
+                        "color": "#8AFF8ACC",
+                        "end": 90,
+                        "start": 0,
+                        "width": 8
+                      },
+                      {
+                        "color": "#FFCA8ACC",
+                        "end": 120,
+                        "start": 90,
+                        "width": 12
+                      },
+                      {
+                        "color": "#FF8A8ACC",
+                        "end": 140,
+                        "start": 120,
+                        "width": 16
+                      }
+                    ],
+                    "show": true,
+                    "width": 1
+                  },
+                  "startAngle": 140,
+                  "style": {
+                    "classes": []
+                  }
+                },
+                "type": "ia.chart.gauge"
+              }
+            ],
+            "meta": {
+              "name": "Gauges 260 Degrees"
+            },
+            "position": {
+              "basis": "300px",
+              "grow": 1
+            },
+            "props": {
+              "direction": "column",
+              "justify": "space-evenly",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Spacing"
+                },
+                "position": {
+                  "basis": "10px",
+                  "shrink": 0
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Single Gauge"
+                },
+                "position": {
+                  "basis": "250px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Sine/Sine0"
+                      },
+                      "type": "tag"
+                    },
+                    "persistent": false
+                  }
+                },
+                "props": {
+                  "backgroundColor": "",
+                  "innerAxis": {
+                    "data": "secondaryValue",
+                    "maxValue": 80,
+                    "percentRadius": 85,
+                    "show": false,
+                    "width": 1
+                  },
+                  "outerAxis": {
+                    "data": "value",
+                    "maxValue": 60,
+                    "minValue": -60,
+                    "percentRadius": 100,
+                    "ranges": [
+                      {
+                        "color": "#7A6BD5CC",
+                        "end": -50,
+                        "start": -60,
+                        "width": 16
+                      },
+                      {
+                        "color": "#6E94D7CC",
+                        "end": -35,
+                        "start": -50,
+                        "width": 12
+                      },
+                      {
+                        "color": "#77b6d8",
+                        "end": 35,
+                        "start": -35,
+                        "width": 8
+                      },
+                      {
+                        "color": "#6E94D7CC",
+                        "end": 50,
+                        "start": 35,
+                        "width": 12
+                      },
+                      {
+                        "color": "#7A6BD5CC",
+                        "end": 60,
+                        "start": 50,
+                        "width": 16
+                      }
+                    ],
+                    "show": true,
+                    "width": 1
+                  },
+                  "style": {
+                    "classes": []
+                  }
+                },
+                "type": "ia.chart.gauge"
+              },
+              {
+                "meta": {
+                  "name": "Spacing_0"
+                },
+                "position": {
+                  "basis": "10px",
+                  "shrink": 0
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Double Gauge"
+                },
+                "position": {
+                  "basis": "250px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.secondaryValue": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Sine/Sine4"
+                      },
+                      "type": "tag"
+                    },
+                    "persistent": false
+                  },
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Ramp/Ramp9"
+                      },
+                      "type": "tag"
+                    },
+                    "persistent": false
+                  }
+                },
+                "props": {
+                  "backgroundColor": "",
+                  "innerAxis": {
+                    "data": "secondaryValue",
+                    "maxValue": 25,
+                    "minValue": -25,
+                    "percentRadius": 60,
+                    "ranges": [
+                      {
+                        "color": "#FF8A8ACC",
+                        "end": -20,
+                        "start": -25,
+                        "width": 0
+                      },
+                      {
+                        "color": "#FFCA8ACC",
+                        "end": -15,
+                        "start": -20,
+                        "width": 0
+                      },
+                      {
+                        "color": "#8AFF8ACC",
+                        "end": 15,
+                        "start": -15,
+                        "width": 0
+                      },
+                      {
+                        "color": "#FFCA8ACC",
+                        "end": 20,
+                        "start": 15,
+                        "width": 0
+                      },
+                      {
+                        "color": "#FF8A8ACC",
+                        "end": 25,
+                        "start": 20,
+                        "width": 0
+                      }
+                    ],
+                    "show": true,
+                    "width": 1
+                  },
+                  "outerAxis": {
+                    "data": "value",
+                    "maxValue": 5500,
+                    "percentRadius": 100,
+                    "ranges": [
+                      {
+                        "color": "#8AFF8ACC",
+                        "end": 4000,
+                        "start": 0,
+                        "width": 8
+                      },
+                      {
+                        "color": "#FFCA8ACC",
+                        "end": 5000,
+                        "start": 4000,
+                        "width": 12
+                      },
+                      {
+                        "color": "#FF8A8ACC",
+                        "end": 5500,
+                        "start": 5000,
+                        "width": 16
+                      }
+                    ],
+                    "show": true,
+                    "width": 1
+                  },
+                  "style": {
+                    "classes": []
+                  }
+                },
+                "type": "ia.chart.gauge"
+              }
+            ],
+            "meta": {
+              "name": "Gauges 180 Degrees"
+            },
+            "position": {
+              "basis": "300px",
+              "grow": 1
+            },
+            "props": {
+              "direction": "column",
+              "justify": "space-evenly",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Single Gauge"
+                },
+                "position": {
+                  "basis": "250px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Sine/Sine6"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "backgroundColor": "",
+                  "endAngle": 450,
+                  "innerAxis": {
+                    "data": "secondaryValue",
+                    "maxValue": 80,
+                    "percentRadius": 85,
+                    "show": false,
+                    "width": 1
+                  },
+                  "outerAxis": {
+                    "data": "value",
+                    "maxValue": 139.9,
+                    "minValue": "",
+                    "percentRadius": 100,
+                    "ranges": [
+                      {
+                        "color": "#77B6D8CC",
+                        "end": 90,
+                        "start": 0,
+                        "width": 0
+                      },
+                      {
+                        "color": "#6E94D7CC",
+                        "end": 120,
+                        "start": 90,
+                        "width": 0
+                      },
+                      {
+                        "color": "#7A6BD5CC",
+                        "end": 140,
+                        "start": 120,
+                        "width": 0
+                      }
+                    ],
+                    "show": true,
+                    "width": 1
+                  },
+                  "startAngle": 90,
+                  "style": {
+                    "classes": []
+                  }
+                },
+                "type": "ia.chart.gauge"
+              },
+              {
+                "meta": {
+                  "name": "Double Gauge"
+                },
+                "position": {
+                  "basis": "250px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.secondaryValue": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Ramp/Ramp0"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Sine/Sine8"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "backgroundColor": "",
+                  "endAngle": 450,
+                  "innerAxis": {
+                    "data": "secondaryValue",
+                    "maxValue": 9.9,
+                    "percentRadius": 60,
+                    "ranges": [
+                      {
+                        "color": "#8AFF8ACC",
+                        "end": 7,
+                        "start": 0,
+                        "width": 0
+                      },
+                      {
+                        "color": "#FFCA8ACC",
+                        "end": 9,
+                        "start": 7,
+                        "width": 0
+                      },
+                      {
+                        "color": "#FF8A8ACC",
+                        "end": 10,
+                        "start": 9,
+                        "width": 0
+                      }
+                    ],
+                    "show": true,
+                    "width": 1
+                  },
+                  "outerAxis": {
+                    "data": "value",
+                    "percentRadius": 100,
+                    "ranges": [
+                      {
+                        "color": "#8AFF8ACC",
+                        "end": 80,
+                        "start": 0,
+                        "width": 8
+                      },
+                      {
+                        "color": "#FFCA8ACC",
+                        "end": 95,
+                        "start": 80,
+                        "width": 12
+                      },
+                      {
+                        "color": "#FF8A8ACC",
+                        "end": 100,
+                        "start": 95,
+                        "width": 16
+                      }
+                    ],
+                    "show": true,
+                    "width": 1
+                  },
+                  "startAngle": 90,
+                  "style": {
+                    "classes": []
+                  }
+                },
+                "type": "ia.chart.gauge"
+              }
+            ],
+            "meta": {
+              "name": "Gauges 360 Degrees"
+            },
+            "position": {
+              "basis": "300px",
+              "grow": 1
+            },
+            "props": {
+              "direction": "column",
+              "justify": "space-evenly",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "300px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "justify": "space-evenly",
+          "style": {
+            "overflow": "visible"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

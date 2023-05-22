@@ -1,0 +1,200 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 718,
+      "width": 825
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Real Time Status and Control"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "With Ignition, you can easily start and stop processes, monitor multiple data points at multiple locations, and check the status of the entire plant floor at any given moment. Ignition also lets you leverage the power of your mobile device’s intuitive touch inputs, sensors, cameras, and GPS to create the next generation of SCADA applications. There are a wide variety of components available as well as many ways to customize them, enabling you to build intuitive screens that represent your processes."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "motor-with-status"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "label": "Motor 1",
+                "tagPath": "[Sample_Tags]Writeable/WriteableShort1"
+              },
+              "path": "ignition-101/feature-views/framework/motor-with-status"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "motor-with-status_0"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "label": "Motor 2",
+                "tagPath": "[Sample_Tags]Writeable/WriteableShort2"
+              },
+              "path": "ignition-101/feature-views/framework/motor-with-status"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "319px"
+        },
+        "props": {
+          "justify": "space-evenly"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "EmbeddedView"
+            },
+            "props": {
+              "params": {
+                "tagPath": "[Sample_Tags]Ramp/Ramp4"
+              },
+              "path": "ignition-101/feature-views/framework/motor",
+              "style": {
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderWidth": "2px",
+                "marginTop": "20px"
+              },
+              "useDefaultViewWidth": true
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_0"
+            },
+            "props": {
+              "params": {
+                "tagPath": "[Sample_Tags]Ramp/Ramp5"
+              },
+              "path": "ignition-101/feature-views/framework/motor",
+              "style": {
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderWidth": "2px",
+                "marginTop": "20px"
+              },
+              "useDefaultViewWidth": true
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_1"
+            },
+            "props": {
+              "params": {
+                "tagPath": "[Sample_Tags]Ramp/Ramp6"
+              },
+              "path": "ignition-101/feature-views/framework/motor",
+              "style": {
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderWidth": "2px",
+                "marginTop": "20px"
+              },
+              "useDefaultViewWidth": true
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_3"
+            },
+            "props": {
+              "params": {
+                "tagPath": "[Sample_Tags]Ramp/Ramp7"
+              },
+              "path": "ignition-101/feature-views/framework/motor",
+              "style": {
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderWidth": "2px",
+                "marginTop": "20px"
+              },
+              "useDefaultViewWidth": true
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "props": {
+          "justify": "space-around",
+          "style": {
+            "marginBottom": 10,
+            "overflow": "visible"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

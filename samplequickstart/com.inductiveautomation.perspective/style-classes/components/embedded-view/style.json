@@ -1,0 +1,9 @@
+{
+  "base": {
+    "style": {
+      "borderColor": "#000000",
+      "borderStyle": "dashed",
+      "borderWidth": "1px"
+    }
+  }
+}

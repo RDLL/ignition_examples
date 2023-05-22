@@ -1,0 +1,61 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 250,
+      "width": 900
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "filters"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "label": "filters + actions",
+            "styleClass": "layouts/container-B"
+          },
+          "path": "layouts/framework/container-label",
+          "style": {
+            "marginBottom": "8px"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "nav"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "params": {
+            "label": "navigation",
+            "styleClass": "layouts/container-A"
+          },
+          "path": "layouts/framework/container-label",
+          "style": {
+            "key": "value"
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

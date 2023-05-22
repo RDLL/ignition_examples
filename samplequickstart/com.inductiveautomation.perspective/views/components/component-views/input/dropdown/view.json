@@ -1,0 +1,254 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 811,
+      "width": 728
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Dropdown"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Description"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "source": "The Dropdown component is a great way to display a list of choices in a limited amount of space. The available choices are presented when the user clicks on the dropdown, and the currently selected option is displayed right inside the component.\nThe choices that are displayed in the Dropdown depend on what Elements are defined in the options property of the Property Editor. The placeholder property defines what text is shown before any of the choices are selected. \nThere is also a multiSelect property which allows the user to select multiple elements from the dropdown. Selected elements can be deleted by clicking the \u0027x\u0027 icon next to them.\nThe Dropdown component also has the capability to search for an element by typing the name of that element in the dropdown field. If the element is present, it will appear as you are typing. If the element doesn\u0027t exist, you can configure what text to display to the user in that case. The Dropdown even has the ability to allow users to enter their own custom options."
+        },
+        "type": "ia.display.markdown"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Single Selection:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Dropdown"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "options": [
+                    {
+                      "label": "One",
+                      "value": "Option 1"
+                    },
+                    {
+                      "label": "Two",
+                      "value": "Option 2"
+                    },
+                    {
+                      "label": "Three",
+                      "value": "Option 3"
+                    }
+                  ]
+                },
+                "type": "ia.input.dropdown"
+              }
+            ],
+            "meta": {
+              "name": "Single"
+            },
+            "position": {
+              "basis": "300px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Multiple Selection:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Dropdown"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "multiSelect": true,
+                  "options": [
+                    {
+                      "label": "One",
+                      "value": "Option 1"
+                    },
+                    {
+                      "label": "Two",
+                      "value": "Option 2"
+                    },
+                    {
+                      "label": "Three",
+                      "value": "Option 3"
+                    }
+                  ],
+                  "showClearIcon": true
+                },
+                "type": "ia.input.dropdown"
+              }
+            ],
+            "meta": {
+              "name": "Multi"
+            },
+            "position": {
+              "basis": "300px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Custom Options:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Dropdown"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "allowCustomOptions": true,
+                  "multiSelect": true,
+                  "options": [
+                    {
+                      "label": "One",
+                      "value": "Option 1"
+                    },
+                    {
+                      "label": "Two",
+                      "value": "Option 2"
+                    },
+                    {
+                      "label": "Three",
+                      "value": "Option 3"
+                    }
+                  ],
+                  "placeholder": {
+                    "icon": {
+                      "path": "material/list"
+                    },
+                    "text": "Add your own options..."
+                  },
+                  "showClearIcon": true,
+                  "value": null
+                },
+                "type": "ia.input.dropdown"
+              }
+            ],
+            "meta": {
+              "name": "Custom"
+            },
+            "position": {
+              "basis": "300px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Examples"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "alignContent": "flex-start",
+          "alignItems": "flex-start",
+          "justify": "space-evenly",
+          "style": {
+            "overflow": "visible",
+            "padding": "10px"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "base": {
+    "style": {
+      "color": "var(--neutral-10)",
+      "fontSize": "18px",
+      "fontWeight": "bold",
+      "padding": "8px",
+      "textAlign": "center",
+      "textTransform": "uppercase"
+    }
+  }
+}

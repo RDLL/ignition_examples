@@ -1,0 +1,89 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 298,
+      "width": 402
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "TimeSeriesChart"
+        },
+        "position": {
+          "basis": "400px"
+        },
+        "props": {
+          "series": [
+            {
+              "data": [
+                {
+                  "Pressure": 12,
+                  "Temperature": 52,
+                  "time": 1560469431423
+                },
+                {
+                  "Pressure": 42,
+                  "Temperature": 18,
+                  "time": 1560469432423
+                },
+                {
+                  "Pressure": 81,
+                  "Temperature": 26,
+                  "time": 1560469433423
+                },
+                {
+                  "Pressure": 11,
+                  "Temperature": 63,
+                  "time": 1560469434423
+                },
+                {
+                  "Pressure": 23,
+                  "Temperature": 65,
+                  "time": 1560469435423
+                },
+                {
+                  "Pressure": 43,
+                  "Temperature": 12,
+                  "time": 1560469436423
+                },
+                {
+                  "Pressure": 71,
+                  "Temperature": 61,
+                  "time": 1560469437423
+                },
+                {
+                  "Pressure": 89,
+                  "Temperature": 60,
+                  "time": 1560469438423
+                },
+                {
+                  "Pressure": 66,
+                  "Temperature": 58,
+                  "time": 1560469439423
+                },
+                {
+                  "Pressure": 33,
+                  "Temperature": 1,
+                  "time": 1560469440423
+                }
+              ],
+              "name": "Boiler"
+            }
+          ]
+        },
+        "type": "ia.chart.timeseries"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

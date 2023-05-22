@@ -1,0 +1,344 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Column"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The Column container has the same components for all screen sizes. The components keep the same bindings and scripting for all screen sizes but can be in different positions. The Column container allows for 3 different configurations; small, medium, and large. Resize your screen to see it in action."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "hasDelegate": true,
+              "name": "Label_5"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 0,
+                  "name": "sm",
+                  "order": 1,
+                  "rowIndex": 6,
+                  "span": 12
+                },
+                {
+                  "colIndex": 0,
+                  "name": "md",
+                  "order": 1,
+                  "rowIndex": 3,
+                  "span": 12
+                },
+                {
+                  "colIndex": 8,
+                  "name": "lg",
+                  "order": 3,
+                  "rowIndex": 2,
+                  "span": 4
+                }
+              ],
+              "height": 200
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-B layouts/container-label",
+                "margin": "5px 0px 5px 0px"
+              },
+              "text": "View 7"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "hasDelegate": true,
+              "name": "Label_4"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 0,
+                  "name": "sm",
+                  "order": 1,
+                  "rowIndex": 5,
+                  "span": 12
+                },
+                {
+                  "colIndex": 6,
+                  "name": "md",
+                  "order": 2,
+                  "rowIndex": 2,
+                  "span": 6
+                },
+                {
+                  "colIndex": 4,
+                  "name": "lg",
+                  "order": 2,
+                  "rowIndex": 2,
+                  "span": 4
+                }
+              ],
+              "height": 200
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-B layouts/container-label",
+                "margin": "5px 0px 5px 0px"
+              },
+              "text": "View 6"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "hasDelegate": true,
+              "name": "Label_3"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 0,
+                  "name": "sm",
+                  "order": 1,
+                  "rowIndex": 4,
+                  "span": 12
+                },
+                {
+                  "colIndex": 0,
+                  "name": "md",
+                  "order": 1,
+                  "rowIndex": 2,
+                  "span": 6
+                },
+                {
+                  "colIndex": 0,
+                  "name": "lg",
+                  "order": 1,
+                  "rowIndex": 2,
+                  "span": 4
+                }
+              ],
+              "height": 200
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-B layouts/container-label",
+                "margin": "5px 0px 5px 0px"
+              },
+              "text": "View 5"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "hasDelegate": true,
+              "name": "Label_2"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 0,
+                  "name": "sm",
+                  "order": 1,
+                  "rowIndex": 3,
+                  "span": 12
+                },
+                {
+                  "colIndex": 6,
+                  "name": "md",
+                  "order": 0.5,
+                  "rowIndex": 1,
+                  "span": 6
+                },
+                {
+                  "colIndex": 0,
+                  "name": "lg",
+                  "order": 1,
+                  "rowIndex": 1,
+                  "span": 12
+                }
+              ],
+              "height": 80
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-B layouts/container-label",
+                "margin": "5px 0px 5px 0px"
+              },
+              "text": "View 4"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "hasDelegate": true,
+              "name": "Label_1"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 0,
+                  "name": "sm",
+                  "order": 1,
+                  "rowIndex": 2,
+                  "span": 12
+                },
+                {
+                  "colIndex": 0,
+                  "name": "md",
+                  "order": 0,
+                  "rowIndex": 1,
+                  "span": 6
+                },
+                {
+                  "colIndex": 8,
+                  "name": "lg",
+                  "order": 3,
+                  "rowIndex": 0,
+                  "span": 4
+                }
+              ],
+              "height": 80
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-B layouts/container-label",
+                "margin": "5px 0px 5px 0px"
+              },
+              "text": "View 3"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "hasDelegate": true,
+              "name": "Label_0"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 0,
+                  "name": "sm",
+                  "order": 0.5,
+                  "rowIndex": 1,
+                  "span": 12
+                },
+                {
+                  "colIndex": 6,
+                  "name": "md",
+                  "order": 2,
+                  "rowIndex": 0,
+                  "span": 6
+                },
+                {
+                  "colIndex": 4,
+                  "name": "lg",
+                  "order": 2,
+                  "rowIndex": 0,
+                  "span": 4
+                }
+              ],
+              "height": 80
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-B layouts/container-label",
+                "margin": "5px 0px 5px 0px"
+              },
+              "text": "View 2"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "hasDelegate": true,
+              "name": "Label"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 0,
+                  "name": "sm",
+                  "order": 1,
+                  "rowIndex": 0,
+                  "span": 12
+                },
+                {
+                  "colIndex": 0,
+                  "name": "md",
+                  "order": 1,
+                  "rowIndex": 0,
+                  "span": 6
+                },
+                {
+                  "colIndex": 0,
+                  "name": "lg",
+                  "order": 1,
+                  "rowIndex": 0,
+                  "span": 4
+                }
+              ],
+              "height": 80
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-B layouts/container-label",
+                "margin": "5px 0px 5px 0px"
+              },
+              "text": "View 1"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "ColumnContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "gutters": {
+            "horizontal": 0
+          },
+          "style": {
+            "marginTop": "20px"
+          }
+        },
+        "type": "ia.container.column"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,3102 @@
+{
+  "custom": {
+    "accelOn": false,
+    "mobile": false
+  },
+  "params": {},
+  "propConfig": {
+    "custom.accelOn": {
+      "persistent": true
+    },
+    "custom.mobile": {
+      "binding": {
+        "config": {
+          "expression": "lower(left({session.props.device.type},3)) \u003d \"ios\" || left({session.props.device.type},7) \u003d \"android\""
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1828,
+      "width": 1029
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Native App"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "Using our native Perspective App, enables the use of many built in pieces of hardware within your mobile device, such as the camera, the accelerometer, or the NFC Scanner. Data from these tools can be pulled into the Perspective Session and used in various ways. View this page on your mobile device using our Perspective App to try out these components. "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Accel_Label"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "16px",
+                        "fontWeight": "bold",
+                        "marginBottom": "10px"
+                      },
+                      "text": "Accelerometer"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "events": {
+                      "dom": {
+                        "onClick": [
+                          {
+                            "config": {
+                              "config": {
+                                "duration": 0,
+                                "sampleRate": 50
+                              },
+                              "context": {},
+                              "mode": "Continuous"
+                            },
+                            "scope": "C",
+                            "type": "native/accelerometer"
+                          },
+                          {
+                            "config": {
+                              "script": "\tif self.props.enabled:\n\t\tself.view.custom.accelOn \u003d True"
+                            },
+                            "scope": "G",
+                            "type": "script"
+                          }
+                        ]
+                      }
+                    },
+                    "meta": {
+                      "name": "AccelOn"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "propConfig": {
+                      "position.basis": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.accelOn"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": "0px",
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": false,
+                                  "output": "35px"
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      },
+                      "props.enabled": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.mobile"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.style.display": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.accelOn"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": "none",
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": false,
+                                  "output": "inline"
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "background": "rgba(130, 150, 150, 1)",
+                        "padding": "0px 10px",
+                        "width": "auto"
+                      },
+                      "text": "Accelerometer (Disabled)"
+                    },
+                    "type": "ia.input.button"
+                  },
+                  {
+                    "events": {
+                      "dom": {
+                        "onClick": [
+                          {
+                            "config": {
+                              "config": {
+                                "duration": -1,
+                                "sampleRate": 0
+                              },
+                              "mode": "Off"
+                            },
+                            "scope": "C",
+                            "type": "native/accelerometer"
+                          },
+                          {
+                            "config": {
+                              "script": "\tif self.props.enabled:\n\t\tself.view.custom.accelOn \u003d False"
+                            },
+                            "scope": "G",
+                            "type": "script"
+                          }
+                        ]
+                      }
+                    },
+                    "meta": {
+                      "name": "AccelOff"
+                    },
+                    "propConfig": {
+                      "position.basis": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.accelOn"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": "0px",
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": true,
+                                  "output": "35px"
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      },
+                      "props.enabled": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.mobile"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.style.display": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.accelOn"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": "inline",
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": false,
+                                  "output": "none"
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "background": "rgba(0, 170, 0, 1)",
+                        "padding": "0px 10px",
+                        "width": "auto"
+                      },
+                      "text": "Accelerometer (Enabled)"
+                    },
+                    "type": "ia.input.button"
+                  },
+                  {
+                    "meta": {
+                      "name": "Table"
+                    },
+                    "position": {
+                      "basis": "64px",
+                      "shrink": 0
+                    },
+                    "propConfig": {
+                      "props.data": {
+                        "binding": {
+                          "config": {
+                            "path": "session.props.device.accelerometer"
+                          },
+                          "transforms": [
+                            {
+                              "code": "\treturn [value]",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "columns": [
+                        {
+                          "align": "center",
+                          "boolean": "checkbox",
+                          "dateFormat": "MM/DD/YYYY",
+                          "editable": false,
+                          "field": "x",
+                          "footer": {
+                            "align": "center",
+                            "style": {
+                              "classes": ""
+                            },
+                            "title": ""
+                          },
+                          "header": {
+                            "align": "center",
+                            "style": {
+                              "classes": ""
+                            },
+                            "title": "X"
+                          },
+                          "number": "value",
+                          "numberFormat": "0,0.00",
+                          "progressBar": {
+                            "bar": {
+                              "color": "#62A3F6",
+                              "linecap": "round",
+                              "width": 5
+                            },
+                            "max": 100,
+                            "track": {
+                              "color": "#DADADA",
+                              "linecap": "round",
+                              "width": 2
+                            },
+                            "value": {
+                              "color": "#7D7D7D",
+                              "show": true
+                            }
+                          },
+                          "render": "number",
+                          "resizable": false,
+                          "sortable": false,
+                          "style": {
+                            "classes": ""
+                          },
+                          "toggleSwitch": {
+                            "color": {
+                              "selected": "#2196F3",
+                              "unselected": "#FFFFFF"
+                            }
+                          },
+                          "viewPath": "",
+                          "width": 80
+                        },
+                        {
+                          "align": "center",
+                          "boolean": "checkbox",
+                          "dateFormat": "MM/DD/YYYY",
+                          "editable": false,
+                          "field": "y",
+                          "footer": {
+                            "align": "center",
+                            "style": {
+                              "classes": ""
+                            },
+                            "title": ""
+                          },
+                          "header": {
+                            "align": "center",
+                            "style": {
+                              "classes": ""
+                            },
+                            "title": "Y"
+                          },
+                          "number": "value",
+                          "numberFormat": "0,0.00",
+                          "progressBar": {
+                            "bar": {
+                              "color": "#62A3F6",
+                              "linecap": "round",
+                              "width": 5
+                            },
+                            "max": 100,
+                            "track": {
+                              "color": "#DADADA",
+                              "linecap": "round",
+                              "width": 2
+                            },
+                            "value": {
+                              "color": "#7D7D7D",
+                              "show": true
+                            }
+                          },
+                          "render": "number",
+                          "resizable": false,
+                          "sortable": false,
+                          "style": {
+                            "classes": ""
+                          },
+                          "toggleSwitch": {
+                            "color": {
+                              "selected": "#2196F3",
+                              "unselected": "#FFFFFF"
+                            }
+                          },
+                          "viewPath": "",
+                          "width": 80
+                        },
+                        {
+                          "align": "center",
+                          "boolean": "checkbox",
+                          "dateFormat": "MM/DD/YYYY",
+                          "editable": false,
+                          "field": "z",
+                          "footer": {
+                            "align": "center",
+                            "style": {
+                              "classes": ""
+                            },
+                            "title": ""
+                          },
+                          "header": {
+                            "align": "center",
+                            "style": {
+                              "classes": ""
+                            },
+                            "title": "Z"
+                          },
+                          "number": "value",
+                          "numberFormat": "0,0.00",
+                          "progressBar": {
+                            "bar": {
+                              "color": "#62A3F6",
+                              "linecap": "round",
+                              "width": 5
+                            },
+                            "max": 100,
+                            "track": {
+                              "color": "#DADADA",
+                              "linecap": "round",
+                              "width": 2
+                            },
+                            "value": {
+                              "color": "#7D7D7D",
+                              "show": true
+                            }
+                          },
+                          "render": "number",
+                          "resizable": false,
+                          "sortable": false,
+                          "style": {
+                            "classes": ""
+                          },
+                          "toggleSwitch": {
+                            "color": {
+                              "selected": "#2196F3",
+                              "unselected": "#FFFFFF"
+                            }
+                          },
+                          "viewPath": "",
+                          "width": 80
+                        }
+                      ],
+                      "minRowHeight": 50,
+                      "pager": {
+                        "bottom": false
+                      },
+                      "selection": {
+                        "enableRowSelection": false
+                      },
+                      "style": {
+                        "height": "63px",
+                        "marginBottom": "10px",
+                        "marginTop": "10px",
+                        "width": "245px"
+                      }
+                    },
+                    "type": "ia.display.table"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Fluid"
+                        },
+                        "position": {
+                          "height": 1,
+                          "width": 1
+                        },
+                        "propConfig": {
+                          "props.color": {
+                            "binding": {
+                              "config": {
+                                "path": "view.custom.accelOn"
+                              },
+                              "transforms": [
+                                {
+                                  "fallback": "#ABF02832",
+                                  "inputType": "scalar",
+                                  "mappings": [
+                                    {
+                                      "input": true,
+                                      "output": "#ABF02882"
+                                    }
+                                  ],
+                                  "outputType": "scalar",
+                                  "type": "map"
+                                }
+                              ],
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "props": {
+                          "path": "material/lens",
+                          "style": {
+                            "stroke": "rgba(0, 0, 0, 0.2)"
+                          }
+                        },
+                        "type": "ia.display.icon"
+                      },
+                      {
+                        "meta": {
+                          "name": "Marks"
+                        },
+                        "position": {
+                          "height": 1,
+                          "width": 1
+                        },
+                        "propConfig": {
+                          "props.color": {
+                            "binding": {
+                              "config": {
+                                "path": "view.custom.accelOn"
+                              },
+                              "transforms": [
+                                {
+                                  "fallback": "#00000012",
+                                  "inputType": "scalar",
+                                  "mappings": [
+                                    {
+                                      "input": true,
+                                      "output": "#0000003D"
+                                    }
+                                  ],
+                                  "outputType": "scalar",
+                                  "type": "map"
+                                }
+                              ],
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "props": {
+                          "path": "material/adjust"
+                        },
+                        "type": "ia.display.icon"
+                      },
+                      {
+                        "custom": {
+                          "previousAccel": {
+                            "timestamp": 0,
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                          }
+                        },
+                        "meta": {
+                          "name": "Bubble"
+                        },
+                        "position": {
+                          "height": 0.2,
+                          "width": 0.2
+                        },
+                        "propConfig": {
+                          "custom.currentAccel": {
+                            "binding": {
+                              "config": {
+                                "path": "session.props.device.accelerometer"
+                              },
+                              "transforms": [
+                                {
+                                  "code": "\tif value:\n\t\treturn value",
+                                  "type": "script"
+                                }
+                              ],
+                              "type": "property"
+                            },
+                            "onChange": {
+                              "enabled": null,
+                              "script": "\tif previousValue and previousValue.value:\n\t\tself.custom.previousAccel \u003d previousValue.value"
+                            }
+                          },
+                          "position.x": {
+                            "binding": {
+                              "config": {
+                                "path": "this.custom.currentAccel"
+                              },
+                              "transforms": [
+                                {
+                                  "code": "\tx \u003d (value.x + self.custom.previousAccel.x) / 2.0\n\treturn min(max(x / 9.8 + 0.4, 0.0), 0.8) ",
+                                  "type": "script"
+                                }
+                              ],
+                              "type": "property"
+                            }
+                          },
+                          "position.y": {
+                            "binding": {
+                              "config": {
+                                "path": "this.custom.currentAccel"
+                              },
+                              "transforms": [
+                                {
+                                  "code": "\ty \u003d (value.y + self.custom.previousAccel.y) / 2.0\n\treturn min(max(y / -9.8 + 0.4, 0.0), 0.8) ",
+                                  "type": "script"
+                                }
+                              ],
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "props": {
+                          "color": "#55555582",
+                          "path": "material/timelapse",
+                          "style": {
+                            "height": "25px",
+                            "position": "absolute",
+                            "width": "25px"
+                          }
+                        },
+                        "type": "ia.display.icon"
+                      }
+                    ],
+                    "meta": {
+                      "name": "CoordinateContainer"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "aspectRatio": "1x1",
+                      "mode": "percent",
+                      "style": {
+                        "height": "200px",
+                        "width": "200px"
+                      }
+                    },
+                    "type": "ia.container.coord"
+                  }
+                ],
+                "meta": {
+                  "name": "Accel_Display"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "alignItems": "center",
+                  "direction": "column",
+                  "style": {
+                    "maxWidth": "350px",
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "Line Break"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "borderBottomColor": "var(--neutral-50)",
+                    "borderBottomStyle": "solid",
+                    "borderBottomWidth": "1px",
+                    "marginBottom": "30px",
+                    "marginTop": "30px",
+                    "width": "250px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Barcode_Label"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "16px",
+                        "fontWeight": "bold",
+                        "marginBottom": "10px"
+                      },
+                      "text": "Barcode Scanner"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Barcode"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "elements": [
+                        {
+                          "d": "M0,0 l999,0 0,666 -999,0 0,-666z",
+                          "fill": {
+                            "paint": "#fff"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M0,0 l61,0 0,666 -61,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M83,0 l62,0 0,666 -62,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M209,0 l62,0 0,666 -62,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M291,0 l20,0 0,666 -20,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M333,0 l42,0 0,666 -42,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M395,0 l42,0 0,666 -42,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M499,0 l62,0 0,666 -62,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M583,0 l62,0 0,666 -62,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M791,0 l62,0 0,666 -62,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M665,0 l20,0 0,666 -20,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M749,0 l20,0 0,666 -20,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M875,0 l20,0 0,666 -20,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M917,0 l42,0 0,666 -42,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M979,0 l20,0 0,666 -20,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        }
+                      ],
+                      "style": {
+                        "marginBottom": "10px",
+                        "width": "75px"
+                      },
+                      "viewBox": "0 0 999 666"
+                    },
+                    "type": "ia.shapes.svg"
+                  },
+                  {
+                    "events": {
+                      "dom": {
+                        "onClick": {
+                          "config": {
+                            "config": {
+                              "type": "ANY",
+                              "uuid": "240341bf-db52-4756-baac-91537d2632dd"
+                            },
+                            "context": {}
+                          },
+                          "scope": "C",
+                          "type": "native/barcode"
+                        }
+                      }
+                    },
+                    "meta": {
+                      "name": "Scan"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "propConfig": {
+                      "props.enabled": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.mobile"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "path": "this.props.enabled"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": "Scan Barcode (Disabled)",
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": true,
+                                  "output": "Scan Barcode"
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "classes": "Button_Action",
+                        "marginBottom": "10px",
+                        "width": "140px"
+                      }
+                    },
+                    "type": "ia.input.button"
+                  },
+                  {
+                    "meta": {
+                      "name": "Barcodes"
+                    },
+                    "position": {
+                      "basis": "100px",
+                      "shrink": 0
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "path": "session.custom.device.barcode"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "borderColor": "#CCCCCC",
+                        "borderRadius": "4px",
+                        "borderStyle": "solid",
+                        "borderWidth": "1px",
+                        "width": "220px"
+                      }
+                    },
+                    "type": "ia.input.text-area"
+                  }
+                ],
+                "meta": {
+                  "name": "Barcode"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "alignItems": "center",
+                  "direction": "column",
+                  "justify": "center",
+                  "style": {
+                    "overflow": "visible",
+                    "width": "330px"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "Line Break_0"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "borderBottomColor": "var(--neutral-50)",
+                    "borderBottomStyle": "solid",
+                    "borderBottomWidth": "1px",
+                    "marginBottom": "30px",
+                    "marginTop": "30px",
+                    "width": "250px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "FileUpload_Label"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "16px",
+                        "fontWeight": "bold",
+                        "marginBottom": "10px"
+                      },
+                      "text": "File Upload"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "path": "material/publish",
+                      "style": {
+                        "height": "70px",
+                        "marginBottom": "10px",
+                        "width": "70px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  },
+                  {
+                    "meta": {
+                      "name": "FileUpload"
+                    },
+                    "position": {
+                      "basis": "83px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "fileUploadIcon": {
+                        "style": {
+                          "width": "350px"
+                        }
+                      },
+                      "style": {}
+                    },
+                    "type": "ia.input.fileupload"
+                  }
+                ],
+                "meta": {
+                  "name": "File Upload"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "alignItems": "center",
+                  "direction": "column",
+                  "justify": "center",
+                  "style": {
+                    "overflow": "visible",
+                    "width": "280px"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "Line Break_1"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "borderBottomColor": "var(--neutral-50)",
+                    "borderBottomStyle": "solid",
+                    "borderBottomWidth": "1px",
+                    "marginBottom": "30px",
+                    "marginTop": "30px",
+                    "width": "250px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "GPS_Label"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "16px",
+                        "fontWeight": "bold",
+                        "marginBottom": "10px"
+                      },
+                      "text": "Mobile Device Geolocation"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "path": "material/location_on",
+                      "style": {
+                        "height": "55px",
+                        "marginBottom": "10px",
+                        "width": "55px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "hasDelegate": true,
+                          "name": "Label"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "style": {
+                            "classes": "Form_Label"
+                          },
+                          "text": "Enable GPS"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Toggle"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "propConfig": {
+                          "props.selected": {
+                            "binding": {
+                              "config": {
+                                "bidirectional": true,
+                                "path": "session.props.geolocation.enabled"
+                              },
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "props": {
+                          "label": {
+                            "position": "left"
+                          }
+                        },
+                        "type": "ia.input.toggle-switch"
+                      }
+                    ],
+                    "meta": {
+                      "name": "Enable"
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "direction": "column",
+                      "justify": "center",
+                      "style": {
+                        "overflow": "visible"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Label"
+                            },
+                            "position": {
+                              "shrink": 0
+                            },
+                            "props": {
+                              "style": {
+                                "textAlign": "center"
+                              },
+                              "text": "Latitude"
+                            },
+                            "type": "ia.display.label"
+                          },
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Value"
+                            },
+                            "position": {
+                              "basis": "36px"
+                            },
+                            "propConfig": {
+                              "props.text": {
+                                "binding": {
+                                  "config": {
+                                    "path": "session.props.geolocation.data.latitude"
+                                  },
+                                  "transforms": [
+                                    {
+                                      "expression": "coalesce(numberFormat({value}, \"#,##0.00\"), \"0.00\")",
+                                      "type": "expression"
+                                    }
+                                  ],
+                                  "type": "property"
+                                }
+                              }
+                            },
+                            "props": {
+                              "style": {
+                                "textAlign": "center"
+                              }
+                            },
+                            "type": "ia.display.label"
+                          }
+                        ],
+                        "meta": {
+                          "name": "Latitude"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "column",
+                          "justify": "center",
+                          "style": {
+                            "marginRight": "10px",
+                            "overflow": "visible",
+                            "width": "75px"
+                          }
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Label"
+                            },
+                            "position": {
+                              "shrink": 0
+                            },
+                            "props": {
+                              "style": {
+                                "textAlign": "center"
+                              },
+                              "text": "Longitude"
+                            },
+                            "type": "ia.display.label"
+                          },
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Value"
+                            },
+                            "position": {
+                              "basis": "36px"
+                            },
+                            "propConfig": {
+                              "props.text": {
+                                "binding": {
+                                  "config": {
+                                    "path": "session.props.geolocation.data.longitude"
+                                  },
+                                  "transforms": [
+                                    {
+                                      "expression": "coalesce(numberFormat({value}, \"#,##0.00\"), \"0.00\")",
+                                      "type": "expression"
+                                    }
+                                  ],
+                                  "type": "property"
+                                }
+                              }
+                            },
+                            "props": {
+                              "style": {
+                                "textAlign": "center"
+                              }
+                            },
+                            "type": "ia.display.label"
+                          }
+                        ],
+                        "meta": {
+                          "name": "Longitude"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "column",
+                          "justify": "space-between",
+                          "style": {
+                            "overflow": "visible",
+                            "width": "75px"
+                          }
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Label"
+                            },
+                            "position": {
+                              "shrink": 0
+                            },
+                            "props": {
+                              "style": {
+                                "textAlign": "center"
+                              },
+                              "text": "Altitude"
+                            },
+                            "type": "ia.display.label"
+                          },
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Value"
+                            },
+                            "position": {
+                              "basis": "36px"
+                            },
+                            "propConfig": {
+                              "props.text": {
+                                "binding": {
+                                  "config": {
+                                    "path": "session.props.geolocation.data.altitude"
+                                  },
+                                  "transforms": [
+                                    {
+                                      "expression": "coalesce(numberFormat({value}, \"#,##0.00\"), \"0.00\")",
+                                      "type": "expression"
+                                    }
+                                  ],
+                                  "type": "property"
+                                }
+                              }
+                            },
+                            "props": {
+                              "style": {
+                                "textAlign": "center"
+                              }
+                            },
+                            "type": "ia.display.label"
+                          }
+                        ],
+                        "meta": {
+                          "name": "Altitude"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "column",
+                          "justify": "center",
+                          "style": {
+                            "marginRight": "10px",
+                            "overflow": "visible",
+                            "width": "75px"
+                          }
+                        },
+                        "type": "ia.container.flex"
+                      }
+                    ],
+                    "meta": {
+                      "name": "Data"
+                    },
+                    "props": {
+                      "justify": "center",
+                      "style": {
+                        "borderColor": "var(--neutral-40)",
+                        "borderStyle": "solid",
+                        "borderWidth": "1px",
+                        "marginTop": "10px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "GPS"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "alignItems": "center",
+                  "direction": "column",
+                  "justify": "center",
+                  "style": {
+                    "maxWidth": "350px",
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "Line Break_2"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "borderBottomColor": "var(--neutral-50)",
+                    "borderBottomStyle": "solid",
+                    "borderBottomWidth": "1px",
+                    "marginBottom": "30px",
+                    "marginTop": "30px",
+                    "width": "250px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "NFC_Label"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "16px",
+                        "fontWeight": "bold",
+                        "marginBottom": "10px"
+                      },
+                      "text": "Near Field Communication"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "path": "material/nfc",
+                      "style": {
+                        "height": "75px",
+                        "marginBottom": "10px",
+                        "width": "75px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  },
+                  {
+                    "events": {
+                      "dom": {
+                        "onClick": {
+                          "config": {
+                            "config": {
+                              "continuousRead": false,
+                              "enable": true
+                            },
+                            "context": {}
+                          },
+                          "scope": "C",
+                          "type": "native/ndef"
+                        }
+                      }
+                    },
+                    "meta": {
+                      "name": "Scan"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "propConfig": {
+                      "props.enabled": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.mobile"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.mobile"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": "Scan NFC (Disabled)",
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": true,
+                                  "output": "Scan NFC"
+                                },
+                                {
+                                  "input": false,
+                                  "output": "Scan NFC (Disabled)"
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "classes": "Button_Action",
+                        "width": "140px"
+                      }
+                    },
+                    "scripts": {
+                      "customMethods": [],
+                      "extensionFunctions": null,
+                      "messageHandlers": [
+                        {
+                          "messageType": "NFC Data",
+                          "pageScope": false,
+                          "script": "\tdef listToString(list):\n\t\t\u0027\u0027\u0027\n\t\tTurns a list into a string spacing out each element in the list and\n\t\treturns the associated string.\n\t\t\u0027\u0027\u0027\n\t\tstring \u003d \u0027\u0027\n\t\tfor element in list:\n\t\t\tstring +\u003d str(element) + \u0027 \u0027\n\t\treturn string\n\t\t\n\t# Record each record as a dictionary and place inside an array\n\tarray \u003d []\n\tfor row in payload:\n\t\tdata \u003d {\n\t\t\t\t\u0027type\u0027:row[\u0027type\u0027],\n\t\t\t\t\u0027typeNameFormat\u0027:row[\u0027typeNameFormat\u0027],\n\t\t\t\t\u0027payload\u0027:row[\u0027payload\u0027],\n\t\t\t\t\u0027string\u0027:row[\u0027string\u0027],\n\t\t\t\t\u0027bytes\u0027:listToString(row[\u0027bytes\u0027])\n\t\t\t\t}\n\t\tarray.append(data)\n\t\n\t# Open Popup NFC to display records \t\n\tsystem.perspective.openPopup(\u0027Popup_NFC\u0027, \u0027Features/Real-time Status/Mobile/Overview/Popup NFC\u0027, params\u003d{\u0027data\u0027:array}, title\u003d\u0027NFC Values\u0027)",
+                          "sessionScope": true,
+                          "viewScope": false
+                        }
+                      ]
+                    },
+                    "type": "ia.input.button"
+                  },
+                  {
+                    "meta": {
+                      "name": "NFC_TextField"
+                    },
+                    "position": {
+                      "basis": "100px",
+                      "shrink": 0
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "path": "session.custom.device.nfc"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "borderColor": "#CCCCCC",
+                        "borderRadius": "4px",
+                        "borderStyle": "solid",
+                        "borderWidth": "1px",
+                        "marginTop": "10px",
+                        "width": "220px"
+                      }
+                    },
+                    "type": "ia.input.text-area"
+                  }
+                ],
+                "meta": {
+                  "name": "NFC"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "alignItems": "center",
+                  "direction": "column",
+                  "justify": "center",
+                  "style": {
+                    "maxWidth": "350px",
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Small"
+            },
+            "props": {
+              "alignItems": "center",
+              "direction": "column",
+              "justify": "center",
+              "style": {
+                "marginTop": "20px",
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Accel_Label"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "16px",
+                        "fontWeight": "bold",
+                        "marginBottom": "10px"
+                      },
+                      "text": "Accelerometer"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "events": {
+                      "dom": {
+                        "onClick": [
+                          {
+                            "config": {
+                              "config": {
+                                "duration": 0,
+                                "sampleRate": 50
+                              },
+                              "context": {},
+                              "mode": "Continuous"
+                            },
+                            "scope": "C",
+                            "type": "native/accelerometer"
+                          },
+                          {
+                            "config": {
+                              "script": "\tif self.props.enabled:\n\t\tself.view.custom.accelOn \u003d True"
+                            },
+                            "scope": "G",
+                            "type": "script"
+                          }
+                        ]
+                      }
+                    },
+                    "meta": {
+                      "name": "AccelOn"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "propConfig": {
+                      "position.basis": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.accelOn"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": "0px",
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": false,
+                                  "output": "35px"
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      },
+                      "props.enabled": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.mobile"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.style.display": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.accelOn"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": "none",
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": false,
+                                  "output": "inline"
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "background": "rgba(130, 150, 150, 1)",
+                        "classes": "Button_Action",
+                        "padding": "0px 10px",
+                        "width": "auto"
+                      },
+                      "text": "Accelerometer (Disabled)"
+                    },
+                    "type": "ia.input.button"
+                  },
+                  {
+                    "events": {
+                      "dom": {
+                        "onClick": [
+                          {
+                            "config": {
+                              "config": {
+                                "duration": -1,
+                                "sampleRate": 0
+                              },
+                              "mode": "Off"
+                            },
+                            "scope": "C",
+                            "type": "native/accelerometer"
+                          },
+                          {
+                            "config": {
+                              "script": "\tif self.props.enabled:\n\t\tself.view.custom.accelOn \u003d False"
+                            },
+                            "scope": "G",
+                            "type": "script"
+                          }
+                        ]
+                      }
+                    },
+                    "meta": {
+                      "name": "AccelOff"
+                    },
+                    "propConfig": {
+                      "position.basis": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.accelOn"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": "0px",
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": true,
+                                  "output": "35px"
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      },
+                      "props.enabled": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.mobile"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.style.display": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.accelOn"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": "inline",
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": false,
+                                  "output": "none"
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "background": "rgba(0, 170, 0, 1)",
+                        "classes": "Button_Action",
+                        "padding": "0px 10px",
+                        "width": "auto"
+                      },
+                      "text": "Accelerometer (Enabled)"
+                    },
+                    "type": "ia.input.button"
+                  },
+                  {
+                    "meta": {
+                      "name": "Table"
+                    },
+                    "position": {
+                      "basis": "64px",
+                      "shrink": 0
+                    },
+                    "propConfig": {
+                      "props.data": {
+                        "binding": {
+                          "config": {
+                            "path": "session.props.device.accelerometer"
+                          },
+                          "transforms": [
+                            {
+                              "code": "\treturn [value]",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "columns": [
+                        {
+                          "align": "center",
+                          "boolean": "checkbox",
+                          "dateFormat": "MM/DD/YYYY",
+                          "editable": false,
+                          "field": "x",
+                          "footer": {
+                            "align": "center",
+                            "style": {
+                              "classes": ""
+                            },
+                            "title": ""
+                          },
+                          "header": {
+                            "align": "center",
+                            "style": {
+                              "classes": ""
+                            },
+                            "title": "X"
+                          },
+                          "number": "value",
+                          "numberFormat": "0,0.00",
+                          "progressBar": {
+                            "bar": {
+                              "color": "#62A3F6",
+                              "linecap": "round",
+                              "width": 5
+                            },
+                            "max": 100,
+                            "track": {
+                              "color": "#DADADA",
+                              "linecap": "round",
+                              "width": 2
+                            },
+                            "value": {
+                              "color": "#7D7D7D",
+                              "show": true
+                            }
+                          },
+                          "render": "number",
+                          "resizable": false,
+                          "sortable": false,
+                          "style": {
+                            "classes": ""
+                          },
+                          "toggleSwitch": {
+                            "color": {
+                              "selected": "#2196F3",
+                              "unselected": "#FFFFFF"
+                            }
+                          },
+                          "viewPath": "",
+                          "width": 80
+                        },
+                        {
+                          "align": "center",
+                          "boolean": "checkbox",
+                          "dateFormat": "MM/DD/YYYY",
+                          "editable": false,
+                          "field": "y",
+                          "footer": {
+                            "align": "center",
+                            "style": {
+                              "classes": ""
+                            },
+                            "title": ""
+                          },
+                          "header": {
+                            "align": "center",
+                            "style": {
+                              "classes": ""
+                            },
+                            "title": "Y"
+                          },
+                          "number": "value",
+                          "numberFormat": "0,0.00",
+                          "progressBar": {
+                            "bar": {
+                              "color": "#62A3F6",
+                              "linecap": "round",
+                              "width": 5
+                            },
+                            "max": 100,
+                            "track": {
+                              "color": "#DADADA",
+                              "linecap": "round",
+                              "width": 2
+                            },
+                            "value": {
+                              "color": "#7D7D7D",
+                              "show": true
+                            }
+                          },
+                          "render": "number",
+                          "resizable": false,
+                          "sortable": false,
+                          "style": {
+                            "classes": ""
+                          },
+                          "toggleSwitch": {
+                            "color": {
+                              "selected": "#2196F3",
+                              "unselected": "#FFFFFF"
+                            }
+                          },
+                          "viewPath": "",
+                          "width": 80
+                        },
+                        {
+                          "align": "center",
+                          "boolean": "checkbox",
+                          "dateFormat": "MM/DD/YYYY",
+                          "editable": false,
+                          "field": "z",
+                          "footer": {
+                            "align": "center",
+                            "style": {
+                              "classes": ""
+                            },
+                            "title": ""
+                          },
+                          "header": {
+                            "align": "center",
+                            "style": {
+                              "classes": ""
+                            },
+                            "title": "Z"
+                          },
+                          "number": "value",
+                          "numberFormat": "0,0.00",
+                          "progressBar": {
+                            "bar": {
+                              "color": "#62A3F6",
+                              "linecap": "round",
+                              "width": 5
+                            },
+                            "max": 100,
+                            "track": {
+                              "color": "#DADADA",
+                              "linecap": "round",
+                              "width": 2
+                            },
+                            "value": {
+                              "color": "#7D7D7D",
+                              "show": true
+                            }
+                          },
+                          "render": "number",
+                          "resizable": false,
+                          "sortable": false,
+                          "style": {
+                            "classes": ""
+                          },
+                          "toggleSwitch": {
+                            "color": {
+                              "selected": "#2196F3",
+                              "unselected": "#FFFFFF"
+                            }
+                          },
+                          "viewPath": "",
+                          "width": 80
+                        }
+                      ],
+                      "minRowHeight": 50,
+                      "pager": {
+                        "bottom": false
+                      },
+                      "selection": {
+                        "enableRowSelection": false
+                      },
+                      "style": {
+                        "height": "63px",
+                        "marginBottom": "10px",
+                        "marginTop": "10px",
+                        "width": "245px"
+                      }
+                    },
+                    "type": "ia.display.table"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Fluid"
+                        },
+                        "position": {
+                          "height": 1,
+                          "width": 1
+                        },
+                        "propConfig": {
+                          "props.color": {
+                            "binding": {
+                              "config": {
+                                "path": "view.custom.accelOn"
+                              },
+                              "transforms": [
+                                {
+                                  "fallback": "#ABF02832",
+                                  "inputType": "scalar",
+                                  "mappings": [
+                                    {
+                                      "input": true,
+                                      "output": "#ABF02882"
+                                    }
+                                  ],
+                                  "outputType": "scalar",
+                                  "type": "map"
+                                }
+                              ],
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "props": {
+                          "path": "material/lens",
+                          "style": {
+                            "stroke": "rgba(0, 0, 0, 0.2)"
+                          }
+                        },
+                        "type": "ia.display.icon"
+                      },
+                      {
+                        "meta": {
+                          "name": "Marks"
+                        },
+                        "position": {
+                          "height": 1,
+                          "width": 1
+                        },
+                        "propConfig": {
+                          "props.color": {
+                            "binding": {
+                              "config": {
+                                "path": "view.custom.accelOn"
+                              },
+                              "transforms": [
+                                {
+                                  "fallback": "#00000012",
+                                  "inputType": "scalar",
+                                  "mappings": [
+                                    {
+                                      "input": true,
+                                      "output": "#0000003D"
+                                    }
+                                  ],
+                                  "outputType": "scalar",
+                                  "type": "map"
+                                }
+                              ],
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "props": {
+                          "path": "material/adjust"
+                        },
+                        "type": "ia.display.icon"
+                      },
+                      {
+                        "custom": {
+                          "previousAccel": {
+                            "timestamp": 0,
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                          }
+                        },
+                        "meta": {
+                          "name": "Bubble"
+                        },
+                        "position": {
+                          "height": 0.2,
+                          "width": 0.2
+                        },
+                        "propConfig": {
+                          "custom.currentAccel": {
+                            "binding": {
+                              "config": {
+                                "path": "session.props.device.accelerometer"
+                              },
+                              "type": "property"
+                            },
+                            "onChange": {
+                              "enabled": null,
+                              "script": "\tif previousValue and previousValue.value:\n\t\tself.custom.previousAccel \u003d previousValue.value"
+                            }
+                          },
+                          "position.x": {
+                            "binding": {
+                              "config": {
+                                "path": "this.custom.currentAccel"
+                              },
+                              "transforms": [
+                                {
+                                  "code": "\tx \u003d (value.x + self.custom.previousAccel.x) / 2.0\n\treturn min(max(x / 9.8 + 0.4, 0.0), 0.8) ",
+                                  "type": "script"
+                                }
+                              ],
+                              "type": "property"
+                            }
+                          },
+                          "position.y": {
+                            "binding": {
+                              "config": {
+                                "path": "this.custom.currentAccel"
+                              },
+                              "transforms": [
+                                {
+                                  "code": "\ty \u003d (value.y + self.custom.previousAccel.y) / 2.0\n\treturn min(max(y / -9.8 + 0.4, 0.0), 0.8) ",
+                                  "type": "script"
+                                }
+                              ],
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "props": {
+                          "color": "#55555582",
+                          "path": "material/timelapse",
+                          "style": {
+                            "height": "25px",
+                            "position": "absolute",
+                            "width": "25px"
+                          }
+                        },
+                        "type": "ia.display.icon"
+                      }
+                    ],
+                    "meta": {
+                      "name": "CoordinateContainer"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "aspectRatio": "1x1",
+                      "mode": "percent",
+                      "style": {
+                        "height": "200px",
+                        "width": "200px"
+                      }
+                    },
+                    "type": "ia.container.coord"
+                  }
+                ],
+                "meta": {
+                  "name": "Accel Display"
+                },
+                "position": {
+                  "basis": "350px",
+                  "shrink": 0
+                },
+                "props": {
+                  "alignItems": "center",
+                  "direction": "column",
+                  "style": {
+                    "borderColor": "var(--neutral-50)",
+                    "borderStyle": "solid",
+                    "borderWidth": "2px",
+                    "height": "380px",
+                    "marginBottom": "20px",
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "NFC_Label"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "16px",
+                        "fontWeight": "bold",
+                        "marginBottom": "10px"
+                      },
+                      "text": "Barcode Scanner"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Barcode 2"
+                    },
+                    "position": {
+                      "basis": "50px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "elements": [
+                        {
+                          "d": "M0,0 l999,0 0,666 -999,0 0,-666z",
+                          "fill": {
+                            "paint": "#fff"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M0,0 l61,0 0,666 -61,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M83,0 l62,0 0,666 -62,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M209,0 l62,0 0,666 -62,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M291,0 l20,0 0,666 -20,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M333,0 l42,0 0,666 -42,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M395,0 l42,0 0,666 -42,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M499,0 l62,0 0,666 -62,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M583,0 l62,0 0,666 -62,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M791,0 l62,0 0,666 -62,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M665,0 l20,0 0,666 -20,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M749,0 l20,0 0,666 -20,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M875,0 l20,0 0,666 -20,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M917,0 l42,0 0,666 -42,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        },
+                        {
+                          "d": "M979,0 l20,0 0,666 -20,0 0,-666z",
+                          "fill": {
+                            "paint": "#000"
+                          },
+                          "name": "path",
+                          "style": {},
+                          "type": "path"
+                        }
+                      ],
+                      "style": {
+                        "marginBottom": "10px"
+                      },
+                      "viewBox": "0 0 999 666"
+                    },
+                    "type": "ia.shapes.svg"
+                  },
+                  {
+                    "events": {
+                      "dom": {
+                        "onClick": {
+                          "config": {
+                            "config": {}
+                          },
+                          "scope": "C",
+                          "type": "native/barcode"
+                        }
+                      }
+                    },
+                    "meta": {
+                      "name": "Scan"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "propConfig": {
+                      "props.enabled": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.mobile"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "path": "this.props.enabled"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": "Scan Barcode (Disabled)",
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": true,
+                                  "output": "Scan Barcode"
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "classes": "Button_Action",
+                        "marginBottom": "10px",
+                        "width": "140px"
+                      }
+                    },
+                    "type": "ia.input.button"
+                  },
+                  {
+                    "meta": {
+                      "name": "Barcodes"
+                    },
+                    "position": {
+                      "basis": "100px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "path": "session.custom.device.barcode"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "borderColor": "#CCCCCC",
+                        "borderRadius": "4px",
+                        "borderStyle": "solid",
+                        "borderWidth": "1px",
+                        "width": "220px"
+                      }
+                    },
+                    "type": "ia.input.text-area"
+                  }
+                ],
+                "meta": {
+                  "name": "Barcode"
+                },
+                "position": {
+                  "basis": "350px"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "direction": "column",
+                  "style": {
+                    "borderColor": "var(--neutral-50)",
+                    "borderStyle": "solid",
+                    "borderWidth": "2px",
+                    "height": "380px",
+                    "marginBottom": "20px",
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "FileUpload_Label"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "16px",
+                        "fontWeight": "bold",
+                        "marginBottom": "10px"
+                      },
+                      "text": "File Upload"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "path": "material/publish",
+                      "style": {
+                        "height": "70px",
+                        "marginBottom": "10px",
+                        "width": "70px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  },
+                  {
+                    "meta": {
+                      "name": "FileUpload"
+                    },
+                    "position": {
+                      "basis": "100px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "style": {
+                        "width": "260px"
+                      }
+                    },
+                    "type": "ia.input.fileupload"
+                  }
+                ],
+                "meta": {
+                  "name": "File Upload"
+                },
+                "position": {
+                  "basis": "350px",
+                  "shrink": 0
+                },
+                "props": {
+                  "alignItems": "center",
+                  "direction": "column",
+                  "style": {
+                    "borderColor": "var(--neutral-50)",
+                    "borderStyle": "solid",
+                    "borderWidth": "2px",
+                    "height": "380px",
+                    "marginBottom": "20px",
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "GPS_Label"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "16px",
+                        "fontWeight": "bold",
+                        "marginBottom": "10px"
+                      },
+                      "text": "Mobile Device Geolocation"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "position": {
+                      "basis": "65px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "path": "material/location_on",
+                      "style": {
+                        "height": "65px",
+                        "marginBottom": "10px",
+                        "width": "65px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "hasDelegate": true,
+                          "name": "Label"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "style": {
+                            "classes": "Form_Label"
+                          },
+                          "text": "Enable GPS"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Toggle"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "propConfig": {
+                          "props.selected": {
+                            "binding": {
+                              "config": {
+                                "bidirectional": true,
+                                "path": "session.props.geolocation.enabled"
+                              },
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "type": "ia.input.toggle-switch"
+                      }
+                    ],
+                    "meta": {
+                      "name": "Enable"
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "direction": "column",
+                      "justify": "center",
+                      "style": {
+                        "overflow": "visible"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Label"
+                            },
+                            "position": {
+                              "shrink": 0
+                            },
+                            "props": {
+                              "style": {
+                                "textAlign": "center"
+                              },
+                              "text": "Latitude"
+                            },
+                            "type": "ia.display.label"
+                          },
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Value"
+                            },
+                            "position": {
+                              "basis": "36px"
+                            },
+                            "propConfig": {
+                              "props.text": {
+                                "binding": {
+                                  "config": {
+                                    "path": "session.props.geolocation.data.latitude"
+                                  },
+                                  "transforms": [
+                                    {
+                                      "expression": "coalesce(numberFormat({value}, \"#,##0.00\"), \"0.00\")",
+                                      "type": "expression"
+                                    }
+                                  ],
+                                  "type": "property"
+                                }
+                              }
+                            },
+                            "props": {
+                              "style": {
+                                "textAlign": "center"
+                              }
+                            },
+                            "type": "ia.display.label"
+                          }
+                        ],
+                        "meta": {
+                          "name": "Latitude"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "column",
+                          "justify": "center",
+                          "style": {
+                            "marginRight": "10px",
+                            "overflow": "visible",
+                            "width": "75px"
+                          }
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Label"
+                            },
+                            "position": {
+                              "shrink": 0
+                            },
+                            "props": {
+                              "style": {
+                                "textAlign": "center"
+                              },
+                              "text": "Longitude"
+                            },
+                            "type": "ia.display.label"
+                          },
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Value"
+                            },
+                            "position": {
+                              "basis": "36px"
+                            },
+                            "propConfig": {
+                              "props.text": {
+                                "binding": {
+                                  "config": {
+                                    "path": "session.props.geolocation.data.longitude"
+                                  },
+                                  "transforms": [
+                                    {
+                                      "expression": "coalesce(numberFormat({value}, \"#,##0.00\"), \"0.00\")",
+                                      "type": "expression"
+                                    }
+                                  ],
+                                  "type": "property"
+                                }
+                              }
+                            },
+                            "props": {
+                              "style": {
+                                "textAlign": "center"
+                              }
+                            },
+                            "type": "ia.display.label"
+                          }
+                        ],
+                        "meta": {
+                          "name": "Longitude"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "column",
+                          "justify": "space-between",
+                          "style": {
+                            "overflow": "visible",
+                            "width": "75px"
+                          }
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Label"
+                            },
+                            "position": {
+                              "shrink": 0
+                            },
+                            "props": {
+                              "style": {
+                                "textAlign": "center"
+                              },
+                              "text": "Altitude"
+                            },
+                            "type": "ia.display.label"
+                          },
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Value"
+                            },
+                            "position": {
+                              "basis": "36px"
+                            },
+                            "propConfig": {
+                              "props.text": {
+                                "binding": {
+                                  "config": {
+                                    "path": "session.props.geolocation.data.altitude"
+                                  },
+                                  "transforms": [
+                                    {
+                                      "expression": "coalesce(numberFormat({value}, \"#,##0.00\"), \"0.00\")",
+                                      "type": "expression"
+                                    }
+                                  ],
+                                  "type": "property"
+                                }
+                              }
+                            },
+                            "props": {
+                              "style": {
+                                "textAlign": "center"
+                              }
+                            },
+                            "type": "ia.display.label"
+                          }
+                        ],
+                        "meta": {
+                          "name": "Altitude"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "column",
+                          "justify": "center",
+                          "style": {
+                            "marginRight": "10px",
+                            "overflow": "visible",
+                            "width": "75px"
+                          }
+                        },
+                        "type": "ia.container.flex"
+                      }
+                    ],
+                    "meta": {
+                      "name": "Data"
+                    },
+                    "props": {
+                      "justify": "center",
+                      "style": {
+                        "borderColor": "var(--neutral-40)",
+                        "borderStyle": "solid",
+                        "borderWidth": "1px",
+                        "marginTop": "10px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "GPS"
+                },
+                "position": {
+                  "basis": "350px",
+                  "shrink": 0
+                },
+                "props": {
+                  "alignItems": "center",
+                  "direction": "column",
+                  "style": {
+                    "borderColor": "var(--neutral-50)",
+                    "borderStyle": "solid",
+                    "borderWidth": "2px",
+                    "height": "380px",
+                    "marginBottom": "20px",
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "NFC_Label"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "16px",
+                        "fontWeight": "bold",
+                        "marginBottom": "10px"
+                      },
+                      "text": "Near Field Communication"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "position": {
+                      "basis": "75px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "path": "material/nfc",
+                      "style": {
+                        "height": "75px",
+                        "marginBottom": "10px",
+                        "width": "75px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  },
+                  {
+                    "events": {
+                      "dom": {
+                        "onClick": {
+                          "config": {
+                            "config": {
+                              "continuousRead": false,
+                              "enable": true
+                            },
+                            "context": {}
+                          },
+                          "scope": "C",
+                          "type": "native/ndef"
+                        }
+                      }
+                    },
+                    "meta": {
+                      "name": "Scan"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "propConfig": {
+                      "props.enabled": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.mobile"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.mobile"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": "Scan NFC (Disabled)",
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": true,
+                                  "output": "Scan NFC"
+                                },
+                                {
+                                  "input": false,
+                                  "output": "Scan NFC (Disabled)"
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "classes": "Button_Action",
+                        "marginBottom": "10px",
+                        "width": "140px"
+                      }
+                    },
+                    "scripts": {
+                      "customMethods": [],
+                      "extensionFunctions": null,
+                      "messageHandlers": [
+                        {
+                          "messageType": "NFC Data",
+                          "pageScope": false,
+                          "script": "\tdef listToString(list):\n\t\t\u0027\u0027\u0027\n\t\tTurns a list into a string spacing out each element in the list and\n\t\treturns the associated string.\n\t\t\u0027\u0027\u0027\n\t\tstring \u003d \u0027\u0027\n\t\tfor element in list:\n\t\t\tstring +\u003d str(element) + \u0027 \u0027\n\t\treturn string\n\t\t\n\t# Record each record as a dictionary and place inside an array\n\tarray \u003d []\n\tfor row in payload:\n\t\tdata \u003d {\n\t\t\t\t\u0027type\u0027:row[\u0027type\u0027],\n\t\t\t\t\u0027typeNameFormat\u0027:row[\u0027typeNameFormat\u0027],\n\t\t\t\t\u0027payload\u0027:row[\u0027payload\u0027],\n\t\t\t\t\u0027string\u0027:row[\u0027string\u0027],\n\t\t\t\t\u0027bytes\u0027:listToString(row[\u0027bytes\u0027])\n\t\t\t\t}\n\t\tarray.append(data)\n\t\n\t# Open Popup NFC to display records \t\n\tsystem.perspective.openPopup(\u0027Popup_NFC\u0027, \u0027Features/Real-time Status/Mobile/Overview/Popup NFC\u0027, params\u003d{\u0027data\u0027:array}, title\u003d\u0027NFC Values\u0027)",
+                          "sessionScope": true,
+                          "viewScope": false
+                        }
+                      ]
+                    },
+                    "type": "ia.input.button"
+                  },
+                  {
+                    "meta": {
+                      "name": "NFC"
+                    },
+                    "position": {
+                      "basis": "100px",
+                      "shrink": 0
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "path": "session.custom.device.nfc"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "borderColor": "#CCCCCC",
+                        "borderRadius": "4px",
+                        "borderStyle": "solid",
+                        "borderWidth": "1px",
+                        "width": "220px"
+                      }
+                    },
+                    "type": "ia.input.text-area"
+                  }
+                ],
+                "meta": {
+                  "name": "NFC"
+                },
+                "position": {
+                  "basis": "350px",
+                  "shrink": 0
+                },
+                "props": {
+                  "alignItems": "center",
+                  "direction": "column",
+                  "style": {
+                    "borderColor": "var(--neutral-50)",
+                    "borderStyle": "solid",
+                    "borderWidth": "2px",
+                    "height": "380px",
+                    "marginBottom": "20px",
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Large"
+            },
+            "position": {
+              "size": "large"
+            },
+            "props": {
+              "justify": "space-evenly",
+              "style": {
+                "marginTop": "20px",
+                "overflow": "visible"
+              },
+              "wrap": "wrap"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Native Applications"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "breakpoint": 450
+        },
+        "type": "ia.container.breakpt"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

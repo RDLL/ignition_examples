@@ -1,0 +1,28 @@
+{
+  "pages": {
+    "/": {
+      "title": "main",
+      "viewPath": "dashboard"
+    },
+    "/actors": {
+      "viewPath": "DatabaseExamples/Actors"
+    },
+    "/alert": {
+      "viewPath": "Forms/Alert"
+    },
+    "/alertembeddedview": {
+      "title": "",
+      "viewPath": "Forms/AlertEmbeddedView"
+    },
+    "/dashboard": {
+      "viewPath": "dashboard"
+    },
+    "/getCountryInfo": {
+      "title": "Charts",
+      "viewPath": "Charts/getCountryInfo"
+    }
+  },
+  "sharedDocks": {
+    "cornerPriority": "top-bottom"
+  }
+}

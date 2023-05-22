@@ -1,0 +1,323 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px"
+        },
+        "props": {
+          "params": {
+            "text": "Moving Analog Indicator"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "props": {
+          "text": "The Moving Analog Indicator displays an analog value in context with other information about that value so that you can visually and quickly see if the value is in the normal range or not. "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "MovingAnalogIndicator"
+                    },
+                    "position": {
+                      "basis": "71px"
+                    },
+                    "props": {
+                      "desiredHigh": 65,
+                      "desiredLow": 40,
+                      "highAlarm": 90,
+                      "highHighAlarm": null,
+                      "highInterlock": null,
+                      "lowAlarm": 10,
+                      "lowInterlock": null,
+                      "lowLowAlarm": null
+                    },
+                    "type": "ia.display.moving-analog-indicator"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "basis": "294px"
+                },
+                "props": {
+                  "justify": "center"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "HelpText"
+                },
+                "position": {
+                  "basis": "87px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "The Moving Analog Indicator component allows for extremely fast information delivery. At a glance, it is obvious to an operator whether or not the value is where it should be, or if it needs attention. If the value is in one of its alarm ranges, then that range can be set to change color to get attention."
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance1"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "MovingAnalogIndicator"
+                    },
+                    "position": {
+                      "basis": "71px"
+                    },
+                    "props": {
+                      "desiredHigh": 65,
+                      "desiredLow": 40,
+                      "highAlarm": 90,
+                      "highHighAlarm": null,
+                      "highInterlock": null,
+                      "lowAlarm": 10,
+                      "lowInterlock": null,
+                      "lowLowAlarm": null,
+                      "processValue": 25
+                    },
+                    "type": "ia.display.moving-analog-indicator"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "basis": "294px"
+                },
+                "props": {
+                  "justify": "center"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "HelpText"
+                },
+                "position": {
+                  "basis": "87px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "The current value is shown as an arrow pointing at a bar with segments showing the desired operating range, low and high alarm ranges, and interlock ranges."
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance2"
+            },
+            "position": {
+              "basis": "188px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "MovingAnalogIndicator"
+                    },
+                    "position": {
+                      "basis": "71px"
+                    },
+                    "props": {
+                      "desiredHigh": 65,
+                      "desiredLow": 40,
+                      "highAlarm": 90,
+                      "highHighAlarm": null,
+                      "highInterlock": null,
+                      "label": {
+                        "visible": true
+                      },
+                      "lowAlarm": 10,
+                      "lowInterlock": null,
+                      "lowLowAlarm": null,
+                      "setpointValue": 55
+                    },
+                    "type": "ia.display.moving-analog-indicator"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "basis": "294px"
+                },
+                "props": {
+                  "justify": "center"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "HelpText"
+                },
+                "position": {
+                  "basis": "87px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "The label--\u003evisible property can be used to display the value next to the moving indicator. If the value being displayed in the Moving Analog Indicator component has a corresponding set point, use the setpointValue property to display the set point value, shown in this Moving Analog Indicator (diamond-shape white rectangle within the indicator)."
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance3"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "justify": "space-evenly",
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "wrap": "wrap"
+    },
+    "type": "ia.container.flex"
+  }
+}

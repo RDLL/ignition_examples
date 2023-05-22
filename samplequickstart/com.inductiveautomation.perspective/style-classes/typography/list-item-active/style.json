@@ -1,0 +1,22 @@
+{
+  "base": {
+    "style": {
+      "borderRightColor": "var(--callToAction)",
+      "borderRightStyle": "solid",
+      "borderRightWidth": "4px",
+      "color": "var(--neutral-100)",
+      "fontSize": "14px",
+      "fontWeight": "bold",
+      "paddingLeft": "16px"
+    }
+  },
+  "variants": [
+    {
+      "pseudo": "hover",
+      "style": {
+        "backgroundColor": "var(--callToActionHighlight)",
+        "cursor": "pointer"
+      }
+    }
+  ]
+}

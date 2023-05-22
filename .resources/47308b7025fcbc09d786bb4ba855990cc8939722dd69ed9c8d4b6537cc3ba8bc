@@ -1,0 +1,292 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 812,
+      "width": 1354
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Dashboard"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "marginBottom": "10px"
+          },
+          "text": "The Dashboard in Ignition allows you to let users create their own custom screens directly in the client. Toggle between edit and play mode with the icon on the bottom of the dashboad. In edit mode you can click on the grid and add a widget from a predefined list."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "basis": "40px",
+          "shrink": 0
+        },
+        "props": {
+          "text": "For a deeper dive into what you can do with the dashboard component, check out our Project Template centered around this.  Just create a new project and select \"Perspective Widget Dashboard\" from the Project Templates dropdown."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Dashboard"
+                },
+                "position": {
+                  "basis": "100%"
+                },
+                "props": {
+                  "availableWidgets": [
+                    {
+                      "body": {
+                        "style": {
+                          "classes": ""
+                        }
+                      },
+                      "category": "",
+                      "defaultSize": {
+                        "columnSpan": 2,
+                        "rowSpan": 2
+                      },
+                      "header": {
+                        "enabled": true,
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": "Gauge"
+                      },
+                      "isConfigurable": false,
+                      "minSize": {
+                        "columnSpan": 2,
+                        "rowSpan": 3
+                      },
+                      "name": "Gauge",
+                      "style": {
+                        "classes": ""
+                      },
+                      "viewParams": {
+                        "tagPath": "[Sample_Tags]Ramp/Ramp1"
+                      },
+                      "viewPath": "framework/widgets/gauge"
+                    },
+                    {
+                      "body": {
+                        "style": {
+                          "classes": ""
+                        }
+                      },
+                      "category": "",
+                      "defaultSize": {
+                        "columnSpan": 2,
+                        "rowSpan": 2
+                      },
+                      "header": {
+                        "enabled": true,
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": "Weather"
+                      },
+                      "isConfigurable": false,
+                      "minSize": {
+                        "columnSpan": 2,
+                        "rowSpan": 3
+                      },
+                      "name": "Weather",
+                      "style": {
+                        "classes": ""
+                      },
+                      "viewParams": {
+                        "station": "KSMF"
+                      },
+                      "viewPath": "framework/widgets/weather"
+                    },
+                    {
+                      "body": {
+                        "style": {
+                          "classes": ""
+                        }
+                      },
+                      "category": "",
+                      "defaultSize": {
+                        "columnSpan": 2,
+                        "rowSpan": 2
+                      },
+                      "header": {
+                        "enabled": true,
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": "LED"
+                      },
+                      "isConfigurable": false,
+                      "minSize": {
+                        "columnSpan": 1,
+                        "rowSpan": 1
+                      },
+                      "name": "LED",
+                      "style": {
+                        "classes": ""
+                      },
+                      "viewParams": {
+                        "tagPath": "[Sample_Tags]Ramp/Ramp2"
+                      },
+                      "viewPath": "framework/widgets/led"
+                    },
+                    {
+                      "body": {
+                        "style": {
+                          "classes": ""
+                        }
+                      },
+                      "category": "",
+                      "defaultSize": {
+                        "columnSpan": 2,
+                        "rowSpan": 2
+                      },
+                      "header": {
+                        "enabled": true,
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": "Time Series Chart"
+                      },
+                      "isConfigurable": false,
+                      "minSize": {
+                        "columnSpan": 3,
+                        "rowSpan": 3
+                      },
+                      "name": "Time Series Chart",
+                      "style": {
+                        "classes": ""
+                      },
+                      "viewParams": {
+                        "tagPath": "[Sample_Tags]Realistic/Realistic1"
+                      },
+                      "viewPath": "framework/widgets/time-series-chart"
+                    },
+                    {
+                      "body": {
+                        "style": {
+                          "classes": ""
+                        }
+                      },
+                      "category": "",
+                      "defaultSize": {
+                        "columnSpan": 4,
+                        "rowSpan": 3
+                      },
+                      "header": {
+                        "enabled": true,
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": "Alarm Status"
+                      },
+                      "isConfigurable": false,
+                      "minSize": {
+                        "columnSpan": 3,
+                        "rowSpan": 2
+                      },
+                      "name": "Alarm Status",
+                      "style": {
+                        "classes": ""
+                      },
+                      "viewParams": {},
+                      "viewPath": "framework/widgets/alarm-status"
+                    }
+                  ],
+                  "isEditing": true
+                },
+                "type": "ia.display.dashboard"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance1"
+            },
+            "position": {
+              "grow": 1
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "572px",
+          "grow": 1
+        },
+        "props": {
+          "style": {
+            "marginLeft": "20px",
+            "marginRight": "20px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Markdown"
+        },
+        "props": {
+          "markdown": {
+            "escapeHtml": false
+          },
+          "source": "\u003cp\u003eFor more information on using the Dashboard component, refer to: \u003ca style\u003d\"color:var(--callToAction);text-decoration:none;\" href\u003d\"https://links.inductiveautomation.com/quickstart-dashboard\"\u003ehttps://links.inductiveautomation.com/quickstart-dashboard\u003c/a\u003e\u003c/p\u003e",
+          "style": {
+            "marginBottom": "20px",
+            "marginTop": "20px"
+          }
+        },
+        "type": "ia.display.markdown"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

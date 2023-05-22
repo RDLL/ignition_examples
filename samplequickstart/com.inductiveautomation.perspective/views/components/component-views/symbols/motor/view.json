@@ -1,0 +1,867 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 1186
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Motor"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The Motor component is a smart symbol which can be customized to match the desired look of your application. Below are some the properties that can be adjusted in the designer. "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Motor"
+        },
+        "position": {
+          "basis": "215px"
+        },
+        "props": {
+          "animated": false,
+          "animationSpeed": "100",
+          "appearance": "simple",
+          "feet": "top",
+          "label": {
+            "justify": "left",
+            "location": "right"
+          },
+          "orientation": "top",
+          "style": {
+            "borderColor": "#0C53FC",
+            "borderStyle": "dotted",
+            "borderWidth": "1px",
+            "marginTop": "20px",
+            "padding": "4px",
+            "width": 200
+          },
+          "value": {
+            "justify": "left",
+            "location": "top"
+          }
+        },
+        "type": "ia.symbol.motor"
+      },
+      {
+        "meta": {
+          "name": "Label_Motor"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "style": {
+            "classes": "components/Label"
+          },
+          "text": "Motor"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "400px"
+            },
+            "props": {
+              "text": "Appearance"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "basis": "500px"
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": ".../Motor.props.appearance"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Simple",
+                  "value": "simple"
+                },
+                {
+                  "label": "P\u0026ID",
+                  "value": "p\u0026id"
+                },
+                {
+                  "label": "Mimic",
+                  "value": "mimic"
+                },
+                {
+                  "label": "Auto",
+                  "value": "auto"
+                }
+              ]
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "Appearance"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "props": {
+          "style": {
+            "alignSelf": "stretch",
+            "classes": "components/Row"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "400px"
+            },
+            "props": {
+              "text": "Animation Speed"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "TextField"
+            },
+            "position": {
+              "basis": "500px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": ".../Motor.props.animationSpeed"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.input.text-field"
+          }
+        ],
+        "meta": {
+          "name": "Animated"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "props": {
+          "style": {
+            "alignSelf": "stretch",
+            "classes": "components/Row"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "400px"
+            },
+            "props": {
+              "text": "State"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "basis": "500px"
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": ".../Motor.props.state"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "allowCustomOptions": true,
+              "options": [
+                {
+                  "label": "Default",
+                  "value": "default"
+                },
+                {
+                  "label": "Running",
+                  "value": "running"
+                },
+                {
+                  "label": "Stopped",
+                  "value": "stopped"
+                },
+                {
+                  "label": "Faulted",
+                  "value": "faulted"
+                }
+              ]
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "State"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "props": {
+          "style": {
+            "alignSelf": "stretch",
+            "classes": "components/Row"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "400px"
+            },
+            "props": {
+              "text": "Orientation"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "basis": "500px"
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": ".../Motor.props.orientation"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Top",
+                  "value": "top"
+                },
+                {
+                  "label": "Bottom",
+                  "value": "bottom"
+                },
+                {
+                  "label": "Left",
+                  "value": "left"
+                },
+                {
+                  "label": "Right",
+                  "value": "right"
+                }
+              ]
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "Orientation"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "props": {
+          "style": {
+            "alignSelf": "stretch",
+            "classes": "components/Row"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "400px"
+            },
+            "props": {
+              "text": "Feet"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "basis": "500px"
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "{.../Motor.props.appearance} !\u003d \"p\u0026id\""
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": ".../Motor.props.feet"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Top",
+                  "value": "top"
+                },
+                {
+                  "label": "Bottom",
+                  "value": "bottom"
+                },
+                {
+                  "label": "Left",
+                  "value": "left"
+                },
+                {
+                  "label": "Right",
+                  "value": "right"
+                }
+              ]
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "Feet"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "props": {
+          "style": {
+            "alignSelf": "stretch",
+            "classes": "components/Row"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Label_Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "style": {
+            "classes": "components/Label"
+          },
+          "text": "Label"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "400px"
+                },
+                "props": {
+                  "text": "Text"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "TextField"
+                },
+                "position": {
+                  "basis": "500px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "path": "..../Motor.props.label.text"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "placeholder": "Motor"
+                },
+                "type": "ia.input.text-field"
+              }
+            ],
+            "meta": {
+              "name": "Text"
+            },
+            "position": {
+              "basis": "30px"
+            },
+            "props": {
+              "style": {
+                "alignSelf": "stretch",
+                "classes": "components/Row"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "400px"
+                },
+                "props": {
+                  "text": "Location"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Dropdown"
+                },
+                "position": {
+                  "basis": "500px"
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "path": "..../Motor.props.label.location"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "options": [
+                    {
+                      "label": "Top",
+                      "value": "top"
+                    },
+                    {
+                      "label": "Bottom",
+                      "value": "bottom"
+                    },
+                    {
+                      "label": "Left",
+                      "value": "left"
+                    },
+                    {
+                      "label": "Right",
+                      "value": "right"
+                    },
+                    {
+                      "label": "Hidden",
+                      "value": "hidden"
+                    }
+                  ]
+                },
+                "type": "ia.input.dropdown"
+              }
+            ],
+            "meta": {
+              "name": "Orientation"
+            },
+            "position": {
+              "basis": "30px"
+            },
+            "props": {
+              "style": {
+                "alignSelf": "stretch",
+                "classes": "components/Row"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "400px"
+                },
+                "props": {
+                  "text": "Justify"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Dropdown"
+                },
+                "position": {
+                  "basis": "500px"
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "path": "..../Motor.props.label.justify"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "options": [
+                    {
+                      "label": "Left",
+                      "value": "left"
+                    },
+                    {
+                      "label": "Center",
+                      "value": "center"
+                    },
+                    {
+                      "label": "Right",
+                      "value": "right"
+                    }
+                  ]
+                },
+                "type": "ia.input.dropdown"
+              }
+            ],
+            "meta": {
+              "name": "Justify"
+            },
+            "position": {
+              "basis": "30px"
+            },
+            "props": {
+              "style": {
+                "alignSelf": "stretch",
+                "classes": "components/Row"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Label_Section"
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "alignSelf": "stretch"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Label_Value"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "style": {
+            "classes": "components/Label"
+          },
+          "text": "Value"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "400px"
+                },
+                "props": {
+                  "text": "Text"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "TextField"
+                },
+                "position": {
+                  "basis": "500px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "path": "..../Motor.props.value.text"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "placeholder": "100%"
+                },
+                "type": "ia.input.text-field"
+              }
+            ],
+            "meta": {
+              "name": "Text"
+            },
+            "position": {
+              "basis": "30px"
+            },
+            "props": {
+              "style": {
+                "alignSelf": "stretch",
+                "classes": "components/Row"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "400px"
+                },
+                "props": {
+                  "text": "Location"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Dropdown"
+                },
+                "position": {
+                  "basis": "500px"
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "path": "..../Motor.props.value.location"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "options": [
+                    {
+                      "label": "Top",
+                      "value": "top"
+                    },
+                    {
+                      "label": "Bottom",
+                      "value": "bottom"
+                    },
+                    {
+                      "label": "Left",
+                      "value": "left"
+                    },
+                    {
+                      "label": "Right",
+                      "value": "right"
+                    },
+                    {
+                      "label": "Hidden",
+                      "value": "hidden"
+                    }
+                  ]
+                },
+                "type": "ia.input.dropdown"
+              }
+            ],
+            "meta": {
+              "name": "Orientation"
+            },
+            "position": {
+              "basis": "30px"
+            },
+            "props": {
+              "style": {
+                "alignSelf": "stretch",
+                "classes": "components/Row"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "400px"
+                },
+                "props": {
+                  "text": "Justify"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Dropdown"
+                },
+                "position": {
+                  "basis": "500px"
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "path": "..../Motor.props.value.justify"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "options": [
+                    {
+                      "label": "Left",
+                      "value": "left"
+                    },
+                    {
+                      "label": "Center",
+                      "value": "center"
+                    },
+                    {
+                      "label": "Right",
+                      "value": "right"
+                    }
+                  ]
+                },
+                "type": "ia.input.dropdown"
+              }
+            ],
+            "meta": {
+              "name": "Justify"
+            },
+            "position": {
+              "basis": "30px"
+            },
+            "props": {
+              "style": {
+                "alignSelf": "stretch",
+                "classes": "components/Row"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Value_Section"
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "alignSelf": "stretch"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

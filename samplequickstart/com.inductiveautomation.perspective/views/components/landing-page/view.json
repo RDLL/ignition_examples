@@ -1,0 +1,58 @@
+{
+  "custom": {},
+  "params": {
+    "componentView": "chart-range-selector",
+    "folder": "charts"
+  },
+  "propConfig": {
+    "params.componentView": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.folder": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1187,
+      "width": 1400
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "selectedComponent"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.path": {
+            "binding": {
+              "config": {
+                "expression": "\"components/component-views/\" + {view.params.folder} + \"/\" + {view.params.componentView} "
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "marginLeft": 22,
+        "marginRight": 22,
+        "padding": 10
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

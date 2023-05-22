@@ -1,0 +1,17 @@
+{
+  "scope": "A",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "code.py"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "rdll",
+      "timestamp": "2023-05-18T17:11:26Z"
+    },
+    "hintScope": 2,
+    "lastModificationSignature": "e5a9b2dfe5676cc315c0f977fc35a32af4bba32987b4043dfa968c5edf819e8d"
+  }
+}

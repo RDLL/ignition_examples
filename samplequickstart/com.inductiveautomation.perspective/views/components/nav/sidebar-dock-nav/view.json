@@ -1,0 +1,570 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 256
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Accordion"
+        },
+        "position": {
+          "basis": "256px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "items": [
+            {
+              "body": {
+                "height": "auto",
+                "style": {
+                  "classes": "",
+                  "margin": 0
+                },
+                "useDefaultViewHeight": true,
+                "useDefaultViewWidth": false,
+                "viewParams": {},
+                "viewPath": "components/nav/charts"
+              },
+              "expanded": true,
+              "header": {
+                "content": {
+                  "style": {
+                    "classes": "typography/list-heading-components"
+                  },
+                  "text": "Charts",
+                  "type": "text",
+                  "useDefaultViewHeight": false,
+                  "useDefaultViewWidth": false,
+                  "viewParams": {},
+                  "viewPath": ""
+                },
+                "height": "40px",
+                "reverse": false,
+                "style": {
+                  "classes": "typography/list-heading"
+                },
+                "toggle": {
+                  "collapsedIcon": {
+                    "color": "",
+                    "path": "material/expand_more",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "enabled": true,
+                  "expandedIcon": {
+                    "color": "",
+                    "path": "material/expand_less",
+                    "style": {
+                      "classes": "",
+                      "key": "value"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "body": {
+                "height": "auto",
+                "style": {
+                  "classes": "",
+                  "margin": "0px"
+                },
+                "useDefaultViewHeight": true,
+                "useDefaultViewWidth": false,
+                "viewParams": {},
+                "viewPath": "components/nav/containers"
+              },
+              "expanded": false,
+              "header": {
+                "content": {
+                  "style": {
+                    "classes": "typography/list-heading-components"
+                  },
+                  "text": "Containers",
+                  "type": "text",
+                  "useDefaultViewHeight": false,
+                  "useDefaultViewWidth": false,
+                  "viewParams": {},
+                  "viewPath": ""
+                },
+                "height": "40px",
+                "reverse": false,
+                "style": {
+                  "classes": "typography/list-heading"
+                },
+                "toggle": {
+                  "collapsedIcon": {
+                    "color": "",
+                    "path": "material/expand_more",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "enabled": true,
+                  "expandedIcon": {
+                    "color": "",
+                    "path": "material/expand_less",
+                    "style": {
+                      "classes": ""
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "body": {
+                "height": "auto",
+                "style": {
+                  "classes": "",
+                  "margin": "0px"
+                },
+                "useDefaultViewHeight": true,
+                "useDefaultViewWidth": false,
+                "viewParams": {},
+                "viewPath": "components/nav/display"
+              },
+              "expanded": false,
+              "header": {
+                "content": {
+                  "style": {
+                    "classes": "typography/list-heading-components"
+                  },
+                  "text": "Display",
+                  "type": "text",
+                  "useDefaultViewHeight": false,
+                  "useDefaultViewWidth": false,
+                  "viewParams": {},
+                  "viewPath": ""
+                },
+                "height": "40px",
+                "reverse": false,
+                "style": {
+                  "classes": "typography/list-heading"
+                },
+                "toggle": {
+                  "collapsedIcon": {
+                    "color": "",
+                    "path": "material/expand_more",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "enabled": true,
+                  "expandedIcon": {
+                    "color": "",
+                    "path": "material/expand_less",
+                    "style": {
+                      "classes": ""
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "body": {
+                "height": "auto",
+                "style": {
+                  "classes": "",
+                  "margin": "0px"
+                },
+                "useDefaultViewHeight": true,
+                "useDefaultViewWidth": false,
+                "viewParams": {},
+                "viewPath": "components/nav/embedding"
+              },
+              "expanded": false,
+              "header": {
+                "content": {
+                  "style": {
+                    "classes": "typography/list-heading-components"
+                  },
+                  "text": "Embedding",
+                  "type": "text",
+                  "useDefaultViewHeight": false,
+                  "useDefaultViewWidth": false,
+                  "viewParams": {},
+                  "viewPath": ""
+                },
+                "height": "40px",
+                "reverse": false,
+                "style": {
+                  "classes": "typography/list-heading"
+                },
+                "toggle": {
+                  "collapsedIcon": {
+                    "color": "",
+                    "path": "material/expand_more",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "enabled": true,
+                  "expandedIcon": {
+                    "color": "",
+                    "path": "material/expand_less",
+                    "style": {
+                      "classes": ""
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "body": {
+                "height": "auto",
+                "style": {
+                  "classes": "",
+                  "margin": "0px"
+                },
+                "useDefaultViewHeight": true,
+                "useDefaultViewWidth": false,
+                "viewParams": {},
+                "viewPath": "components/nav/input"
+              },
+              "expanded": false,
+              "header": {
+                "content": {
+                  "style": {
+                    "classes": "typography/list-heading-components"
+                  },
+                  "text": "Input",
+                  "type": "text",
+                  "useDefaultViewHeight": false,
+                  "useDefaultViewWidth": false,
+                  "viewParams": {},
+                  "viewPath": ""
+                },
+                "height": "40px",
+                "reverse": false,
+                "style": {
+                  "classes": "typography/list-heading"
+                },
+                "toggle": {
+                  "collapsedIcon": {
+                    "color": "",
+                    "path": "material/expand_more",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "enabled": true,
+                  "expandedIcon": {
+                    "color": "",
+                    "path": "material/expand_less",
+                    "style": {
+                      "classes": ""
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "body": {
+                "height": "auto",
+                "style": {
+                  "classes": "",
+                  "margin": "0px"
+                },
+                "useDefaultViewHeight": true,
+                "useDefaultViewWidth": false,
+                "viewParams": {},
+                "viewPath": "components/nav/navigation"
+              },
+              "expanded": false,
+              "header": {
+                "content": {
+                  "style": {
+                    "classes": "typography/list-heading-components"
+                  },
+                  "text": "Navigation",
+                  "type": "text",
+                  "useDefaultViewHeight": false,
+                  "useDefaultViewWidth": false,
+                  "viewParams": {},
+                  "viewPath": ""
+                },
+                "height": "40px",
+                "reverse": false,
+                "style": {
+                  "classes": "typography/list-heading"
+                },
+                "toggle": {
+                  "collapsedIcon": {
+                    "color": "",
+                    "path": "material/expand_more",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "enabled": true,
+                  "expandedIcon": {
+                    "color": "",
+                    "path": "material/expand_less",
+                    "style": {
+                      "classes": ""
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "body": {
+                "height": "auto",
+                "style": {
+                  "classes": "",
+                  "margin": "0px"
+                },
+                "useDefaultViewHeight": true,
+                "useDefaultViewWidth": false,
+                "viewParams": {},
+                "viewPath": "components/nav/reporting"
+              },
+              "expanded": false,
+              "header": {
+                "content": {
+                  "style": {
+                    "classes": "typography/list-heading-components"
+                  },
+                  "text": "Reporting",
+                  "type": "text",
+                  "useDefaultViewHeight": false,
+                  "useDefaultViewWidth": false,
+                  "viewParams": {},
+                  "viewPath": ""
+                },
+                "height": "40px",
+                "reverse": false,
+                "style": {
+                  "classes": "typography/list-heading"
+                },
+                "toggle": {
+                  "collapsedIcon": {
+                    "color": "",
+                    "path": "material/expand_more",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "enabled": true,
+                  "expandedIcon": {
+                    "color": "",
+                    "path": "material/expand_less",
+                    "style": {
+                      "classes": ""
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "body": {
+                "height": "auto",
+                "style": {
+                  "classes": "",
+                  "margin": "0px"
+                },
+                "useDefaultViewHeight": true,
+                "useDefaultViewWidth": false,
+                "viewParams": {},
+                "viewPath": "components/nav/symbols"
+              },
+              "expanded": false,
+              "header": {
+                "content": {
+                  "style": {
+                    "classes": "typography/list-heading-components"
+                  },
+                  "text": "Symbols",
+                  "type": "text",
+                  "useDefaultViewHeight": false,
+                  "useDefaultViewWidth": false,
+                  "viewParams": {},
+                  "viewPath": ""
+                },
+                "height": "40px",
+                "reverse": false,
+                "style": {
+                  "classes": "typography/list-heading"
+                },
+                "toggle": {
+                  "collapsedIcon": {
+                    "color": "",
+                    "path": "material/expand_more",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "enabled": true,
+                  "expandedIcon": {
+                    "color": "",
+                    "path": "material/expand_less",
+                    "style": {
+                      "classes": ""
+                    }
+                  }
+                }
+              }
+            }
+          ],
+          "style": {
+            "borderBottom": "none",
+            "borderTop": "none"
+          }
+        },
+        "scripts": {
+          "customMethods": [],
+          "extensionFunctions": null,
+          "messageHandlers": [
+            {
+              "messageType": "expand-collapse",
+              "pageScope": true,
+              "script": "\tstate\u003dpayload \n\t\n\tself.props.items[0].expanded \u003d state\n\tself.props.items[1].expanded \u003d state\n\tself.props.items[2].expanded \u003d state\n\tself.props.items[3].expanded \u003d state\n\tself.props.items[4].expanded \u003d state\n\tself.props.items[5].expanded \u003d state\n\tself.props.items[6].expanded \u003d state",
+              "sessionScope": false,
+              "viewScope": false
+            }
+          ]
+        },
+        "type": "ia.display.accordion"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tpayload\u003dTrue\n\t\n\tsystem.perspective.sendMessage(\u0027expand-collapse\u0027, payload, scope \u003d \u0027page\u0027)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "btn-expand"
+            },
+            "position": {
+              "basis": "80px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "if(\n\t{.../Accordion.props.items[0].expanded} \u003d true \u0026\u0026 \n\t{.../Accordion.props.items[1].expanded} \u003d true \u0026\u0026 \n\t{.../Accordion.props.items[2].expanded} \u003d true \u0026\u0026 \n\t{.../Accordion.props.items[3].expanded} \u003d true \u0026\u0026 \n\t{.../Accordion.props.items[4].expanded} \u003d true \u0026\u0026 \n\t{.../Accordion.props.items[5].expanded} \u003d true \u0026\u0026 \n\t{.../Accordion.props.items[6].expanded} \u003d true, \n\tfalse, \n\ttrue \n)"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "image": {
+                "height": 16,
+                "icon": {
+                  "path": "material/unfold_more"
+                },
+                "width": 16
+              },
+              "primary": false,
+              "style": {
+                "marginRight": "0.25rem"
+              },
+              "text": "Expand all",
+              "textStyle": {
+                "fontWeight": "normal"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tpayload\u003dFalse\n\t\n\tsystem.perspective.sendMessage(\u0027expand-collapse\u0027, payload, scope \u003d \u0027page\u0027)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "btn-collapse"
+            },
+            "position": {
+              "basis": "80px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "if(\n\t{.../Accordion.props.items[0].expanded} \u003d false \u0026\u0026 \n\t{.../Accordion.props.items[1].expanded} \u003d false \u0026\u0026 \n\t{.../Accordion.props.items[2].expanded} \u003d false \u0026\u0026 \n\t{.../Accordion.props.items[3].expanded} \u003d false \u0026\u0026 \n\t{.../Accordion.props.items[4].expanded} \u003d false \u0026\u0026 \n\t{.../Accordion.props.items[5].expanded} \u003d false \u0026\u0026 \n\t{.../Accordion.props.items[6].expanded} \u003d false, \n\tfalse, \n\ttrue \n)"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "image": {
+                "height": 16,
+                "icon": {
+                  "path": "material/unfold_less"
+                },
+                "width": 16
+              },
+              "primary": false,
+              "style": {
+                "marginLeft": "0.25rem"
+              },
+              "text": "Collapse all",
+              "textStyle": {
+                "fontWeight": "normal"
+              }
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "48px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "borderLeftColor": "var(--neutral-50)",
+            "borderLeftStyle": "solid",
+            "borderLeftWidth": "1px",
+            "borderRightColor": "var(--neutral-50)",
+            "borderRightStyle": "solid",
+            "borderRightWidth": "1px",
+            "borderTopColor": "var(--neutral-50)",
+            "borderTopStyle": "solid",
+            "borderTopWidth": "1px",
+            "padding": "0.5rem"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "var(--neutral-30)"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

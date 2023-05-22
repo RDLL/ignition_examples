@@ -1,0 +1,22 @@
+{
+  "pages": {
+    "/": {
+      "title": "",
+      "viewPath": "Main/main"
+    },
+    "/delete": {
+      "viewPath": "Modify/delete"
+    },
+    "/generate": {
+      "title": "",
+      "viewPath": "Report/generate"
+    },
+    "/update": {
+      "title": "update",
+      "viewPath": "Modify/update"
+    }
+  },
+  "sharedDocks": {
+    "cornerPriority": "top-bottom"
+  }
+}

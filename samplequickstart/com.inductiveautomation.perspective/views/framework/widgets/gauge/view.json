@@ -1,0 +1,177 @@
+{
+  "custom": {},
+  "params": {
+    "animate": false,
+    "endAngle": 360,
+    "outerAxis": {
+      "color": "#777777",
+      "data": "value",
+      "maxValue": 120,
+      "minValue": 0,
+      "needle": {
+        "color": "#000000",
+        "origin": 0,
+        "reach": 100
+      },
+      "percentRadius": 100,
+      "ranges": [
+        {
+          "color": "#77B6D8",
+          "end": 80,
+          "start": 0,
+          "width": 8
+        },
+        {
+          "color": "#6E94D7",
+          "end": 105,
+          "start": 80,
+          "width": 12
+        },
+        {
+          "color": "#7A6BD5",
+          "end": 120,
+          "start": 105,
+          "width": 16
+        }
+      ],
+      "show": true,
+      "tickMarks": {
+        "color": "#67b7dc",
+        "length": 10,
+        "thickness": 1
+      },
+      "width": 1
+    },
+    "reverseScale": false,
+    "startAngle": 180,
+    "tagPath": ""
+  },
+  "propConfig": {
+    "params.animate": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.endAngle": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.outerAxis": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.reverseScale": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.startAngle": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 218,
+      "width": 349
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Gauge"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.animate": {
+            "binding": {
+              "config": {
+                "expression": "toBoolean({view.params.animate})"
+              },
+              "type": "expr"
+            }
+          },
+          "props.endAngle": {
+            "binding": {
+              "config": {
+                "expression": "toInt({view.params.endAngle})"
+              },
+              "type": "expr"
+            }
+          },
+          "props.outerAxis": {
+            "binding": {
+              "config": {
+                "path": "view.params.outerAxis"
+              },
+              "type": "property"
+            }
+          },
+          "props.reverseScale": {
+            "binding": {
+              "config": {
+                "expression": "toBoolean({view.params.reverseScale})"
+              },
+              "type": "expr"
+            }
+          },
+          "props.startAngle": {
+            "binding": {
+              "config": {
+                "expression": "toInt({view.params.startAngle})"
+              },
+              "type": "expr"
+            }
+          },
+          "props.value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagPath}"
+                },
+                "tagPath": "{1}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "backgroundColor": "",
+          "innerAxis": {
+            "color": "#777777",
+            "data": "secondaryValue",
+            "maxValue": 80,
+            "needle": {
+              "color": "#AAAAAA"
+            },
+            "percentRadius": 85,
+            "show": false,
+            "width": 1
+          },
+          "style": {
+            "classes": []
+          }
+        },
+        "type": "ia.chart.gauge"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "center",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 404,
+      "width": 759
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Checkbox"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Description"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "source": "A Checkbox is a familiar component that represents a bit. It is either on (selected) or off (not selected). In this way, it is functionally equivalent to the Toggle Switch component. However, this component also has a \u0027triState\u0027 property that can be enabled, adding a third state to represent an indeterminate value."
+        },
+        "type": "ia.display.markdown"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Standard:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Simple"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "Simple Checkbox"
+                },
+                "type": "ia.input.checkbox"
+              }
+            ],
+            "meta": {
+              "name": "Standard"
+            },
+            "position": {
+              "basis": "250px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Tri-State:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Tri-State"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "selected": null,
+                  "text": "Tri-State Mode",
+                  "triState": true
+                },
+                "type": "ia.input.checkbox"
+              }
+            ],
+            "meta": {
+              "name": "TriState"
+            },
+            "position": {
+              "basis": "250px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Disabled:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Disabled"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "enabled": false,
+                  "selected": true,
+                  "text": "Disabled"
+                },
+                "type": "ia.input.checkbox"
+              }
+            ],
+            "meta": {
+              "name": "Disabled"
+            },
+            "position": {
+              "basis": "250px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Customized:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Customized"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "checkedIcon": {
+                    "color": {
+                      "enabled": "#FF005D"
+                    },
+                    "path": "material/star"
+                  },
+                  "indeterminateIcon": {
+                    "color": {
+                      "enabled": "#149500"
+                    },
+                    "path": "material/star_half"
+                  },
+                  "style": {
+                    "backgroundColor": "var(--neutral-20)",
+                    "borderBottomLeftRadius": "4px",
+                    "borderBottomRightRadius": "4px",
+                    "borderColor": "gray",
+                    "borderStyle": "solid",
+                    "borderTopLeftRadius": "4px",
+                    "borderTopRightRadius": "4px",
+                    "borderWidth": "2px"
+                  },
+                  "text": "Customized Checkbox",
+                  "triState": true,
+                  "uncheckedIcon": {
+                    "color": {
+                      "enabled": "#0029FF"
+                    },
+                    "path": "material/star_border"
+                  }
+                },
+                "type": "ia.input.checkbox"
+              }
+            ],
+            "meta": {
+              "name": "Customized"
+            },
+            "position": {
+              "basis": "250px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Examples"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "alignContent": "flex-start",
+          "alignItems": "flex-start",
+          "justify": "space-evenly",
+          "style": {
+            "overflow": "visible",
+            "padding": "10px"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

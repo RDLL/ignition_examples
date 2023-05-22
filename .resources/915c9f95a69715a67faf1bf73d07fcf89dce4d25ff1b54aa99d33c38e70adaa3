@@ -1,0 +1,98 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 846,
+      "width": 1291
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Alarm Journal Table"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The Perspective Alarm Journal Table displays the history of the alarm system. It can be configured to show active, cleared, and acknowledged events.\n\nThe Perspective Alarm Journal Table has a number of configuration options that can be used to filter on realtime and historical alarm data, and change how the component displays those alarms. When you first drag the Alarm Journal Table into the Designer, by default, the table will show you the last 8 hours of alarm journal data. You can interface with the journal table in the Designer, in Preview Mode of the Designer, and in a Perspective Session. "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "AlarmJournalTable"
+                },
+                "position": {
+                  "basis": "300px",
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "type": "ia.display.alarmjournaltable"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance1"
+            },
+            "position": {
+              "basis": "500px",
+              "grow": 1
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "overflow": "visible"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

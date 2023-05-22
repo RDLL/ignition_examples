@@ -1,0 +1,358 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 816,
+      "width": 256
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "MenuTree"
+        },
+        "position": {
+          "basis": "100%",
+          "shrink": 0
+        },
+        "props": {
+          "itemStyle": {
+            "classes": "framework/sidebar-items"
+          },
+          "items": [
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/input-barcodeScanner"
+                },
+                "text": "Barcode Scanner Input"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/components/input/barcode-scanner-input",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/input-button"
+                },
+                "text": "Button"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/components/input/button",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/input-checkbox"
+                },
+                "text": "Checkbox"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/components/input/checkbox",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/input-dateTimeInput"
+                },
+                "text": "DateTime Input"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/components/input/date-time-input",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/input-dateTimePicker"
+                },
+                "text": "DateTime Picker"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/components/input/date-time-picker",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/input-dropdown"
+                },
+                "text": "Dropdown"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/components/input/dropdown",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/input-fileUpload"
+                },
+                "text": "File Upload"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/components/input/file-upload",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/input-multiStateButton"
+                },
+                "text": "Multi-State Button"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/components/input/multi-state-button",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/input-numericEntryField"
+                },
+                "text": "Numeric Entry Field"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/components/input/numeric-entry-field",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/input-oneShotButton"
+                },
+                "text": "One-Shot Button"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/components/input/one-shot-button",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/input-passwordField"
+                },
+                "text": "Password Field"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/components/input/password-field",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/input-radioGroup"
+                },
+                "text": "Radio Group"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/components/input/radio-group",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/input-signaturePad"
+                },
+                "text": "Signature Pad"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/components/input/signature-pad",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/input-slider"
+                },
+                "text": "Slider"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/components/input/slider",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/input-textArea"
+                },
+                "text": "Text Area"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/components/input/text-area",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/input-textField"
+                },
+                "text": "Text Field"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/components/input/text-field",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/input-toggleSwitch"
+                },
+                "text": "Toggle Switch"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/components/input/toggle-switch",
+              "visible": true
+            }
+          ]
+        },
+        "type": "ia.navigation.menutree"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

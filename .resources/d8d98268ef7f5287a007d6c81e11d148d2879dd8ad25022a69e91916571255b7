@@ -1,0 +1,168 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 336,
+      "width": 256
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "MenuTree"
+        },
+        "position": {
+          "basis": "100%",
+          "shrink": 0
+        },
+        "props": {
+          "itemStyle": {
+            "classes": "framework/sidebar-items"
+          },
+          "items": [
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "Bindings"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/ignition-101/perspective-features/bindings",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "Transforms"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/ignition-101/perspective-features/transforms",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "Events \u0026 Actions"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/ignition-101/perspective-features/events-actions",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "Themes \u0026 Styles"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/ignition-101/perspective-features/themes-styles",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "Embedded Views"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/ignition-101/perspective-features/embedded-views",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "Containers"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/ignition-101/perspective-features/containers",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "Native App"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/ignition-101/perspective-features/native-app",
+              "visible": true
+            }
+          ]
+        },
+        "type": "ia.navigation.menutree"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

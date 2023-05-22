@@ -1,0 +1,185 @@
+{
+  "custom": {},
+  "params": {
+    "desc": "description here",
+    "image": "/system/images/temp-layout.png",
+    "link": "url",
+    "title": "Layout Title"
+  },
+  "propConfig": {
+    "params.desc": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.image": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.link": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.title": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 330,
+      "width": 392
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "title"
+        },
+        "position": {
+          "basis": "40px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.title"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "borderBottom": "1px solid var(--neutral-50)",
+            "fontSize": "18px",
+            "fontWeight": "bold",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Image"
+        },
+        "position": {
+          "basis": "292px"
+        },
+        "propConfig": {
+          "props.source": {
+            "binding": {
+              "config": {
+                "path": "view.params.image"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "fit": {
+            "mode": "contain"
+          },
+          "style": {
+            "backgroundColor": "#ffffff",
+            "borderBottom": "1px solid var(--neutral-50)"
+          }
+        },
+        "type": "ia.display.image"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "48px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.desc"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "fontSize": "13px"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "newTab": true,
+                    "url": "layouts/{view.params.link}"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "basis": "80px",
+              "shrink": 0
+            },
+            "props": {
+              "image": {
+                "height": 16,
+                "icon": {
+                  "path": "material/open_in_new"
+                },
+                "position": "right",
+                "width": 16
+              },
+              "primary": false,
+              "style": {
+                "margin": "8px 0 8px 8px"
+              },
+              "text": "Open",
+              "textStyle": {
+                "fontSize": "12px"
+              }
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "88px"
+        },
+        "props": {
+          "justify": "space-between",
+          "style": {
+            "padding": "8px 16px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "layouts/layout-card"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

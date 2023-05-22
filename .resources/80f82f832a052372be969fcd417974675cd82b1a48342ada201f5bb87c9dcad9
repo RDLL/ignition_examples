@@ -1,0 +1,968 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1347,
+      "width": 1332
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Bindings"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Description"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "source": "Perspective allows for numerous types of bindings that allow for the dynamic updating of properties associated with Views or their child components. When configuring a binding, it is initially unidirectional: the value on the property that contains the binding will synchronize with whatever it is bound to. For example, if the text property on a Label component is bound to a Tag (via a Tag Binding), then the text on the Label will update to match the value of that Tag. Bindings can also be bidirectional, meaning that when the value of the property changes in some other way, then it will write back to the binding\u0027s source. For example, a Multi-State Button bound bidirectionally to a tag will attempt to write the new selected value to that tag.",
+          "style": {
+            "marginBottom": "10px"
+          }
+        },
+        "type": "ia.display.markdown"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Heading"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "16px",
+                    "fontWeight": "bold",
+                    "marginBottom": "10px",
+                    "textAlign": "center"
+                  },
+                  "text": "Tag Binding"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Value1"
+                },
+                "position": {
+                  "basis": "80px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Realistic/Realistic0"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Value2"
+                },
+                "position": {
+                  "basis": "60px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Random/RandomInteger1"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "CylindricalTank"
+                    },
+                    "position": {
+                      "basis": "136px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Random/RandomDouble2"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "type": "ia.display.cylindrical-tank"
+                  }
+                ],
+                "meta": {
+                  "name": "SizeConstraint"
+                },
+                "position": {
+                  "basis": "200px"
+                },
+                "props": {
+                  "justify": "center",
+                  "style": {
+                    "margin": "20px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Tag"
+            },
+            "position": {
+              "basis": "400px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "borderColor": "var(--neutral-50)",
+                "borderStyle": "solid",
+                "borderWidth": "2px",
+                "height": "380px",
+                "marginBottom": "20px",
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Heading"
+                },
+                "position": {
+                  "basis": "32px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "16px",
+                    "fontWeight": "bold",
+                    "marginBottom": "10px",
+                    "textAlign": "center"
+                  },
+                  "text": "Property Binding"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Pump"
+                },
+                "position": {
+                  "basis": "129px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.animationSpeed": {
+                    "binding": {
+                      "config": {
+                        "path": "../Slider.props.value"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "appearance": "simple",
+                  "label": {
+                    "text": ""
+                  },
+                  "state": "running",
+                  "style": {
+                    "marginTop": "80px"
+                  },
+                  "value": {
+                    "text": ""
+                  }
+                },
+                "type": "ia.symbol.pump"
+              },
+              {
+                "meta": {
+                  "name": "Value"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "../Slider.props.value"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "alignVertical": "bottom",
+                  "style": {
+                    "marginTop": "38px",
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Slider"
+                },
+                "position": {
+                  "basis": "40px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "marginLeft": "10px",
+                    "marginRight": "10px"
+                  },
+                  "value": 30
+                },
+                "type": "ia.input.slider"
+              }
+            ],
+            "meta": {
+              "name": "Property"
+            },
+            "position": {
+              "basis": "400px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "borderColor": "var(--neutral-50)",
+                "borderStyle": "solid",
+                "borderWidth": "2px",
+                "height": "380px",
+                "marginBottom": "20px",
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Heading"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "16px",
+                    "fontWeight": "bold",
+                    "marginBottom": "10px",
+                    "textAlign": "center"
+                  },
+                  "text": "Expression Binding"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Value"
+                },
+                "position": {
+                  "basis": "80px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "\"The value of the tag is: \" + numberFormat({[Sample_Tags]Random/RandomDouble1}, \"0.00\")"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Vessel"
+                },
+                "position": {
+                  "basis": "159px"
+                },
+                "propConfig": {
+                  "props.value.value": {
+                    "binding": {
+                      "config": {
+                        "expression": "{[Sample_Tags]Random/RandomDouble1} * {../Slider.props.value}"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "label": {
+                    "text": ""
+                  },
+                  "value": {}
+                },
+                "type": "ia.symbol.vessel"
+              },
+              {
+                "meta": {
+                  "name": "Scaling"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "\"Scaling: \"+{../Slider.props.value}+\"x\""
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "marginTop": "30px",
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Slider"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "max": 1,
+                  "step": ".1",
+                  "style": {
+                    "marginLeft": "10px",
+                    "marginRight": "10px"
+                  },
+                  "value": 0.5
+                },
+                "type": "ia.input.slider"
+              }
+            ],
+            "meta": {
+              "name": "Expression"
+            },
+            "position": {
+              "basis": "400px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "borderColor": "var(--neutral-50)",
+                "borderStyle": "solid",
+                "borderWidth": "2px",
+                "height": "380px",
+                "marginBottom": "20px",
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Heading"
+                },
+                "position": {
+                  "basis": "32px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "16px",
+                    "fontWeight": "bold",
+                    "marginBottom": "10px",
+                    "textAlign": "center"
+                  },
+                  "text": "Expression Structure Binding"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "SimpleGauge"
+                },
+                "position": {
+                  "basis": "300px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.arc": {
+                    "binding": {
+                      "config": {
+                        "struct": {
+                          "color": "\"#CCCCFF\"",
+                          "cornerRadius": 0,
+                          "width": "{../Slider.props.value}"
+                        },
+                        "waitOnAll": true
+                      },
+                      "type": "expr-struct"
+                    }
+                  },
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Random/RandomInteger1"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "classes": []
+                  }
+                },
+                "type": "ia.chart.simple-gauge"
+              },
+              {
+                "meta": {
+                  "name": "Slider"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "max": 35,
+                  "min": 5,
+                  "style": {
+                    "marginLeft": "10px",
+                    "marginRight": "10px"
+                  },
+                  "value": 25
+                },
+                "type": "ia.input.slider"
+              }
+            ],
+            "meta": {
+              "name": "ExpressionStructure"
+            },
+            "position": {
+              "basis": "400px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "borderColor": "var(--neutral-50)",
+                "borderStyle": "solid",
+                "borderWidth": "2px",
+                "height": "380px",
+                "marginBottom": "20px",
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Heading"
+                },
+                "position": {
+                  "basis": "32px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "16px",
+                    "fontWeight": "bold",
+                    "marginBottom": "10px",
+                    "textAlign": "center"
+                  },
+                  "text": "Named Query Binding"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Table"
+                },
+                "position": {
+                  "basis": "300px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.data": {
+                    "binding": {
+                      "config": {
+                        "polling": {
+                          "enabled": true,
+                          "rate": "5"
+                        },
+                        "queryPath": "Ignition 101/Named Query Binding"
+                      },
+                      "type": "query"
+                    }
+                  }
+                },
+                "props": {
+                  "columns": [
+                    {
+                      "align": "center",
+                      "boolean": "checkbox",
+                      "dateFormat": "MM/DD/YYYY",
+                      "editable": false,
+                      "field": "displaypath",
+                      "footer": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": ""
+                      },
+                      "header": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": "Alarm Display Path"
+                      },
+                      "justify": "auto",
+                      "number": "value",
+                      "numberFormat": "0,0.##",
+                      "progressBar": {
+                        "bar": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "max": 100,
+                        "min": 0,
+                        "track": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "value": {
+                          "enabled": true,
+                          "format": "0,0.##",
+                          "justify": "center",
+                          "style": {
+                            "classes": ""
+                          }
+                        }
+                      },
+                      "render": "auto",
+                      "resizable": true,
+                      "sort": "none",
+                      "sortable": true,
+                      "strictWidth": false,
+                      "style": {
+                        "classes": ""
+                      },
+                      "toggleSwitch": {
+                        "color": {
+                          "selected": "",
+                          "unselected": ""
+                        }
+                      },
+                      "viewParams": {},
+                      "viewPath": "",
+                      "visible": true,
+                      "width": ""
+                    },
+                    {
+                      "align": "center",
+                      "boolean": "checkbox",
+                      "dateFormat": "MM/DD/YYYY HH:mm:ss",
+                      "editable": false,
+                      "field": "eventtime",
+                      "footer": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": ""
+                      },
+                      "header": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": "Event Time"
+                      },
+                      "justify": "auto",
+                      "number": "value",
+                      "numberFormat": "0,0.##",
+                      "progressBar": {
+                        "bar": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "max": 100,
+                        "min": 0,
+                        "track": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "value": {
+                          "enabled": true,
+                          "format": "0,0.##",
+                          "justify": "center",
+                          "style": {
+                            "classes": ""
+                          }
+                        }
+                      },
+                      "render": "date",
+                      "resizable": true,
+                      "sort": "none",
+                      "sortable": true,
+                      "strictWidth": false,
+                      "style": {
+                        "classes": ""
+                      },
+                      "toggleSwitch": {
+                        "color": {
+                          "selected": "",
+                          "unselected": ""
+                        }
+                      },
+                      "viewParams": {},
+                      "viewPath": "",
+                      "visible": true,
+                      "width": ""
+                    }
+                  ],
+                  "pager": {
+                    "bottom": false
+                  },
+                  "style": {
+                    "margin": "10px"
+                  }
+                },
+                "type": "ia.display.table"
+              }
+            ],
+            "meta": {
+              "name": "NamedQuery"
+            },
+            "position": {
+              "basis": "400px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "borderColor": "var(--neutral-50)",
+                "borderStyle": "solid",
+                "borderWidth": "2px",
+                "height": "380px",
+                "marginBottom": "20px",
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Heading"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "16px",
+                    "fontWeight": "bold",
+                    "marginBottom": "10px",
+                    "textAlign": "center"
+                  },
+                  "text": "Tag History Binding"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "TimeSeriesChart"
+                },
+                "position": {
+                  "basis": "200px",
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.series[0].data": {
+                    "binding": {
+                      "config": {
+                        "avoidScanClassValidation": true,
+                        "dateRange": {
+                          "mostRecent": "1",
+                          "mostRecentUnits": "MIN"
+                        },
+                        "ignoreBadQuality": false,
+                        "polling": {
+                          "enabled": true,
+                          "rate": "1"
+                        },
+                        "preventInterpolation": false,
+                        "returnFormat": "Wide",
+                        "returnSize": {
+                          "type": "RAW"
+                        },
+                        "tags": [
+                          {
+                            "path": "[Sample_Tags]Realistic/Realistic0"
+                          }
+                        ],
+                        "valueFormat": "DATASET"
+                      },
+                      "type": "tag-history"
+                    }
+                  }
+                },
+                "props": {
+                  "series": [
+                    {
+                      "name": "Boiler"
+                    }
+                  ]
+                },
+                "type": "ia.chart.timeseries"
+              }
+            ],
+            "meta": {
+              "name": "History"
+            },
+            "position": {
+              "basis": "400px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "borderColor": "var(--neutral-50)",
+                "borderStyle": "solid",
+                "borderWidth": "2px",
+                "height": "380px",
+                "marginBottom": "20px",
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Heading"
+                },
+                "position": {
+                  "basis": "32px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "16px",
+                    "fontWeight": "bold",
+                    "marginBottom": "10px",
+                    "textAlign": "center"
+                  },
+                  "text": "HTTP Binding"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "BindingExample"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "connectTimeout": 60000,
+                        "enableCookies": true,
+                        "polling": {
+                          "enabled": false,
+                          "rate": ""
+                        },
+                        "request": {
+                          "auth": {
+                            "type": "None",
+                            "value": ""
+                          },
+                          "method": "GET",
+                          "url": "\"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/2244/property/MolecularFormula/TXT\""
+                        },
+                        "socketTimeout": 60000
+                      },
+                      "type": "http"
+                    }
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Image"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "fit": {
+                    "height": 200,
+                    "mode": "absolute",
+                    "width": 200
+                  },
+                  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/2244/PNG?record_type\u003d3d",
+                  "tint": {
+                    "color": ""
+                  }
+                },
+                "type": "ia.display.image"
+              }
+            ],
+            "meta": {
+              "name": "HTTP"
+            },
+            "position": {
+              "basis": "400px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "alignItems": "center",
+              "direction": "column",
+              "style": {
+                "borderColor": "var(--neutral-50)",
+                "borderStyle": "solid",
+                "borderWidth": "2px",
+                "height": "380px",
+                "marginBottom": "20px",
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Examples"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "alignContent": "flex-start",
+          "alignItems": "flex-start",
+          "justify": "space-evenly",
+          "style": {
+            "overflow": "visible",
+            "padding": "10px"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

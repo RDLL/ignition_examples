@@ -1,0 +1,124 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 56,
+      "width": 972
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "282px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "color": "var(--neutral-10)",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "textAlign": "center"
+              },
+              "text": "View these screens within the Ignition Designer to fully understand how they\u0027re constructed. "
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "scope-warning"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "session.props.device.type"
+              },
+              "transforms": [
+                {
+                  "fallback": true,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "designer",
+                      "output": false
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "var(--info)",
+            "overflow": "visible",
+            "padding": "2px 8px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "small"
+            },
+            "props": {
+              "path": "framework/header-small-breakpoint"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "large"
+            },
+            "position": {
+              "size": "large"
+            },
+            "props": {
+              "path": "framework/header-large-breakpoint"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "breakpoint"
+        },
+        "position": {
+          "basis": "56px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "breakpoint": 900,
+          "style": {
+            "backgroundColor": "var(--neutral-20)",
+            "borderBottom": "1px solid var(--neutral-50)"
+          }
+        },
+        "type": "ia.container.breakpt"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,477 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px"
+        },
+        "props": {
+          "params": {
+            "text": "Barcode"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "props": {
+          "text": "The Barcode component enables you to display text as a barcode. The component supports 105 different barcode types including Code 128, QR code, EAN-8, and ISBN.\t"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "events": {
+                  "dom": {
+                    "onClick": {
+                      "config": {
+                        "draggable": true,
+                        "id": "JTb1Ga5n",
+                        "modal": false,
+                        "overlayDismiss": false,
+                        "position": {
+                          "height": 150,
+                          "relativeLocation": "bottom",
+                          "width": 300
+                        },
+                        "positionType": "relative",
+                        "resizable": true,
+                        "showCloseIcon": true,
+                        "title": "Info",
+                        "type": "open",
+                        "viewParams": {
+                          "helpText": "{/root/Components/ComponentInstance3/Barcode.custom.helpText}"
+                        },
+                        "viewPath": "EarlyDev/Help/HelpPopup"
+                      },
+                      "scope": "C",
+                      "type": "popup"
+                    },
+                    "onContextMenu": {
+                      "config": {
+                        "draggable": true,
+                        "id": "yIkvPjPr",
+                        "modal": false,
+                        "overlayDismiss": false,
+                        "position": {
+                          "height": 150,
+                          "relativeLocation": "bottom",
+                          "width": 300
+                        },
+                        "positionType": "relative",
+                        "resizable": true,
+                        "showCloseIcon": true,
+                        "title": "Info",
+                        "type": "open",
+                        "viewParams": {
+                          "helpText": "{/root/Components/ComponentInstance3/Barcode.custom.helpText}"
+                        },
+                        "viewPath": "EarlyDev/Help/HelpPopup"
+                      },
+                      "scope": "C",
+                      "type": "popup"
+                    },
+                    "onTouchEnd": {
+                      "config": {
+                        "draggable": true,
+                        "id": "IbdDHmcp",
+                        "modal": false,
+                        "overlayDismiss": false,
+                        "position": {
+                          "height": 150,
+                          "relativeLocation": "bottom",
+                          "width": 300
+                        },
+                        "positionType": "relative",
+                        "resizable": true,
+                        "showCloseIcon": true,
+                        "title": "Info",
+                        "type": "toggle",
+                        "viewParams": {
+                          "helpText": "{/root/Components/ComponentInstance3/Barcode.custom.helpText}"
+                        },
+                        "viewPath": "EarlyDev/Help/HelpPopup"
+                      },
+                      "scope": "C",
+                      "type": "popup"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "Barcode"
+                },
+                "position": {
+                  "basis": "180px"
+                },
+                "props": {
+                  "type": "ean13",
+                  "value": 349483473869
+                },
+                "type": "ia.display.barcode"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "HelpText"
+                },
+                "position": {
+                  "basis": "87px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "This Barcode component has its type property set to ean13. \n\nNote that this particular type of ean13 requires a 13-digit number value."
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance3"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "events": {
+                  "dom": {
+                    "onClick": {
+                      "config": {
+                        "draggable": true,
+                        "id": "JTb1Ga5n",
+                        "modal": false,
+                        "overlayDismiss": false,
+                        "position": {
+                          "height": 150,
+                          "relativeLocation": "bottom",
+                          "width": 300
+                        },
+                        "positionType": "relative",
+                        "resizable": true,
+                        "showCloseIcon": true,
+                        "title": "Info",
+                        "type": "open",
+                        "viewParams": {
+                          "helpText": "{/root/Components/ComponentInstance2/Barcode.custom.helpText}"
+                        },
+                        "viewPath": "EarlyDev/Help/HelpPopup"
+                      },
+                      "scope": "C",
+                      "type": "popup"
+                    },
+                    "onContextMenu": {
+                      "config": {
+                        "draggable": true,
+                        "id": "yIkvPjPr",
+                        "modal": false,
+                        "overlayDismiss": false,
+                        "position": {
+                          "height": 150,
+                          "relativeLocation": "bottom",
+                          "width": 300
+                        },
+                        "positionType": "relative",
+                        "resizable": true,
+                        "showCloseIcon": true,
+                        "title": "Info",
+                        "type": "open",
+                        "viewParams": {
+                          "helpText": "{/root/Components/ComponentInstance2/Barcode.custom.helpText}"
+                        },
+                        "viewPath": "EarlyDev/Help/HelpPopup"
+                      },
+                      "scope": "C",
+                      "type": "popup"
+                    },
+                    "onTouchEnd": {
+                      "config": {
+                        "draggable": true,
+                        "id": "IbdDHmcp",
+                        "modal": false,
+                        "overlayDismiss": false,
+                        "position": {
+                          "height": 150,
+                          "relativeLocation": "bottom",
+                          "width": 300
+                        },
+                        "positionType": "relative",
+                        "resizable": true,
+                        "showCloseIcon": true,
+                        "title": "Info",
+                        "type": "toggle",
+                        "viewParams": {
+                          "helpText": "{/root/Components/ComponentInstance2/Barcode.custom.helpText}"
+                        },
+                        "viewPath": "EarlyDev/Help/HelpPopup"
+                      },
+                      "scope": "C",
+                      "type": "popup"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "Barcode"
+                },
+                "position": {
+                  "basis": "180px"
+                },
+                "props": {
+                  "type": "qrcode",
+                  "value": 2020
+                },
+                "type": "ia.display.barcode"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "HelpText"
+                },
+                "position": {
+                  "basis": "87px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "This Barcode component has its type property set to qrcode. "
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance2"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "events": {
+                  "dom": {
+                    "onClick": {
+                      "config": {
+                        "draggable": true,
+                        "id": "JTb1Ga5n",
+                        "modal": false,
+                        "overlayDismiss": false,
+                        "position": {
+                          "height": 150,
+                          "relativeLocation": "bottom",
+                          "width": 300
+                        },
+                        "positionType": "relative",
+                        "resizable": true,
+                        "showCloseIcon": true,
+                        "title": "Info",
+                        "type": "open",
+                        "viewParams": {
+                          "helpText": "{/root/Components/ComponentInstance1/Barcode.custom.helpText}"
+                        },
+                        "viewPath": "EarlyDev/Help/HelpPopup"
+                      },
+                      "scope": "C",
+                      "type": "popup"
+                    },
+                    "onContextMenu": {
+                      "config": {
+                        "draggable": true,
+                        "id": "yIkvPjPr",
+                        "modal": false,
+                        "overlayDismiss": false,
+                        "position": {
+                          "height": 150,
+                          "relativeLocation": "bottom",
+                          "width": 300
+                        },
+                        "positionType": "relative",
+                        "resizable": true,
+                        "showCloseIcon": true,
+                        "title": "Info",
+                        "type": "open",
+                        "viewParams": {
+                          "helpText": "{/root/Components/ComponentInstance1/Barcode.custom.helpText}"
+                        },
+                        "viewPath": "EarlyDev/Help/HelpPopup"
+                      },
+                      "scope": "C",
+                      "type": "popup"
+                    },
+                    "onTouchEnd": {
+                      "config": {
+                        "draggable": true,
+                        "id": "IbdDHmcp",
+                        "modal": false,
+                        "overlayDismiss": false,
+                        "position": {
+                          "height": 150,
+                          "relativeLocation": "bottom",
+                          "width": 300
+                        },
+                        "positionType": "relative",
+                        "resizable": true,
+                        "showCloseIcon": true,
+                        "title": "Info",
+                        "type": "toggle",
+                        "viewParams": {
+                          "helpText": "{/root/Components/ComponentInstance1/Barcode.custom.helpText}"
+                        },
+                        "viewPath": "EarlyDev/Help/HelpPopup"
+                      },
+                      "scope": "C",
+                      "type": "popup"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "Barcode"
+                },
+                "position": {
+                  "basis": "180px"
+                },
+                "props": {
+                  "value": "487DRF"
+                },
+                "type": "ia.display.barcode"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "HelpText"
+                },
+                "position": {
+                  "basis": "87px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "This Barcode component has its type property set to code128. "
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance1"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "justify": "space-evenly",
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-evenly",
+      "wrap": "wrap"
+    },
+    "type": "ia.container.flex"
+  }
+}

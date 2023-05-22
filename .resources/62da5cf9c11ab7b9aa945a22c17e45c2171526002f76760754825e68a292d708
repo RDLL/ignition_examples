@@ -1,0 +1,489 @@
+{
+  "custom": {
+    "databaseTankInfo": [],
+    "defaultTankInfo": [
+      {
+        "tankInUse": 0,
+        "tankMaxVol": 100,
+        "tankName": "",
+        "tankNo": 0,
+        "tankType": "",
+        "tankVol": 0
+      }
+    ],
+    "mode": "add",
+    "tankInfo": {
+      "tankInUse": 0,
+      "tankMaxVol": 100,
+      "tankName": "",
+      "tankNo": 0,
+      "tankType": "",
+      "tankVol": 0
+    }
+  },
+  "params": {
+    "TankNo": null
+  },
+  "propConfig": {
+    "custom.databaseTankInfo": {
+      "binding": {
+        "config": {
+          "parameters": {
+            "tankNo": "{view.params.TankNo}"
+          },
+          "queryPath": "Ignition 101/Data Entry/Tank Details",
+          "returnFormat": "json"
+        },
+        "type": "query"
+      },
+      "persistent": true
+    },
+    "custom.defaultTankInfo": {
+      "persistent": true
+    },
+    "custom.mode": {
+      "binding": {
+        "config": {
+          "expression": "isNull({view.params.TankNo})"
+        },
+        "transforms": [
+          {
+            "fallback": "edit",
+            "inputType": "scalar",
+            "mappings": [
+              {
+                "input": true,
+                "output": "add"
+              }
+            ],
+            "outputType": "scalar",
+            "type": "map"
+          }
+        ],
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.tankInfo": {
+      "binding": {
+        "config": {
+          "path": "view.custom.mode"
+        },
+        "transforms": [
+          {
+            "fallback": "{view.custom.databaseTankInfo[0]}",
+            "inputType": "scalar",
+            "mappings": [
+              {
+                "input": "add",
+                "output": "{view.custom.defaultTankInfo[0]}"
+              }
+            ],
+            "outputType": "expression",
+            "type": "map"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.TankNo": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 493,
+      "width": 315
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label_5"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.mode"
+              },
+              "transforms": [
+                {
+                  "fallback": "Edit Tank",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "add",
+                      "output": "Add New Tank"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "fontWeight": "bold",
+            "marginBottom": "10px",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "text": "Tank #"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "tankNo"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.enabled": {
+            "binding": {
+              "config": {
+                "path": "view.custom.mode"
+              },
+              "transforms": [
+                {
+                  "fallback": false,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "add",
+                      "output": true
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.value": {
+            "binding": {
+              "config": {
+                "path": "view.custom.tankInfo.tankNo"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "format": "0,0"
+        },
+        "type": "ia.input.numeric-entry-field"
+      },
+      {
+        "meta": {
+          "name": "Label_4"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "text": "Tank Type"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "tankType"
+        },
+        "position": {
+          "basis": "36px"
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "path": "view.custom.tankInfo.tankType"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "options": [
+            {
+              "label": "Blend Tank",
+              "value": "Blend Tank"
+            },
+            {
+              "label": "Mix Tank",
+              "value": "Mix Tank"
+            }
+          ]
+        },
+        "type": "ia.input.dropdown"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "text": "Tank Name"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "tankName"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.tankInfo.tankName"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "Label_2"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "text": "Max Volume"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "tankMaxVol"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "path": "view.custom.tankInfo.tankMaxVol"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "format": "0,0.00"
+        },
+        "type": "ia.input.numeric-entry-field"
+      },
+      {
+        "meta": {
+          "name": "Label_3"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "text": "Current Volume"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "tankVol"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "path": "view.custom.tankInfo.tankVol"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "format": "0,0.00"
+        },
+        "type": "ia.input.numeric-entry-field"
+      },
+      {
+        "meta": {
+          "name": "tankInUse"
+        },
+        "position": {
+          "basis": "36px"
+        },
+        "propConfig": {
+          "props.selected": {
+            "binding": {
+              "config": {
+                "path": "view.custom.tankInfo.tankInUse"
+              },
+              "transforms": [
+                {
+                  "fallback": true,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": false
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "text": "Tank in Use"
+        },
+        "type": "ia.input.checkbox"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\t# This script will add or edit a record for the tank in the database table.\n\t# First we get our field values into a dictionary\n\ttankDetails \u003d {\n\t\t\"tankNo\":     self.parent.parent.getChild(\"tankNo\").props.value,\n\t\t\"tankName\":   self.parent.parent.getChild(\"tankName\").props.text,\n\t\t\"tankType\":   self.parent.parent.getChild(\"tankType\").props.value,\n\t\t\"tankVol\":    self.parent.parent.getChild(\"tankVol\").props.value,\n\t\t\"tankMaxVol\": self.parent.parent.getChild(\"tankMaxVol\").props.value,\n\t\t\"tankInUse\":  self.parent.parent.getChild(\"tankInUse\").props.selected\n\t}\n\tmode \u003d self.view.custom.mode\n\t\n\t# Then, we\u0027ll provide an example of validation.\n\t# In a larger project it\u0027s common to do validation under the Scripting section in the designer if you needed \n\t#  validation and data manipulation functions that you might use in more than one place.\n\tvalid \u003d 1\n\tif tankDetails[\"tankNo\"] \u003c\u003d 0:\n\t\tvalid \u003d 0\n\t\tmsg \u003d \"Please enter a tank number greater than zero\"\n\t\t\n\t# Next we run our named query to insert or update if our data is valid.\n\tif valid:\n\t\tif mode \u003d\u003d \"add\":\n\t\t\tsystem.db.runNamedQuery(\"Ignition 101/Data Entry/Add Tank\", tankDetails)\n\t\telse:\n\t\t\tsystem.db.runNamedQuery(\"Ignition 101/Data Entry/Edit Tank\", tankDetails)\n\t\t\n\t\t# That\u0027s it.  Let\u0027s send a message to the table that the data is updated and close this popup.\n\t\tsystem.perspective.sendMessage(\"refresh-tank-list\")\n\t\tsystem.perspective.closePopup(\"\")\n\n\t# If the data is not valid we can use another popup for the message\n\telse:\n\t\tparams \u003d {\"class\": \"Text\", \"display\":msg, \"icon\":\"error\"}\t\t\n\t\tsystem.perspective.openPopup(\"badTankData\",\"ignition-101/feature-views/framework/message\", params, modal \u003d1, id\u003d\"message\")\n"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button Add"
+            },
+            "position": {
+              "basis": "80px"
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "expression": "if(coalesce({.../Table.props.selection.selectedRow}\u003c0,-1),True,False)"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.mode"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "Save",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": "add",
+                          "output": "Add"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "draggable": true,
+                    "id": "tankform",
+                    "modal": false,
+                    "overlayDismiss": false,
+                    "resizable": true,
+                    "showCloseIcon": true,
+                    "type": "close",
+                    "viewPath": ""
+                  },
+                  "scope": "C",
+                  "type": "popup"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button Cancel",
+              "visible": 1
+            },
+            "position": {
+              "basis": "80px"
+            },
+            "props": {
+              "text": "Cancel"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "37px"
+        },
+        "props": {
+          "justify": "space-around",
+          "style": {
+            "marginTop": "20px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "padding": "10px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

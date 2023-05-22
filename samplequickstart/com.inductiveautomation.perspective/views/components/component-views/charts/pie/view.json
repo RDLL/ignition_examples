@@ -1,0 +1,299 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 774,
+      "width": 1335
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Pie Chart"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "A Pie Chart displays a list of named items, each of which has a value that is part of a total. The total is the sum of the value of each item. The key to the Pie Chart component can be configured by modifying the data property, which contains the items that will be displayed as pie wedges. It is fully customizable in its appearance, from colors, line widths, text styles, and more."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "PieChart"
+            },
+            "position": {
+              "basis": "400px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "colors": [
+                "#3366CCCC",
+                "#EC4B3DCC",
+                "#4FC86CCC",
+                "#00A9C6CC",
+                "#E69300CC"
+              ],
+              "data": [
+                {
+                  "count": 36,
+                  "flavor": "Pumpkin"
+                },
+                {
+                  "count": 17,
+                  "flavor": "Pecan"
+                },
+                {
+                  "count": 14,
+                  "flavor": "Apple"
+                },
+                {
+                  "count": 10,
+                  "flavor": "Sweet Potato"
+                },
+                {
+                  "count": 9,
+                  "flavor": "Chocolate"
+                }
+              ],
+              "enableTransitions": false,
+              "labels": {
+                "showName": false,
+                "wrap": {
+                  "enabled": true,
+                  "maxWidth": 150
+                }
+              },
+              "style": {
+                "marginTop": "20px"
+              },
+              "title": "Favorite Pie Flavors",
+              "titleColor": "#808080"
+            },
+            "type": "ia.chart.pie"
+          },
+          {
+            "meta": {
+              "name": "PieChart_1"
+            },
+            "position": {
+              "basis": "400px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "colors": [
+                "#3366CCCC",
+                "#EC4B3DCC",
+                "#4FC86CCC",
+                "#800080CC",
+                "#FF8C00CC",
+                "#FFFF00CC"
+              ],
+              "data": [
+                {
+                  "color": "Blue",
+                  "count": 42
+                },
+                {
+                  "color": "Red",
+                  "count": 9
+                },
+                {
+                  "color": "Green",
+                  "count": 25
+                },
+                {
+                  "color": "Purple",
+                  "count": 12
+                },
+                {
+                  "color": "Orange",
+                  "count": 7
+                },
+                {
+                  "color": "Yellow",
+                  "count": 5
+                }
+              ],
+              "enableTransitions": false,
+              "labels": {
+                "align": false,
+                "showValue": false,
+                "wrap": {
+                  "enabled": true,
+                  "maxWidth": 80
+                }
+              },
+              "showLabels": false,
+              "style": {
+                "marginTop": "20px"
+              },
+              "threeDimensional": true,
+              "title": "Favorite Colors",
+              "titleColor": "#808080",
+              "valueFormat": {
+                "showPercentSymbol": false,
+                "showValueAsPercent": false
+              }
+            },
+            "type": "ia.chart.pie"
+          },
+          {
+            "meta": {
+              "name": "PieChart_0"
+            },
+            "position": {
+              "basis": "400px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "colors": [
+                "#3366CCCC",
+                "#EC4B3DCC",
+                "#4FC86CCC",
+                "#FFFF00CC"
+              ],
+              "data": [
+                {
+                  "color": "Rainy",
+                  "count": 12.8
+                },
+                {
+                  "color": "Sunny",
+                  "count": 61.5
+                },
+                {
+                  "color": "Cloudy",
+                  "count": 15.4
+                },
+                {
+                  "color": "Snowy",
+                  "count": 12.3
+                }
+              ],
+              "enableTransitions": false,
+              "labels": {
+                "wrap": {
+                  "enabled": true,
+                  "maxWidth": 70
+                }
+              },
+              "showLegend": false,
+              "style": {
+                "marginTop": "20px"
+              },
+              "title": "Weather Profile",
+              "titleColor": "#808080"
+            },
+            "type": "ia.chart.pie"
+          },
+          {
+            "meta": {
+              "name": "PieChart_2"
+            },
+            "position": {
+              "basis": "400px",
+              "grow": 1
+            },
+            "props": {
+              "colors": [
+                "#3366CCCC",
+                "#00D900CC",
+                "#FF0000CC"
+              ],
+              "cutoutRadius": 50,
+              "data": [
+                {
+                  "color": "Desktop",
+                  "count": 56.8
+                },
+                {
+                  "color": "Mobile",
+                  "count": 34.1
+                },
+                {
+                  "color": "Tablet",
+                  "count": 9.1
+                }
+              ],
+              "enableTransitions": false,
+              "labels": {
+                "wrap": {
+                  "enabled": true,
+                  "maxWidth": 100
+                }
+              },
+              "showLegend": false,
+              "style": {
+                "marginTop": "20px"
+              },
+              "title": "Visits by Device",
+              "titleColor": "#808080"
+            },
+            "type": "ia.chart.pie"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "260px",
+          "shrink": 0
+        },
+        "props": {
+          "justify": "space-evenly",
+          "style": {
+            "overflow": "visible"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

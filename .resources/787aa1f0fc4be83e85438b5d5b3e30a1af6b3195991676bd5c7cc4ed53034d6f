@@ -1,0 +1,168 @@
+{
+  "custom": {},
+  "params": {
+    "city": "Folsom",
+    "country": "USA",
+    "population": 600000
+  },
+  "propConfig": {
+    "params.city": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.country": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.population": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 89,
+      "width": 241
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 20,
+          "width": 87,
+          "x": 6,
+          "y": 9
+        },
+        "props": {
+          "style": {
+            "fontWeight": "bold"
+          },
+          "text": "City:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 20,
+          "width": 128,
+          "x": 99,
+          "y": 9
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.city"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "height": 20,
+          "width": 128,
+          "x": 99,
+          "y": 30
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.country"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_2"
+        },
+        "position": {
+          "height": 20,
+          "width": 87,
+          "x": 6,
+          "y": 30
+        },
+        "props": {
+          "style": {
+            "fontWeight": "bold"
+          },
+          "text": "Country:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_3"
+        },
+        "position": {
+          "height": 20,
+          "width": 87,
+          "x": 6,
+          "y": 50
+        },
+        "props": {
+          "style": {
+            "fontWeight": "bold"
+          },
+          "text": "Population:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_4"
+        },
+        "position": {
+          "height": 20,
+          "width": 119,
+          "x": 99,
+          "y": 50
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.population"
+              },
+              "transforms": [
+                {
+                  "formatType": "numeric",
+                  "formatValue": "#,##0",
+                  "type": "format"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "Card"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

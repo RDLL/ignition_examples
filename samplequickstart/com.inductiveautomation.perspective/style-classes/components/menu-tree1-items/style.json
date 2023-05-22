@@ -1,0 +1,10 @@
+{
+  "base": {
+    "style": {
+      "fontFamily": "Verdana",
+      "fontSize": "12px",
+      "textAlign": "center",
+      "textTransform": "uppercase"
+    }
+  }
+}

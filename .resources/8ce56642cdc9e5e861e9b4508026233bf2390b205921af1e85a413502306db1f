@@ -1,0 +1,247 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 737,
+      "width": 1013
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Time Series Chart"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The Time Series component provides an efficient way to visualize data from a variety of different data sources. The Time Series Chart requires that the X axis of the chart represents time and the Y axis represents values. This chart includes a variety of features such as the ability to zoom or pan in and out using  your mouse wheel, the option to enable x-trace, and multiple chart display types (Area, Bar, Line, and Scatter)."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "TimeSeriesChart_Line"
+            },
+            "position": {
+              "basis": "490px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.series[0].data": {
+                "binding": {
+                  "config": {
+                    "aggregate": "MinMax",
+                    "avoidScanClassValidation": true,
+                    "dateRange": {
+                      "mostRecent": "1",
+                      "mostRecentUnits": "MIN"
+                    },
+                    "ignoreBadQuality": false,
+                    "polling": {
+                      "enabled": false,
+                      "rate": "30"
+                    },
+                    "preventInterpolation": false,
+                    "returnFormat": "Wide",
+                    "returnSize": {
+                      "numRows": "100",
+                      "type": "FIXED"
+                    },
+                    "tags": [
+                      {
+                        "path": "[Sample_Tags]Realistic/Realistic0"
+                      },
+                      {
+                        "path": "[Sample_Tags]Realistic/Realistic1"
+                      },
+                      {
+                        "path": "[Sample_Tags]Realistic/Realistic3"
+                      }
+                    ],
+                    "valueFormat": "DATASET"
+                  },
+                  "type": "tag-history"
+                }
+              }
+            },
+            "props": {
+              "defaultStyles": {
+                "colorScheme": "Paired"
+              },
+              "legend": {
+                "visible": true
+              },
+              "plots": [
+                {
+                  "axes": [],
+                  "markers": [],
+                  "trends": [
+                    {
+                      "axis": "",
+                      "baselines": [],
+                      "breakLine": true,
+                      "columns": [],
+                      "interpolation": "curveLinear",
+                      "radius": 2,
+                      "series": "Boiler",
+                      "stack": true,
+                      "type": "line",
+                      "visible": true
+                    }
+                  ]
+                }
+              ],
+              "series": [
+                {
+                  "name": "Boiler"
+                }
+              ]
+            },
+            "type": "ia.chart.timeseries"
+          },
+          {
+            "meta": {
+              "name": "TimeSeriesChart_Area"
+            },
+            "position": {
+              "basis": "513px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.series[0].data": {
+                "binding": {
+                  "config": {
+                    "aggregate": "MinMax",
+                    "avoidScanClassValidation": true,
+                    "dateRange": {
+                      "mostRecent": "1",
+                      "mostRecentUnits": "MIN"
+                    },
+                    "ignoreBadQuality": false,
+                    "polling": {
+                      "enabled": false,
+                      "rate": "30"
+                    },
+                    "preventInterpolation": false,
+                    "returnFormat": "Wide",
+                    "returnSize": {
+                      "numRows": "100",
+                      "type": "FIXED"
+                    },
+                    "tags": [
+                      {
+                        "path": "[Sample_Tags]Realistic/Realistic0"
+                      },
+                      {
+                        "path": "[Sample_Tags]Realistic/Realistic1"
+                      },
+                      {
+                        "path": "[Sample_Tags]Realistic/Realistic3"
+                      }
+                    ],
+                    "valueFormat": "DATASET"
+                  },
+                  "type": "tag-history"
+                }
+              }
+            },
+            "props": {
+              "defaultStyles": {
+                "colorScheme": "Paired"
+              },
+              "legend": {
+                "visible": true
+              },
+              "plots": [
+                {
+                  "axes": [],
+                  "markers": [],
+                  "trends": [
+                    {
+                      "axis": "",
+                      "baselines": [],
+                      "breakLine": true,
+                      "columns": [],
+                      "interpolation": "curveLinear",
+                      "radius": 2,
+                      "series": "Boiler",
+                      "stack": true,
+                      "type": "area",
+                      "visible": true
+                    }
+                  ]
+                }
+              ],
+              "series": [
+                {
+                  "name": "Boiler"
+                }
+              ]
+            },
+            "type": "ia.chart.timeseries"
+          }
+        ],
+        "meta": {
+          "name": "Charts"
+        },
+        "position": {
+          "basis": "522px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "margin": 5,
+            "overflow": "visible"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "overflow": "visible"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

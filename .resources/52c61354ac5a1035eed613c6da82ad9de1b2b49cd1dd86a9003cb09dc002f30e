@@ -1,0 +1,60 @@
+{
+  "custom": {},
+  "params": {
+    "label": "value",
+    "styleClass": "layouts/container-C"
+  },
+  "propConfig": {
+    "params.label": {
+      "paramDirection": "inout",
+      "persistent": true
+    },
+    "params.styleClass": {
+      "paramDirection": "inout",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "EmbeddedView"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.params.label": {
+            "binding": {
+              "config": {
+                "path": "view.params.label"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.styleClass": {
+            "binding": {
+              "config": {
+                "path": "view.params.styleClass"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "layouts/framework/container-label"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

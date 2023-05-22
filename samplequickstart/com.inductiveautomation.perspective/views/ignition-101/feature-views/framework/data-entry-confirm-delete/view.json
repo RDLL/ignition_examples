@@ -1,0 +1,148 @@
+{
+  "custom": {},
+  "params": {
+    "TankNo": 0
+  },
+  "propConfig": {
+    "params.TankNo": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 182,
+      "width": 385
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "fontWeight": "bold",
+            "textAlign": "center"
+          },
+          "text": "Confirm"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "props": {
+          "alignVertical": "top",
+          "style": {
+            "marginTop": "10px",
+            "textAlign": "center"
+          },
+          "text": "Are you sure you want to delete this record?"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\t# This script deletes the tank from the database.\n\ttankNo \u003d self.view.params.TankNo\n\tsystem.db.runNamedQuery(\"Ignition 101/Data Entry/Delete Tank\", {\"tankNo\": tankNo})\n\tsystem.perspective.sendMessage(\"refresh-tank-list\")\n\tsystem.perspective.closePopup(\"\")\n\t"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button Add"
+            },
+            "position": {
+              "basis": "151px"
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "expression": "if(coalesce({.../Table.props.selection.selectedRow}\u003c0,-1),True,False)"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "text": "Yes - Delete"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tsystem.perspective.closePopup(\"\")"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button Add_0"
+            },
+            "position": {
+              "basis": "151px"
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "expression": "if(coalesce({.../Table.props.selection.selectedRow}\u003c0,-1),True,False)"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "text": "No - Cancel"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "36px",
+          "shrink": 0
+        },
+        "props": {
+          "justify": "space-around"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "padding": "10px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

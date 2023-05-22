@@ -1,0 +1,991 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 671,
+      "width": 998
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Container Types"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "Container components provide a way of laying out and organizing components within a View. The different container types support different layout strategies, which are essential to creating responsive applications. Containers will allow your applications to gracefully display information across a wide variety of screen sizes and orientations. "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "View 6"
+                },
+                "position": {
+                  "height": 80,
+                  "width": 300,
+                  "x": 20,
+                  "y": 320
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-A layouts/container-label",
+                    "margin": "5px 0px 5px 0px"
+                  },
+                  "text": "View 6"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "View 5"
+                },
+                "position": {
+                  "height": 80,
+                  "width": 610,
+                  "x": 20,
+                  "y": 230
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-A layouts/container-label",
+                    "margin": "5px 0px 5px 0px"
+                  },
+                  "text": "View 5"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "View 4"
+                },
+                "position": {
+                  "height": 80,
+                  "width": 200,
+                  "x": 430,
+                  "y": 140
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-A layouts/container-label",
+                    "margin": "5px 0px 5px 0px"
+                  },
+                  "text": "View 4"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "View 3"
+                },
+                "position": {
+                  "height": 80,
+                  "width": 400,
+                  "x": 20,
+                  "y": 140
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-A layouts/container-label",
+                    "margin": "5px 0px 5px 0px"
+                  },
+                  "text": "View 3"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "View 2"
+                },
+                "position": {
+                  "height": 80,
+                  "rotate": {
+                    "anchor": "44% 50%"
+                  },
+                  "width": 400,
+                  "x": 230,
+                  "y": 50
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-A layouts/container-label",
+                    "margin": "5px 0px 5px 0px"
+                  },
+                  "text": "View 2"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "View 1"
+                },
+                "position": {
+                  "height": 80,
+                  "width": 200,
+                  "x": 20,
+                  "y": 50
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-A layouts/container-label",
+                    "margin": "5px 0px 5px 0px"
+                  },
+                  "text": "View 1"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "basis": "50px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "text": "Mode"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Dropdown"
+                    },
+                    "position": {
+                      "basis": "110px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "options": [
+                        {
+                          "label": "Fixed",
+                          "value": "fixed"
+                        },
+                        {
+                          "label": "Percent",
+                          "value": "percent"
+                        }
+                      ],
+                      "value": "fixed"
+                    },
+                    "type": "ia.input.dropdown"
+                  }
+                ],
+                "meta": {
+                  "name": "Modes"
+                },
+                "position": {
+                  "height": 30,
+                  "width": 180,
+                  "x": 20,
+                  "y": 10
+                },
+                "props": {
+                  "style": {
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "View 7"
+                },
+                "position": {
+                  "height": 80,
+                  "rotate": {
+                    "anchor": "40% 50%"
+                  },
+                  "width": 300,
+                  "x": 330,
+                  "y": 320
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-A layouts/container-label",
+                    "margin": "5px 0px 5px 0px"
+                  },
+                  "text": "View 7"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "Coordinate Container"
+            },
+            "propConfig": {
+              "props.mode": {
+                "binding": {
+                  "config": {
+                    "path": "./Modes/Dropdown.props.value"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.container.coord"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "View 7"
+                },
+                "position": {
+                  "breakpoints": [
+                    {
+                      "colIndex": 0,
+                      "name": "sm",
+                      "order": 1,
+                      "rowIndex": 6,
+                      "span": 12
+                    },
+                    {
+                      "colIndex": 0,
+                      "name": "md",
+                      "order": 1,
+                      "rowIndex": 3,
+                      "span": 12
+                    },
+                    {
+                      "colIndex": 8,
+                      "name": "lg",
+                      "order": 3,
+                      "rowIndex": 2,
+                      "span": 4
+                    }
+                  ],
+                  "height": 200
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-B layouts/container-label",
+                    "margin": "5px 0px 5px 0px"
+                  },
+                  "text": "View 7"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "View 6"
+                },
+                "position": {
+                  "breakpoints": [
+                    {
+                      "colIndex": 0,
+                      "name": "sm",
+                      "order": 1,
+                      "rowIndex": 5,
+                      "span": 12
+                    },
+                    {
+                      "colIndex": 6,
+                      "name": "md",
+                      "order": 2,
+                      "rowIndex": 2,
+                      "span": 6
+                    },
+                    {
+                      "colIndex": 4,
+                      "name": "lg",
+                      "order": 2,
+                      "rowIndex": 2,
+                      "span": 4
+                    }
+                  ],
+                  "height": 200
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-B layouts/container-label",
+                    "margin": "5px 0px 5px 0px"
+                  },
+                  "text": "View 6"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "View 5"
+                },
+                "position": {
+                  "breakpoints": [
+                    {
+                      "colIndex": 0,
+                      "name": "sm",
+                      "order": 1,
+                      "rowIndex": 4,
+                      "span": 12
+                    },
+                    {
+                      "colIndex": 0,
+                      "name": "md",
+                      "order": 1,
+                      "rowIndex": 2,
+                      "span": 6
+                    },
+                    {
+                      "colIndex": 0,
+                      "name": "lg",
+                      "order": 1,
+                      "rowIndex": 2,
+                      "span": 4
+                    }
+                  ],
+                  "height": 200
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-B layouts/container-label",
+                    "margin": "5px 0px 5px 0px"
+                  },
+                  "text": "View 5"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "View 4"
+                },
+                "position": {
+                  "breakpoints": [
+                    {
+                      "colIndex": 0,
+                      "name": "sm",
+                      "order": 1,
+                      "rowIndex": 3,
+                      "span": 12
+                    },
+                    {
+                      "colIndex": 6,
+                      "name": "md",
+                      "order": 0.5,
+                      "rowIndex": 1,
+                      "span": 6
+                    },
+                    {
+                      "colIndex": 0,
+                      "name": "lg",
+                      "order": 1,
+                      "rowIndex": 1,
+                      "span": 12
+                    }
+                  ],
+                  "height": 80
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-B layouts/container-label",
+                    "margin": "5px 0px 5px 0px"
+                  },
+                  "text": "View 4"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "View 3"
+                },
+                "position": {
+                  "breakpoints": [
+                    {
+                      "colIndex": 0,
+                      "name": "sm",
+                      "order": 1,
+                      "rowIndex": 2,
+                      "span": 12
+                    },
+                    {
+                      "colIndex": 0,
+                      "name": "md",
+                      "order": 0,
+                      "rowIndex": 1,
+                      "span": 6
+                    },
+                    {
+                      "colIndex": 8,
+                      "name": "lg",
+                      "order": 3,
+                      "rowIndex": 0,
+                      "span": 4
+                    }
+                  ],
+                  "height": 80
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-B layouts/container-label",
+                    "margin": "5px 0px 5px 0px"
+                  },
+                  "text": "View 3"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "View 2"
+                },
+                "position": {
+                  "breakpoints": [
+                    {
+                      "colIndex": 0,
+                      "name": "sm",
+                      "order": 0.5,
+                      "rowIndex": 1,
+                      "span": 12
+                    },
+                    {
+                      "colIndex": 6,
+                      "name": "md",
+                      "order": 2,
+                      "rowIndex": 0,
+                      "span": 6
+                    },
+                    {
+                      "colIndex": 4,
+                      "name": "lg",
+                      "order": 2,
+                      "rowIndex": 0,
+                      "span": 4
+                    }
+                  ],
+                  "height": 80
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-B layouts/container-label",
+                    "margin": "5px 0px 5px 0px"
+                  },
+                  "text": "View 2"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "View 1"
+                },
+                "position": {
+                  "breakpoints": [
+                    {
+                      "colIndex": 0,
+                      "name": "sm",
+                      "order": 1,
+                      "rowIndex": 0,
+                      "span": 12
+                    },
+                    {
+                      "colIndex": 0,
+                      "name": "md",
+                      "order": 1,
+                      "rowIndex": 0,
+                      "span": 6
+                    },
+                    {
+                      "colIndex": 0,
+                      "name": "lg",
+                      "order": 1,
+                      "rowIndex": 0,
+                      "span": 4
+                    }
+                  ],
+                  "height": 80
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-B layouts/container-label",
+                    "margin": "5px 0px 5px 0px"
+                  },
+                  "text": "View 1"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "Column Container"
+            },
+            "position": {
+              "tabIndex": 1
+            },
+            "props": {
+              "gutters": {
+                "horizontal": 0
+              },
+              "style": {
+                "margin": "10px"
+              }
+            },
+            "type": "ia.container.column"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "hasDelegate": true,
+                      "name": "View 1"
+                    },
+                    "position": {
+                      "basis": "100px"
+                    },
+                    "props": {
+                      "style": {
+                        "classes": "layouts/container-D layouts/container-label",
+                        "marginRight": "5px"
+                      },
+                      "text": "View 1"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "hasDelegate": true,
+                      "name": "View 2"
+                    },
+                    "position": {
+                      "basis": "50px",
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "classes": "layouts/container-D layouts/container-label",
+                        "marginLeft": "5px",
+                        "marginRight": "5px"
+                      },
+                      "text": "View 2"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "hasDelegate": true,
+                      "name": "View 3"
+                    },
+                    "position": {
+                      "basis": "300px"
+                    },
+                    "props": {
+                      "style": {
+                        "classes": "layouts/container-D layouts/container-label",
+                        "marginLeft": "5px"
+                      },
+                      "text": "View 3"
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "Row Flex Container"
+                },
+                "props": {
+                  "style": {
+                    "margin": "10px"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "hasDelegate": true,
+                      "name": "View 1"
+                    },
+                    "position": {
+                      "basis": "100px"
+                    },
+                    "props": {
+                      "style": {
+                        "classes": "layouts/container-D layouts/container-label",
+                        "marginBottom": "5px"
+                      },
+                      "text": "View 1"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "hasDelegate": true,
+                      "name": "View 2"
+                    },
+                    "position": {
+                      "basis": "50px",
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "classes": "layouts/container-D layouts/container-label",
+                        "marginBottom": "5px",
+                        "marginTop": "5px"
+                      },
+                      "text": "View 2"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "hasDelegate": true,
+                      "name": "View 3"
+                    },
+                    "position": {
+                      "basis": "300px"
+                    },
+                    "props": {
+                      "style": {
+                        "classes": "layouts/container-D layouts/container-label",
+                        "marginTop": "5px"
+                      },
+                      "text": "View 3"
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "Column Flex Container"
+                },
+                "position": {
+                  "tabIndex": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "margin": "10px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Flex Container"
+            },
+            "position": {
+              "tabIndex": 3
+            },
+            "props": {
+              "currentTabIndex": 1,
+              "tabs": [
+                "Row",
+                "Column"
+              ]
+            },
+            "type": "ia.container.tab"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "Tab View 2"
+                },
+                "position": {
+                  "tabIndex": 1
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-E layouts/container-label",
+                    "margin": "10px"
+                  },
+                  "text": "Tab View 2"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "Tab View 1"
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-E layouts/container-label",
+                    "margin": "10px"
+                  },
+                  "text": "Tab View 1"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "Tab Container"
+            },
+            "position": {
+              "tabIndex": 4
+            },
+            "props": {
+              "tabs": [
+                "Tab 1",
+                "Tab 2"
+              ]
+            },
+            "type": "ia.container.tab"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Small"
+                },
+                "props": {
+                  "direction": "column",
+                  "elementPosition": {
+                    "basis": "84px",
+                    "grow": 0,
+                    "shrink": 0
+                  },
+                  "elementStyle": {
+                    "classes": "layouts/container-C",
+                    "marginBottom": "10px"
+                  },
+                  "instances": [
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "label": "view 1"
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "label": "view 2"
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "label": "view 3"
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "label": "view 4"
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "label": "view 5"
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "label": "view 6"
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "label": "view 7"
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "label": "view 8"
+                    }
+                  ],
+                  "path": "layouts/framework/container-label",
+                  "style": {
+                    "margin": "10px"
+                  },
+                  "useDefaultViewHeight": false,
+                  "useDefaultViewWidth": false
+                },
+                "type": "ia.display.flex-repeater"
+              },
+              {
+                "meta": {
+                  "name": "Large"
+                },
+                "position": {
+                  "size": "large"
+                },
+                "props": {
+                  "elementPosition": {
+                    "basis": "84px",
+                    "shrink": 0
+                  },
+                  "elementStyle": {
+                    "classes": "layouts/container-C",
+                    "margin": "5px"
+                  },
+                  "instances": [
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "label": "view 1"
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "label": "view 2"
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "label": "view 3"
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "label": "view 4"
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "label": "view 5"
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "label": "view 6"
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "label": "view 7"
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      },
+                      "label": "view 8"
+                    }
+                  ],
+                  "path": "layouts/framework/container-label",
+                  "style": {
+                    "margin": "10px"
+                  },
+                  "useDefaultViewHeight": false,
+                  "useDefaultViewWidth": false,
+                  "wrap": "wrap"
+                },
+                "type": "ia.display.flex-repeater"
+              }
+            ],
+            "meta": {
+              "name": "Breakpoint Container"
+            },
+            "position": {
+              "tabIndex": 2
+            },
+            "props": {
+              "breakpoint": 900
+            },
+            "type": "ia.container.breakpt"
+          }
+        ],
+        "meta": {
+          "name": "Container Type Tabs"
+        },
+        "position": {
+          "basis": "300px",
+          "grow": 1
+        },
+        "props": {
+          "currentTabIndex": 3,
+          "style": {
+            "marginTop": "20px"
+          },
+          "tabs": [
+            "Coordinate",
+            "Column",
+            "Breakpoint",
+            "Flex",
+            "Tab"
+          ]
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "overflow": "visible"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

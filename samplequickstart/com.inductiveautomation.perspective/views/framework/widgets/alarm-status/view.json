@@ -1,0 +1,258 @@
+{
+  "custom": {},
+  "params": {
+    "activeAcked": true,
+    "activeUnacked": true,
+    "breakpoint": 500,
+    "clearAcked": false,
+    "clearUnacked": false,
+    "critical": true,
+    "diagnostic": true,
+    "displayPath": "",
+    "high": true,
+    "low": true,
+    "medium": true,
+    "pager": true,
+    "provider": "",
+    "search": "",
+    "source": ""
+  },
+  "propConfig": {
+    "params.activeAcked": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.activeUnacked": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.breakpoint": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.clearAcked": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.clearUnacked": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.critical": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.diagnostic": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.displayPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.high": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.low": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.medium": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.pager": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.provider": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.search": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.source": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 339,
+      "width": 642
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "AlarmStatusTable"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.filters.active.conditions.displayPath": {
+            "binding": {
+              "config": {
+                "path": "view.params.displayPath"
+              },
+              "type": "property"
+            }
+          },
+          "props.filters.active.conditions.provider": {
+            "binding": {
+              "config": {
+                "path": "view.params.provider"
+              },
+              "type": "property"
+            }
+          },
+          "props.filters.active.conditions.source": {
+            "binding": {
+              "config": {
+                "path": "view.params.source"
+              },
+              "type": "property"
+            }
+          },
+          "props.filters.active.priorities.critical": {
+            "binding": {
+              "config": {
+                "path": "view.params.critical"
+              },
+              "type": "property"
+            }
+          },
+          "props.filters.active.priorities.diagnostic": {
+            "binding": {
+              "config": {
+                "path": "view.params.diagnostic"
+              },
+              "type": "property"
+            }
+          },
+          "props.filters.active.priorities.high": {
+            "binding": {
+              "config": {
+                "path": "view.params.high"
+              },
+              "type": "property"
+            }
+          },
+          "props.filters.active.priorities.low": {
+            "binding": {
+              "config": {
+                "path": "view.params.low"
+              },
+              "type": "property"
+            }
+          },
+          "props.filters.active.priorities.medium": {
+            "binding": {
+              "config": {
+                "path": "view.params.medium"
+              },
+              "type": "property"
+            }
+          },
+          "props.filters.active.states.activeAcked": {
+            "binding": {
+              "config": {
+                "path": "view.params.activeAcked"
+              },
+              "type": "property"
+            }
+          },
+          "props.filters.active.states.activeUnacked": {
+            "binding": {
+              "config": {
+                "path": "view.params.activeUnacked"
+              },
+              "type": "property"
+            }
+          },
+          "props.filters.active.states.clearAcked": {
+            "binding": {
+              "config": {
+                "path": "view.params.clearAcked"
+              },
+              "type": "property"
+            }
+          },
+          "props.filters.active.states.clearUnacked": {
+            "binding": {
+              "config": {
+                "path": "view.params.clearUnacked"
+              },
+              "type": "property"
+            }
+          },
+          "props.filters.active.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.search"
+              },
+              "type": "property"
+            }
+          },
+          "props.pager.enabled": {
+            "binding": {
+              "config": {
+                "path": "view.params.pager"
+              },
+              "type": "property"
+            }
+          },
+          "props.responsive.breakpoint": {
+            "binding": {
+              "config": {
+                "path": "view.params.breakpoint"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "columns": {
+            "active": {
+              "name": {
+                "enabled": false
+              },
+              "source": {
+                "enabled": false
+              }
+            }
+          },
+          "filters": {
+            "active": {
+              "conditions": {},
+              "priorities": {},
+              "states": {}
+            }
+          },
+          "pager": {},
+          "responsive": {
+            "enabled": true
+          },
+          "toolbar": {
+            "enableFilterResults": false,
+            "enablePreFilters": false
+          }
+        },
+        "type": "ia.display.alarmstatustable"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

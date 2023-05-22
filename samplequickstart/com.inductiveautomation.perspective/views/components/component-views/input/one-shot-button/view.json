@@ -1,0 +1,558 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 811,
+      "width": 728
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "One-Shot Button"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Description"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "source": "The One-Shot Button is designed to write once and wait for a response. The button will remain disabled until something else changes the \u0027value\u0027 property on the component. \nWhen the \u0027value\u0027 property and the \u0027setValue\u0027 property are equal, the component transitions to the writing state. Once \u0027value\u0027 and \u0027setValue\u0027 are no longer equal, the button returns the the a ready state. \nA confirmation box can be presented before attempting to write out the value."
+        },
+        "type": "ia.display.markdown"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "40px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "\"Current Value: \" + {[Sample_Tags]Writeable/WriteableInteger5}"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "OneShotButton_0"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Writeable/WriteableInteger5"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "readyState": {
+                        "icon": {
+                          "style": {
+                            "height": "24px",
+                            "width": "2rem"
+                          }
+                        },
+                        "style": {
+                          "padding": "10px"
+                        },
+                        "text": "Write (0)"
+                      },
+                      "setValue": 0,
+                      "writingState": {
+                        "icon": {
+                          "path": "material/hourglass_empty",
+                          "style": {
+                            "height": "24px",
+                            "width": "2rem"
+                          }
+                        },
+                        "style": {
+                          "padding": "10px"
+                        },
+                        "text": "Writing (0)..."
+                      }
+                    },
+                    "type": "ia.input.oneshotbutton"
+                  },
+                  {
+                    "meta": {
+                      "name": "OneShotButton_1"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Writeable/WriteableInteger5"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "primary": false,
+                      "readyState": {
+                        "icon": {
+                          "style": {
+                            "height": "24px",
+                            "width": "2rem"
+                          }
+                        },
+                        "style": {
+                          "padding": "10px"
+                        },
+                        "text": "Write (1)"
+                      },
+                      "writingState": {
+                        "icon": {
+                          "path": "material/hourglass_empty",
+                          "style": {
+                            "height": "24px",
+                            "width": "2rem"
+                          }
+                        },
+                        "style": {
+                          "padding": "10px"
+                        },
+                        "text": "Writing (1)..."
+                      }
+                    },
+                    "type": "ia.input.oneshotbutton"
+                  }
+                ],
+                "meta": {
+                  "name": "Buttons"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Simple"
+            },
+            "position": {
+              "basis": "300px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "40px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Disabled:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "OneShotButton_0"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Writeable/WriteableInteger5"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "enabled": false,
+                      "readyState": {
+                        "icon": {
+                          "style": {
+                            "height": "24px",
+                            "width": "2rem"
+                          }
+                        },
+                        "style": {
+                          "padding": "10px"
+                        },
+                        "text": "Write (0)"
+                      },
+                      "setValue": 0,
+                      "writingState": {
+                        "icon": {
+                          "path": "material/hourglass_empty",
+                          "style": {
+                            "height": "24px",
+                            "width": "2rem"
+                          }
+                        },
+                        "style": {
+                          "padding": "10px"
+                        },
+                        "text": "Writing (0)..."
+                      }
+                    },
+                    "type": "ia.input.oneshotbutton"
+                  },
+                  {
+                    "meta": {
+                      "name": "OneShotButton_1"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Writeable/WriteableInteger5"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "enabled": false,
+                      "readyState": {
+                        "icon": {
+                          "style": {
+                            "height": "24px",
+                            "width": "2rem"
+                          }
+                        },
+                        "style": {
+                          "padding": "10px"
+                        },
+                        "text": "Write (1)"
+                      },
+                      "writingState": {
+                        "icon": {
+                          "path": "material/hourglass_empty",
+                          "style": {
+                            "height": "24px",
+                            "width": "2rem"
+                          }
+                        },
+                        "style": {
+                          "padding": "10px"
+                        },
+                        "text": "Writing (1)..."
+                      }
+                    },
+                    "type": "ia.input.oneshotbutton"
+                  }
+                ],
+                "meta": {
+                  "name": "Buttons"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Disabled"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "40px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Confirm:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "OneShotButton_1"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Writeable/WriteableInteger5"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "confirm": {
+                    "enabled": true
+                  },
+                  "readyState": {
+                    "icon": {
+                      "path": "material/settings_ethernet",
+                      "style": {
+                        "height": "24px",
+                        "width": "2rem"
+                      }
+                    },
+                    "style": {
+                      "padding": "10px"
+                    },
+                    "text": "Write (1)"
+                  },
+                  "writingState": {
+                    "icon": {
+                      "path": "material/sync_alt",
+                      "style": {
+                        "height": "24px",
+                        "width": "2rem"
+                      }
+                    },
+                    "style": {
+                      "padding": "10px"
+                    },
+                    "text": "Writing (1)..."
+                  }
+                },
+                "type": "ia.input.oneshotbutton"
+              }
+            ],
+            "meta": {
+              "name": "Confirm"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "40px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Customized:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "OneShotButton_0"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Writeable/WriteableInteger5"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "readyState": {
+                    "icon": {
+                      "path": "material/settings_ethernet",
+                      "style": {
+                        "height": "24px",
+                        "width": "2rem"
+                      }
+                    },
+                    "style": {
+                      "backgroundColor": "#000879",
+                      "color": "#FFFFFF",
+                      "padding": "10px"
+                    },
+                    "text": "Write (0)"
+                  },
+                  "setValue": 0,
+                  "writingState": {
+                    "icon": {
+                      "path": "material/sync_alt",
+                      "style": {
+                        "height": "24px",
+                        "width": "2rem"
+                      }
+                    },
+                    "style": {
+                      "backgroundColor": "#884E47",
+                      "color": "#CFCFCF",
+                      "padding": "10px"
+                    },
+                    "text": "Writing (0)..."
+                  }
+                },
+                "type": "ia.input.oneshotbutton"
+              }
+            ],
+            "meta": {
+              "name": "Customized"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Examples"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "alignContent": "flex-start",
+          "alignItems": "flex-start",
+          "justify": "space-evenly",
+          "style": {
+            "overflow": "visible",
+            "padding": "10px"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

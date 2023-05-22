@@ -1,0 +1,688 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1098,
+      "width": 1038
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Historical Data"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Description"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "source": "The Tag Historian Module provides power and flexibility for storing and accessing historical data. When history is enabled on an Ignition Tag, data is stored automatically in your SQL database in an efficient format. This data is then available for querying through scripting, historical bindings, and reporting. Options for partitioning and deleting old data help to ensure the system stays maintained with minimal extra work. Tag Historian\u0027s robust querying features provide you great flexibility in how you retrieve the stored data."
+        },
+        "type": "ia.display.markdown"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Tag History Binding:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "TimeSeriesChart"
+                },
+                "position": {
+                  "basis": "300px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.series[0].data": {
+                    "binding": {
+                      "config": {
+                        "aggregate": "MinMax",
+                        "avoidScanClassValidation": true,
+                        "dateRange": {
+                          "mostRecent": "15",
+                          "mostRecentUnits": "MIN"
+                        },
+                        "ignoreBadQuality": false,
+                        "polling": {
+                          "enabled": true,
+                          "rate": "5"
+                        },
+                        "preventInterpolation": false,
+                        "returnFormat": "Wide",
+                        "returnSize": {
+                          "numRows": "200",
+                          "type": "FIXED"
+                        },
+                        "tags": [
+                          {
+                            "alias": "Temp",
+                            "path": "[Sample_Tags]Realistic/Realistic1"
+                          },
+                          {
+                            "alias": "Pressure",
+                            "path": "[Sample_Tags]Realistic/Realistic2"
+                          }
+                        ],
+                        "valueFormat": "DATASET"
+                      },
+                      "type": "tag-history"
+                    }
+                  }
+                },
+                "props": {
+                  "defaultStyles": {
+                    "colorScheme": "Dark2",
+                    "muted": {
+                      "fill": {
+                        "opacity": 0.8
+                      }
+                    },
+                    "normal": {
+                      "fill": {
+                        "opacity": 1
+                      },
+                      "stroke": {
+                        "opacity": 1,
+                        "width": 1.5
+                      }
+                    }
+                  },
+                  "legend": {
+                    "visible": true
+                  },
+                  "series": [
+                    {
+                      "name": "Boiler"
+                    }
+                  ],
+                  "timeRange": {
+                    "visible": false
+                  },
+                  "title": {
+                    "font": {
+                      "color": "var(--neutral-70)"
+                    },
+                    "height": 24,
+                    "text": "Temp and Pressure (Last 15 Minutes)",
+                    "visible": true
+                  }
+                },
+                "type": "ia.chart.timeseries"
+              }
+            ],
+            "meta": {
+              "name": "TagHistoryBinding"
+            },
+            "position": {
+              "basis": "400px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Tag History Calculations:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Table"
+                },
+                "position": {
+                  "basis": "200px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.data": {
+                    "binding": {
+                      "config": {
+                        "avoidScanClassValidation": true,
+                        "calculations": [
+                          "Variance",
+                          "StdDev"
+                        ],
+                        "dateRange": {
+                          "mostRecent": "15",
+                          "mostRecentUnits": "MIN"
+                        },
+                        "ignoreBadQuality": false,
+                        "polling": {
+                          "enabled": true,
+                          "rate": "5"
+                        },
+                        "preventInterpolation": false,
+                        "returnFormat": "Calculations",
+                        "tags": [
+                          {
+                            "alias": "Temp",
+                            "path": "[Sample_Tags]Realistic/Realistic1"
+                          },
+                          {
+                            "alias": "Pressure",
+                            "path": "[Sample_Tags]Realistic/Realistic2"
+                          }
+                        ],
+                        "valueFormat": "DATASET"
+                      },
+                      "type": "tag-history"
+                    }
+                  }
+                },
+                "props": {
+                  "columns": [
+                    {
+                      "align": "center",
+                      "boolean": "checkbox",
+                      "dateFormat": "MM/DD/YYYY",
+                      "editable": false,
+                      "field": "tagpath",
+                      "footer": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": ""
+                      },
+                      "header": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": "Tag"
+                      },
+                      "justify": "auto",
+                      "number": "value",
+                      "numberFormat": "0,0.##",
+                      "progressBar": {
+                        "bar": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "max": 100,
+                        "min": 0,
+                        "track": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "value": {
+                          "enabled": true,
+                          "format": "0,0.##",
+                          "justify": "center",
+                          "style": {
+                            "classes": ""
+                          }
+                        }
+                      },
+                      "render": "auto",
+                      "resizable": true,
+                      "sort": "none",
+                      "sortable": true,
+                      "strictWidth": false,
+                      "style": {
+                        "classes": ""
+                      },
+                      "toggleSwitch": {
+                        "color": {
+                          "selected": "",
+                          "unselected": ""
+                        }
+                      },
+                      "viewParams": {},
+                      "viewPath": "",
+                      "visible": true,
+                      "width": ""
+                    },
+                    {
+                      "align": "center",
+                      "boolean": "checkbox",
+                      "dateFormat": "MM/DD/YYYY",
+                      "editable": false,
+                      "field": "Variance",
+                      "footer": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": ""
+                      },
+                      "header": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": ""
+                      },
+                      "justify": "auto",
+                      "number": "value",
+                      "numberFormat": "0,0.##",
+                      "progressBar": {
+                        "bar": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "max": 100,
+                        "min": 0,
+                        "track": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "value": {
+                          "enabled": true,
+                          "format": "0,0.##",
+                          "justify": "center",
+                          "style": {
+                            "classes": ""
+                          }
+                        }
+                      },
+                      "render": "auto",
+                      "resizable": true,
+                      "sort": "none",
+                      "sortable": true,
+                      "strictWidth": false,
+                      "style": {
+                        "classes": ""
+                      },
+                      "toggleSwitch": {
+                        "color": {
+                          "selected": "",
+                          "unselected": ""
+                        }
+                      },
+                      "viewParams": {},
+                      "viewPath": "",
+                      "visible": true,
+                      "width": ""
+                    },
+                    {
+                      "align": "center",
+                      "boolean": "checkbox",
+                      "dateFormat": "MM/DD/YYYY",
+                      "editable": false,
+                      "field": "StdDev",
+                      "footer": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": ""
+                      },
+                      "header": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": ""
+                      },
+                      "justify": "auto",
+                      "number": "value",
+                      "numberFormat": "0,0.##",
+                      "progressBar": {
+                        "bar": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "max": 100,
+                        "min": 0,
+                        "track": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "value": {
+                          "enabled": true,
+                          "format": "0,0.##",
+                          "justify": "center",
+                          "style": {
+                            "classes": ""
+                          }
+                        }
+                      },
+                      "render": "auto",
+                      "resizable": true,
+                      "sort": "none",
+                      "sortable": true,
+                      "strictWidth": false,
+                      "style": {
+                        "classes": ""
+                      },
+                      "toggleSwitch": {
+                        "color": {
+                          "selected": "",
+                          "unselected": ""
+                        }
+                      },
+                      "viewParams": {},
+                      "viewPath": "",
+                      "visible": true,
+                      "width": ""
+                    }
+                  ],
+                  "pager": {
+                    "bottom": false
+                  }
+                },
+                "type": "ia.display.table"
+              }
+            ],
+            "meta": {
+              "name": "TagHistoryCalcs"
+            },
+            "position": {
+              "basis": "400px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Ad Hoc Trending:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Dropdown"
+                },
+                "position": {
+                  "basis": "36px",
+                  "shrink": 0
+                },
+                "props": {
+                  "multiSelect": true,
+                  "options": [
+                    {
+                      "label": "Temp",
+                      "value": "[Sample_Tags]Realistic/Realistic0"
+                    },
+                    {
+                      "label": "Pressure",
+                      "value": "[Sample_Tags]Realistic/Realistic1"
+                    },
+                    {
+                      "label": "Amps",
+                      "value": "[Sample_Tags]Realistic/Realistic2"
+                    }
+                  ],
+                  "value": [
+                    "[Sample_Tags]Realistic/Realistic0",
+                    "[Sample_Tags]Realistic/Realistic1",
+                    "[Sample_Tags]Realistic/Realistic2"
+                  ]
+                },
+                "type": "ia.input.dropdown"
+              },
+              {
+                "meta": {
+                  "name": "ChartRangeSelector"
+                },
+                "position": {
+                  "basis": "100px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.data": {
+                    "binding": {
+                      "config": {
+                        "aggregate": "MinMax",
+                        "avoidScanClassValidation": true,
+                        "dateRange": {
+                          "mostRecent": "1",
+                          "mostRecentUnits": "HOUR"
+                        },
+                        "ignoreBadQuality": false,
+                        "polling": {
+                          "enabled": false,
+                          "rate": "30"
+                        },
+                        "preventInterpolation": false,
+                        "returnFormat": "Wide",
+                        "returnSize": {
+                          "numRows": "100",
+                          "type": "FIXED"
+                        },
+                        "tags": "{parent.custom.selectedTags}",
+                        "valueFormat": "DATASET"
+                      },
+                      "type": "tag-history"
+                    }
+                  }
+                },
+                "props": {
+                  "areaStyles": {
+                    "colorScheme": "Paired"
+                  },
+                  "brushRange": {
+                    "visible": false
+                  },
+                  "enablePanZoom": false,
+                  "selectedRange": {
+                    "end": {
+                      "$": [
+                        "ts",
+                        0,
+                        1599764618191
+                      ],
+                      "$ts": 1599762261261
+                    },
+                    "start": {
+                      "$": [
+                        "ts",
+                        0,
+                        1599764618191
+                      ],
+                      "$ts": 1599761414810
+                    }
+                  }
+                },
+                "type": "ia.chart.chartrangeselector"
+              },
+              {
+                "meta": {
+                  "name": "TimeSeriesChart"
+                },
+                "position": {
+                  "basis": "200px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.series[0].data": {
+                    "binding": {
+                      "config": {
+                        "aggregate": "MinMax",
+                        "avoidScanClassValidation": true,
+                        "dateRange": {
+                          "endDate": "{../ChartRangeSelector.props.selectedRange.end}",
+                          "startDate": "{../ChartRangeSelector.props.selectedRange.start}"
+                        },
+                        "ignoreBadQuality": false,
+                        "preventInterpolation": false,
+                        "returnFormat": "Wide",
+                        "returnSize": {
+                          "numRows": "200",
+                          "type": "FIXED"
+                        },
+                        "tags": "{parent.custom.selectedTags}",
+                        "valueFormat": "DATASET"
+                      },
+                      "type": "tag-history"
+                    }
+                  }
+                },
+                "props": {
+                  "defaultStyles": {
+                    "colorScheme": "Paired",
+                    "normal": {
+                      "fill": {
+                        "opacity": 1
+                      },
+                      "stroke": {
+                        "opacity": 1,
+                        "width": 1.5
+                      }
+                    }
+                  },
+                  "series": [
+                    {
+                      "name": "Data"
+                    }
+                  ],
+                  "xTrace": {
+                    "visible": false
+                  }
+                },
+                "type": "ia.chart.timeseries"
+              }
+            ],
+            "meta": {
+              "name": "AdHocTrending"
+            },
+            "position": {
+              "basis": "400px"
+            },
+            "propConfig": {
+              "custom.selectedTags": {
+                "binding": {
+                  "config": {
+                    "path": "./Dropdown.props.value"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn [{\u0027path\u0027: path, \u0027alias\u0027: path} for path in value]",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Examples"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "justify": "space-evenly",
+          "style": {
+            "overflow": "visible"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

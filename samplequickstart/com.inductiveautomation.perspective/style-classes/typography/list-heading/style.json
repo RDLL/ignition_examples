@@ -1,0 +1,11 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--neutral-30)",
+      "fontSize": "12px",
+      "letterSpacing": "1px",
+      "paddingLeft": "16px",
+      "textTransform": "uppercase"
+    }
+  }
+}

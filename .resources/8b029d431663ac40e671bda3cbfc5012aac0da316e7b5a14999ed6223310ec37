@@ -1,0 +1,2012 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "props": {
+          "style": {
+            "background-color": "#ff0000",
+            "color": "white",
+            "font-size": "25px",
+            "padding-left": "10px"
+          },
+          "text": "Youtube Search"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "props": {
+              "style": {
+                "margin-right": "5px "
+              },
+              "text": "Filter Keywords:"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "TextField"
+            },
+            "position": {
+              "basis": "150px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "margin": "10px 0"
+              },
+              "text": "pizza"
+            },
+            "type": "ia.input.text-field"
+          }
+        ],
+        "meta": {
+          "name": "flexKeyword"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "props": {
+          "style": {
+            "margin": "0 10%"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "props": {
+              "style": {
+                "margin-right": "5px"
+              },
+              "text": "Published Before:"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "DateTimeInput"
+            },
+            "position": {
+              "basis": "170px",
+              "grow": 1
+            },
+            "props": {
+              "formattedValue": "Jun 25, 2013 12:00 PM",
+              "style": {
+                "margin": "10px 0"
+              },
+              "value": {
+                "$": [
+                  "ts",
+                  0,
+                  1684445956811
+                ],
+                "$ts": 1372179600000
+              }
+            },
+            "type": "ia.input.date-time-input"
+          }
+        ],
+        "meta": {
+          "name": "flexPublishedBefore"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "props": {
+          "style": {
+            "margin": " 0 10%"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t\n\tkeyword \u003d self.parent.getChild(\"flexKeyword\").getChild(\"TextField\").props.text\n\tpublishedBefore \u003d self.parent.getChild(\"flexPublishedBefore\").getChild(\"DateTimeInput\").props.value\n\tvideoLs \u003d []\n\t\n\tsystem.perspective.print(keyword)\n\tsystem.perspective.print(publishedBefore)\n\t\n\tclient \u003d system.net.httpClient()\n\t\n\t\n\turl \u003d \"https://youtube.googleapis.com/youtube/v3/search?key\u003d\" + \\\n\t\t\tshared.env.api_key + \"\u0026publishedBefore\u003d\" + \\\n\t\t\tsystem.date.format(publishedBefore, \"yyyy-MM-dd\") + \\\n\t\t\t\"T00:00:00Z\u0026type\u003dvideo\u0026q\" + keyword + \"\u0026maxResults\u003d25\"\n\t\n\t\n\tres \u003d client.get(url)\n\t\n\tif res.good:\n\t\t\n\t\tfor item in res.json[\u0027items\u0027]:\n\t\t\tvideoInfo \u003d system.net.httpClient();\n\t\t\t\n\t\t\turl \u003d \"https://youtube.googleapis.com/youtube/v3/videos?part\u003dsnippet%2CcontentDetails%2Cstatistics\u0026id\u003d\" + \\\n\t\t\titem[\u0027id\u0027][\u0027videoId\u0027] + \"\u0026key\u003d\" + shared.env.api_key \n\t\t\t\n\t\t\tvideoRes \u003d videoInfo.get(url)\n\t\t\t\n\t\t\tif videoRes.good:\n\t\t\t\t#system.perspective.print(videoRes.json[\"items\"][0][\"snippet\"][\"title\"])\n\t\t\t\t\n\t\t\t\tn \u003d videoRes.json[\"items\"][0]\n\t\t\t\t\n\t\t\t\tobj \u003d {\n\t\t\t\t\t\"videoId\": item[\u0027id\u0027][\u0027videoId\u0027],\n\t\t\t\t\t\"title\": n[\"snippet\"][\"title\"],\n\t\t\t\t\t\"description\": n[\"snippet\"][\"description\"],\n\t\t\t\t\t\"publishedAt\": n[\"snippet\"][\"publishedAt\"],\n\t\t\t\t\t\"channelTitle\": n[\"snippet\"][\"channelTitle\"],\n\t\t\t\t\t\"duration\": n[\"contentDetails\"][\"duration\"],\n\t\t\t\t\t\"viewCount\": n[\"statistics\"][\"viewCount\"],\n\t\t\t\t\t\"likeCount\": n[\"statistics\"][\"likeCount\"],\n\t\t\t\t\t\"commentCount\": n[\"statistics\"][\"commentCount\"]\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\tvideoLs.append(obj)\n\t\t\t\t\n\t\t\tself.getSibling(\"Table\").props.data \u003d videoLs\n\t\t\t\n\t\t\t\n\t#\tsystem.perspective.print(videoLs)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "props": {
+          "columns": [
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "title",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Title"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "description",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Desc"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "channelTitle",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Channel"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "duration",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Duration"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "viewCount",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Views"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "likeCount",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Likes"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            }
+          ],
+          "image": {
+            "icon": {
+              "path": "material/search"
+            }
+          },
+          "style": {
+            "background-color": "#ff0000",
+            "margin": "5px 10%"
+          },
+          "text": "Search"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t\n\tkeyword \u003d self.parent.getChild(\"flexKeyword\").getChild(\"TextField\").props.text\n\tpublishedBefore \u003d self.parent.getChild(\"flexPublishedBefore\").getChild(\"DateTimeInput\").props.value\n\tvideoLs \u003d []\n\t\n\tsystem.perspective.print(keyword)\n\tsystem.perspective.print(publishedBefore)\n\t\n\tclient \u003d system.net.httpClient()\n\t\n\t\n\turl \u003d \"https://youtube.googleapis.com/youtube/v3/search?key\u003d\" + \\\n\t\t\tshared.env.api_key + \"\u0026publishedBefore\u003d\" + \\\n\t\t\tsystem.date.format(publishedBefore, \"yyyy-MM-dd\") + \\\n\t\t\t\"T00:00:00Z\u0026type\u003dvideo\u0026q\" + keyword + \"\u0026maxResults\u003d25\"\n\t\n\t\n\tres \u003d client.get(url)\n\t\n\tif res.good:\n\t\t\n\t\tfor item in res.json[\u0027items\u0027]:\n\t\t\tvideoInfo \u003d system.net.httpClient();\n\t\t\t\n\t\t\turl \u003d \"https://youtube.googleapis.com/youtube/v3/videos?part\u003dsnippet%2CcontentDetails%2Cstatistics\u0026id\u003d\" + \\\n\t\t\titem[\u0027id\u0027][\u0027videoId\u0027] + \"\u0026key\u003d\" + shared.env.api_key \n\t\t\t\n\t\t\tvideoRes \u003d videoInfo.get(url)\n\t\t\t\n\t\t\tif videoRes.good:\n\t\t\t\t#system.perspective.print(videoRes.json[\"items\"][0][\"snippet\"][\"title\"])\n\t\t\t\t\n\t\t\t\tn \u003d videoRes.json[\"items\"][0]\n\t\t\t\t\n\t\t\t\tobj \u003d {\n\t\t\t\t\t\"title\": n[\"snippet\"][\"title\"],\n\t\t\t\t\t\"description\": n[\"snippet\"][\"description\"],\n\t\t\t\t\t\"publishedAt\": n[\"snippet\"][\"publishedAt\"],\n\t\t\t\t\t\"channelTitle\": n[\"snippet\"][\"channelTitle\"],\n\t\t\t\t\t\"duration\": n[\"contentDetails\"][\"duration\"],\n\t\t\t\t\t\"viewCount\": n[\"statistics\"][\"viewCount\"],\n\t\t\t\t\t\"likeCount\": n[\"statistics\"][\"likeCount\"],\n\t\t\t\t\t\"commentCount\": n[\"statistics\"][\"commentCount\"]\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\tvideoLs.append(obj)\n\t\t\t\t\n\t\t\tself.getSibling(\"Table\").props.data \u003d videoLs\n\t\t\t\n\t\t\t\n\t#\tsystem.perspective.print(videoLs)"
+              },
+              "scope": "G",
+              "type": "script"
+            },
+            "onRowClick": {
+              "config": {
+                "script": "\t\n\tvideo \u003d event[\"value\"][\"videoId\"]\n\tlink \u003d \"https://www.youtube.com/watch?v\u003d\" + video\n\t\n\tsystem.perspective.navigate(url\u003dlink, newTab\u003dTrue)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1
+        },
+        "props": {
+          "columns": [
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "title",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Title"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "description",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Description"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "channelTitle",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Channel"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "duration",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Duration"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "viewCount",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Views"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "likeCount",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Likes"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "commentCount",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Comments"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "publishedAt",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Published"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "videoId",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": false,
+              "width": ""
+            }
+          ],
+          "data": [
+            {
+              "channelTitle": "Canal Capital",
+              "commentCount": "9",
+              "description": "#NoticiasCapital | La secretaría distrital de ambiente realizó una campaña para la preservación de las Tinguas, aves que migran desde los llanos orientales hasta los humedales de Bogotá. Los pájaros son nativos de la capital y la campaña se da porque algunas veces, las aves se pierden y las personas no saben como cuidarlas.  \n\nSuscríbete a Capital en YouTube: https://bit.ly/3kSykMv \ny activa la campanita 🔔 para recibir notificaciones\n\n¡Síguenos en nuestras redes sociales!\nInstagram: https://www.instagram.com/canalcapital/ \nFacebook: https://www.facebook.com/CanalCapitalOficial \nTwitter: https://twitter.com/CanalCapital\nTikTok: https://www.tiktok.com/@canalcapital \n\nNo olvides visitar nuestro portal web: http://www.conexioncapital.co",
+              "duration": "PT1M31S",
+              "likeCount": "100",
+              "publishedAt": "2013-01-21T15:24:26Z",
+              "title": "Conozca las Tinguas, las aves que migran a los humedales de Bogotá",
+              "viewCount": "11418"
+            },
+            {
+              "channelTitle": "Canal Capital",
+              "commentCount": "0",
+              "description": "#NoticiasCapital | Miguel Ángel Calero Rodríguez falleció debido a unas trombosis que desencadenaron una muerte cerebral. A través de un comunicado de prensa, el Club Pachuca hizo oficial el deceso del exfutbolista colombiano que pasó sus últimos días en un hospital al sur de la Ciudad de México. \n\n\nSuscríbete a Capital en YouTube: https://bit.ly/3kSykMv \ny activa la campanita 🔔 para recibir notificaciones\n\n¡Síguenos en nuestras redes sociales!\nInstagram: https://www.instagram.com/canalcapital/\nFacebook: https://www.facebook.com/CanalCapitalOficial\nTwitter: https://twitter.com/CanalCapital\n\nNo olvides visitar nuestro portal web: http://www.conexioncapital.co",
+              "duration": "PT2M5S",
+              "likeCount": "672",
+              "publishedAt": "2012-12-05T13:46:00Z",
+              "title": "Falleció Miguel Calero en Ciudad de México",
+              "viewCount": "181486"
+            },
+            {
+              "channelTitle": "Canal Capital",
+              "commentCount": "1",
+              "description": "#DeportesCapital | El deporte es la mejor forma de comprobar que la pasión por un equipo puede unir. Las barras de Santa Fe, Zona 12 y Made in Bogotá fueron protagonistas de un campeonato relámpago, en donde compartieron su amor hacia el equipo capitalino. \n\nSuscríbete a Capital en YouTube: https://bit.ly/3kSykMv \ny activa la campanita 🔔 para recibir notificaciones\n\n¡Síguenos en nuestras redes sociales!\nInstagram: https://www.instagram.com/canalcapital/\nFacebook: https://www.facebook.com/CanalCapitalOficial\nTwitter: https://twitter.com/CanalCapital\n\nNo olvides visitar nuestro portal web: http://www.conexioncapital.co",
+              "duration": "PT59S",
+              "likeCount": "29",
+              "publishedAt": "2012-12-10T15:06:39Z",
+              "title": "Campeonato relámpago entre barras de Santa Fe",
+              "viewCount": "3132"
+            },
+            {
+              "channelTitle": "The Lizzie Bennet Diaries",
+              "commentCount": "1006",
+              "description": "Experience The Lizzie Bennet Diaries in real time! In honor of the 5 year anniversary, join us on Facebook as we re-visit Lizzie’s story with a curated transmedia experience - http://bit.ly/LBD-Facebook\n#LBD5Year\nBe sure to join the official Facebook group to interact with other fans!\n\nDownload to own the entire series + exclusive bonus. \nAvailable on iTunes - http://bit.ly/LBD-iTunes and Amazon Instant Video - http://bit.ly/LBD-Amazon\n\nFollow the Story - http://bit.ly/LBD-story\nGet the Merch - http://bit.ly/LBDmerch\n\n_____\n\nMr. Collins is back and wants to keep us over Thanksgiving break.\n\nStart from the first video - http://bit.ly/LBDplist\nTwitter - http://twitter.com/TheLBDOfficial\nFacebook - http://www.facebook.com/LizzieBennetDiaries\nTumblr - http://thelbdofficial.tumblr.com/\n\n---------\nThe Lizzie Bennet Diaries is a Primetime Emmy Award winning series based on Jane Austen\u0027s Pride and Prejudice. \nThe series was produced by Pemberley Digital. \nSee other Pemberley Digital projects at http://pemberleydigital.com\nThe show was developed and executive produced by Hank Green and Bernie Su. \nSee more details at http://lizziebennet.com\n\nLizzie Bennet - Ashley Clements - http://twitter.com/theashleyclem\nMr. Ricky Collins - Maxwell Glick - http://twitter.com/MaxwellGlick\n\nExecutive Producer - Hank Green - http://youtube.com/HanksChannel\nExecutive Producer - Bernie Su  - http://twitter.com/BernieSu\nProducer - Jenni Powell - http://twitter.com/JenniPowell\nCo-Executive Producer - Margaret Dunlap - http://twitter.com/SpyScribe\nAssociate Producer - Rachel Kiley - http://twitter.com/RachelKiley\nDirector - Bernie Su - http://twitter.com/BernieSu\nWriter - Margaret Dunlap - http://twitter.com/SpyScribe\nCinematography - Jason Raswant - http://twitter.com/JasonRaswant\nAssistant Director - Stuart Davis  - http://twitter.com/enzostuarti\nEditor - Sam Mollo\nTransmedia Producer - Jay Bushman - http://twitter.com/JayBushman\nTransmedia Editor - Alexandra Edwards - http://twitter.com/nonmodernist\nProduction Designer - Katie Moest - http://twitter.com/orangepenguino\nMakeup - Heather Begley\nProduction Assistant - Cody Bonsignore \nIntro Music and Graphics - Michael Aranda - http://www.youtube.com/michaelaranda",
+              "duration": "PT3M44S",
+              "likeCount": "7582",
+              "publishedAt": "2012-11-19T17:00:23Z",
+              "title": "Turkey Days - Ep: 65",
+              "viewCount": "733548"
+            },
+            {
+              "channelTitle": "Canal Capital",
+              "commentCount": "48",
+              "description": "Noticias Capital Última Hora mayo 5 /2013\n\nNoticias Capital conoció información sobre la operación código amarillo ejecutada desde mediados de 2010 y orquestada al parecer por el asesor de imagen política  J.J. Rendon en coordinación con miembros del antiguo DAS que buscaban a través de seguimientos e interceptaciones ilegales y propaganda negra, desprestigiar y destruir políticamente al entonces candidato a la alcaldía Gustavo Petro.\n\nhttp://www.canalcapital.gov.co/",
+              "duration": "PT2M58S",
+              "likeCount": "98",
+              "publishedAt": "2013-05-06T03:09:05Z",
+              "title": "[EXTRA] Seguimientos e interceptaciones ilegales al Alcalde Gustavo Petro",
+              "viewCount": "20050"
+            },
+            {
+              "channelTitle": "Red Productions",
+              "commentCount": "26",
+              "description": "An in-stadium video that played in Cowboys Stadium 2012 featuring Steve Austin. \n\nVideo by http://www.redproductions.com",
+              "duration": "PT50S",
+              "likeCount": "398",
+              "publishedAt": "2012-11-06T16:16:59Z",
+              "title": "Dallas Cowboys In-Stadium -- Stone Cold Steve Austin",
+              "viewCount": "24647"
+            },
+            {
+              "channelTitle": "Canal Capital",
+              "commentCount": "0",
+              "description": "#NoticiasCapital | La calle de los Sombreros es Patrimonio Cultural de Bogotá y debe su nombre a la principal actividad comercial que se ha realizado desde hace décadas en el lugar. Fabricantes y vendedores se agrupaban en la zona y así nació el histórico gremio de los fabricantes de sombreros.",
+              "duration": "PT2M48S",
+              "likeCount": "130",
+              "publishedAt": "2012-12-06T20:24:22Z",
+              "title": "La calle de los Sombreros: una visión al siglo pasado",
+              "viewCount": "20570"
+            },
+            {
+              "channelTitle": "Canal Capital",
+              "commentCount": "0",
+              "description": "Noticias Capital 12:00 m. 4 de febrero 013\n\nLa Policía capturó a tres integrantes de Los Pascuales, los traficantes que operan en la zona donde vive el patrullero, pero niegan cualquier vínculo con el caso.\n\nhttp://www.canalcapital.gov.co/",
+              "duration": "PT1M21S",
+              "likeCount": "27",
+              "publishedAt": "2013-02-05T13:43:04Z",
+              "title": "Capturados tres integrantes de Los Pascuales",
+              "viewCount": "18538"
+            },
+            {
+              "channelTitle": "Gorillaz",
+              "commentCount": "55711",
+              "description": "Follow Gorillaz online:\nhttp://gorillaz.com \nhttp://facebook.com/Gorillaz\nhttp://twitter.com/GorillazBand\nhttps://instagram.com/gorillaz\n\nMusic video by Gorillaz performing On Melancholy Hill. (P) 2010 The copyright in this audiovisual recording is owned by Parlophone Records",
+              "duration": "PT4M27S",
+              "likeCount": "1846900",
+              "publishedAt": "2010-06-14T08:36:39Z",
+              "title": "Gorillaz - On Melancholy Hill (Official Video)",
+              "viewCount": "218582419"
+            },
+            {
+              "channelTitle": "shakiraVEVO",
+              "commentCount": "21355",
+              "description": "Vídeo oficial de Shakira de su tema \u0027Dia De Enero\u0027. Haz clic aquí para escuchar a Shakira en Spotify: http://smarturl.it/ShakiraSpot?IQid\u003dSDDE\n\nIncluido en Oral Fixation, Vol 1 \u0026 2. Haz clic aquí para comprar el track o el álbum en iTunes: http://smarturl.it/OralFixation?IQid\u003d...\nGoogle Play: http://smarturl.it/SDDEPlay?IQid\u003dSDDE\nAmazon: http://smarturl.it/OFAmazon?IQid\u003dSDDE\n\nMás de Shakira\nWaka Waka (This Time For Africa): https://youtu.be/pRpeEdMmmQ0\nLoba: https://youtu.be/C7ssrLSheg4\nLa Tortura: https://youtu.be/Dsp_8Lm1eSk\n\nPincha aquí http://smarturl.it/DLPlaylist?IQid\u003dSDDE para escuchar más vídeos de buen Divas Latino.\n\nSigue a Shakira\nPágina web: http://www.shakira.com/home\nFacebook: https://www.facebook.com/shakira\nTwitter: https://twitter.com/shakira\nInstagram: https://instagram.com/shakira\n\nSuscríbete al canal de Shakira en YouTube: http://smarturl.it/ShakiraSub?IQid\u003dSDDE\n\n---------\n\nLetras:\n \nYa vas a ver como van sanando\nPoco a poco tus heridas\nYa vas a ver como va\nLa misma vida a decantar la sal que sobra del mar\n\nY aunque hayas sido un extranjero\nhasta en tu propio país\nSi yo te digo ¿Como dices tu?\nTu aún dices ¿Que decis?\nY lloras de emoción oyendo un bandoneón\"",
+              "duration": "PT2M54S",
+              "likeCount": "557069",
+              "publishedAt": "2009-10-03T04:48:00Z",
+              "title": "Shakira - Dia de Enero (Official HD Video)",
+              "viewCount": "166872099"
+            },
+            {
+              "channelTitle": "Canal Capital",
+              "commentCount": "6",
+              "description": "#NoticiasCapital | Jorge Iván Laverde alias \"El iguano\", ex comandante del bloque catatumbo de las AUC, declaró contra el expresidente Álvaro Uribe Vélez. En una audiencia reservada de justicia y paz, Laverde dio detalles sobre algunos gastos que se hicieron, presuntamente, para para apoyar la campaña presidencial de Uribe en 2002.\"\n\nSuscríbete a Capital en YouTube: https://bit.ly/3kSykMv \ny activa la campanita 🔔 para recibir notificaciones\n\n¡Síguenos en nuestras redes sociales!\nInstagram: https://www.instagram.com/canalcapital/ \nFacebook: https://www.facebook.com/CanalCapitalOficial \nTwitter: https://twitter.com/CanalCapital\nTikTok: https://www.tiktok.com/@canalcapital \n\nNo olvides visitar nuestro portal web: http://www.conexioncapital.co",
+              "duration": "PT2M39S",
+              "likeCount": "57",
+              "publishedAt": "2012-11-06T14:36:49Z",
+              "title": "Declaraciones de alias \"El iguano\" sobre campaña de Álvaro Uribe Vélez",
+              "viewCount": "11299"
+            },
+            {
+              "channelTitle": "Canal Capital",
+              "commentCount": "0",
+              "description": "#NoticiasCapital | La Administración Distrital estudia una alternativa que pretende disminuir los problemas de movilidad: Restringir el tránsito de vehículos con placas blancas. Sin embargo, estarían exentos autos con capacidad superior a seis pasajeros y las rutas escolares.\n\n Suscríbete a Capital en YouTube: https://bit.ly/3kSykMv \ny activa la campanita 🔔 para recibir notificaciones\n\n¡Síguenos en nuestras redes sociales!\nInstagram: https://www.instagram.com/canalcapital/\nFacebook: https://www.facebook.com/CanalCapital...\nTwitter: https://twitter.com/CanalCapital\n\nNo olvides visitar nuestro portal web: http://www.conexioncapital.co",
+              "duration": "PT57S",
+              "likeCount": "3",
+              "publishedAt": "2012-10-19T15:50:47Z",
+              "title": "Restricciones para vehículos con placas blancas",
+              "viewCount": "1327"
+            },
+            {
+              "channelTitle": "Canal Capital",
+              "commentCount": "8",
+              "description": "En entrevista exclusiva, el exfiscal que en 1998 envió a la cárcel al zar de las esmeraldas Víctor Carranza, revelá qué éste tenía nexos con poderos empresarios y políticos, y que jugó un papel clave en masacres cometidas por paramilitares. Por seguridad, se oculta el rostro del exfiscal. http://www.canalcapital.gov.co/",
+              "duration": "PT3M36S",
+              "likeCount": "100",
+              "publishedAt": "2013-04-06T02:43:52Z",
+              "title": "\"Carranza tenía nexos con poderosos empresarios y políticos\": exfiscal",
+              "viewCount": "28024"
+            },
+            {
+              "channelTitle": "Canal Capital",
+              "commentCount": "0",
+              "description": "#NoticiasCapital | Pasquilla, una de las despensas agrícolas más importantes de Bogotá, revivió sus fiestas campesinas, donde vecinos de Usme y Sumapaz llegaron hasta Ciudad Bolívar para unirse a las celebraciones.\n\nSuscríbete a Capital en YouTube: https://bit.ly/3kSykMv \ny activa la campanita 🔔 para recibir notificaciones\n\n¡Síguenos en nuestras redes sociales!\nInstagram: https://www.instagram.com/canalcapital/\nFacebook: https://www.facebook.com/CanalCapitalOficial\nTwitter: https://twitter.com/CanalCapital\n\nNo olvides visitar nuestro portal web: http://www.conexioncapital.co",
+              "duration": "PT2M1S",
+              "likeCount": "27",
+              "publishedAt": "2012-11-13T19:15:53Z",
+              "title": "Pasquilla revivió sus fiestas",
+              "viewCount": "3904"
+            },
+            {
+              "channelTitle": "Canal Capital",
+              "commentCount": "2",
+              "description": "#NoticiasCapital | A partir de una condena de 74 meses de prisión, a un profesor que abusó sexualmente de una mujer en estado de alicoramiento, la Corte Suprema de Justicia fijó los limites entre el sexo consensuado y el abuso sexual.\n\nSuscríbete a Capital en YouTube: https://bit.ly/3kSykMv \ny activa la campanita 🔔 para recibir notificaciones\n\n¡Síguenos en nuestras redes sociales!\nInstagram: https://www.instagram.com/canalcapital/ \nFacebook: https://www.facebook.com/CanalCapitalOficial \nTwitter: https://twitter.com/CanalCapital\nTikTok: https://www.tiktok.com/@canalcapital \n\nNo olvides visitar nuestro portal web: http://www.conexioncapital.co",
+              "duration": "PT1M19S",
+              "likeCount": "11",
+              "publishedAt": "2013-01-10T19:07:46Z",
+              "title": "Límites entre el sexo consensuado y el abuso",
+              "viewCount": "5033"
+            },
+            {
+              "channelTitle": "Canal Capital",
+              "commentCount": "1",
+              "description": "#NoticiasCapital | El sombrero vueltiao tiene la categoría de símbolo cultural de la nación. Sus inventores son los indios zenú y es un elemento representativo de Colombia. Esta es la historia de Danis Morales, quien los fabricaccon sus pies. \n\n Suscríbete a Capital en YouTube: https://bit.ly/3kSykMv \ny activa la campanita 🔔 para recibir notificaciones\n\n¡Síguenos en nuestras redes sociales!\nInstagram: https://www.instagram.com/canalcapital/\nFacebook: https://www.facebook.com/CanalCapitalOficial\nTwitter: https://twitter.com/CanalCapital\n\nNo olvides visitar nuestro portal web: http://www.conexioncapital.co",
+              "duration": "PT1M21S",
+              "likeCount": "17",
+              "publishedAt": "2012-12-04T13:41:10Z",
+              "title": "Sombreros vueltiaos hechos con los pies",
+              "viewCount": "2491"
+            },
+            {
+              "channelTitle": "Warner Music México",
+              "commentCount": "4579",
+              "description": "@alexanderacha\n@warnermusicmex\n\nhttp://alexanderacha.com/alexander/",
+              "duration": "PT3M56S",
+              "likeCount": "274714",
+              "publishedAt": "2012-11-01T06:00:10Z",
+              "title": "Alexander Acha - Amor Sincero feat. Zuria Vega (Video Oficial)",
+              "viewCount": "34030811"
+            },
+            {
+              "channelTitle": "FARRUKOVEVO",
+              "commentCount": "17130",
+              "description": "Lo mejor de Farruko https://goo.gl/bP8VCp\nFarruko - TrapXficante (Album 2017) https://goo.gl/ak5GPk\nSuscríbete para ver más  https://goo.gl/PaCxgw\nMusic video by Farruko performing Cositas Que Haciamos. 2012 Swag Music\nBest of Farruko / Lo mejor de Farruko: https://goo.gl/bP8VCp\nSubscribe here: https://goo.gl/PaCxgw\n\n#Farruko #CositasQueHaciamos #Vevo #Latin #OfficialMusicVideo",
+              "duration": "PT4M17S",
+              "likeCount": "712052",
+              "publishedAt": "2013-06-03T04:00:32Z",
+              "title": "Farruko - Cositas Que Haciamos (Official Video)",
+              "viewCount": "114773702"
+            },
+            {
+              "channelTitle": "jesseyjoyoficial",
+              "commentCount": "102991",
+              "description": "JESSE \u0026 JOY – ¡Corre! (Video Oficial)\n\nSuscríbete a nuestro canal de YouTube: https://www.youtube.com/c/jesseyjoyoficial \nSitio oficial: https://jesseyjoy.com/ \n\nSíguenos en social media:\nFacebook: https://www.facebook.com/JesseyJoyOficial \nInstagram: https://www.instagram.com/jesseyjoy/ \nTwitter: https://twitter.com/jesseyjoy \nTikTok: https://www.tiktok.com/@jesseandjoy \n\nSigue a Jesse:\nFacebook: https://www.facebook.com/MisterNach0s \nInstagram: https://www.instagram.com/cheeseandbeans \nTwitter: https://twitter.com/jesseboy \nTikTok: https://www.tiktok.com/@jesseboy \nTwich: https://www.twitch.tv/jesseboy \n\nSigue a Joy:\nFacebook: https://www.facebook.com/SolamenteJoyOficial \nInstagram: https://www.instagram.com/joynadamas \nTwitter: https://twitter.com/solamentejoy \nTikTok: https://www.tiktok.com/@joy.nadamas \n\nLETRA / LYRICS\nMe miras diferente, me abrazas y no siento tu calor\nTe digo lo que siento, me interrumpes y terminas la oración\nSiempre tienes la razón\n\nTú, libreto de siempre tan predecible\nYa, ya me lo sé\n\nAsí que corre, corre, corre, corazón\nDe los dos tú siempre fuiste el más veloz\nToma todo lo que quieras pero vete ya\nQue mis lágrimas jamás te voy a dar\nAsí que corre como siempre, no mires atrás\nLo has hecho ya y, la verdad, me da igual\n\nYa viví esta escena y con mucha pena te digo no, conmigo no\nDi lo que podía, pero a media puerta se quedó mi corazón\n\nTú, libreto de siempre, tan repetido\nYa no, no te queda bien\n\nAsí que corre, corre, corre, corazón\nDe los dos tú siempre fuiste el más veloz\nToma todo lo que quieras pero vete ya\nQue mis lágrimas jamás te voy a dar\nAsí que corre como siempre, no mires atrás\nLo has hecho ya y, la verdad, me da igual\n\nTú, el perro de siempre los mismos trucos\nYa, ya me los sé\n\nAsí que corre, corre, corre, corazón\nDe los dos tú siempre fuiste el más veloz\nToma todo lo que quieras pero vete ya\nQue mis lágrimas jamás te voy a dar\n\nHan sido tantas despedidas que en verdad\nDedicarte un verso más está de más\nAsí que corre como siempre que no iré detrás\nLo has hecho ya y, la verdad, me da igual\n\nLo has hecho ya y, la verdad, me da igual\nLo has hecho ya, pero al final me da igual\n\n#JESSEyJOY #Corre #ConQuiénSeQuedaElPerro\n\n© 2011 WMG",
+              "duration": "PT5M55S",
+              "likeCount": "2694551",
+              "publishedAt": "2011-12-02T16:58:15Z",
+              "title": "JESSE \u0026 JOY – ¡Corre! (Video Oficial)",
+              "viewCount": "992263654"
+            },
+            {
+              "channelTitle": "Canal Capital",
+              "commentCount": "1",
+              "description": "Capital Noticias 8:00 pm 16-11-12\n\n27 años después de la tragedia de Armero, el 13 de noviembre de 1985, muchas familias aún siguen buscando a sus hijos perdidos. Algunos fueron adoptados por extrangeros de manera irregular. Otros están en alguna ciudad de Colombia. En la Plaza de Bolívar comenzó el reencuentro de los niños perdidos de Armero. \n\nhttp://www.canalcapital.gov.co/",
+              "duration": "PT1M9S",
+              "likeCount": "20",
+              "publishedAt": "2012-11-19T12:50:27Z",
+              "title": "Inició reencuentro de los niños perdidos de Armero",
+              "viewCount": "4574"
+            },
+            {
+              "channelTitle": "jesseyjoyoficial",
+              "commentCount": "33667",
+              "description": "JESSE \u0026 JOY, Mario Domm - Llorar (Video Oficial)\n\nSuscríbete a nuestro canal de YouTube: https://www.youtube.com/c/jesseyjoyoficial \nSitio oficial: https://jesseyjoy.com/ \n\nSíguenos en social media:\nFacebook: https://www.facebook.com/JesseyJoyOficial \nInstagram: https://www.instagram.com/jesseyjoy/ \nTwitter: https://twitter.com/jesseyjoy \nTikTok: https://www.tiktok.com/@jesseandjoy \n\nSigue a Jesse:\nFacebook: https://www.facebook.com/MisterNach0s \nInstagram: https://www.instagram.com/cheeseandbeans \nTwitter: https://twitter.com/jesseboy \nTikTok: https://www.tiktok.com/@jesseboy \nTwich: https://www.twitch.tv/jesseboy \n\nSigue a Joy:\nFacebook: https://www.facebook.com/SolamenteJoyOficial \nInstagram: https://www.instagram.com/joynadamas \nTwitter: https://twitter.com/solamentejoy \nTikTok: https://www.tiktok.com/@joy.nadamas \n\nLETRA / LYRICS\n\nMe perdí buscando ese lugar\nTodo por tratar de demostrar\nOlvide que sin tu amor\nNo valgo nada\nY tome una vuelta equivocada\n\nMe quede sin movimiento\nSin saber por donde regresar\nLleno de remordimiento\n\nDejándote detrás, fingir ser alguien mas\nY llorar (y llorar), y llorar (y llorar)\nNo sirve de nada ahora que te perdí\nTe quiero recuperar\nVen sálvame, despiérteme, rescátame\nDel sufrimiento, oh no (del sufrimiento)\n\nTengo la esperanza que el dolor\nCambie y se transforme en tu perdón\nNavegar en un mar sin fantasmas\nY la luz de tu amor sea mi mapa\n\nJuro que es verdad no miento\nQue mi voluntad es cambiar\nPero sola yo no puedo\nNo se como lograr, mi alma reparar\n\nY llorar (y llorar), y llorar (y llorar)\nNo sirve de nada ahora que te perdí\nTe quiero recuperar\nVen sálvame, despiérteme, rescátame\nDel sufrimiento\nDel sufrimiento, del sufrimiento\n\nY llorar, y llorar\nNo sirve de nada ahora que te perdí\nTe quiero recuperar\n\nVen sálvame, despiérteme, rescátame\nDel sufrimiento, oh\nDel sufrimiento\nY llorar, y llorar\n\n#JESSEyJOY #Llorar #MarioDomm #ConQuiénSeQuedaElPerro",
+              "duration": "PT5M1S",
+              "likeCount": "1418204",
+              "publishedAt": "2013-01-28T06:00:35Z",
+              "title": "JESSE \u0026 JOY, Mario Domm - Llorar (Video Oficial)",
+              "viewCount": "453079510"
+            },
+            {
+              "channelTitle": "RioromaVEVO",
+              "commentCount": "32102",
+              "description": "Vídeo oficial de Río Roma de su tema Me Cambiaste La Vida. Haz clic aquí para escuchar a Río Roma en Spotify: http://smarturl.it/RioRomaSpot?IQid\u003dR...\n\nIncluido en Al Fin Te Encontré. Haz clic aquí para comprar el track o el álbum en iTunes: http://smarturl.it/AlFinTeEncontre?IQ...\nGoogle Play: http://smarturl.it/MCLVGPlay?IQid\u003dRio...\nDisfruta de más música de Río Roma aquí: http://smarturl.it/RioRomaStream?IQid...\n\nMás de Río Roma\nMi Persona Favorita: https://youtu.be/AJKzOgv5YNU\nPor Eso Te Amo: https://youtu.be/9jirj0OjI-M\nHoy Es Un Buen Día: https://youtu.be/36kmCZheR1I\n\nHaz clic aquí http://smarturl.it/ilovepophitsMX?IQi... para escuchar más vídeos de buen Pop en Español.\n\nSigue a Río Roma\nPágina Web: http://www.rioroma.mx/\nFacebook: https://www.facebook.com/rioromamx\nTwitter: https://twitter.com/RioRomaMx\nInstagram: https://instagram.com/rioromamx\n\nSuscríbete al canal de Río Roma en YouTube: http://smarturl.it/RioRomaSub?IQid\u003dRi...\n\n---------\n\nLetras:\n\nFue un día como cualquiera, nunca olvidaré la fecha \nCoincidimos sin pensar en tiempo y en lugar \nAlgo mágico pasó, tu sonrisa me atrapó \nSin permiso me robaste el corazón \nY así sin decirnos nada con una simple mirada comenzaba nuestro amor \nTú mecambiaste la vida desde que llegaste a mi \nEres el sol que ilumina todo mi existir \nEres un sueño perfecto, todo lo encuentro en ti \nTú me cambiaste la vida por ti es que he vuelto a creer \nAhora sólo tus labios encienden mi piel \nHoy ya no hay dudas aquí, el miedo se fue de mí \nY todo gracias a ti\"",
+              "duration": "PT3M55S",
+              "likeCount": "1607720",
+              "publishedAt": "2012-04-06T07:00:10Z",
+              "title": "Río Roma - Me Cambiaste la Vida (Videoclip)",
+              "viewCount": "397507738"
+            },
+            {
+              "channelTitle": "EnriqueIglesiasVEVO",
+              "commentCount": "64043",
+              "description": "Official Music Video for Enrique Iglesias, Juan Luis Guerra - Cuando Me Enamoro, Remastered in HD!\n\nListen to Enrique’s album Final Vol.1 on:\nYouTube: https://www.youtube.com/watch?v\u003dEjIfL0rSndo\u0026list\u003dPLkZvZjoXsklBpny803ZG5d0soW6jAeAZ8\nSpotify: https://open.spotify.com/album/61a4XyIj98CGrUnKy8Hu4Z\nApple Music/ iTunes: https://music.apple.com/us/album/final-vol-1/1585690462\nAmazon: https://a.co/d/3whglJp\nYoutube Music: https://music.youtube.com/playlist?list\u003dOLAK5uy_l3iBxAs_jesGQPrIUWXBGfK5gzqHNfNos\u0026feature\u003dshare\nDeezer: https://deezer.page.link/BwuCg8q3y8VF7ABb6\n \nWatch more Enrique Music Videos: https://www.youtube.com/watch?v\u003dCRYixDvIKcg\u0026list\u003dPL80A2C64141575F4B\n \nTour Dates and News at: https://www.enriqueiglesias.com\n \nFollow Enrique: \nInstagram: http://www.instagram.com/enriqueiglesias \nFacebook: http://www.facebook.com/enriqueiglesias \nTwitter: http://www.twitter.com/enriqueiglesias \nSnapchat: @Enrique\n\n#EnriqueIglesias #CuandoMeEnamoro",
+              "duration": "PT3M58S",
+              "likeCount": "2593259",
+              "publishedAt": "2010-05-18T17:54:38Z",
+              "title": "Enrique Iglesias, Juan Luis Guerra - Cuando Me Enamoro (Official Music Video)",
+              "viewCount": "819637675"
+            }
+          ],
+          "selection": {
+            "data": [
+              {
+                "channelTitle": "Canal Capital",
+                "column_9": "",
+                "commentCount": "0",
+                "description": "#NoticiasCapital | Miguel Ángel Calero Rodríguez falleció debido a unas trombosis que desencadenaron una muerte cerebral. A través de un comunicado de prensa, el Club Pachuca hizo oficial el deceso del exfutbolista colombiano que pasó sus últimos días en un hospital al sur de la Ciudad de México. \n\n\nSuscríbete a Capital en YouTube: https://bit.ly/3kSykMv \ny activa la campanita 🔔 para recibir notificaciones\n\n¡Síguenos en nuestras redes sociales!\nInstagram: https://www.instagram.com/canalcapital/\nFacebook: https://www.facebook.com/CanalCapitalOficial\nTwitter: https://twitter.com/CanalCapital\n\nNo olvides visitar nuestro portal web: http://www.conexioncapital.co",
+                "duration": "PT2M5S",
+                "likeCount": "672",
+                "publishedAt": "2012-12-05T13:46:00Z",
+                "title": "Falleció Miguel Calero en Ciudad de México",
+                "viewCount": "181486"
+              }
+            ],
+            "selectedColumn": "likeCount",
+            "selectedRow": 1
+          },
+          "style": {
+            "margin": "10px 10%"
+          }
+        },
+        "type": "ia.display.table"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

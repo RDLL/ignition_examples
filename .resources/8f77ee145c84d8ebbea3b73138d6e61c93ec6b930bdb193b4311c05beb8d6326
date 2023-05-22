@@ -1,0 +1,118 @@
+{
+  "custom": {},
+  "params": {
+    "backgroundColor": "#3A3A3A",
+    "diodeOffColor": "#005A00",
+    "diodeOnColor": "#00FF00",
+    "numberFormat": "#,##0.00",
+    "segmentFormat": "14 segment",
+    "tagPath": ""
+  },
+  "propConfig": {
+    "params.backgroundColor": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.diodeOffColor": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.diodeOnColor": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.numberFormat": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.segmentFormat": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 35,
+      "width": 135
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "LedDisplay"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.backgroundColor": {
+            "binding": {
+              "config": {
+                "path": "view.params.backgroundColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.diodeOffColor": {
+            "binding": {
+              "config": {
+                "path": "view.params.diodeOffColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.diodeOnColor": {
+            "binding": {
+              "config": {
+                "path": "view.params.diodeOnColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.numberFormat": {
+            "binding": {
+              "config": {
+                "path": "view.params.numberFormat"
+              },
+              "type": "property"
+            }
+          },
+          "props.segmentFormat": {
+            "binding": {
+              "config": {
+                "path": "view.params.segmentFormat"
+              },
+              "type": "property"
+            }
+          },
+          "props.value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "tagPath": "{view.params.tagPath}"
+                },
+                "tagPath": "{tagPath}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "type": "ia.display.led-display"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

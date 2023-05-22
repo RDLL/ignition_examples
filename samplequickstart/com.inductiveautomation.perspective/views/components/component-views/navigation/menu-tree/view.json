@@ -1,0 +1,371 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Menu Tree"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The Menu Tree component can be configured to allow users to navigate pages in a Perspective Session. The Menu Tree defines a hierarchical view of information that can be configured to expand submenu branches and menu items. The subitems can be further expanded to expose more subitems if any exist, and collapsed to hide subitems. This component can be customized to fit the look and feel of your project by leveraging style classes as well at icons from the Material library."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "MenuTree"
+                },
+                "position": {
+                  "basis": "300px",
+                  "grow": 1
+                },
+                "props": {
+                  "items": [
+                    {
+                      "enabled": true,
+                      "items": [
+                        {
+                          "enabled": true,
+                          "items": [],
+                          "label": {
+                            "icon": {
+                              "path": ""
+                            },
+                            "text": "Submenu item 1"
+                          },
+                          "navIcon": {
+                            "path": ""
+                          },
+                          "showHeader": true,
+                          "style": {
+                            "classes": ""
+                          },
+                          "target": "",
+                          "visible": true
+                        },
+                        {
+                          "enabled": true,
+                          "items": [],
+                          "label": {
+                            "icon": {
+                              "path": ""
+                            },
+                            "text": "Submenu item 2"
+                          },
+                          "navIcon": {
+                            "path": ""
+                          },
+                          "showHeader": true,
+                          "style": {
+                            "classes": ""
+                          },
+                          "target": "",
+                          "visible": true
+                        }
+                      ],
+                      "label": {
+                        "icon": {
+                          "path": "material/list"
+                        },
+                        "text": "Menu Item 1"
+                      },
+                      "navIcon": {
+                        "color": "",
+                        "path": "material/chevron_right"
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [
+                        {
+                          "enabled": true,
+                          "items": [],
+                          "label": {
+                            "icon": {
+                              "path": ""
+                            },
+                            "text": "Submenu item 1"
+                          },
+                          "navIcon": {
+                            "path": ""
+                          },
+                          "showHeader": true,
+                          "style": {
+                            "classes": ""
+                          },
+                          "target": "",
+                          "visible": true
+                        },
+                        {
+                          "enabled": true,
+                          "items": [],
+                          "label": {
+                            "icon": {
+                              "path": ""
+                            },
+                            "text": "Submenu item 2"
+                          },
+                          "navIcon": {
+                            "path": ""
+                          },
+                          "showHeader": true,
+                          "style": {
+                            "classes": ""
+                          },
+                          "target": "",
+                          "visible": true
+                        }
+                      ],
+                      "label": {
+                        "icon": {
+                          "path": "material/list"
+                        },
+                        "text": "Menu Item 2"
+                      },
+                      "navIcon": {
+                        "color": "",
+                        "path": "material/chevron_right"
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "",
+                      "visible": true
+                    }
+                  ]
+                },
+                "type": "ia.navigation.menutree"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "323px",
+              "shrink": 0
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "MenuTree"
+                },
+                "position": {
+                  "basis": "323px"
+                },
+                "props": {
+                  "items": [
+                    {
+                      "enabled": true,
+                      "items": [
+                        {
+                          "enabled": true,
+                          "items": [],
+                          "label": {
+                            "icon": {
+                              "path": "material/assessment"
+                            },
+                            "text": "Line KPIs"
+                          },
+                          "navIcon": {
+                            "path": ""
+                          },
+                          "showHeader": true,
+                          "style": {
+                            "classes": ""
+                          },
+                          "target": "",
+                          "visible": true
+                        },
+                        {
+                          "enabled": true,
+                          "items": [],
+                          "label": {
+                            "icon": {
+                              "path": "material/assignment"
+                            },
+                            "text": "Today\u0027s Reports"
+                          },
+                          "navIcon": {
+                            "path": ""
+                          },
+                          "showHeader": true,
+                          "style": {
+                            "classes": ""
+                          },
+                          "target": "",
+                          "visible": true
+                        }
+                      ],
+                      "label": {
+                        "icon": {
+                          "path": ""
+                        },
+                        "text": "Plant Overview"
+                      },
+                      "navIcon": {
+                        "color": "",
+                        "path": "material/chevron_right"
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [
+                        {
+                          "enabled": true,
+                          "items": [],
+                          "label": {
+                            "icon": {
+                              "path": "material/assignment_ind"
+                            },
+                            "text": "Operators On Floor"
+                          },
+                          "navIcon": {
+                            "path": ""
+                          },
+                          "showHeader": true,
+                          "style": {
+                            "classes": ""
+                          },
+                          "target": "",
+                          "visible": true
+                        },
+                        {
+                          "enabled": true,
+                          "items": [],
+                          "label": {
+                            "icon": {
+                              "path": "material/ring_volume"
+                            },
+                            "text": "Operators On Call"
+                          },
+                          "navIcon": {
+                            "path": ""
+                          },
+                          "showHeader": true,
+                          "style": {
+                            "classes": ""
+                          },
+                          "target": "",
+                          "visible": true
+                        },
+                        {
+                          "enabled": true,
+                          "items": [],
+                          "label": {
+                            "icon": {
+                              "path": "material/date_range"
+                            },
+                            "text": "Schedule"
+                          },
+                          "navIcon": {
+                            "path": ""
+                          },
+                          "showHeader": true,
+                          "style": {
+                            "classes": ""
+                          },
+                          "target": "",
+                          "visible": true
+                        }
+                      ],
+                      "label": {
+                        "icon": {
+                          "path": ""
+                        },
+                        "text": "Attendance"
+                      },
+                      "navIcon": {
+                        "color": "",
+                        "path": "material/chevron_right"
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "",
+                      "visible": true
+                    }
+                  ],
+                  "style": {
+                    "classes": "components/menu-tree1"
+                  }
+                },
+                "type": "ia.navigation.menutree"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "323px",
+              "shrink": 0
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "452px",
+          "shrink": 0
+        },
+        "props": {
+          "justify": "space-around",
+          "style": {
+            "marginTop": 15
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

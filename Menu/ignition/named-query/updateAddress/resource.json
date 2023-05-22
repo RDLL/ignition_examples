@@ -1,0 +1,45 @@
+{
+  "scope": "DG",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "query.sql"
+  ],
+  "attributes": {
+    "useMaxReturnSize": false,
+    "autoBatchEnabled": false,
+    "fallbackValue": "",
+    "maxReturnSize": 100,
+    "cacheUnit": "SEC",
+    "type": "UpdateQuery",
+    "enabled": true,
+    "cacheAmount": 1,
+    "cacheEnabled": false,
+    "database": "",
+    "fallbackEnabled": false,
+    "lastModificationSignature": "795393ce0743197ef60c10d23482ca51a62bb0e0d623350e70da42e471c46f8d",
+    "permissions": [
+      {
+        "zone": "",
+        "role": ""
+      }
+    ],
+    "lastModification": {
+      "actor": "rdll",
+      "timestamp": "2023-05-22T22:38:01Z"
+    },
+    "parameters": [
+      {
+        "type": "Parameter",
+        "identifier": "newAddress",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "oldAddress",
+        "sqlType": 7
+      }
+    ]
+  }
+}

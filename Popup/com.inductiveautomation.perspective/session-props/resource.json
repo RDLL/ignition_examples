@@ -1,0 +1,16 @@
+{
+  "scope": "G",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "props.json"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "rdll",
+      "timestamp": "2023-05-19T19:08:36Z"
+    },
+    "lastModificationSignature": "7ede19023c90b80261d1f5e4404f8ee17c58eece03c93da17f46d1d5fd8f51ce"
+  }
+}

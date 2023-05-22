@@ -1,0 +1,92 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 886,
+      "width": 1297
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Alarm Status Table"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The Perspective Alarm Status Table displays the current state of the alarm system. It can be configured to show active, unacknowledged, cleared, and acknowledged alarm states. The Alarm Status Table allows you to view currently active alarm events in the system, providing an easy way to inspect the alarm details, shelve alarms, and acknowledge them. \n\nAcknowledgement is handled by selecting (checking) alarms and pressing the \"Acknowledge\" button. If any of the selected alarms require acknowledge notes, then a popup window will be presented in which the operator must add notes to the acknowledgement.\n\nThe Alarm Status Table provides a host of filtering properties that allow you to filter on various parts of alarms and view the details. All the alarm states are visible by clicking the Filter button on the table. There is also a search bar where you can enter text to further refine your filter criteria so you have less alarm events to scroll through."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "AlarmStatusTable"
+                },
+                "position": {
+                  "basis": "1197px"
+                },
+                "type": "ia.display.alarmstatustable"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "643px"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "659px",
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "home-large"
+        },
+        "position": {
+          "size": "large"
+        },
+        "props": {
+          "path": "home/home-large"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "home-small"
+        },
+        "props": {
+          "path": "home/home-small"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "breakpoint": 900
+    },
+    "type": "ia.container.breakpt"
+  }
+}

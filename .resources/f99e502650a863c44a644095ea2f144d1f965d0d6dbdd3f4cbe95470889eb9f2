@@ -1,0 +1,255 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px"
+        },
+        "props": {
+          "params": {
+            "text": "LED Display"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "props": {
+          "text": "The LED Display is a stylized numeric and/or alphanumeric label. It has two visual styles: 7-segment and 14-segment and supports nine common number format patterns. Use the \u0027value\u0027 property to enter numeric and/or alphanumeric characters. "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "LedDisplay"
+                },
+                "position": {
+                  "basis": "60px"
+                },
+                "type": "ia.display.led-display"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "48px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "HelpText"
+                },
+                "position": {
+                  "basis": "87px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Use the LED Display component to display numeric values with properties to customize the number format."
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance1"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "LedDisplay"
+                },
+                "position": {
+                  "basis": "60px"
+                },
+                "props": {
+                  "numberFormat": "#,##0"
+                },
+                "type": "ia.display.led-display"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "HelpText"
+                },
+                "position": {
+                  "basis": "87px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": " This LED Display component\u0027s numberFormat property has been changed to 0 using the property\u0027s dropdown menu. This numberFormat value would be ideal for displaying integer values."
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance2"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "LedDisplay"
+                },
+                "position": {
+                  "basis": "60px"
+                },
+                "props": {
+                  "backgroundColor": "#0E5974",
+                  "diodeOffColor": "#0E5974",
+                  "diodeOnColor": "#00FFFF",
+                  "value": 78.34
+                },
+                "type": "ia.display.led-display"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "HelpText"
+                },
+                "position": {
+                  "basis": "87px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "The LED Display component\u0027s backgroundColor, diodeOnColor, and diodeOffColor can be altered to customize the look of the display. Note this example uses the same exact color for the backgroundColor and diodeOffColor properties. Try altering this LED Display component\u0027s diodeOffColor property to something else to see the difference."
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance3"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "justify": "space-evenly",
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "wrap": "wrap"
+    },
+    "type": "ia.container.flex"
+  }
+}

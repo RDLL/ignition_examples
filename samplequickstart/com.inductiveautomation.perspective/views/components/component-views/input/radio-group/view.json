@@ -1,0 +1,382 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 860,
+      "width": 728
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Radio Group"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Description"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "source": "The Radio Group allows you to create multiple radio buttons that are grouped together in a single container. The number of radio buttons in the group is determined by the number of elements in the \"radios\" object. Only one radio button in a group may be selected at a time. Radio groups are a good way to let the user choose just one of a number of options. If multiple selections are expected, the Checkbox or Dropdown components can be used instead.\nCustom styling can be applied for the selected and unselected options, and the direction and flow of the group can be configured as well."
+        },
+        "type": "ia.display.markdown"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Column:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "RadioGroup"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "index": 0,
+                  "orientation": "column",
+                  "radios": [
+                    {
+                      "selected": true,
+                      "text": "Option 1",
+                      "value": "Option 1"
+                    },
+                    {
+                      "selected": false,
+                      "text": "Option 2",
+                      "value": "Option 2"
+                    },
+                    {
+                      "selected": false,
+                      "text": "Option 3",
+                      "value": "Option 3"
+                    },
+                    {
+                      "selected": false,
+                      "text": "Option 4",
+                      "value": "Option 4"
+                    }
+                  ],
+                  "value": "Option 1"
+                },
+                "type": "ia.input.radio-group"
+              }
+            ],
+            "meta": {
+              "name": "Column"
+            },
+            "position": {
+              "basis": "200px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Row:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "RadioGroup"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "index": 0,
+                  "radios": [
+                    {
+                      "selected": true,
+                      "text": "Option 1",
+                      "value": "Option 1"
+                    },
+                    {
+                      "selected": false,
+                      "text": "Option 2",
+                      "value": "Option 2"
+                    },
+                    {
+                      "selected": false,
+                      "text": "Option 3",
+                      "value": "Option 3"
+                    },
+                    {
+                      "selected": false,
+                      "text": "Option 4",
+                      "value": "Option 4"
+                    }
+                  ],
+                  "value": "Option 1"
+                },
+                "type": "ia.input.radio-group"
+              }
+            ],
+            "meta": {
+              "name": "Row"
+            },
+            "position": {
+              "basis": "500px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Disabled:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "RadioGroup"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "enabled": false,
+                  "index": 0,
+                  "orientation": "column",
+                  "radios": [
+                    {
+                      "selected": true,
+                      "text": "Option 1",
+                      "value": "Option 1"
+                    },
+                    {
+                      "selected": false,
+                      "text": "Option 2",
+                      "value": "Option 2"
+                    },
+                    {
+                      "selected": false,
+                      "text": "Option 3",
+                      "value": "Option 3"
+                    },
+                    {
+                      "selected": false,
+                      "text": "Option 4",
+                      "value": "Option 4"
+                    }
+                  ],
+                  "value": "Option 1"
+                },
+                "type": "ia.input.radio-group"
+              }
+            ],
+            "meta": {
+              "name": "Disabled"
+            },
+            "position": {
+              "basis": "200px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Customized:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "RadioGroup"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "align": "start",
+                  "index": 0,
+                  "justify": "space-evenly",
+                  "orientation": "column",
+                  "radios": [
+                    {
+                      "selected": true,
+                      "text": "Option 1",
+                      "value": "Option 1"
+                    },
+                    {
+                      "selected": false,
+                      "text": "Option 2",
+                      "value": "Option 2"
+                    },
+                    {
+                      "selected": false,
+                      "text": "Option 3",
+                      "value": "Option 3"
+                    },
+                    {
+                      "selected": false,
+                      "text": "Option 4",
+                      "value": "Option 4"
+                    }
+                  ],
+                  "selectedIcon": {
+                    "path": "material/toggle_on",
+                    "style": {
+                      "borderBottomLeftRadius": "50%",
+                      "borderBottomRightRadius": "50%",
+                      "borderStyle": "solid",
+                      "borderTopLeftRadius": "50%",
+                      "borderTopRightRadius": "50%",
+                      "borderWidth": 4,
+                      "fontSize": "3rem"
+                    }
+                  },
+                  "textPosition": "left",
+                  "unselectedIcon": {
+                    "path": "material/toggle_off",
+                    "style": {
+                      "borderBottomLeftRadius": "50%",
+                      "borderBottomRightRadius": "50%",
+                      "borderStyle": "solid",
+                      "borderTopLeftRadius": "50%",
+                      "borderTopRightRadius": "50%",
+                      "borderWidth": 4,
+                      "fontSize": "3rem"
+                    }
+                  },
+                  "value": "Option 1"
+                },
+                "type": "ia.input.radio-group"
+              }
+            ],
+            "meta": {
+              "name": "Customized"
+            },
+            "position": {
+              "basis": "200px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Examples"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "alignContent": "flex-start",
+          "alignItems": "flex-start",
+          "justify": "space-evenly",
+          "style": {
+            "overflow": "visible",
+            "padding": "10px"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

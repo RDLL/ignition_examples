@@ -1,0 +1,84 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "text": "Dynamic Flex Repeater"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "FlexRepeater"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "instances": [
+            {
+              "label": "Temperature",
+              "value": 1
+            },
+            {
+              "label": "Temperature",
+              "value": 36
+            },
+            {
+              "label": "Temperature",
+              "value": 93
+            }
+          ],
+          "path": "dynamic_Flex/valueLabelInstance",
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t\n\timport random\n\t\n\tinstance \u003d {\n\t\t\"label\": \"Temperature\",\n\t\t\"value\": random.randint(1,120),\n\t\t\n\t}\n\t\n\t\n\tself.getSibling(\"FlexRepeater\").props.instances.append(instance)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "props": {
+          "primary": false,
+          "text": "Add Instance"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "padding": "1opx"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

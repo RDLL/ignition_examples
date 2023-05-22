@@ -1,0 +1,1868 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 400
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "MenuTree"
+        },
+        "position": {
+          "basis": "300px",
+          "grow": 1
+        },
+        "props": {
+          "headerStyle": {
+            "classes": "framework/sidebar-items-mobile-headers"
+          },
+          "itemStyle": {
+            "classes": "framework/sidebar-items-mobile"
+          },
+          "items": [
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "Home"
+              },
+              "navIcon": {
+                "color": "",
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [
+                {
+                  "enabled": true,
+                  "items": [
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": ""
+                        },
+                        "text": "Bindings"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/ignition-101/perspective-features/bindings",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": ""
+                        },
+                        "text": "Transforms"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/ignition-101/perspective-features/transforms",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": ""
+                        },
+                        "text": "Events \u0026 Actions"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/ignition-101/perspective-features/events-actions",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": ""
+                        },
+                        "text": "Themes \u0026 Styles"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/ignition-101/perspective-features/themes-styles",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": ""
+                        },
+                        "text": "Embedded Views"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/ignition-101/perspective-features/embedded-views",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": ""
+                        },
+                        "text": "Containers"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/ignition-101/perspective-features/containers",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": ""
+                        },
+                        "text": "Native App"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/ignition-101/perspective-features/native-app",
+                      "visible": true
+                    }
+                  ],
+                  "label": {
+                    "icon": {
+                      "path": ""
+                    },
+                    "text": "Perspective Features"
+                  },
+                  "navIcon": {
+                    "color": "",
+                    "path": "material/chevron_right"
+                  },
+                  "showHeader": true,
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "",
+                  "visible": true
+                },
+                {
+                  "enabled": true,
+                  "items": [
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": ""
+                        },
+                        "text": "Realtime Status \u0026 Control"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/ignition-101/application/realtime-control",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": ""
+                        },
+                        "text": "Historical Data"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/ignition-101/application/historical-data",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": ""
+                        },
+                        "text": "Alarming"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/ignition-101/application/alarming",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": ""
+                        },
+                        "text": "Data Entry"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/ignition-101/application/data-entry",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": ""
+                        },
+                        "text": "Reports"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/ignition-101/application/reports",
+                      "visible": true
+                    }
+                  ],
+                  "label": {
+                    "icon": {
+                      "path": ""
+                    },
+                    "text": "Application"
+                  },
+                  "navIcon": {
+                    "color": "",
+                    "path": "material/chevron_right"
+                  },
+                  "showHeader": true,
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "",
+                  "visible": true
+                }
+              ],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "Ignition 101"
+              },
+              "navIcon": {
+                "color": "",
+                "path": "material/chevron_right"
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/ignition-101",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "Layouts"
+              },
+              "navIcon": {
+                "color": "",
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/layouts",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [
+                {
+                  "enabled": true,
+                  "items": [
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/chart-chartRangeSelector"
+                        },
+                        "text": "Chart Range Selector"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/charts/chart-range-selector",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/chart-gauge"
+                        },
+                        "text": "Gauge"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/charts/gauge",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/chart-pie"
+                        },
+                        "text": "Pie"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/charts/pie",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/chart-pie"
+                        },
+                        "text": "Power Chart"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/charts/power-chart",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/chart-simpleGauge"
+                        },
+                        "text": "Simple Gauge"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/charts/simple-gauge",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/chart-timeSeriesChart"
+                        },
+                        "text": "Time Series Chart"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/charts/time-series-chart",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/chart-xyChart"
+                        },
+                        "text": "XY Chart"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/charts/xy-chart",
+                      "visible": true
+                    }
+                  ],
+                  "label": {
+                    "icon": {
+                      "path": ""
+                    },
+                    "text": "Charts"
+                  },
+                  "navIcon": {
+                    "color": "",
+                    "path": "material/chevron_right"
+                  },
+                  "showHeader": true,
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "",
+                  "visible": true
+                },
+                {
+                  "enabled": true,
+                  "items": [
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/container-breakPoint"
+                        },
+                        "text": "Breakpoint"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/containers/breakpoint",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/container-column"
+                        },
+                        "text": "Column"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/containers/column",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/container-coordinate"
+                        },
+                        "text": "Coordinate"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/containers/coordinate",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/container-flex"
+                        },
+                        "text": "Flex"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/containers/flex",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/container-tab"
+                        },
+                        "text": "Tab"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/containers/tab",
+                      "visible": true
+                    }
+                  ],
+                  "label": {
+                    "icon": {
+                      "path": ""
+                    },
+                    "text": "Containers"
+                  },
+                  "navIcon": {
+                    "color": "",
+                    "path": "material/chevron_right"
+                  },
+                  "showHeader": true,
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "",
+                  "visible": true
+                },
+                {
+                  "enabled": true,
+                  "items": [
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-alarmJournalTable"
+                        },
+                        "text": "Alarm Journal Table"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/alarm-journal-table",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-alarmStatusTable"
+                        },
+                        "text": "Alarm Status Table"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/alarm-status-table",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-barcode"
+                        },
+                        "text": "Barcode"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/barcode",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-dashboard"
+                        },
+                        "text": "Dashboard"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/dashboard",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-icon"
+                        },
+                        "text": "Icon"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/icon",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-image"
+                        },
+                        "text": "Image"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/image",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-inlineFrame"
+                        },
+                        "text": "Inline Frame"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/inline-frame",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-label"
+                        },
+                        "text": "Label"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/label",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-ledDisplay"
+                        },
+                        "text": "LED Display"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/led-display",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-linearScale"
+                        },
+                        "text": "Linear Scale"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/linear-scale",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-map"
+                        },
+                        "text": "Map"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/map",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-markdown"
+                        },
+                        "text": "Markdown"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/markdown",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-movingAnalogIndicator"
+                        },
+                        "text": "Moving Analog Indicator"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/moving-analog-indicator",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-pdfViewer"
+                        },
+                        "text": "PDF Viewer"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/pdf-viewer",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-progress"
+                        },
+                        "text": "Progress"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/progress",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-spark"
+                        },
+                        "text": "Sparkline"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/sparkline",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-table"
+                        },
+                        "text": "Table"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/table",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-cylindricalTank"
+                        },
+                        "text": "Cylindrical Tank"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/cylindrical-tank",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-thermometer"
+                        },
+                        "text": "Thermometer"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/thermometer",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-tree"
+                        },
+                        "text": "Tree"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/tree",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/display-videoPlayer"
+                        },
+                        "text": "Video Player"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/display/video-player",
+                      "visible": true
+                    }
+                  ],
+                  "label": {
+                    "icon": {
+                      "path": ""
+                    },
+                    "text": "Display"
+                  },
+                  "navIcon": {
+                    "color": "",
+                    "path": "material/chevron_right"
+                  },
+                  "showHeader": true,
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "",
+                  "visible": true
+                },
+                {
+                  "enabled": true,
+                  "items": [
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/embedding-accordion"
+                        },
+                        "text": "Accordion"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/embedding/accordion",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/embedding-carousel"
+                        },
+                        "text": "Carousel"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/embedding/carousel",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/embedding-embeddedView"
+                        },
+                        "text": "Embedded View"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/embedding/embedded-view",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/embedding-flexRepeater"
+                        },
+                        "text": "Flex Repeater"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/embedding/flex-repeater",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/embedding-viewCanvas"
+                        },
+                        "text": "View Canvas"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/embedding/view-canvas",
+                      "visible": true
+                    }
+                  ],
+                  "label": {
+                    "icon": {
+                      "path": ""
+                    },
+                    "text": "Embedding"
+                  },
+                  "navIcon": {
+                    "color": "",
+                    "path": "material/chevron_right"
+                  },
+                  "showHeader": true,
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "",
+                  "visible": true
+                },
+                {
+                  "enabled": true,
+                  "items": [
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/input-barcodeScanner"
+                        },
+                        "text": "Barcode Scanner Input"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/input/barcode-scanner-input",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/input-button"
+                        },
+                        "text": "Button"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/input/button",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/input-checkbox"
+                        },
+                        "text": "Checkbox"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/input/checkbox",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/input-dateTimeInput"
+                        },
+                        "text": "DateTime Input"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/input/date-time-input",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/input-dateTimePicker"
+                        },
+                        "text": "DateTime Picker"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/input/date-time-picker",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/input-dropdown"
+                        },
+                        "text": "Dropdown"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/input/dropdown",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/input-fileUpload"
+                        },
+                        "text": "File Upload"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/input/file-upload",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/input-multiStateButton"
+                        },
+                        "text": "Multi-State Button"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/input/multi-state-button",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/input-numericEntryField"
+                        },
+                        "text": "Numeric Entry Field"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/input/numeric-entry-field",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/input-oneShotButton"
+                        },
+                        "text": "One-Shot Button"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/input/one-shot-button",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/input-passwordField"
+                        },
+                        "text": "Password Field"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/input/password-field",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/input-radioGroup"
+                        },
+                        "text": "Radio Group"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/input/radio-group",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/input-signaturePad"
+                        },
+                        "text": "Signature Pad"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/input/signature-pad",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/input-slider"
+                        },
+                        "text": "Slider"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/input/slider",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/input-textArea"
+                        },
+                        "text": "Text Area"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/input/text-area",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/input-textField"
+                        },
+                        "text": "Text Field"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/input/text-field",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/input-toggleSwitch"
+                        },
+                        "text": "Toggle Switch"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/input/toggle-switch",
+                      "visible": true
+                    }
+                  ],
+                  "label": {
+                    "icon": {
+                      "path": ""
+                    },
+                    "text": "Input"
+                  },
+                  "navIcon": {
+                    "color": "",
+                    "path": "material/chevron_right"
+                  },
+                  "showHeader": true,
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "",
+                  "visible": true
+                },
+                {
+                  "enabled": true,
+                  "items": [
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/navigation-horizontalMenu"
+                        },
+                        "text": "Horizontal Menu"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/navigation/horizontal-menu",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/navigation-link"
+                        },
+                        "text": "Link"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/navigation/link",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/navigation-menuTree"
+                        },
+                        "text": "Menu Tree"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/navigation/menu-tree",
+                      "visible": true
+                    }
+                  ],
+                  "label": {
+                    "icon": {
+                      "path": ""
+                    },
+                    "text": "Navigation"
+                  },
+                  "navIcon": {
+                    "color": "",
+                    "path": "material/chevron_right"
+                  },
+                  "showHeader": true,
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "",
+                  "visible": true
+                },
+                {
+                  "enabled": true,
+                  "items": [
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/reporting-reportViewer"
+                        },
+                        "text": "Report Viewer"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/reporting/report-viewer",
+                      "visible": true
+                    }
+                  ],
+                  "label": {
+                    "icon": {
+                      "path": ""
+                    },
+                    "text": "Reporting"
+                  },
+                  "navIcon": {
+                    "color": "",
+                    "path": "material/chevron_right"
+                  },
+                  "showHeader": true,
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "",
+                  "visible": true
+                },
+                {
+                  "enabled": true,
+                  "items": [
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/symbols-motor"
+                        },
+                        "text": "Motor"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/symbols/motor",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/symbols-pump"
+                        },
+                        "text": "Pump"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/symbols/pump",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/symbols-sensor"
+                        },
+                        "text": "Sensor"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/symbols/sensor",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/symbols-valve"
+                        },
+                        "text": "Valve"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/symbols/valve",
+                      "visible": true
+                    },
+                    {
+                      "enabled": true,
+                      "items": [],
+                      "label": {
+                        "icon": {
+                          "path": "sample-components/symbols-vessel"
+                        },
+                        "text": "Vessel"
+                      },
+                      "navIcon": {
+                        "path": ""
+                      },
+                      "showHeader": true,
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/components/symbols/vessel",
+                      "visible": true
+                    }
+                  ],
+                  "label": {
+                    "icon": {
+                      "path": ""
+                    },
+                    "text": "Symbols"
+                  },
+                  "navIcon": {
+                    "color": "",
+                    "path": "material/chevron_right"
+                  },
+                  "showHeader": true,
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "",
+                  "visible": true
+                }
+              ],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "Components"
+              },
+              "navIcon": {
+                "color": "",
+                "path": "material/chevron_right"
+              },
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/components",
+              "visible": true
+            }
+          ]
+        },
+        "type": "ia.navigation.menutree"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "48px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "fontSize": "12px",
+                "textAlign": "right"
+              },
+              "text": "Theme"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "basis": "144px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "session.props.theme"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Light",
+                  "value": "light"
+                },
+                {
+                  "label": "Light Cool",
+                  "value": "light-cool"
+                },
+                {
+                  "label": "Light Warm",
+                  "value": "light-warm"
+                },
+                {
+                  "label": "Dark",
+                  "value": "dark"
+                },
+                {
+                  "label": "Dark Cool",
+                  "value": "dark-cool"
+                },
+                {
+                  "label": "Dark Warm",
+                  "value": "dark-warm"
+                }
+              ],
+              "search": {
+                "enabled": false,
+                "marginLeft": "8px"
+              }
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "themePicker"
+        },
+        "position": {
+          "basis": "56px"
+        },
+        "props": {
+          "justify": "space-between",
+          "style": {
+            "marginBottom": "56px",
+            "padding": "8px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-between",
+      "style": {
+        "backgroundColor": "var(--neutral-20)"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

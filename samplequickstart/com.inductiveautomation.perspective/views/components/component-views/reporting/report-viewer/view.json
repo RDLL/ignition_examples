@@ -1,0 +1,80 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 1100
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Report Viewer"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The Report Viewer component allows embedding reports from the Reporting Module into a Perspective views. The Reporting Module must be installed to use the Report Viewer component. The Report Viewer is found at the bottom of the Perspective Component palette in the Designer. To configure the Report Viewer, you must first create a report and provide the Path of that report in the \u0027source\u0027 property of the component. "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "ReportViewer"
+            },
+            "position": {
+              "basis": "600px"
+            },
+            "props": {
+              "page": 1,
+              "pageCount": 1,
+              "source": "Simple Report"
+            },
+            "type": "ia.reporting.report-viewer"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "900px",
+          "shrink": 0
+        },
+        "props": {
+          "justify": "center",
+          "style": {
+            "marginTop": 10,
+            "overflow": "visible"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

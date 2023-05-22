@@ -1,0 +1,189 @@
+{
+  "custom": {},
+  "params": {
+    "button-margin": "8px 8px 0 8px",
+    "flex-direction": "column",
+    "flex-grow": 0
+  },
+  "propConfig": {
+    "params.button-margin": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.flex-direction": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.flex-grow": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 72
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tsystem.perspective.sendMessage(\"update-section\", payload \u003d \"a\", scope \u003d \"page\")"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "nav-a"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.grow": {
+            "binding": {
+              "config": {
+                "path": "view.params.flex-grow"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.margin": {
+            "binding": {
+              "config": {
+                "path": "view.params.button-margin"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "primary": false,
+          "style": {
+            "classes": "layouts/container-A layouts/container-label"
+          },
+          "text": "a"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tsystem.perspective.sendMessage(\"update-section\", payload \u003d \"b\", scope \u003d \"page\")"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "nav-b"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.grow": {
+            "binding": {
+              "config": {
+                "path": "view.params.flex-grow"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.margin": {
+            "binding": {
+              "config": {
+                "path": "view.params.button-margin"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "primary": false,
+          "style": {
+            "classes": "layouts/container-B layouts/container-label"
+          },
+          "text": "b"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tsystem.perspective.sendMessage(\"update-section\", payload \u003d \"c\", scope \u003d \"page\")"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "nav-c"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.grow": {
+            "binding": {
+              "config": {
+                "path": "view.params.flex-grow"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.margin": {
+            "binding": {
+              "config": {
+                "path": "view.params.button-margin"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "primary": false,
+          "style": {
+            "classes": "layouts/container-C layouts/container-label"
+          },
+          "text": "c"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.direction": {
+        "binding": {
+          "config": {
+            "path": "view.params.flex-direction"
+          },
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "justify": "center",
+      "style": {
+        "backgroundColor": "var(--neutral-20)"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 56,
+      "width": 1272
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "logoImage"
+            },
+            "position": {
+              "height": 40,
+              "width": 40,
+              "x": 8,
+              "y": 8
+            },
+            "props": {
+              "fit": {
+                "height": 40,
+                "mode": "absolute",
+                "width": 40
+              },
+              "source": "/system/images/sample-images/Icon-Gateway_128.png"
+            },
+            "type": "ia.display.image"
+          },
+          {
+            "meta": {
+              "name": "logoLabel"
+            },
+            "position": {
+              "height": 32,
+              "width": 188,
+              "x": 56,
+              "y": 12
+            },
+            "props": {
+              "style": {
+                "fontSize": "24px"
+              },
+              "text": "Explore Ignition"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "draggable": false,
+                    "id": "ELsSyAN9",
+                    "modal": true,
+                    "overlayDismiss": true,
+                    "position": {
+                      "height": 180,
+                      "relativeLocation": "bottom-right",
+                      "width": 200
+                    },
+                    "positionType": "relative",
+                    "resizable": false,
+                    "showCloseIcon": false,
+                    "type": "toggle",
+                    "viewPath": "framework/popup-info"
+                  },
+                  "scope": "C",
+                  "type": "popup"
+                }
+              }
+            },
+            "meta": {
+              "name": "Icon-info"
+            },
+            "position": {
+              "height": 22,
+              "width": 22,
+              "x": 244,
+              "y": 17
+            },
+            "props": {
+              "color": "var(--info)",
+              "path": "material/info_outline"
+            },
+            "type": "ia.display.icon"
+          }
+        ],
+        "meta": {
+          "name": "logo"
+        },
+        "position": {
+          "basis": "270px",
+          "shrink": 0
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "mainNav"
+        },
+        "position": {
+          "basis": "700px"
+        },
+        "props": {
+          "path": "framework/header-main-nav",
+          "style": {
+            "marginLeft": "8px",
+            "marginRight": "8px"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "48px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "fontSize": "12px",
+                "paddingRight": "8px",
+                "textAlign": "right"
+              },
+              "text": "Theme"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "basis": "138px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "session.props.theme"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Light",
+                  "value": "light"
+                },
+                {
+                  "label": "Light Cool",
+                  "value": "light-cool"
+                },
+                {
+                  "label": "Light Warm",
+                  "value": "light-warm"
+                },
+                {
+                  "label": "Dark",
+                  "value": "dark"
+                },
+                {
+                  "label": "Dark Cool",
+                  "value": "dark-cool"
+                },
+                {
+                  "label": "Dark Warm",
+                  "value": "dark-warm"
+                }
+              ],
+              "search": {
+                "enabled": false,
+                "marginLeft": "8px"
+              }
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "themePicker"
+        },
+        "position": {
+          "basis": "216px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "justify": "space-between",
+          "style": {
+            "backgroundColor": " var(--neutral-20)",
+            "padding": "8px 16px 8px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "alignContent": "flex-start",
+      "style": {
+        "classes": "framework/header"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

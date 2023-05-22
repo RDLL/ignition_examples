@@ -1,0 +1,96 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Tab"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "A Tab container is a relatively simple layout option. Tabs run along the top of the container. You can configure and select a distinct embedded view, container, or component for each tab."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "hasDelegate": true,
+              "name": "Label_0"
+            },
+            "position": {
+              "tabIndex": 1
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-E layouts/container-label",
+                "margin": "10px"
+              },
+              "text": "Tab View 2"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "hasDelegate": true,
+              "name": "Label"
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-E layouts/container-label",
+                "margin": "10px"
+              },
+              "text": "Tab View 1"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "TabContainer_0"
+        },
+        "position": {
+          "basis": "300px",
+          "grow": 1
+        },
+        "props": {
+          "style": {
+            "marginTop": "20px"
+          },
+          "tabs": [
+            "Tab 1",
+            "Tab 2"
+          ]
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

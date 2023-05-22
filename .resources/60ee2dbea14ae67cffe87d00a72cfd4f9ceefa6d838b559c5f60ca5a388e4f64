@@ -1,0 +1,58 @@
+{
+  "custom": {},
+  "params": {
+    "featureView": "bindings",
+    "folder": "perspective-features"
+  },
+  "propConfig": {
+    "params.featureView": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.folder": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1087
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "mainView"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.path": {
+            "binding": {
+              "config": {
+                "expression": "\"ignition-101/feature-views/\" + {view.params.folder} + \"/\" + {view.params.featureView}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "marginLeft": 22,
+        "marginRight": 22,
+        "padding": 10
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

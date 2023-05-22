@@ -1,0 +1,45 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 101,
+      "width": 351
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "LedDisplay"
+        },
+        "position": {
+          "basis": "52px"
+        },
+        "props": {
+          "value": 23
+        },
+        "type": "ia.display.led-display"
+      },
+      {
+        "meta": {
+          "name": "LedDisplay_0"
+        },
+        "position": {
+          "basis": "52px"
+        },
+        "props": {
+          "value": 47
+        },
+        "type": "ia.display.led-display"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

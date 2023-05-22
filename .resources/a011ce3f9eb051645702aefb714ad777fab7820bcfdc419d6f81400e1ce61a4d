@@ -1,0 +1,241 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 860,
+      "width": 728
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Toggle Switch"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Description"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "source": "The Toggle Switch represents a bit that is either on (selected) or off (not selected). It can support custom colors for selected and unselected. It can also have an associated label displayed on the left or right side of the switch. "
+        },
+        "type": "ia.display.markdown"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Standard Toggle:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "ToggleSwitch"
+                },
+                "position": {
+                  "basis": "36px"
+                },
+                "type": "ia.input.toggle-switch"
+              }
+            ],
+            "meta": {
+              "name": "Standard"
+            },
+            "position": {
+              "basis": "300px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "alignItems": "center",
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Disabled:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "ToggleSwitch"
+                },
+                "position": {
+                  "basis": "36px"
+                },
+                "props": {
+                  "enabled": false
+                },
+                "type": "ia.input.toggle-switch"
+              }
+            ],
+            "meta": {
+              "name": "Disabled"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "alignItems": "center",
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Customized:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "ToggleSwitch"
+                },
+                "position": {
+                  "basis": "36px"
+                },
+                "props": {
+                  "color": {
+                    "selected": "#33FF00",
+                    "unselected": "#91AA48"
+                  },
+                  "label": {
+                    "style": {
+                      "fontWeight": "bold"
+                    },
+                    "text": "Toggle Switch"
+                  }
+                },
+                "type": "ia.input.toggle-switch"
+              },
+              {
+                "meta": {
+                  "name": "ToggleSwitchLeft"
+                },
+                "position": {
+                  "basis": "36px"
+                },
+                "props": {
+                  "color": {
+                    "selected": "#33FF00",
+                    "unselected": "#91AA48"
+                  },
+                  "label": {
+                    "position": "left",
+                    "style": {
+                      "fontWeight": "bold"
+                    },
+                    "text": "Toggle Switch"
+                  },
+                  "selected": true
+                },
+                "type": "ia.input.toggle-switch"
+              }
+            ],
+            "meta": {
+              "name": "Customized"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "alignItems": "center",
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Examples"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "alignContent": "flex-start",
+          "alignItems": "flex-start",
+          "justify": "space-evenly",
+          "style": {
+            "overflow": "visible",
+            "padding": "10px"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

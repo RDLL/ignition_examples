@@ -1,0 +1,272 @@
+{
+  "custom": {},
+  "params": {
+    "info": {
+      "infoMD": "A multi-column layout that introduces larger margins on big screens. This layout relies on the column container to scale from large screens down to small screen sizes, and stacks columns vertically in its narrowest incarnations.\n\u003cbr /\u003e\u003cbr /\u003e\nThe design mostly relies on the column container to handle the layout, and reflows the content vertically to fit a variety of screen sizes.",
+      "title": "Fluid Columns"
+    }
+  },
+  "propConfig": {
+    "params.info": {
+      "paramDirection": "output",
+      "persistent": true
+    },
+    "params.info.infoMD": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.info.title": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1200,
+      "width": 1200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "EmbeddedView"
+            },
+            "position": {
+              "basis": "100px",
+              "grow": 1
+            },
+            "props": {
+              "params": {
+                "label": "a"
+              },
+              "path": "layouts/framework/container-label"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "flex-a"
+        },
+        "position": {
+          "breakpoints": [
+            {
+              "colIndex": 0,
+              "name": "sm",
+              "order": 1,
+              "rowIndex": 1,
+              "span": 12
+            },
+            {
+              "colIndex": 0,
+              "name": "md",
+              "order": 1,
+              "rowIndex": 1,
+              "span": 12
+            },
+            {
+              "colIndex": 0,
+              "name": "lg",
+              "order": 1,
+              "rowIndex": 1,
+              "span": 12
+            }
+          ],
+          "height": 600
+        },
+        "props": {
+          "alignItems": "center",
+          "justify": "center",
+          "style": {
+            "classes": "layouts/container-A"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "EmbeddedView"
+            },
+            "position": {
+              "basis": "100px",
+              "grow": 1
+            },
+            "props": {
+              "params": {
+                "label": "b"
+              },
+              "path": "layouts/framework/container-label"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "flex-b"
+        },
+        "position": {
+          "breakpoints": [
+            {
+              "colIndex": 0,
+              "name": "sm",
+              "order": 2,
+              "rowIndex": 1,
+              "span": 12
+            },
+            {
+              "colIndex": 0,
+              "name": "md",
+              "order": 2,
+              "rowIndex": 1,
+              "span": 6
+            },
+            {
+              "colIndex": 0,
+              "name": "lg",
+              "order": 2,
+              "rowIndex": 1,
+              "span": 6
+            }
+          ],
+          "height": 800
+        },
+        "props": {
+          "alignItems": "center",
+          "justify": "center",
+          "style": {
+            "classes": "layouts/container-B"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "EmbeddedView"
+            },
+            "position": {
+              "basis": "100px",
+              "grow": 1
+            },
+            "props": {
+              "params": {
+                "label": "c"
+              },
+              "path": "layouts/framework/container-label"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "flex-c"
+        },
+        "position": {
+          "breakpoints": [
+            {
+              "colIndex": 0,
+              "name": "sm",
+              "order": 3,
+              "rowIndex": 1,
+              "span": 12
+            },
+            {
+              "colIndex": 6,
+              "name": "md",
+              "order": 3,
+              "rowIndex": 1,
+              "span": 6
+            },
+            {
+              "colIndex": 6,
+              "name": "lg",
+              "order": 3,
+              "rowIndex": 1,
+              "span": 6
+            }
+          ],
+          "height": 800
+        },
+        "props": {
+          "alignItems": "center",
+          "justify": "center",
+          "style": {
+            "classes": "layouts/container-C"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView"
+        },
+        "position": {
+          "basis": "320px",
+          "breakpoints": [
+            {
+              "colIndex": 0,
+              "name": "sm",
+              "order": 1,
+              "rowIndex": 0,
+              "span": 12
+            },
+            {
+              "colIndex": 0,
+              "name": "md",
+              "order": 1,
+              "rowIndex": 0,
+              "span": 12
+            },
+            {
+              "colIndex": 0,
+              "name": "lg",
+              "order": 1,
+              "rowIndex": 0,
+              "span": 12
+            }
+          ],
+          "grow": 1,
+          "height": 48
+        },
+        "props": {
+          "params": {
+            "label": "content header",
+            "styleClass": "layouts/gray-80"
+          },
+          "path": "layouts/framework/container-label"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "breakpoints": [
+        {
+          "minWidth": 0,
+          "name": "sm"
+        },
+        {
+          "minWidth": 800,
+          "name": "md"
+        },
+        {
+          "minWidth": 1200,
+          "name": "lg"
+        }
+      ],
+      "gutters": {
+        "horizontal": 8,
+        "vertical": 8
+      },
+      "style": {
+        "padding": "8px"
+      }
+    },
+    "type": "ia.container.column"
+  }
+}

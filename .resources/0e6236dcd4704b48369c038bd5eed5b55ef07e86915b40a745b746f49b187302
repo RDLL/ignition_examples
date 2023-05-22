@@ -1,0 +1,124 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 180,
+      "width": 200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "popup-header"
+        },
+        "position": {
+          "basis": "40px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "backgroundColor": " var(--neutral-20)",
+            "borderBottom": "1px solid  var(--neutral-50)",
+            "fontSize": "11px",
+            "paddingLeft": "8px"
+          },
+          "text": "Learn more online via our helpful resources and community:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "link-docs"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "typography/link",
+            "textDecoration": "none"
+          },
+          "target": "tab",
+          "text": "Ignition Docs",
+          "url": "https://docs.inductiveautomation.com/"
+        },
+        "type": "ia.navigation.link"
+      },
+      {
+        "meta": {
+          "name": "link-iu"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "typography/link",
+            "textDecoration": "none"
+          },
+          "target": "tab",
+          "text": "Inductive University",
+          "url": "https://links.inductiveautomation.com/university"
+        },
+        "type": "ia.navigation.link"
+      },
+      {
+        "meta": {
+          "name": "link-forum"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "typography/link",
+            "textDecoration": "none"
+          },
+          "target": "tab",
+          "text": "User Forums",
+          "url": "https://links.inductiveautomation.com/forum-home"
+        },
+        "type": "ia.navigation.link"
+      },
+      {
+        "meta": {
+          "name": "link-ideas"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "typography/link",
+            "textDecoration": "none"
+          },
+          "target": "tab",
+          "text": "Ideas Portal",
+          "url": "https://links.inductiveautomation.com/ideas"
+        },
+        "type": "ia.navigation.link"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": " var(--neutral-10)"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

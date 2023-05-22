@@ -1,0 +1,461 @@
+{
+  "pages": {
+    "/": {
+      "docks": {
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "framework/dock-main-nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 88,
+            "viewParams": {},
+            "viewPath": "framework/header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "home/landing-page"
+    },
+    "/View": {
+      "viewPath": "View"
+    },
+    "/components": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 256,
+            "viewParams": {},
+            "viewPath": "components/nav/sidebar-dock-nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "framework/dock-main-nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 88,
+            "viewParams": {},
+            "viewPath": "framework/header"
+          }
+        ]
+      },
+      "viewPath": "components/landing-page"
+    },
+    "/components/:folder/:componentView": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 256,
+            "viewParams": {},
+            "viewPath": "components/nav/sidebar-dock-nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "framework/dock-main-nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 88,
+            "viewParams": {},
+            "viewPath": "framework/header"
+          }
+        ]
+      },
+      "viewPath": "components/landing-page"
+    },
+    "/ignition-101": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": true,
+            "resizable": false,
+            "show": "auto",
+            "size": 256,
+            "viewParams": {},
+            "viewPath": "ignition-101/nav/sidebar-dock-nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "framework/dock-main-nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 88,
+            "viewParams": {},
+            "viewPath": "framework/header"
+          }
+        ]
+      },
+      "viewPath": "ignition-101/landing-page"
+    },
+    "/ignition-101/:folder/:featureView": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 256,
+            "viewParams": {},
+            "viewPath": "ignition-101/nav/sidebar-dock-nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "framework/dock-main-nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 88,
+            "viewParams": {},
+            "viewPath": "framework/header"
+          }
+        ]
+      },
+      "viewPath": "ignition-101/landing-page"
+    },
+    "/layouts": {
+      "docks": {
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "framework/dock-main-nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 88,
+            "viewParams": {},
+            "viewPath": "framework/header"
+          }
+        ]
+      },
+      "viewPath": "layouts/landing-page"
+    },
+    "/layouts/coordinate": {
+      "viewPath": "layouts/coordinate/main"
+    },
+    "/layouts/fluid": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 800,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "fluid-sidebar",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "layouts/fluid/sidebar"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "show",
+            "iconUrl": "material/info",
+            "id": "layout-info",
+            "modal": false,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 256,
+            "viewParams": {
+              "desc": "A fluid layout relying on the column container to reflow the content.",
+              "title": "Fluid Columns"
+            },
+            "viewPath": "layouts/dock-layout-info"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "fluid-header",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 80,
+            "viewParams": {},
+            "viewPath": "layouts/fluid/header"
+          }
+        ]
+      },
+      "viewPath": "layouts/fluid/content"
+    },
+    "/layouts/fluid-max-width": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 800,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "fluid-sidebar",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "layouts/fluid/sidebar"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "fluid-header",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 80,
+            "viewParams": {},
+            "viewPath": "layouts/fluid/header"
+          }
+        ]
+      },
+      "viewPath": "layouts/fluid/main"
+    },
+    "/layouts/grid": {
+      "viewPath": "layouts/grid/main"
+    },
+    "/layouts/panes": {
+      "viewPath": "layouts/panes/main"
+    },
+    "/layouts/scrollable-canvas": {
+      "docks": {
+        "bottom": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "deets",
+            "modal": false,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 200,
+            "viewParams": {
+              "label": "value",
+              "styleClass": "value"
+            },
+            "viewPath": "layouts/scrollable/sidebar"
+          }
+        ],
+        "cornerPriority": "left-right",
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 800,
+            "content": "push",
+            "handle": "show",
+            "iconUrl": "material/menu",
+            "id": "scrollable-sidebar",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 256,
+            "viewParams": {
+              "label": "on-demand view"
+            },
+            "viewPath": "layouts/scrollable/sidebar"
+          }
+        ]
+      },
+      "viewPath": "layouts/scrollable/main"
+    },
+    "/secondview": {
+      "viewPath": "Test/SecondView"
+    }
+  },
+  "sharedDocks": {
+    "cornerPriority": "top-bottom",
+    "top": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 150,
+        "viewParams": {},
+        "viewPath": "TopNavView"
+      }
+    ]
+  }
+}

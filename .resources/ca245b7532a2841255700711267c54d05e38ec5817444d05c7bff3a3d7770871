@@ -1,0 +1,73 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "ViewCanvas"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "props": {
+          "instances": [
+            {
+              "bottom": "auto",
+              "height": "auto",
+              "left": "auto",
+              "position": "absolute",
+              "right": "64px",
+              "style": {
+                "classes": ""
+              },
+              "top": "64px",
+              "viewParams": {
+                "label": "fixed position view",
+                "styleClass": "layouts/container-A"
+              },
+              "viewPath": "layouts/framework/container-label",
+              "width": "280px",
+              "zIndex": 10
+            },
+            {
+              "bottom": "0px",
+              "height": "2000px",
+              "left": "0px",
+              "position": "absolute",
+              "right": "0px",
+              "style": {
+                "classes": ""
+              },
+              "top": "0px",
+              "viewParams": {},
+              "viewPath": "layouts/scrollable/scrollable",
+              "width": "2000px",
+              "zIndex": 0
+            }
+          ],
+          "style": {
+            "overflow": "visible"
+          },
+          "transitionSettings": {
+            "duration": "0.5s",
+            "timingFunction": "ease-in-out"
+          },
+          "useDefaultViewHeight": false,
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.viewcanvas"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "alignContent": "flex-start",
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

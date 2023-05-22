@@ -1,0 +1,174 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "btnUpdate"
+            },
+            "position": {
+              "basis": "80px",
+              "shrink": 0
+            },
+            "props": {
+              "image": {
+                "height": 10,
+                "width": 10
+              },
+              "style": {
+                "margin": "10px 10px",
+                "padding": "10px",
+                "padding-left": "10px",
+                "textAlign": "center"
+              },
+              "text": "Zip Code Search"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "TextField"
+            },
+            "position": {
+              "basis": "150px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "margin": "5px",
+                "padding": "10px"
+              },
+              "text": "19151"
+            },
+            "type": "ia.input.text-field"
+          }
+        ],
+        "meta": {
+          "name": "header"
+        },
+        "position": {
+          "basis": "100px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "events": {
+          "component": {
+            "onRowClick": {
+              "config": {
+                "script": "\tself.session.custom.address_id \u003d self.props.data[\u0027address_id\u0027]"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.data": {
+            "binding": {
+              "config": {
+                "parameters": {
+                  "zip": "{../header/TextField.props.text}"
+                },
+                "queryPath": "getZip"
+              },
+              "type": "query"
+            }
+          }
+        },
+        "type": "ia.display.table"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "btnUpdate"
+            },
+            "position": {
+              "basis": "80px",
+              "shrink": 0
+            },
+            "props": {
+              "image": {
+                "height": 10,
+                "width": 10
+              },
+              "style": {
+                "margin": "10px 120px",
+                "padding": "10px",
+                "padding-left": "10px",
+                "textAlign": "center"
+              },
+              "text": "Update"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "btnDelete"
+            },
+            "position": {
+              "basis": "80px",
+              "shrink": 0
+            },
+            "props": {
+              "image": {
+                "position": "center"
+              },
+              "style": {
+                "margin": "10px 30px",
+                "padding": "10px"
+              },
+              "text": "Delete"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "btnGenerate"
+            },
+            "position": {
+              "basis": "80px"
+            },
+            "props": {
+              "image": {
+                "position": "right"
+              },
+              "style": {
+                "margin": "10px 120px",
+                "padding": "10px"
+              },
+              "text": "Report"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "btns"
+        },
+        "position": {
+          "basis": "100px"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

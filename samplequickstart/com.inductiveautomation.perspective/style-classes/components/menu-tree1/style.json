@@ -1,0 +1,12 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "#79B2E5",
+      "color": "#1D1010",
+      "fontFamily": "Verdana",
+      "fontSize": "12px",
+      "textAlign": "center",
+      "textTransform": "uppercase"
+    }
+  }
+}

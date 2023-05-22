@@ -1,0 +1,276 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "contextMenu": {
+            "style": {
+              "margin": "5px"
+            }
+          },
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "text": "Latitude: 38.680551703 | Longitude: -121.167869568"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "TextField"
+            },
+            "position": {
+              "basis": "150px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "padding": "5px"
+              },
+              "text": "Atlanta"
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\t\n\timport urllib\n\t\n\tclient \u003d system.net.httpClient()\n\ttext \u003d self.getSibling(\"TextField\").props.text\n\turl \u003d \u0027https://nominatim.openstreetmap.org/search?q\u003d\u0027 + urllib.quote_plus(text) + \u0027\u0026format\u003dgeojson\u0027\n\t\n\tres \u003d client.get(url)\n\t\n\tif res.good:\n\t\toptions \u003d []\n\t\tfor result in res.json[\"features\"]:\n\t\t\toptions.append({\"label\": result[\"properties\"][\"display_name\"], \"value\":{\"lat\":result[\"geometry\"][\"coordinates\"][1] , \"lng\":result[\"geometry\"][\"coordinates\"][0]}})\n\t\tself.parent.parent.getChild(\"Dropdown\").props.options \u003d options"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "basis": "80px"
+            },
+            "props": {
+              "style": {
+                "margin-left": "5px"
+              },
+              "text": "Search"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "props": {
+          "style": {
+            "padding": "5px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t \n\tcoordinates \u003d self.props.value\n\t\n\tself.getSibling(\"Map\").flyTo(latLng \u003d {\"lat\": coordinates[\"lat\"], \"lng\": coordinates[\"lng\"]}, zoom \u003d 10)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Dropdown"
+        },
+        "position": {
+          "basis": "36px"
+        },
+        "props": {
+          "options": [
+            {
+              "label": "Atlanta, Fulton County, Georgia, United States",
+              "value": {
+                "lat": 33.7489924,
+                "lng": -84.3902644
+              }
+            },
+            {
+              "label": "Atlanta, Cass County, Texas, 75551, United States",
+              "value": {
+                "lat": 33.1162131,
+                "lng": -94.1663493
+              }
+            },
+            {
+              "label": "Atlanta, Cowley County, Kansas, United States",
+              "value": {
+                "lat": 37.4356784,
+                "lng": -96.7691606
+              }
+            },
+            {
+              "label": "Atlanta, Macon County, Missouri, United States",
+              "value": {
+                "lat": 39.898646,
+                "lng": -92.4810208
+              }
+            },
+            {
+              "label": "United States Penitentiary, Atlanta, 601, McDonough Boulevard Southeast, Thomasville, Atlanta, Fulton County, Georgia, 30315, United States",
+              "value": {
+                "lat": 33.710511,
+                "lng": -84.36899652238671
+              }
+            },
+            {
+              "label": "The Westin Peachtree Plaza, Atlanta, 210, Ted Turner Drive Northwest, Five Points, Atlanta, Fulton County, Georgia, 30303, United States",
+              "value": {
+                "lat": 33.7594055,
+                "lng": -84.38835777351468
+              }
+            },
+            {
+              "label": "Atlanta, Sussex County, Delaware, United States",
+              "value": {
+                "lat": 38.708725,
+                "lng": -75.6779851
+              }
+            },
+            {
+              "label": "Atlanta, Briley Township, Montmorency County, Michigan, United States",
+              "value": {
+                "lat": 45.0047575,
+                "lng": -84.15197019460344
+              }
+            },
+            {
+              "label": "Atlanta, Municipality of the County of Kings, Kings County, Nova Scotia, Canada",
+              "value": {
+                "lat": 45.1513902,
+                "lng": -64.5040943
+              }
+            },
+            {
+              "label": "Atlanta, Logan County, Illinois, United States",
+              "value": {
+                "lat": 40.2596504,
+                "lng": -89.2332466
+              }
+            }
+          ],
+          "style": {
+            "margin": "0 5px"
+          },
+          "value": {
+            "lat": 33.1162131,
+            "lng": -94.1663493
+          }
+        },
+        "type": "ia.input.dropdown"
+      },
+      {
+        "events": {
+          "component": {
+            "onMapClick": {
+              "config": {
+                "script": "\t\n\tself.getSibling(\"Label\").props.text \u003d \"Latitude: \" + str(event.lat) + \" | Longitude: \" + str(event.lng)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Map"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1
+        },
+        "props": {
+          "init": {
+            "center": {
+              "lat": 38.660867,
+              "lng": -121.159728
+            },
+            "zoom": 13
+          },
+          "layers": {
+            "raster": {
+              "tile": [
+                {
+                  "WMS": {
+                    "format": "image/jpeg",
+                    "layers": "",
+                    "styles": "",
+                    "transparent": false,
+                    "uppercase": false,
+                    "version": "1.1.1"
+                  },
+                  "options": {
+                    "attribution": "Map data \u0026copy; \u003ca href\u003d\u0027https://www.openstreetmap.org/\u0027\u003eOpenStreetMap\u003c/a\u003e contributors, \u003ca href\u003d\u0027https://creativecommons.org/licenses/by-sa/2.0/\u0027\u003eCC-BY-SA\u003c/a\u003e",
+                    "crossOrigin": false,
+                    "detectRetina": false,
+                    "errorTileUrl": "",
+                    "opacity": 1,
+                    "subdomains": [
+                      "a",
+                      "b",
+                      "c"
+                    ],
+                    "tileSize": {
+                      "height": 256,
+                      "width": 256
+                    },
+                    "tms": false,
+                    "update": {
+                      "interval": 200,
+                      "whenIdle": false,
+                      "whenZooming": true
+                    },
+                    "zIndex": 1,
+                    "zoom": {
+                      "max": 18,
+                      "min": 0,
+                      "native": {
+                        "max": null,
+                        "min": null
+                      },
+                      "offset": 0,
+                      "reverse": false
+                    }
+                  },
+                  "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                  "urlTemplateParams": {}
+                }
+              ]
+            }
+          },
+          "style": {
+            "margin": "5px"
+          }
+        },
+        "type": "ia.display.map"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

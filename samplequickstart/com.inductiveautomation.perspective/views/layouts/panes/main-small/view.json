@@ -1,0 +1,223 @@
+{
+  "custom": {
+    "activeColor": "var(--qual-1)"
+  },
+  "params": {
+    "section": "a"
+  },
+  "propConfig": {
+    "custom.activeColor": {
+      "binding": {
+        "config": {
+          "path": "view.params.section"
+        },
+        "transforms": [
+          {
+            "expression": "case({value},\n\"a\",\n\"var(--qual-1)\",\n\n\"b\",\n\"var(--qual-2)\",\n\n\"c\",\n\"var(--qual-3)\",\n\n\"var(--qual-1)\")",
+            "type": "expression"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.section": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "nav"
+        },
+        "position": {
+          "basis": "72px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "button-margin": "8px 4px",
+            "flex-direction": "row",
+            "flex-grow": 1
+          },
+          "path": "layouts/panes/nav"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "list-heading"
+            },
+            "position": {
+              "basis": "56px"
+            },
+            "propConfig": {
+              "props.style.backgroundColor": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.activeColor"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "\"list \" + {view.params.section} + \" heading\""
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-label layouts/gray-100",
+                "marginBottom": "8px"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "list-items"
+            },
+            "position": {
+              "basis": "48px",
+              "shrink": 0
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "List Item",
+                  "value": 1
+                },
+                {
+                  "label": "List Item",
+                  "value": 2
+                },
+                {
+                  "label": "List Item",
+                  "value": 3
+                },
+                {
+                  "label": "List Item",
+                  "value": 4
+                },
+                {
+                  "label": "List Item",
+                  "value": 5
+                }
+              ],
+              "placeholder": {
+                "text": "Select an item to view details..."
+              },
+              "search": {
+                "enabled": false
+              },
+              "style": {
+                "fontSize": "18px",
+                "margin": "0 8px"
+              },
+              "value": 1
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "list"
+        },
+        "position": {
+          "basis": "120px",
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "item-heading"
+            },
+            "position": {
+              "basis": "56px"
+            },
+            "propConfig": {
+              "props.style.backgroundColor": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.activeColor"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-label layouts/gray-80",
+                "marginBottom": "8px"
+              },
+              "text": "selected item actions"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "item-details"
+            },
+            "position": {
+              "basis": "56px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.style.backgroundColor": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.activeColor"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-label layouts/gray-80"
+              },
+              "text": "selected item details"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "details"
+        },
+        "position": {
+          "basis": "60px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "opacity": 0.5
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

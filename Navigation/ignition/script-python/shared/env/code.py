@@ -1,0 +1,1 @@
+root_url = "http://localhost:8088/data/perspective/client/Copy_Of_Navigation"

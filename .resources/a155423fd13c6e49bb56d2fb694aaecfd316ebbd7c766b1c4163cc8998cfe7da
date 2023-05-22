@@ -1,0 +1,126 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 80
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "id": "fluid-sidebar",
+                "type": "toggle"
+              },
+              "scope": "C",
+              "type": "dock"
+            },
+            "onTouchStart": {
+              "config": {
+                "id": "fluid-sidebar",
+                "type": "toggle"
+              },
+              "scope": "C",
+              "type": "dock"
+            }
+          }
+        },
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "64px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "layouts/container-D",
+            "color": "var(--neutral-20)",
+            "margin": "8px"
+          },
+          "text": "toggle sidebar"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "props": {
+          "params": {
+            "label": "header"
+          },
+          "path": "layouts/framework/container-label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "draggable": true,
+                "id": "G+aVLOlZ",
+                "modal": true,
+                "overlayDismiss": true,
+                "resizable": true,
+                "showCloseIcon": true,
+                "type": "open",
+                "viewPath": "layouts/fluid/popup"
+              },
+              "scope": "C",
+              "type": "popup"
+            },
+            "onTouchStart": {
+              "config": {
+                "draggable": true,
+                "id": "YQ43N0pj",
+                "modal": true,
+                "overlayDismiss": true,
+                "resizable": true,
+                "showCloseIcon": true,
+                "type": "open",
+                "viewPath": "layouts/fluid/popup"
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "64px"
+        },
+        "props": {
+          "style": {
+            "classes": "layouts/container-E",
+            "color": "var(--neutral-20)",
+            "margin": "8px"
+          },
+          "text": "show popup"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "justify": "center",
+      "style": {
+        "classes": "layouts/gray-100"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "#6FAAE2",
+      "color": "#0056A6",
+      "fontFamily": "Roboto",
+      "fontSize": "12pt",
+      "fontWeight": "bold"
+    }
+  }
+}

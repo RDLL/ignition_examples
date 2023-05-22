@@ -1,0 +1,265 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 811,
+      "width": 728
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Button"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Description"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "source": "The Button component is a versatile component that is used to initiate some sort of action in response to being pressed. It can be used for showing status, as well. For example, you can configure buttons to be active or inactive, change color, text, or any other property, and you can alter these configurations in response to conditions in your project. Button components also support icons. To set up a button with an Action, you use the Configure Events interface. Simply select an event and then configure one or more Actions. For instance, you might call a Navigation action that executes when an onActionPerformed event has occurred. The onActionPerformed event will be called when the button is activated through a click or press."
+        },
+        "type": "ia.display.markdown"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Display Modes:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "custom": {
+                  "clicked": 0
+                },
+                "meta": {
+                  "name": "PrimaryEnabled"
+                },
+                "position": {
+                  "basis": "60px"
+                },
+                "props": {
+                  "style": {
+                    "margin": "10px",
+                    "padding": "10px"
+                  },
+                  "text": "Primary"
+                },
+                "type": "ia.input.button"
+              },
+              {
+                "custom": {
+                  "clicked": 0
+                },
+                "meta": {
+                  "name": "SecondaryEnabled"
+                },
+                "position": {
+                  "basis": "60px"
+                },
+                "props": {
+                  "primary": false,
+                  "style": {
+                    "margin": "10px",
+                    "padding": "10px"
+                  },
+                  "text": "Secondary"
+                },
+                "type": "ia.input.button"
+              },
+              {
+                "custom": {
+                  "clicked": 0
+                },
+                "meta": {
+                  "name": "PrimaryDisabled"
+                },
+                "position": {
+                  "basis": "60px"
+                },
+                "props": {
+                  "enabled": false,
+                  "style": {
+                    "margin": "10px",
+                    "padding": "10px"
+                  },
+                  "text": "(Disabled)"
+                },
+                "type": "ia.input.button"
+              }
+            ],
+            "meta": {
+              "name": "DisplayModes"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Actions:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "events": {
+                  "component": {
+                    "onActionPerformed": {
+                      "config": {
+                        "script": "\tself.props.text \u003d \u0027Clicked!\u0027"
+                      },
+                      "scope": "G",
+                      "type": "script"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "SimpleButton"
+                },
+                "position": {
+                  "basis": "100px"
+                },
+                "props": {
+                  "image": {
+                    "icon": {
+                      "path": "material/check"
+                    }
+                  },
+                  "style": {
+                    "margin": "10px",
+                    "padding": "10px"
+                  },
+                  "text": "Simple Button"
+                },
+                "type": "ia.input.button"
+              },
+              {
+                "events": {
+                  "component": {
+                    "onActionPerformed": {
+                      "config": {
+                        "draggable": true,
+                        "id": "ButtonPopup",
+                        "modal": false,
+                        "overlayDismiss": false,
+                        "resizable": true,
+                        "showCloseIcon": true,
+                        "title": "Button Popup Action",
+                        "type": "toggle",
+                        "viewPath": "components/component-views/input/button-popup"
+                      },
+                      "scope": "C",
+                      "type": "popup"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "PopupButton"
+                },
+                "position": {
+                  "basis": "100px"
+                },
+                "props": {
+                  "image": {
+                    "icon": {
+                      "path": "material/announcement"
+                    }
+                  },
+                  "style": {
+                    "margin": "10px",
+                    "padding": "10px"
+                  },
+                  "text": "Popup Action"
+                },
+                "type": "ia.input.button"
+              }
+            ],
+            "meta": {
+              "name": "Actions"
+            },
+            "position": {
+              "basis": "300px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Examples"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "alignContent": "flex-start",
+          "alignItems": "flex-start",
+          "justify": "space-evenly",
+          "style": {
+            "overflow": "visible",
+            "padding": "10px"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

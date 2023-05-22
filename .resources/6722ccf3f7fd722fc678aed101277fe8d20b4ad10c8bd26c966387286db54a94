@@ -1,0 +1,332 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px"
+        },
+        "props": {
+          "params": {
+            "text": "Linear Scale"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "props": {
+          "text": "The Linear Scale component displays a series of tick marks and labels that represent a range between a minimum value and a maximum value. It also displays indicators that represent a value or range of values, correctly positioned on the linear scale."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "LinearScale"
+                },
+                "position": {
+                  "basis": "318px"
+                },
+                "props": {
+                  "indicators": [
+                    {
+                      "color": "",
+                      "extent": 15,
+                      "indicatorStyle": "range",
+                      "label": "High",
+                      "labelAngle": 270,
+                      "labelColor": "",
+                      "length": 25,
+                      "opacity": 0.4,
+                      "stroke": 1.5,
+                      "value": 85
+                    },
+                    {
+                      "color": "",
+                      "extent": 2,
+                      "indicatorStyle": "wedge",
+                      "label": "Low",
+                      "labelAngle": 270,
+                      "labelColor": "",
+                      "length": 25,
+                      "opacity": 1,
+                      "stroke": 2,
+                      "value": 20
+                    }
+                  ]
+                },
+                "type": "ia.display.linear-scale"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "48px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "HelpText"
+                },
+                "position": {
+                  "basis": "87px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "The Linear Scale component displays a series of tick marks and labels that represent a range between a minimum value and a maximum value."
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance1"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "LinearScale"
+                },
+                "position": {
+                  "basis": "318px"
+                },
+                "props": {
+                  "indicators": [
+                    {
+                      "color": "",
+                      "extent": 15,
+                      "indicatorStyle": "range",
+                      "label": "High",
+                      "labelAngle": 270,
+                      "labelColor": "",
+                      "length": 25,
+                      "opacity": 0.4,
+                      "stroke": 1.5,
+                      "value": 85
+                    },
+                    {
+                      "color": "",
+                      "extent": 2,
+                      "indicatorStyle": "wedge",
+                      "label": "Low",
+                      "labelAngle": 270,
+                      "labelColor": "",
+                      "length": 25,
+                      "opacity": 1,
+                      "stroke": 2,
+                      "value": 20
+                    }
+                  ],
+                  "minValue": 50
+                },
+                "type": "ia.display.linear-scale"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "HelpText"
+                },
+                "position": {
+                  "basis": "87px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Alter the Linear Scale component\u0027s minValue and maxValue properties to set the range to be displayed. This example Linear Scale has it\u0027s minValue changed from 0 to 50."
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance2"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "LinearScale"
+                },
+                "position": {
+                  "basis": "318px"
+                },
+                "props": {
+                  "indicators": [
+                    {
+                      "color": "",
+                      "extent": 15,
+                      "indicatorStyle": "range",
+                      "label": "High",
+                      "labelAngle": 270,
+                      "labelColor": "",
+                      "length": 25,
+                      "opacity": 0.4,
+                      "stroke": 1.5,
+                      "value": 85
+                    },
+                    {
+                      "color": "",
+                      "extent": 2,
+                      "indicatorStyle": "line",
+                      "label": "High Low",
+                      "labelAngle": 270,
+                      "labelColor": "",
+                      "length": 25,
+                      "opacity": 1,
+                      "stroke": 2,
+                      "value": 20
+                    }
+                  ],
+                  "mirror": true
+                },
+                "type": "ia.display.linear-scale"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "HelpText"
+                },
+                "position": {
+                  "basis": "87px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "The Linear Scale component\u0027s mirror property can be used to adjust which side of the component the scale itself resides on."
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance4"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "justify": "space-evenly",
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "wrap": "wrap"
+    },
+    "type": "ia.container.flex"
+  }
+}

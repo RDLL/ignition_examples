@@ -1,0 +1,19 @@
+{
+  "base": {
+    "style": {
+      "borderBottomStyle": "none",
+      "borderBottomWidth": "0px",
+      "borderLeftColor": "#D35A5A",
+      "borderLeftStyle": "solid",
+      "borderLeftWidth": "8px",
+      "borderRightStyle": "none",
+      "borderRightWidth": "0px",
+      "borderTopStyle": "none",
+      "borderTopWidth": "0px",
+      "fontSize": "12px",
+      "lineHeight": "16px",
+      "paddingLeft": "4px",
+      "textTransform": "uppercase"
+    }
+  }
+}

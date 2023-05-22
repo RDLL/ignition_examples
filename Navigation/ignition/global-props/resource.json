@@ -1,0 +1,16 @@
+{
+  "scope": "A",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "data.bin"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "rdll",
+      "timestamp": "2023-05-17T15:59:50Z"
+    },
+    "lastModificationSignature": "eaf3be29465c6b01343525f94d349cccd85d4ec19b0d9d4f90594c21d284079d"
+  }
+}

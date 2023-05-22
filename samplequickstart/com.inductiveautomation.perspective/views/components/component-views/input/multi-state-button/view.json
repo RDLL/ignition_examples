@@ -1,0 +1,521 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 811,
+      "width": 728
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Multi-State Button"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Description"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "source": "The Multi-State button is a series of two or more buttons, arranged in a column or row. Each button represents an integer state. Each state defines two styles for a button: selected and unselected. Each button is automatically displayed with the correct style based on the current state (the value of Indicator Value). When a button is pressed, its state\u0027s value is written to the Control Value. \n\nWhen the Multi-State Button is dragged into a container, it is pre-configured with default styles for the three default options. These styles can be changed or simply deleted. A default style that covers all states can be configured as well."
+        },
+        "type": "ia.display.markdown"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Vertical:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "MultiStateButton"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.controlValue": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Writeable/WriteableInteger1"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.indicatorValue": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Writeable/WriteableInteger1"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "states": [
+                    {
+                      "selectedStyle": {
+                        "backgroundColor": "#FFF275",
+                        "classes": ""
+                      },
+                      "text": "Hand",
+                      "unselectedStyle": {
+                        "classes": ""
+                      },
+                      "value": 2
+                    },
+                    {
+                      "selectedStyle": {
+                        "backgroundColor": "#F84553",
+                        "classes": ""
+                      },
+                      "text": "Off",
+                      "unselectedStyle": {
+                        "classes": ""
+                      },
+                      "value": 0
+                    },
+                    {
+                      "selectedStyle": {
+                        "backgroundColor": "#7CEA9C",
+                        "classes": ""
+                      },
+                      "text": "Auto",
+                      "unselectedStyle": {
+                        "classes": ""
+                      },
+                      "value": 1
+                    }
+                  ]
+                },
+                "type": "ia.input.multi-state-button"
+              }
+            ],
+            "meta": {
+              "name": "Vertical"
+            },
+            "position": {
+              "basis": "200px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Horizontal:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "MultiStateButton"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.controlValue": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Writeable/WriteableInteger1"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.indicatorValue": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Writeable/WriteableInteger1"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "orientation": "row",
+                  "primary": true,
+                  "states": [
+                    {
+                      "selectedStyle": {
+                        "backgroundColor": "#FFF275",
+                        "classes": ""
+                      },
+                      "text": "Hand",
+                      "unselectedStyle": {
+                        "classes": ""
+                      },
+                      "value": 2
+                    },
+                    {
+                      "selectedStyle": {
+                        "backgroundColor": "#F84553",
+                        "classes": ""
+                      },
+                      "text": "Off",
+                      "unselectedStyle": {
+                        "classes": ""
+                      },
+                      "value": 0
+                    },
+                    {
+                      "selectedStyle": {
+                        "backgroundColor": "#7CEA9C",
+                        "classes": ""
+                      },
+                      "text": "Auto",
+                      "unselectedStyle": {
+                        "classes": ""
+                      },
+                      "value": 1
+                    }
+                  ]
+                },
+                "type": "ia.input.multi-state-button"
+              }
+            ],
+            "meta": {
+              "name": "Horizontal"
+            },
+            "position": {
+              "basis": "400px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Disabled:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "MultiStateButton"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.controlValue": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Writeable/WriteableInteger1"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.indicatorValue": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Writeable/WriteableInteger1"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "enabled": false,
+                  "states": [
+                    {
+                      "selectedStyle": {
+                        "backgroundColor": "#FFF275",
+                        "classes": ""
+                      },
+                      "text": "Hand",
+                      "unselectedStyle": {
+                        "classes": ""
+                      },
+                      "value": 2
+                    },
+                    {
+                      "selectedStyle": {
+                        "backgroundColor": "#F84553",
+                        "classes": ""
+                      },
+                      "text": "Off",
+                      "unselectedStyle": {
+                        "classes": ""
+                      },
+                      "value": 0
+                    },
+                    {
+                      "selectedStyle": {
+                        "backgroundColor": "#7CEA9C",
+                        "classes": ""
+                      },
+                      "text": "Auto",
+                      "unselectedStyle": {
+                        "classes": ""
+                      },
+                      "value": 1
+                    }
+                  ]
+                },
+                "type": "ia.input.multi-state-button"
+              }
+            ],
+            "meta": {
+              "name": "Disabled"
+            },
+            "position": {
+              "basis": "200px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Customized:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "MultiStateButton"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.controlValue": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Writeable/WriteableInteger2"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.indicatorValue": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Writeable/WriteableInteger2"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "buttonGap": 12,
+                  "defaultSelectedStyle": {
+                    "color": "#141414",
+                    "padding": "10px"
+                  },
+                  "defaultUnselectedStyle": {
+                    "padding": "10px"
+                  },
+                  "endButtonCornerRadius": "20px",
+                  "orientation": "row",
+                  "states": [
+                    {
+                      "selectedStyle": {
+                        "backgroundColor": "#FAFFB4",
+                        "classes": ""
+                      },
+                      "text": "Monday",
+                      "unselectedStyle": {
+                        "classes": ""
+                      },
+                      "value": 0
+                    },
+                    {
+                      "selectedStyle": {
+                        "backgroundColor": "#B4FFCD",
+                        "classes": ""
+                      },
+                      "text": "Tuesday",
+                      "unselectedStyle": {
+                        "classes": ""
+                      },
+                      "value": 1
+                    },
+                    {
+                      "selectedStyle": {
+                        "backgroundColor": "#B6B4FF",
+                        "classes": ""
+                      },
+                      "text": "Wednesday",
+                      "unselectedStyle": {
+                        "classes": ""
+                      },
+                      "value": 2
+                    },
+                    {
+                      "selectedStyle": {
+                        "backgroundColor": "#FFB4E8",
+                        "classes": ""
+                      },
+                      "text": "Thursday",
+                      "unselectedStyle": {
+                        "classes": ""
+                      },
+                      "value": 3
+                    },
+                    {
+                      "selectedStyle": {
+                        "backgroundColor": "#FFC9B4",
+                        "classes": ""
+                      },
+                      "text": "Friday",
+                      "unselectedStyle": {
+                        "classes": ""
+                      },
+                      "value": 4
+                    }
+                  ]
+                },
+                "type": "ia.input.multi-state-button"
+              }
+            ],
+            "meta": {
+              "name": "Customized"
+            },
+            "position": {
+              "basis": "600px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Examples"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "alignContent": "flex-start",
+          "alignItems": "flex-start",
+          "justify": "space-evenly",
+          "style": {
+            "overflow": "visible",
+            "padding": "10px"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "small"
+        },
+        "props": {
+          "path": "layouts/coordinate/mode-fixed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "large"
+        },
+        "position": {
+          "size": "large"
+        },
+        "props": {
+          "path": "layouts/coordinate/mode-percent"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "breakpoint": 1200
+    },
+    "type": "ia.container.breakpt"
+  }
+}

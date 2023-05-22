@@ -1,0 +1,21 @@
+{
+  "base": {
+    "style": {
+      "color": "#243E4A",
+      "fontFamily": "serif",
+      "fontSize": "16px",
+      "fontWeight": "bold",
+      "lineHeight": "32px",
+      "textShadow": "#666060"
+    }
+  },
+  "variants": [
+    {
+      "pseudo": "hover",
+      "style": {
+        "backgroundImage": "material/heart",
+        "borderStyle": "solid"
+      }
+    }
+  ]
+}

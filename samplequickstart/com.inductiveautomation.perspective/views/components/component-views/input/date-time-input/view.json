@@ -1,0 +1,310 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 811,
+      "width": 728
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "DateTime Input"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Description"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "source": "The DateTime Input is an easy way to select a date from a popup calendar. It can be used to select a day, time, or both. A minimum and maximum date/time can be set, and the format of the selected value is configurable."
+        },
+        "type": "ia.display.markdown"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Date:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "DateTimeInput"
+                },
+                "position": {
+                  "basis": "100px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "expression": "now(0)"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "format": "MMM DD, YYYY",
+                  "formattedValue": "Sep 11, 2020",
+                  "formattedValues": {
+                    "date": "Sep 11, 2020"
+                  },
+                  "pickerType": "date"
+                },
+                "type": "ia.input.date-time-input"
+              }
+            ],
+            "meta": {
+              "name": "Date"
+            },
+            "position": {
+              "basis": "300px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Time:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "DateTimeInput"
+                },
+                "position": {
+                  "basis": "100px",
+                  "shrink": 0
+                },
+                "props": {
+                  "format": "HH:mm:ss A",
+                  "formattedValue": "02:55:58 AM",
+                  "formattedValues": {
+                    "time": "02:55:58 AM"
+                  },
+                  "pickerType": "time"
+                },
+                "type": "ia.input.date-time-input"
+              }
+            ],
+            "meta": {
+              "name": "Time"
+            },
+            "position": {
+              "basis": "300px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Date/Time:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "DateTimeInput"
+                },
+                "position": {
+                  "basis": "100px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "expression": "now(0)"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "format": "YYYY-MM-DD HH:mm:ss ZZ",
+                  "formattedValue": "2020-09-11 12:24:38 -0700",
+                  "formattedValues": {
+                    "date": "2020-09-11",
+                    "datetime": "2020-09-11 12:24:38 -0700",
+                    "time": "12:24:38 -0700"
+                  }
+                },
+                "type": "ia.input.date-time-input"
+              }
+            ],
+            "meta": {
+              "name": "DateTime"
+            },
+            "position": {
+              "basis": "300px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Limited to within 7 days:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "DateTimeInput"
+                },
+                "position": {
+                  "basis": "100px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.maxDate": {
+                    "binding": {
+                      "config": {
+                        "expression": "addDays(now(0), 7)"
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.minDate": {
+                    "binding": {
+                      "config": {
+                        "expression": "addDays(now(0), -7)"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "format": "YYYY-MM-DD HH:mm:ss ZZ",
+                  "formattedValue": "2020-08-31 11:13:07 -0700",
+                  "formattedValues": {
+                    "date": "2020-08-31",
+                    "datetime": "2020-08-31 11:13:07 -0700",
+                    "time": "11:13:07 -0700"
+                  }
+                },
+                "type": "ia.input.date-time-input"
+              }
+            ],
+            "meta": {
+              "name": "Limited"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Examples"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "alignContent": "flex-start",
+          "alignItems": "flex-start",
+          "justify": "space-evenly",
+          "style": {
+            "overflow": "visible",
+            "padding": "10px"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "base": {
+    "style": {
+      "color": "var(--callToAction)",
+      "fontSize": "14px",
+      "lineHeight": "32px",
+      "paddingLeft": "8px",
+      "textTransform": "uppercase"
+    }
+  },
+  "variants": [
+    {
+      "pseudo": "hover",
+      "style": {
+        "backgroundColor": "var(--callToActionHighlight)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 873
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Carousel"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The Carousel component allows you to display a selection of rotating views at a defined rate with a link to the view on a page in your project. The Carousel component can automatically cycle through the views or a user can click through the views on demand, either way, still providing a link to the view on a page."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Carousel"
+        },
+        "position": {
+          "basis": "384px"
+        },
+        "props": {
+          "views": [
+            {
+              "alignItems": "flex-start",
+              "direction": "row",
+              "justify": "flex-start",
+              "viewParams": {
+                "instance": 1
+              },
+              "viewPath": "components/component-views/framework/embedded-view"
+            },
+            {
+              "alignItems": "flex-start",
+              "direction": "row",
+              "justify": "flex-start",
+              "viewParams": {
+                "instance": 2
+              },
+              "viewPath": "components/component-views/framework/embedded-view"
+            },
+            {
+              "alignItems": "flex-start",
+              "direction": "row",
+              "justify": "flex-start",
+              "viewParams": {
+                "instance": 3
+              },
+              "viewPath": "components/component-views/framework/embedded-view"
+            }
+          ]
+        },
+        "type": "ia.display.carousel"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

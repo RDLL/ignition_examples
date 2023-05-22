@@ -1,0 +1,160 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "52px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Link"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The Link component allows users to create a hyperlink that points to a destination such as a page, view, resource, or mount path that they can quickly navigate to. Links are easily identifiable because they typically have a different color font then the rest of the content, and an underscore when you hover over them. To configure a link, enter the URL for the destination, and the name of the link in the \u0027text\u0027 property."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "80px"
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Control Industrial Processes Remotely and Securely. Take Control Wherever You Are With Ignition."
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Link"
+                },
+                "position": {
+                  "basis": "38px"
+                },
+                "props": {
+                  "style": {
+                    "classes": "components/link-example1",
+                    "textAlign": "center"
+                  },
+                  "target": "self",
+                  "text": "Watch the Webinar!",
+                  "url": "https://inductiveautomation.com/resources/webinar/controlling-industrial-processes-remotely-and-securely"
+                },
+                "type": "ia.navigation.link"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "96px",
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "72px"
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Learn more about creating mobile responsive layouts in this quick start project."
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Link"
+                },
+                "position": {
+                  "basis": "52px"
+                },
+                "props": {
+                  "style": {
+                    "classes": "components/link-example2",
+                    "marginTop": 10,
+                    "textAlign": "center"
+                  },
+                  "target": "self",
+                  "text": "Navigate to the Layouts Section",
+                  "url": "../../layouts"
+                },
+                "type": "ia.navigation.link"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "394px",
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "490px",
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "marginTop": 10
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

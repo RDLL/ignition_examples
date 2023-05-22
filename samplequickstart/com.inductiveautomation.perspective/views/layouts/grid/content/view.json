@@ -1,0 +1,246 @@
+{
+  "custom": {},
+  "params": {
+    "order-component": 1,
+    "order-kpi": 0,
+    "order-nav": 2,
+    "wrap-kpi": "wrap"
+  },
+  "propConfig": {
+    "params.order-component": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.order-kpi": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.order-nav": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.wrap-kpi": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "kpi"
+        },
+        "position": {
+          "basis": "120px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.style.order": {
+            "binding": {
+              "config": {
+                "path": "view.params.order-kpi"
+              },
+              "type": "property"
+            }
+          },
+          "props.wrap": {
+            "binding": {
+              "config": {
+                "path": "view.params.wrap-kpi"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elementPosition": {
+            "basis": "384px"
+          },
+          "elementStyle": {
+            "margin": "4px"
+          },
+          "instances": [
+            {
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              },
+              "label": "kpi",
+              "styleClass": "layouts/gray-80"
+            },
+            {
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              },
+              "label": "kpi",
+              "styleClass": "layouts/gray-80"
+            },
+            {
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              },
+              "label": "kpi",
+              "styleClass": "layouts/gray-80"
+            },
+            {
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              },
+              "label": "kpi",
+              "styleClass": "layouts/gray-80"
+            }
+          ],
+          "justify": "space-evenly",
+          "path": "layouts/framework/container-label",
+          "style": {
+            "padding": "4px 4px 0"
+          },
+          "useDefaultViewHeight": false,
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      },
+      {
+        "meta": {
+          "name": "content"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 3
+        },
+        "propConfig": {
+          "props.style.order": {
+            "binding": {
+              "config": {
+                "path": "view.params.order-component"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elementPosition": {
+            "basis": "384px",
+            "shrink": 0
+          },
+          "elementStyle": {
+            "margin": "4px"
+          },
+          "instances": [
+            {
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              },
+              "label": "component",
+              "styleClass": "layouts/gray-60"
+            },
+            {
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              },
+              "label": "component",
+              "styleClass": "layouts/gray-60"
+            },
+            {
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              },
+              "label": "component",
+              "styleClass": "layouts/gray-60"
+            },
+            {
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              },
+              "label": "component",
+              "styleClass": "layouts/gray-60"
+            },
+            {
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              },
+              "label": "component",
+              "styleClass": "layouts/gray-60"
+            },
+            {
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              },
+              "label": "component",
+              "styleClass": "layouts/gray-60"
+            },
+            {
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              },
+              "label": "component",
+              "styleClass": "layouts/gray-60"
+            },
+            {
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              },
+              "label": "component",
+              "styleClass": "layouts/gray-60"
+            }
+          ],
+          "justify": "space-evenly",
+          "path": "layouts/framework/container-label",
+          "style": {
+            "padding": "0 4px 4px"
+          },
+          "useDefaultViewHeight": false,
+          "useDefaultViewWidth": false,
+          "wrap": "wrap"
+        },
+        "type": "ia.display.flex-repeater"
+      },
+      {
+        "meta": {
+          "name": "nav"
+        },
+        "position": {
+          "basis": "200px"
+        },
+        "propConfig": {
+          "props.style.order": {
+            "binding": {
+              "config": {
+                "path": "view.params.order-nav"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "layouts/grid/nav"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-between"
+    },
+    "type": "ia.container.flex"
+  }
+}

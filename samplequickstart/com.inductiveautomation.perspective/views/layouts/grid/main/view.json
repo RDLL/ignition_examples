@@ -1,0 +1,49 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "nav-btm"
+        },
+        "props": {
+          "params": {
+            "order-component": 1,
+            "order-kpi": 0,
+            "order-nav": 2,
+            "wrap-kpi": "wrap"
+          },
+          "path": "layouts/grid/content"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "nav-top"
+        },
+        "position": {
+          "size": "large"
+        },
+        "props": {
+          "params": {
+            "order-component": 2,
+            "order-kpi": 1,
+            "order-nav": 0,
+            "wrap-kpi": "no-wrap"
+          },
+          "path": "layouts/grid/content"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "breakpoint": 1000
+    },
+    "type": "ia.container.breakpt"
+  }
+}

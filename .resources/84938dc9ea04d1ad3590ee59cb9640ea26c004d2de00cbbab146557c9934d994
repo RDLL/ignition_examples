@@ -1,0 +1,92 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px"
+        },
+        "props": {
+          "params": {
+            "text": "Video Player"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "props": {
+          "text": "The Video Player component enables you to embed video or a live feed in Perspective views. In a view, the component displays either a live feed from an IP camera or a web hosted video file that is accessible from your gateway. The component is wrapped in a skin that gives you control over the style of the video controls and a uniform experience across browsers. Video controls can also be hidden (available on hover) to allow for a simple, clean video display.\n\nThe component requires a URL to a video or live feed. This also includes files placed on a WebDev mounted folder or file resource, which can be used to serve video files. "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "VideoPlayer"
+                },
+                "position": {
+                  "basis": "464px"
+                },
+                "props": {
+                  "source": "https://archive.org/download/BigBuckBunny_199/big_buck_bunny_240p_2mb.ogv",
+                  "status": {
+                    "loadedData": true,
+                    "paused": true
+                  }
+                },
+                "type": "ia.display.video-player"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance1"
+            },
+            "position": {
+              "basis": "778px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "wrap": "wrap"
+    },
+    "type": "ia.container.flex"
+  }
+}

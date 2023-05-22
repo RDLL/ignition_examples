@@ -1,0 +1,403 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px"
+        },
+        "props": {
+          "params": {
+            "text": "Sparkline"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "props": {
+          "text": "The Sparkline chart is a minimalistic chart component that displays a line-chart history for a single datapoint."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Sparkline"
+                },
+                "position": {
+                  "basis": "100px"
+                },
+                "props": {
+                  "points": [
+                    59,
+                    80,
+                    80,
+                    100,
+                    68,
+                    62,
+                    87,
+                    72,
+                    42,
+                    49,
+                    58,
+                    53,
+                    57,
+                    51,
+                    42,
+                    32,
+                    37,
+                    30,
+                    24,
+                    38,
+                    57,
+                    29,
+                    18,
+                    32,
+                    38,
+                    24,
+                    24,
+                    24,
+                    20,
+                    21,
+                    29,
+                    32,
+                    26,
+                    18,
+                    32,
+                    36,
+                    30,
+                    36,
+                    29,
+                    32,
+                    29,
+                    28,
+                    41,
+                    20,
+                    28,
+                    58,
+                    18,
+                    24,
+                    16,
+                    2,
+                    22,
+                    17,
+                    22,
+                    21,
+                    12,
+                    22,
+                    14,
+                    13,
+                    11,
+                    20,
+                    16,
+                    16,
+                    18,
+                    12,
+                    28,
+                    28,
+                    32,
+                    16,
+                    16,
+                    24,
+                    16,
+                    20,
+                    14,
+                    18,
+                    12,
+                    26,
+                    17,
+                    11,
+                    30,
+                    16,
+                    9,
+                    20,
+                    42,
+                    13,
+                    13,
+                    24,
+                    17,
+                    13,
+                    20,
+                    12,
+                    14,
+                    13,
+                    14,
+                    71,
+                    82,
+                    20,
+                    16,
+                    20,
+                    22,
+                    17,
+                    5
+                  ]
+                },
+                "type": "ia.display.sparkline"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "HelpText"
+                },
+                "position": {
+                  "basis": "87px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Sparklines are typically used to display the recent history (up to current time) of a datapoint so that the viewer can quickly discern the recent trend of a datapoint."
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance2"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Sparkline"
+                },
+                "position": {
+                  "basis": "100px"
+                },
+                "props": {
+                  "desired": {
+                    "fill": {
+                      "color": "#28CDFF"
+                    },
+                    "high": 55,
+                    "low": 25
+                  },
+                  "points": [
+                    59,
+                    80,
+                    80,
+                    100,
+                    68,
+                    62,
+                    87,
+                    72,
+                    42,
+                    49,
+                    58,
+                    53,
+                    57,
+                    51,
+                    42,
+                    32,
+                    37,
+                    30,
+                    24,
+                    38,
+                    57,
+                    29,
+                    18,
+                    32,
+                    38,
+                    24,
+                    24,
+                    24,
+                    20,
+                    21,
+                    29,
+                    32,
+                    26,
+                    18,
+                    32,
+                    36,
+                    30,
+                    36,
+                    29,
+                    32,
+                    29,
+                    28,
+                    41,
+                    20,
+                    28,
+                    58,
+                    18,
+                    24,
+                    16,
+                    2,
+                    22,
+                    17,
+                    22,
+                    21,
+                    12,
+                    22,
+                    14,
+                    13,
+                    11,
+                    20,
+                    16,
+                    16,
+                    18,
+                    12,
+                    28,
+                    28,
+                    32,
+                    16,
+                    16,
+                    24,
+                    16,
+                    20,
+                    14,
+                    18,
+                    12,
+                    26,
+                    17,
+                    11,
+                    30,
+                    16,
+                    9,
+                    20,
+                    42,
+                    13,
+                    13,
+                    24,
+                    17,
+                    13,
+                    20,
+                    12,
+                    14,
+                    13,
+                    14,
+                    71,
+                    82,
+                    20,
+                    16,
+                    20,
+                    22,
+                    17,
+                    5
+                  ]
+                },
+                "type": "ia.display.sparkline"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "HelpText"
+                },
+                "position": {
+                  "basis": "87px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "The desired--\u003elow/high properties are very useful to visually indicate an ideal range for the datapoint being displayed, or the window between high and low set points."
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "ComponentInstance3"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "justify": "space-evenly",
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "wrap": "wrap"
+    },
+    "type": "ia.container.flex"
+  }
+}

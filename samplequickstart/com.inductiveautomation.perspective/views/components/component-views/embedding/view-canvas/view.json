@@ -1,0 +1,423 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 860
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "View Canvas"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The View Canvas component can display multiple Perspective views, each positioned on a coordinate based system. The component offers smooth transition animations when views are relocated.  Familiarity with CSS is helpful in taking full advantage of the this component."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "ViewCanvas"
+                },
+                "position": {
+                  "basis": "802px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.instances": {
+                    "persistent": true
+                  },
+                  "props.instances[0].viewPath": {
+                    "persistent": true
+                  },
+                  "props.instances[1].viewPath": {
+                    "persistent": true
+                  },
+                  "props.instances[2].viewPath": {
+                    "persistent": true
+                  },
+                  "props.instances[3].viewPath": {
+                    "persistent": true
+                  },
+                  "props.instances[4].viewPath": {
+                    "persistent": true
+                  }
+                },
+                "props": {
+                  "instances": [
+                    {
+                      "bottom": "auto",
+                      "height": "110px",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": "auto",
+                      "style": {
+                        "classes": "",
+                        "overflow": "visible"
+                      },
+                      "top": 30,
+                      "viewParams": {
+                        "instance": 3
+                      },
+                      "viewPath": "components/component-views/framework/embedded-view",
+                      "width": "250px",
+                      "zIndex": 0
+                    },
+                    {
+                      "bottom": "auto",
+                      "height": "110px",
+                      "left": 137.5,
+                      "position": "absolute",
+                      "right": "auto",
+                      "style": {
+                        "classes": "",
+                        "overflow": "visible"
+                      },
+                      "top": 50,
+                      "viewParams": {
+                        "instance": 2
+                      },
+                      "viewPath": "components/component-views/framework/embedded-view",
+                      "width": "250px",
+                      "zIndex": 1
+                    },
+                    {
+                      "bottom": "auto",
+                      "height": "110px",
+                      "left": 275,
+                      "position": "absolute",
+                      "right": "auto",
+                      "style": {
+                        "classes": "",
+                        "overflow": "visible"
+                      },
+                      "top": 60,
+                      "viewParams": {
+                        "instance": 1
+                      },
+                      "viewPath": "components/component-views/framework/embedded-view",
+                      "width": "250px",
+                      "zIndex": 2
+                    },
+                    {
+                      "bottom": "auto",
+                      "height": "110px",
+                      "left": 412.5,
+                      "position": "absolute",
+                      "right": "auto",
+                      "style": {
+                        "classes": "",
+                        "overflow": "visible"
+                      },
+                      "top": 50,
+                      "viewParams": {
+                        "instance": 5
+                      },
+                      "viewPath": "components/component-views/framework/embedded-view",
+                      "width": "250px",
+                      "zIndex": 1
+                    },
+                    {
+                      "bottom": "auto",
+                      "height": "110px",
+                      "left": 550,
+                      "position": "absolute",
+                      "right": "auto",
+                      "style": {
+                        "classes": "",
+                        "overflow": "visible"
+                      },
+                      "top": 30,
+                      "viewParams": {
+                        "instance": 4
+                      },
+                      "viewPath": "components/component-views/framework/embedded-view",
+                      "width": "250px",
+                      "zIndex": 0
+                    }
+                  ],
+                  "style": {
+                    "overflow": "visible"
+                  },
+                  "transitionSettings": {
+                    "duration": "0.1s",
+                    "timingFunction": "linear"
+                  },
+                  "useDefaultViewHeight": false,
+                  "useDefaultViewWidth": false
+                },
+                "type": "ia.display.viewcanvas"
+              }
+            ],
+            "meta": {
+              "name": "ViewCanvas Large"
+            },
+            "position": {
+              "size": "large"
+            },
+            "props": {
+              "alignContent": "center",
+              "justify": "center",
+              "style": {
+                "marginBottom": "10px",
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "ViewCanvas"
+                },
+                "position": {
+                  "basis": "802px",
+                  "shrink": 0
+                },
+                "props": {
+                  "instances": [
+                    {
+                      "bottom": "auto",
+                      "height": "auto",
+                      "left": 275,
+                      "position": "absolute",
+                      "right": "auto",
+                      "style": {
+                        "classes": ""
+                      },
+                      "top": 15,
+                      "viewParams": {
+                        "instance": 4
+                      },
+                      "viewPath": "components/component-views/framework/embedded-view",
+                      "width": "250px",
+                      "zIndex": 1
+                    },
+                    {
+                      "bottom": "auto",
+                      "height": "auto",
+                      "left": 275,
+                      "position": "absolute",
+                      "right": "auto",
+                      "style": {
+                        "classes": ""
+                      },
+                      "top": 0,
+                      "viewParams": {
+                        "instance": 5
+                      },
+                      "viewPath": "components/component-views/framework/embedded-view",
+                      "width": "250px",
+                      "zIndex": 0
+                    },
+                    {
+                      "bottom": "auto",
+                      "height": "auto",
+                      "left": 275,
+                      "position": "absolute",
+                      "right": "auto",
+                      "style": {
+                        "classes": ""
+                      },
+                      "top": 60,
+                      "viewParams": {
+                        "instance": 1
+                      },
+                      "viewPath": "components/component-views/framework/embedded-view",
+                      "width": "250px",
+                      "zIndex": 4
+                    },
+                    {
+                      "bottom": "auto",
+                      "height": "auto",
+                      "left": 275,
+                      "position": "absolute",
+                      "right": "auto",
+                      "style": {
+                        "classes": ""
+                      },
+                      "top": 45,
+                      "viewParams": {
+                        "instance": 2
+                      },
+                      "viewPath": "components/component-views/framework/embedded-view",
+                      "width": "250px",
+                      "zIndex": 3
+                    },
+                    {
+                      "bottom": "auto",
+                      "height": "auto",
+                      "left": 275,
+                      "position": "absolute",
+                      "right": "auto",
+                      "style": {
+                        "classes": ""
+                      },
+                      "top": 30,
+                      "viewParams": {
+                        "instance": 3
+                      },
+                      "viewPath": "components/component-views/framework/embedded-view",
+                      "width": "250px",
+                      "zIndex": 2
+                    }
+                  ],
+                  "style": {
+                    "overflow": "hidden"
+                  },
+                  "transitionSettings": {
+                    "duration": "0.1s",
+                    "timingFunction": "linear"
+                  },
+                  "useDefaultViewHeight": false,
+                  "useDefaultViewWidth": false
+                },
+                "type": "ia.display.viewcanvas"
+              }
+            ],
+            "meta": {
+              "name": "ViewCanvas Small"
+            },
+            "props": {
+              "alignContent": "center",
+              "justify": "center",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "BreakpointContainer"
+        },
+        "position": {
+          "basis": "352px"
+        },
+        "props": {
+          "breakpoint": 802,
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.breakpt"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tinstances \u003d self.parent.parent.getChild(\"BreakpointContainer\").getChild(\"ViewCanvas Large\").getChild(\"ViewCanvas\").props.instances\n\tfor instance in instances:\n\t\tif instance[\u0027left\u0027] \u003c\u003d 0:\n\t\t\tinstance[\u0027left\u0027] \u003d 550\n\t\telif instance[\u0027left\u0027] \u003c\u003d 275:\n\t\t\tif instance[\u0027top\u0027]%30 !\u003d 0:\n\t\t\t\tinstance[\u0027top\u0027] -\u003d 20\n\t\t\telse:\n\t\t\t\tinstance[\u0027top\u0027] -\u003d 10\n\t\t\tinstance[\u0027left\u0027] -\u003d 137.5\n\t\t\tinstance[\u0027zIndex\u0027] -\u003d 1\n\t\telse:\n\t\t\tif instance[\u0027top\u0027]%30 !\u003d 0:\n\t\t\t\tinstance[\u0027top\u0027] +\u003d 10\n\t\t\telse:\n\t\t\t\tinstance[\u0027top\u0027] +\u003d 20\n\t\t\tinstance[\u0027left\u0027] -\u003d 137.5\n\t\t\tinstance[\u0027zIndex\u0027] +\u003d 1\n\t\t\t\n\tinstances \u003d self.parent.parent.getChild(\"BreakpointContainer\").getChild(\"ViewCanvas Small\").getChild(\"ViewCanvas\").props.instances\n\tfor instance in instances:\n\t\tif instance[\u0027top\u0027] \u003c\u003d 0:\n\t\t\tinstance[\u0027top\u0027] \u003d 60\n\t\t\tinstance[\u0027zIndex\u0027] \u003d 4\n\t\telse:\n\t\t\tinstance[\u0027top\u0027] -\u003d 15\n\t\t\tinstance[\u0027zIndex\u0027] -\u003d 1"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Backwards Button"
+            },
+            "position": {
+              "basis": "100px",
+              "shrink": 0
+            },
+            "props": {
+              "image": {
+                "icon": {
+                  "color": "#FFFAFA",
+                  "path": "material/chevron_left"
+                }
+              },
+              "text": ""
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "5px",
+              "shrink": 0
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tinstances \u003d self.parent.parent.getChild(\"BreakpointContainer\").getChild(\"ViewCanvas Large\").getChild(\"ViewCanvas\").props.instances\n\tfor instance in instances:\n\t\tif instance[\u0027left\u0027] \u003e\u003d 550:\n\t\t\tinstance[\u0027left\u0027] \u003d 0\n\t\telif instance[\u0027left\u0027] \u003c 275:\n\t\t\tif instance[\u0027top\u0027]%30 !\u003d 0:\n\t\t\t\tinstance[\u0027top\u0027] +\u003d 10\n\t\t\telse:\n\t\t\t\tinstance[\u0027top\u0027] +\u003d 20\n\t\t\tinstance[\u0027left\u0027] +\u003d 137.5\n\t\t\tinstance[\u0027zIndex\u0027] +\u003d 1\n\t\telse:\n\t\t\tif instance[\u0027top\u0027]%30 !\u003d 0:\n\t\t\t\tinstance[\u0027top\u0027] -\u003d 20\n\t\t\telse:\n\t\t\t\tinstance[\u0027top\u0027] -\u003d 10\n\t\t\tinstance[\u0027left\u0027] +\u003d 137.5\n\t\t\tinstance[\u0027zIndex\u0027] -\u003d 1\n\n\tinstances \u003d self.parent.parent.getChild(\"BreakpointContainer\").getChild(\"ViewCanvas Small\").getChild(\"ViewCanvas\").props.instances\n\tfor instance in instances:\n\t\tif instance[\u0027top\u0027] \u003e\u003d 60:\n\t\t\tinstance[\u0027zIndex\u0027] \u003d 0\n\t\t\tinstance[\u0027top\u0027] \u003d 0\n\t\telse:\n\t\t\tinstance[\u0027zIndex\u0027] +\u003d 1\n\t\t\tinstance[\u0027top\u0027] +\u003d 15"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Forwards Button"
+            },
+            "position": {
+              "basis": "100px",
+              "shrink": 0
+            },
+            "props": {
+              "image": {
+                "icon": {
+                  "color": "#FFFAFA",
+                  "path": "material/chevron_right"
+                }
+              },
+              "text": ""
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "ViewCanvas Buttons"
+        },
+        "position": {
+          "basis": "40px"
+        },
+        "props": {
+          "justify": "center"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

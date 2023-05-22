@@ -1,0 +1,177 @@
+{
+  "custom": {},
+  "params": {
+    "tagPath": "[Sample_Tags]Realistic/Realistic0"
+  },
+  "propConfig": {
+    "params.tagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 126,
+      "width": 166
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "tagPath",
+          "type": "Motor"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 32,
+          "width": 166
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "tagPath": "{view.params.tagPath}"
+                },
+                "tagPath": "{tagPath}.Name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#D5D5D587",
+            "fontWeight": "bold",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "LedDisplay"
+        },
+        "position": {
+          "height": 26,
+          "width": 93,
+          "x": 65,
+          "y": 96
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "tagPath": "{view.params.tagPath}"
+                },
+                "tagPath": "{tagPath}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "type": "ia.display.led-display"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 32,
+          "width": 61,
+          "x": 11,
+          "y": 93
+        },
+        "props": {
+          "text": "Amps:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Motor"
+        },
+        "position": {
+          "height": 58.99999999999999,
+          "width": 90,
+          "x": 38,
+          "y": 33
+        },
+        "propConfig": {
+          "props.style.fill": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.tagPath}"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000C4",
+                  "inputType": "range",
+                  "mappings": [
+                    {
+                      "input": {
+                        "exclusiveMax": true,
+                        "min": 1500
+                      },
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": {
+                        "max": 1499,
+                        "min": 1000
+                      },
+                      "output": "#00FF00"
+                    },
+                    {
+                      "input": {
+                        "max": 999,
+                        "min": 500
+                      },
+                      "output": "#FFFF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "label": {
+            "text": ""
+          },
+          "value": {
+            "text": ""
+          }
+        },
+        "type": "ia.symbol.motor"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "Card"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

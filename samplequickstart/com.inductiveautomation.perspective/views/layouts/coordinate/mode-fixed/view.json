@@ -1,0 +1,245 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "component-a"
+        },
+        "position": {
+          "height": 134,
+          "width": 138,
+          "x": 24,
+          "y": 132.25
+        },
+        "props": {
+          "params": {
+            "label": " ",
+            "styleClass": "layouts/gray-60"
+          },
+          "path": "layouts/framework/container-label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "component-b"
+        },
+        "position": {
+          "height": 223.99999999999997,
+          "width": 194,
+          "x": 303,
+          "y": 86.75
+        },
+        "props": {
+          "params": {
+            "label": " ",
+            "styleClass": "layouts/gray-60"
+          },
+          "path": "layouts/framework/container-label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "component-c"
+        },
+        "position": {
+          "height": 73,
+          "width": 134,
+          "x": 608.5,
+          "y": 162.25
+        },
+        "props": {
+          "params": {
+            "label": " ",
+            "styleClass": "layouts/gray-60"
+          },
+          "path": "layouts/framework/container-label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "label-1"
+        },
+        "position": {
+          "height": 40,
+          "width": 80,
+          "x": 52.5,
+          "y": 278.25
+        },
+        "props": {
+          "params": {
+            "label": "a",
+            "styleClass": "layouts/container-A"
+          },
+          "path": "layouts/framework/container-label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "label-2"
+        },
+        "position": {
+          "height": 40,
+          "width": 80,
+          "x": 359.5,
+          "y": 328.25
+        },
+        "props": {
+          "params": {
+            "label": "b",
+            "styleClass": "layouts/container-B"
+          },
+          "path": "layouts/framework/container-label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "label-3"
+        },
+        "position": {
+          "height": 40,
+          "width": 80,
+          "x": 635,
+          "y": 246.25
+        },
+        "props": {
+          "params": {
+            "label": "c",
+            "styleClass": "layouts/container-C"
+          },
+          "path": "layouts/framework/container-label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "connector-1"
+        },
+        "position": {
+          "height": 16,
+          "width": 142,
+          "x": 161.5,
+          "y": 191.25
+        },
+        "props": {
+          "params": {
+            "label": "",
+            "styleClass": "layouts/gray-100"
+          },
+          "path": "layouts/framework/container-label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "connector-2"
+        },
+        "position": {
+          "height": 16,
+          "width": 111.99999999999999,
+          "x": 496.5,
+          "y": 191.25
+        },
+        "props": {
+          "params": {
+            "label": "",
+            "styleClass": "layouts/gray-100"
+          },
+          "path": "layouts/framework/container-label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "component-e"
+        },
+        "position": {
+          "height": 84,
+          "width": 758,
+          "x": 23.5,
+          "y": 578.25
+        },
+        "props": {
+          "params": {
+            "label": " ",
+            "styleClass": "layouts/gray-60"
+          },
+          "path": "layouts/framework/container-label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "label-5"
+        },
+        "position": {
+          "height": 40,
+          "width": 80,
+          "x": 360,
+          "y": 673.25
+        },
+        "props": {
+          "params": {
+            "label": "d",
+            "styleClass": "layouts/container-D"
+          },
+          "path": "layouts/framework/container-label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "connector-3"
+        },
+        "position": {
+          "height": 16,
+          "width": 58,
+          "x": 742,
+          "y": 191.25
+        },
+        "props": {
+          "params": {
+            "label": "",
+            "styleClass": "layouts/gray-100"
+          },
+          "path": "layouts/framework/container-label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "connector-4"
+        },
+        "position": {
+          "height": 16,
+          "width": 24,
+          "y": 191.25
+        },
+        "props": {
+          "params": {
+            "label": "",
+            "styleClass": "layouts/gray-100"
+          },
+          "path": "layouts/framework/container-label"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.mode": {
+        "persistent": true
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

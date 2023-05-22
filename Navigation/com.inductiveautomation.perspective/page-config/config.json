@@ -1,0 +1,60 @@
+{
+  "pages": {
+    "/": {
+      "title": "",
+      "viewPath": "Navigation"
+    },
+    "/IT/Assets": {
+      "viewPath": "IT/Assets"
+    },
+    "/IT/Backlog": {
+      "viewPath": "IT/Backlog"
+    },
+    "/IT/Documentation": {
+      "viewPath": "IT/Documentation"
+    },
+    "/Maintenance/Assets": {
+      "viewPath": "Maintenance/Assets"
+    },
+    "/Maintenance/Inspections": {
+      "viewPath": "Maintenance/Inspections"
+    },
+    "/Maintenance/schedule": {
+      "viewPath": "Maintenance/Schedule"
+    },
+    "/Production/Inventory": {
+      "viewPath": "Production/Inventory"
+    },
+    "/Production/Produce": {
+      "viewPath": "Production/Produce"
+    },
+    "/Production/Schedule": {
+      "viewPath": "Production/Schedule"
+    },
+    "/Quality/Documentation": {
+      "viewPath": "Quality/Documentation"
+    },
+    "/Quality/Safety": {
+      "viewPath": "Quality/Safety"
+    },
+    "/Quality/Scrap": {
+      "viewPath": "Quality/Scrap"
+    },
+    "/Sales/Customers": {
+      "viewPath": "Sales/Customers"
+    },
+    "/Sales/Orders": {
+      "viewPath": "Sales/Orders"
+    },
+    "/Sales/Shipping": {
+      "viewPath": "Sales/Shipping"
+    },
+    "/map": {
+      "title": "",
+      "viewPath": "Map/searchMap"
+    }
+  },
+  "sharedDocks": {
+    "cornerPriority": "top-bottom"
+  }
+}

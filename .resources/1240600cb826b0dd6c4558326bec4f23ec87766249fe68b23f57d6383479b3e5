@@ -1,0 +1,125 @@
+{
+  "custom": {},
+  "params": {
+    "index": "value",
+    "label": "temp",
+    "value": 46
+  },
+  "propConfig": {
+    "params.index": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.value": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 108,
+      "width": 409
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.label} + \":\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "margin-right": "5px"
+          },
+          "textStyle": {
+            "font-weight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.value"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t\n\tmessage \u003d \"delete Instance\"\n\tpayload \u003d {\"index\":\n\tsystem.perspective.sendMessage(message)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "80px"
+        },
+        "props": {
+          "image": {
+            "icon": {
+              "path": "material/close"
+            }
+          },
+          "primary": false,
+          "style": {
+            "border": 0,
+            "boxShadow": "none",
+            "outline": 0
+          },
+          "text": ""
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "border": "1px solid var(--neutral-40)",
+        "border-radius": "4px",
+        "margin": "5px 10px",
+        "padding": "0 10px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

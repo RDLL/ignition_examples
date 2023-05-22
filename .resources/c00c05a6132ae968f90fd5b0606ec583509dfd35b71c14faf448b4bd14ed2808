@@ -1,0 +1,81 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 757,
+      "width": 1000
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "TextField"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t\n\ttextValue\u003dself.getSibling(\"TextField\").props.text\n\tpath \u003d \"Popup\"\n\tparams \u003d {\n\t\t\"ID\": textValue\n\t}\n\t\n\t\n\tsystem.perspective.openPopup(\"sampleForm\", path, params\u003dparams)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "props": {
+          "text": "Open Popup"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "text": "Label"
+        },
+        "scripts": {
+          "customMethods": [],
+          "extensionFunctions": null,
+          "messageHandlers": [
+            {
+              "messageType": "receiveFromPopup",
+              "pageScope": true,
+              "script": "\t# implement your handler here\n\tfieldFromPopup \u003d payload[\"fieldFromPopup\"]\n\t\n\tself.props.text \u003d fieldFromPopup",
+              "sessionScope": false,
+              "viewScope": false
+            }
+          ]
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "padding": "20px 50px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

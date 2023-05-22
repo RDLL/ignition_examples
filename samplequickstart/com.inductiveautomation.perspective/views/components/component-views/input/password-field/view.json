@@ -1,0 +1,285 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 811,
+      "width": 728
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Password Field"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Description"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "source": "The Password Field component is text field component that allows users to securely enter their password. The Password Field supports placeholder text and includes a setting that allows the user to reveal the password."
+        },
+        "type": "ia.display.markdown"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Password Field:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "PasswordField"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "allowReveal": false,
+                  "placeholder": "Enter password..."
+                },
+                "type": "ia.input.password-field"
+              }
+            ],
+            "meta": {
+              "name": "Password"
+            },
+            "position": {
+              "basis": "300px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Allow Reveal:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "PasswordField"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "placeholder": "Enter password..."
+                },
+                "type": "ia.input.password-field"
+              }
+            ],
+            "meta": {
+              "name": "Reveal"
+            },
+            "position": {
+              "basis": "300px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Disabled:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "PasswordField"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "enabled": false,
+                  "placeholder": "Disabled..."
+                },
+                "type": "ia.input.password-field"
+              }
+            ],
+            "meta": {
+              "name": "Disabled"
+            },
+            "position": {
+              "basis": "300px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Password Verification:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Match"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({../PasswordFieldVerify.props.text} \u003d {../PasswordField.props.text}, \u0027Passwords Match!\u0027, \u0027Passwords Do Not Match!\u0027)"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "PasswordField"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "placeholder": "Enter Password..."
+                },
+                "type": "ia.input.password-field"
+              },
+              {
+                "meta": {
+                  "name": "PasswordFieldVerify"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "placeholder": "Verify Password..."
+                },
+                "type": "ia.input.password-field"
+              }
+            ],
+            "meta": {
+              "name": "Compare"
+            },
+            "position": {
+              "basis": "300px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Examples"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "alignContent": "flex-start",
+          "alignItems": "flex-start",
+          "justify": "space-evenly",
+          "style": {
+            "overflow": "visible",
+            "padding": "10px"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1400
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "EmbeddedView-content"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "path": "layouts/fluid/content",
+          "style": {
+            "maxWidth": "1400px"
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "alignContent": "flex-start",
+      "alignItems": "flex-start",
+      "justify": "center",
+      "style": {
+        "overflow": "scroll"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

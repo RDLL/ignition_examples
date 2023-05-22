@@ -1,0 +1,108 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 604,
+      "width": 929
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Power Chart"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The Power Chart component allows you to quickly and easily create runtime-configurable time series charts from Tag Historian data. Now you can easily generate “ad hoc” charts within a Perspective session."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "PowerChart"
+            },
+            "position": {
+              "basis": "500px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.config.tagBrowserStartPath": {
+                "binding": {
+                  "config": {
+                    "expression": "\"histprov:Sample_SQLite_Database:/drv:\" + {[System]Gateway/SystemName} + \":sample_tags\""
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "config": {}
+            },
+            "type": "ia.chart.powerchart"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "476.5px",
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "marginTop": 10,
+            "overflow": "visible"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "overflow": "visible"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

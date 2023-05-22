@@ -1,0 +1,33 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 109,
+      "width": 300
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Barcode"
+        },
+        "position": {
+          "basis": "122px"
+        },
+        "props": {
+          "value": "Item #1"
+        },
+        "type": "ia.display.barcode"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

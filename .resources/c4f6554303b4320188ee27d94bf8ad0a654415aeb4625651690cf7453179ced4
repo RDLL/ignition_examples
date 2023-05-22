@@ -1,0 +1,170 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "page-title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "icon": "",
+            "text": "Tag History Report"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Start"
+            },
+            "position": {
+              "basis": "84px"
+            },
+            "props": {
+              "text": "Start Date:"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "StartDate"
+            },
+            "position": {
+              "basis": "170px"
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "expression": "dateArithmetic(now(0), -5, \"min\")"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "formattedValue": "Sep 11, 2020 12:29 PM",
+              "formattedValues": {
+                "date": "Sep 11, 2020",
+                "datetime": "Sep 11, 2020 12:29 PM",
+                "time": "12:29 PM"
+              }
+            },
+            "type": "ia.input.date-time-input"
+          },
+          {
+            "meta": {
+              "name": "Spacer"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "End"
+            },
+            "position": {
+              "basis": "84px"
+            },
+            "props": {
+              "text": "End Date:"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "EndDate"
+            },
+            "position": {
+              "basis": "170px"
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "expression": "now(0)"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "formattedValue": "Sep 11, 2020 12:34 PM",
+              "formattedValues": {
+                "date": "Sep 11, 2020",
+                "datetime": "Sep 11, 2020 12:34 PM",
+                "time": "12:34 PM"
+              }
+            },
+            "type": "ia.input.date-time-input"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "50px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "padding": "5px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "ReportViewer"
+        },
+        "position": {
+          "basis": "700px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.params.EndDate": {
+            "binding": {
+              "config": {
+                "path": "../FlexContainer/EndDate.props.value"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.StartDate": {
+            "binding": {
+              "config": {
+                "path": "../FlexContainer/StartDate.props.value"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "page": 1,
+          "pageCount": 6,
+          "source": "Tag History Report"
+        },
+        "type": "ia.reporting.report-viewer"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

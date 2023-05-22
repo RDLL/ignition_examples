@@ -1,0 +1,314 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Coordinate"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "A Coordinate container type creates a traditional yet simple type of layout to use in Perspective. Each element (i.e., component or nested container) inside the layout has the familiar x, y, width, and height. Resize your screen to see it in action."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Dropdown",
+              "visible": false
+            },
+            "position": {
+              "height": 30,
+              "width": 105.01,
+              "x": 60.97,
+              "y": 10
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Fixed",
+                  "value": "fixed"
+                },
+                {
+                  "label": "Percent",
+                  "value": "percent"
+                }
+              ],
+              "value": "fixed"
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "Label",
+              "visible": false
+            },
+            "position": {
+              "height": 20,
+              "width": 50.03,
+              "x": 17,
+              "y": 15
+            },
+            "props": {
+              "text": "Mode"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "hasDelegate": true,
+              "name": "Label_6"
+            },
+            "position": {
+              "height": 80,
+              "width": 490,
+              "x": 9.981542392333985,
+              "y": 336
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-A layouts/container-label",
+                "margin": "5px 0px 5px 0px"
+              },
+              "text": "View 6"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "hasDelegate": true,
+              "name": "Label_5"
+            },
+            "position": {
+              "height": 79.99,
+              "width": 669,
+              "x": 9.994323577636719,
+              "y": 246
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-A layouts/container-label",
+                "margin": "5px 0px 5px 0px"
+              },
+              "text": "View 5"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "hasDelegate": true,
+              "name": "Label_4"
+            },
+            "position": {
+              "height": 79.99,
+              "width": 310.02,
+              "x": 369,
+              "y": 156
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-A layouts/container-label",
+                "margin": "5px 0px 5px 0px"
+              },
+              "text": "View 4"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "hasDelegate": true,
+              "name": "Label_3"
+            },
+            "position": {
+              "height": 79.99,
+              "width": 350,
+              "x": 9.99716357763672,
+              "y": 156
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-A layouts/container-label",
+                "margin": "5px 0px 5px 0px"
+              },
+              "text": "View 3"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "hasDelegate": true,
+              "name": "Label_2"
+            },
+            "position": {
+              "height": 79.99,
+              "rotate": {
+                "anchor": "44% 50%"
+              },
+              "width": 480,
+              "x": 199,
+              "y": 66
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-A layouts/container-label",
+                "margin": "5px 0px 5px 0px"
+              },
+              "text": "View 2"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "hasDelegate": true,
+              "name": "Label_1"
+            },
+            "position": {
+              "height": 79.99,
+              "width": 180.03,
+              "x": 10,
+              "y": 66
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-A layouts/container-label",
+                "margin": "5px 0px 5px 0px"
+              },
+              "text": "View 1"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "Mode"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Dropdown"
+                },
+                "position": {
+                  "basis": "110px",
+                  "shrink": 0
+                },
+                "props": {
+                  "options": [
+                    {
+                      "label": "Fixed",
+                      "value": "fixed"
+                    },
+                    {
+                      "label": "Percent",
+                      "value": "percent"
+                    }
+                  ],
+                  "value": "fixed"
+                },
+                "type": "ia.input.dropdown"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "height": 35,
+              "width": 160,
+              "x": 20,
+              "y": 10
+            },
+            "props": {
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "hasDelegate": true,
+              "name": "Label_7"
+            },
+            "position": {
+              "height": 80,
+              "rotate": {
+                "anchor": "40% 50%"
+              },
+              "width": 169,
+              "x": 510,
+              "y": 336
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-A layouts/container-label",
+                "margin": "5px 0px 5px 0px"
+              },
+              "text": "View 7"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.mode": {
+            "binding": {
+              "config": {
+                "path": "./FlexContainer/Dropdown.props.value"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "marginTop": "20px"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

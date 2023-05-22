@@ -1,0 +1,8 @@
+{
+  "base": {
+    "style": {
+      "fontSize": "18px",
+      "fontWeight": "bold"
+    }
+  }
+}

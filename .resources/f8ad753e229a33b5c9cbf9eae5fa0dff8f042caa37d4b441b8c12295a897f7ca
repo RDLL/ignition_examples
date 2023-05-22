@@ -1,0 +1,136 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 860,
+      "width": 728
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Barcode Scanner Input"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Description"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "source": "The Barcode Scanner Input component awaits input from a barcode scanner. The component was designed for keyboard wedge scanners, and provides dedicated prefix and suffix properties to define scanner input.\n\nThe scanner component is continuously listening, waiting for the prefix and suffix characters to be entered. Once triggered, the component will call the Barcode Scanned session event script, allowing you an opportunity to do something with the scanned data. "
+        },
+        "type": "ia.display.markdown"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "40px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Scanner Input:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Instructions"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "80%",
+                    "padding": "10px",
+                    "textAlign": "justify"
+                  },
+                  "text": "Type out some text using your keyboard starting with \"a\" and ending with \"b\" to trigger a scan."
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "BarcodeScannerInput"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "prefix": "a",
+                  "suffix": "b"
+                },
+                "type": "ia.input.barcodescannerinput"
+              }
+            ],
+            "meta": {
+              "name": "Standard"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "alignItems": "center",
+              "direction": "column",
+              "style": {
+                "overflow": "visible",
+                "padding": "10px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Examples"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "alignContent": "flex-start",
+          "alignItems": "flex-start",
+          "justify": "space-evenly",
+          "style": {
+            "overflow": "visible",
+            "padding": "10px"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

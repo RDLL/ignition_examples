@@ -1,0 +1,236 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 643
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Simple Gauge"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The Simple Gauge component provides a way to show realtime values in a range as they change. This gauge is a less complicated version of the Gauge component. It has just one axis, is easy to configure and is customizable in its appearance."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Simple 180 Degree"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[Sample_Tags]Ramp/Ramp0"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "arc": {
+                "color": "#77B6D8CC"
+              },
+              "arcBackground": {
+                "color": "#77B6D8CC"
+              },
+              "label": {
+                "maxDecimal": 0,
+                "units": "lb/in²"
+              },
+              "maxValue": 10,
+              "style": {
+                "classes": []
+              }
+            },
+            "type": "ia.chart.simple-gauge"
+          },
+          {
+            "meta": {
+              "name": "Simple 360 Degree"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[Sample_Tags]Sine/Sine1"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "arc": {
+                "color": "#96E6B1CC",
+                "width": 88
+              },
+              "arcBackground": {
+                "color": "#96E6B1CC"
+              },
+              "endAngle": 540,
+              "label": {
+                "maxDecimal": 2,
+                "units": "°"
+              },
+              "maxValue": 360,
+              "style": {
+                "classes": []
+              }
+            },
+            "type": "ia.chart.simple-gauge"
+          },
+          {
+            "meta": {
+              "name": "Simple 240 Degree"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[Sample_Tags]Ramp/Ramp1"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "arc": {
+                "color": "#FF4747CC",
+                "width": 2
+              },
+              "arcBackground": {
+                "color": "#FF4747CC"
+              },
+              "endAngle": 390,
+              "label": {
+                "maxDecimal": 2,
+                "units": "RPM"
+              },
+              "maxValue": 130,
+              "startAngle": 150,
+              "style": {
+                "classes": []
+              }
+            },
+            "type": "ia.chart.simple-gauge"
+          },
+          {
+            "meta": {
+              "name": "Simple Hollow 360 Degree "
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[Sample_Tags]Sine/Sine8"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "arc": {
+                "color": "#FFAC47CC",
+                "cornerRadius": 10
+              },
+              "arcBackground": {
+                "color": "#FFAC47CC"
+              },
+              "endAngle": 450,
+              "label": {
+                "maxDecimal": 2,
+                "units": "psi"
+              },
+              "startAngle": 90,
+              "style": {
+                "classes": []
+              }
+            },
+            "type": "ia.chart.simple-gauge"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "250px",
+          "shrink": 0
+        },
+        "props": {
+          "justify": "space-evenly",
+          "style": {
+            "overflow": "visible"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

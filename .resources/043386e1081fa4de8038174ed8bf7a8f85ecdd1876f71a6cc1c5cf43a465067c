@@ -1,0 +1,1507 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1000,
+      "width": 1200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Themes \u0026 Styles"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "marginBottom": "10px"
+          },
+          "text": "Container components provide a way of laying out and organizing components within a View. The different container types support different layout strategies, which are essential to creating responsive applications. Containers will allow your applications to gracefully display information across a wide variety of screen sizes and orientations. "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label_0"
+                    },
+                    "position": {
+                      "basis": "93px"
+                    },
+                    "props": {
+                      "text": "Theme:"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Dropdown"
+                    },
+                    "position": {
+                      "basis": "159px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "path": "session.props.theme"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "options": [
+                        {
+                          "label": "Light",
+                          "value": "light"
+                        },
+                        {
+                          "label": "Light Cool",
+                          "value": "light-cool"
+                        },
+                        {
+                          "label": "Light Warm",
+                          "value": "light-warm"
+                        },
+                        {
+                          "label": "Dark",
+                          "value": "dark"
+                        },
+                        {
+                          "label": "Dark Cool",
+                          "value": "dark-cool"
+                        },
+                        {
+                          "label": "Dark Warm",
+                          "value": "dark-warm"
+                        }
+                      ],
+                      "search": {
+                        "enabled": false,
+                        "marginLeft": "8px"
+                      }
+                    },
+                    "type": "ia.input.dropdown"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "basis": "46px"
+                },
+                "props": {
+                  "style": {
+                    "marginTop": 5,
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "CylindricalTank"
+                        },
+                        "position": {
+                          "basis": "136px"
+                        },
+                        "props": {
+                          "value": 20
+                        },
+                        "type": "ia.display.cylindrical-tank"
+                      },
+                      {
+                        "meta": {
+                          "name": "LedDisplay"
+                        },
+                        "position": {
+                          "basis": "128px"
+                        },
+                        "propConfig": {
+                          "props.value": {
+                            "binding": {
+                              "config": {
+                                "fallbackDelay": 2.5,
+                                "mode": "direct",
+                                "tagPath": "[Sample_Tags]Ramp/Ramp0"
+                              },
+                              "type": "tag"
+                            }
+                          }
+                        },
+                        "type": "ia.display.led-display"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "basis": "102px"
+                        },
+                        "props": {
+                          "text": "Styled Labels"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Standard"
+                            },
+                            "position": {
+                              "shrink": 0
+                            },
+                            "props": {
+                              "text": "No Style"
+                            },
+                            "type": "ia.display.label"
+                          },
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Styled"
+                            },
+                            "position": {
+                              "basis": "24px",
+                              "shrink": 0
+                            },
+                            "props": {
+                              "style": {
+                                "backgroundColor": "#8E8888",
+                                "classes": "Value_Label",
+                                "marginTop": "6px",
+                                "padding": 0
+                              },
+                              "text": "Styled"
+                            },
+                            "type": "ia.display.label"
+                          },
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Flashing"
+                            },
+                            "position": {
+                              "basis": "24px",
+                              "shrink": 0
+                            },
+                            "props": {
+                              "style": {
+                                "backgroundColor": "#8E8888",
+                                "classes": "components/animated-label",
+                                "marginTop": "6px",
+                                "padding": 0
+                              },
+                              "text": "Animated"
+                            },
+                            "type": "ia.display.label"
+                          }
+                        ],
+                        "meta": {
+                          "name": "Content"
+                        },
+                        "position": {
+                          "basis": "200px"
+                        },
+                        "props": {
+                          "direction": "column",
+                          "justify": "center",
+                          "style": {
+                            "classes": "Card_Container"
+                          }
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "meta": {
+                          "name": "Gauge"
+                        },
+                        "position": {
+                          "basis": "300px"
+                        },
+                        "propConfig": {
+                          "props.value": {
+                            "binding": {
+                              "config": {
+                                "fallbackDelay": 2.5,
+                                "mode": "direct",
+                                "tagPath": "[Sample_Tags]Ramp/Ramp0"
+                              },
+                              "type": "tag"
+                            }
+                          }
+                        },
+                        "props": {
+                          "backgroundColor": "",
+                          "innerAxis": {
+                            "data": "secondaryValue",
+                            "maxValue": 80,
+                            "percentRadius": 85,
+                            "show": false,
+                            "width": 1
+                          },
+                          "outerAxis": {
+                            "data": "value",
+                            "maxValue": 120,
+                            "percentRadius": 100,
+                            "ranges": [
+                              {
+                                "color": "#77B6D8",
+                                "end": 80,
+                                "start": 0,
+                                "width": 8
+                              },
+                              {
+                                "color": "#6E94D7",
+                                "end": 105,
+                                "start": 80,
+                                "width": 12
+                              },
+                              {
+                                "color": "#7A6BD5",
+                                "end": 120,
+                                "start": 105,
+                                "width": 16
+                              }
+                            ],
+                            "show": true,
+                            "width": 1
+                          },
+                          "style": {
+                            "classes": []
+                          }
+                        },
+                        "type": "ia.chart.gauge"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_2"
+                    },
+                    "position": {
+                      "basis": "1076px"
+                    },
+                    "props": {
+                      "justify": "space-between",
+                      "style": {
+                        "overflow": "visible"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "position": {
+                  "basis": "211px"
+                },
+                "props": {
+                  "justify": "space-around",
+                  "style": {
+                    "margin": "10px",
+                    "overflow": "visible"
+                  },
+                  "wrap": "wrap"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Progress"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "type": "ia.display.progress"
+                  },
+                  {
+                    "meta": {
+                      "name": "Checkbox"
+                    },
+                    "position": {
+                      "basis": "165px"
+                    },
+                    "props": {
+                      "text": "Checkbox"
+                    },
+                    "type": "ia.input.checkbox"
+                  },
+                  {
+                    "meta": {
+                      "name": "NumericEntryField"
+                    },
+                    "position": {
+                      "basis": "150px"
+                    },
+                    "props": {
+                      "value": 50
+                    },
+                    "type": "ia.input.numeric-entry-field"
+                  },
+                  {
+                    "meta": {
+                      "name": "TextField"
+                    },
+                    "position": {
+                      "basis": "150px"
+                    },
+                    "props": {
+                      "placeholder": "Enter text"
+                    },
+                    "type": "ia.input.text-field"
+                  },
+                  {
+                    "meta": {
+                      "name": "Slider"
+                    },
+                    "position": {
+                      "basis": "192px"
+                    },
+                    "type": "ia.input.slider"
+                  },
+                  {
+                    "meta": {
+                      "name": "ToggleSwitch"
+                    },
+                    "position": {
+                      "basis": "96px"
+                    },
+                    "type": "ia.input.toggle-switch"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_3"
+                },
+                "position": {
+                  "basis": "40px",
+                  "shrink": 0
+                },
+                "props": {
+                  "justify": "space-around",
+                  "style": {
+                    "margin": "10px",
+                    "overflow": "visible"
+                  },
+                  "wrap": "wrap"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Table"
+                    },
+                    "position": {
+                      "basis": "609px"
+                    },
+                    "props": {
+                      "data": [
+                        {
+                          "city": {
+                            "align": "center",
+                            "editable": true,
+                            "justify": "left",
+                            "style": {
+                              "backgroundColor": "#F7901D",
+                              "classes": "some-class"
+                            },
+                            "value": "Folsom"
+                          },
+                          "country": "United States",
+                          "population": 77271
+                        },
+                        {
+                          "city": "Helsinki",
+                          "country": "Finland",
+                          "population": 635591
+                        },
+                        {
+                          "city": "Jakarta",
+                          "country": "Indonesia",
+                          "population": 10187595
+                        },
+                        {
+                          "city": "Madrid",
+                          "country": "Spain",
+                          "population": 3233527
+                        },
+                        {
+                          "city": "Prague",
+                          "country": "Czech Republic",
+                          "population": 1241664
+                        },
+                        {
+                          "city": "San Diego",
+                          "country": "United States",
+                          "population": 1406630
+                        },
+                        {
+                          "city": "San Francisco",
+                          "country": "United States",
+                          "population": 884363
+                        },
+                        {
+                          "city": "Shanghai",
+                          "country": "China",
+                          "population": 24153000
+                        },
+                        {
+                          "city": "Tokyo",
+                          "country": "Japan",
+                          "population": 13617000
+                        },
+                        {
+                          "city": "Washington, DC",
+                          "country": "United States",
+                          "population": 658893
+                        },
+                        {
+                          "city": "Wellington",
+                          "country": "New Zealand",
+                          "population": 405000
+                        },
+                        {
+                          "city": "Delhi",
+                          "country": "India",
+                          "population": 11034555
+                        },
+                        {
+                          "city": "Dhaka",
+                          "country": "Bangladesh",
+                          "population": 14399000
+                        },
+                        {
+                          "city": "Lagos",
+                          "country": "Nigeria",
+                          "population": 16060303
+                        },
+                        {
+                          "city": "Karachi",
+                          "country": "Pakistan",
+                          "population": 14910352
+                        },
+                        {
+                          "city": "Istanbul",
+                          "country": "Turkey",
+                          "population": 14025000
+                        },
+                        {
+                          "city": "Cairo",
+                          "country": "Egypt",
+                          "population": 10230350
+                        },
+                        {
+                          "city": "Mexico City",
+                          "country": "Mexico",
+                          "population": 8974724
+                        },
+                        {
+                          "city": "London",
+                          "country": "United Kingdom",
+                          "population": 8825001
+                        },
+                        {
+                          "city": "New York City",
+                          "country": "United States",
+                          "population": 8622698
+                        },
+                        {
+                          "city": "Tehran",
+                          "country": "Iran",
+                          "population": 8154051
+                        },
+                        {
+                          "city": "Bogota",
+                          "country": "Colombia",
+                          "population": 7878783
+                        },
+                        {
+                          "city": "Rio de Janeiro",
+                          "country": "Brazil",
+                          "population": 6429923
+                        },
+                        {
+                          "city": "Riyadh",
+                          "country": "Saudi Arabia",
+                          "population": 5676621
+                        },
+                        {
+                          "city": "Singapore",
+                          "country": "Singapore",
+                          "population": 5535000
+                        },
+                        {
+                          "city": "Saint Petersburg",
+                          "country": "Russia",
+                          "population": 5191690
+                        },
+                        {
+                          "city": "Sydney",
+                          "country": "Australia",
+                          "population": 208374
+                        },
+                        {
+                          "city": "Abidjan",
+                          "country": "Ivory Coast",
+                          "population": 4765000
+                        },
+                        {
+                          "city": "Dar es Salaam",
+                          "country": "Tanzania",
+                          "population": 4364541
+                        },
+                        {
+                          "city": "Wellington",
+                          "country": "New Zealand",
+                          "population": 405000
+                        },
+                        {
+                          "city": "Los Angeles",
+                          "country": "United States",
+                          "population": 3884307
+                        },
+                        {
+                          "city": "Berlin",
+                          "country": "Germany",
+                          "population": 3517424
+                        },
+                        {
+                          "city": "Jeddah",
+                          "country": "Saudi Arabia",
+                          "population": 3456259
+                        },
+                        {
+                          "city": "Kabul",
+                          "country": "Afghanistan",
+                          "population": 3414100
+                        },
+                        {
+                          "city": "Mashhad",
+                          "country": "Iran",
+                          "population": 3001184
+                        },
+                        {
+                          "city": "Milan",
+                          "country": "Italy",
+                          "population": 1359905
+                        },
+                        {
+                          "city": "Kiev",
+                          "country": "Ukraine",
+                          "population": 2908703
+                        },
+                        {
+                          "city": "Rome",
+                          "country": "Italy",
+                          "population": 2877215
+                        },
+                        {
+                          "city": "Chicago",
+                          "country": "United States",
+                          "population": 2695598
+                        },
+                        {
+                          "city": "Osaka",
+                          "country": "Japan",
+                          "population": 2691742
+                        },
+                        {
+                          "city": "Bandung",
+                          "country": "Indonesia",
+                          "population": 2575478
+                        },
+                        {
+                          "city": "Managua",
+                          "country": "Nicaragua",
+                          "population": 2560789
+                        },
+                        {
+                          "city": "Paris",
+                          "country": "France",
+                          "population": 2229621
+                        },
+                        {
+                          "city": "Shiraz",
+                          "country": "Iran",
+                          "population": 1869001
+                        },
+                        {
+                          "city": "Manila",
+                          "country": "Philippines",
+                          "population": 1780148
+                        },
+                        {
+                          "city": "Montreal",
+                          "country": "Canada",
+                          "population": 1649519
+                        },
+                        {
+                          "city": "Guadalajara",
+                          "country": "Mexico",
+                          "population": 1495189
+                        },
+                        {
+                          "city": "Dallas",
+                          "country": "United States",
+                          "population": 1317929
+                        },
+                        {
+                          "city": "Yerevan",
+                          "country": "Armenia",
+                          "population": 1060138
+                        },
+                        {
+                          "city": "Tunis",
+                          "country": "Tunisia",
+                          "population": 1056247
+                        }
+                      ]
+                    },
+                    "type": "ia.display.table"
+                  },
+                  {
+                    "meta": {
+                      "name": "TimeSeriesChart"
+                    },
+                    "position": {
+                      "basis": "491px"
+                    },
+                    "props": {
+                      "series": [
+                        {
+                          "data": [
+                            {
+                              "Pressure": 12,
+                              "Temperature": 52,
+                              "time": 1560469431423
+                            },
+                            {
+                              "Pressure": 42,
+                              "Temperature": 18,
+                              "time": 1560469432423
+                            },
+                            {
+                              "Pressure": 81,
+                              "Temperature": 26,
+                              "time": 1560469433423
+                            },
+                            {
+                              "Pressure": 11,
+                              "Temperature": 63,
+                              "time": 1560469434423
+                            },
+                            {
+                              "Pressure": 23,
+                              "Temperature": 65,
+                              "time": 1560469435423
+                            },
+                            {
+                              "Pressure": 43,
+                              "Temperature": 12,
+                              "time": 1560469436423
+                            },
+                            {
+                              "Pressure": 71,
+                              "Temperature": 61,
+                              "time": 1560469437423
+                            },
+                            {
+                              "Pressure": 89,
+                              "Temperature": 60,
+                              "time": 1560469438423
+                            },
+                            {
+                              "Pressure": 66,
+                              "Temperature": 58,
+                              "time": 1560469439423
+                            },
+                            {
+                              "Pressure": 33,
+                              "Temperature": 1,
+                              "time": 1560469440423
+                            }
+                          ],
+                          "name": "Boiler"
+                        }
+                      ]
+                    },
+                    "type": "ia.chart.timeseries"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_1"
+                },
+                "position": {
+                  "basis": "299px",
+                  "shrink": 0
+                },
+                "props": {
+                  "justify": "space-evenly",
+                  "style": {
+                    "marginTop": 10,
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_LargeView"
+            },
+            "position": {
+              "size": "large"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "position": {
+                          "basis": "184.5px"
+                        },
+                        "props": {
+                          "text": "Theme:"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Dropdown"
+                        },
+                        "position": {
+                          "basis": "309.5px"
+                        },
+                        "propConfig": {
+                          "props.value": {
+                            "binding": {
+                              "config": {
+                                "bidirectional": true,
+                                "path": "session.props.theme"
+                              },
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "props": {
+                          "options": [
+                            {
+                              "label": "Light",
+                              "value": "light"
+                            },
+                            {
+                              "label": "Light Cool",
+                              "value": "light-cool"
+                            },
+                            {
+                              "label": "Light Warm",
+                              "value": "light-warm"
+                            },
+                            {
+                              "label": "Dark",
+                              "value": "dark"
+                            },
+                            {
+                              "label": "Dark Cool",
+                              "value": "dark-cool"
+                            },
+                            {
+                              "label": "Dark Warm",
+                              "value": "dark-warm"
+                            }
+                          ],
+                          "search": {
+                            "enabled": false,
+                            "marginLeft": "8px"
+                          }
+                        },
+                        "type": "ia.input.dropdown"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "position": {
+                      "basis": "47px"
+                    },
+                    "props": {
+                      "style": {
+                        "marginTop": 10
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "CylindricalTank"
+                        },
+                        "position": {
+                          "basis": "136px"
+                        },
+                        "type": "ia.display.cylindrical-tank"
+                      },
+                      {
+                        "meta": {
+                          "name": "LedDisplay"
+                        },
+                        "position": {
+                          "basis": "107px"
+                        },
+                        "type": "ia.display.led-display"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "position": {
+                      "basis": "134px"
+                    },
+                    "props": {
+                      "justify": "space-evenly"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "Label"
+                            },
+                            "position": {
+                              "basis": "58.7px"
+                            },
+                            "props": {
+                              "text": "Styled Labels"
+                            },
+                            "type": "ia.display.label"
+                          },
+                          {
+                            "children": [
+                              {
+                                "meta": {
+                                  "hasDelegate": true,
+                                  "name": "Standard"
+                                },
+                                "position": {
+                                  "shrink": 0
+                                },
+                                "props": {
+                                  "text": "No Style"
+                                },
+                                "type": "ia.display.label"
+                              },
+                              {
+                                "meta": {
+                                  "hasDelegate": true,
+                                  "name": "Styled"
+                                },
+                                "position": {
+                                  "basis": "24px",
+                                  "shrink": 0
+                                },
+                                "props": {
+                                  "style": {
+                                    "backgroundColor": "#8E8888",
+                                    "classes": "Value_Label",
+                                    "marginTop": "6px",
+                                    "padding": 0
+                                  },
+                                  "text": "Styled"
+                                },
+                                "type": "ia.display.label"
+                              },
+                              {
+                                "meta": {
+                                  "hasDelegate": true,
+                                  "name": "Flashing"
+                                },
+                                "position": {
+                                  "basis": "24px",
+                                  "shrink": 0
+                                },
+                                "props": {
+                                  "style": {
+                                    "backgroundColor": "#8E8888",
+                                    "classes": "components/animated-label",
+                                    "marginTop": "6px",
+                                    "padding": 0
+                                  },
+                                  "text": "Animated"
+                                },
+                                "type": "ia.display.label"
+                              }
+                            ],
+                            "meta": {
+                              "name": "Content"
+                            },
+                            "position": {
+                              "basis": "95px"
+                            },
+                            "props": {
+                              "direction": "column",
+                              "justify": "center",
+                              "style": {
+                                "classes": "Card_Container"
+                              }
+                            },
+                            "type": "ia.container.flex"
+                          },
+                          {
+                            "meta": {
+                              "name": "ToggleSwitch"
+                            },
+                            "position": {
+                              "basis": "36px"
+                            },
+                            "type": "ia.input.toggle-switch"
+                          }
+                        ],
+                        "meta": {
+                          "name": "FlexContainer"
+                        },
+                        "position": {
+                          "basis": "174px"
+                        },
+                        "props": {
+                          "direction": "column"
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "Progress"
+                            },
+                            "position": {
+                              "basis": "33px"
+                            },
+                            "type": "ia.display.progress"
+                          },
+                          {
+                            "meta": {
+                              "name": "Checkbox"
+                            },
+                            "position": {
+                              "basis": "36px"
+                            },
+                            "props": {
+                              "text": "Checkbox"
+                            },
+                            "type": "ia.input.checkbox"
+                          },
+                          {
+                            "meta": {
+                              "name": "TextField"
+                            },
+                            "position": {
+                              "basis": "32px"
+                            },
+                            "props": {
+                              "placeholder": "Enter Text"
+                            },
+                            "type": "ia.input.text-field"
+                          },
+                          {
+                            "meta": {
+                              "name": "NumericEntryField"
+                            },
+                            "position": {
+                              "basis": "32px"
+                            },
+                            "props": {
+                              "value": 50
+                            },
+                            "type": "ia.input.numeric-entry-field"
+                          }
+                        ],
+                        "meta": {
+                          "name": "FlexContainer_0"
+                        },
+                        "position": {
+                          "basis": "245px"
+                        },
+                        "props": {
+                          "direction": "column",
+                          "justify": "space-between",
+                          "style": {
+                            "marginLeft": 5
+                          }
+                        },
+                        "type": "ia.container.flex"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_1"
+                    },
+                    "position": {
+                      "basis": "170px"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "TimeSeriesChart"
+                        },
+                        "position": {
+                          "basis": "491px"
+                        },
+                        "props": {
+                          "series": [
+                            {
+                              "data": [
+                                {
+                                  "Pressure": 12,
+                                  "Temperature": 52,
+                                  "time": 1560469431423
+                                },
+                                {
+                                  "Pressure": 42,
+                                  "Temperature": 18,
+                                  "time": 1560469432423
+                                },
+                                {
+                                  "Pressure": 81,
+                                  "Temperature": 26,
+                                  "time": 1560469433423
+                                },
+                                {
+                                  "Pressure": 11,
+                                  "Temperature": 63,
+                                  "time": 1560469434423
+                                },
+                                {
+                                  "Pressure": 23,
+                                  "Temperature": 65,
+                                  "time": 1560469435423
+                                },
+                                {
+                                  "Pressure": 43,
+                                  "Temperature": 12,
+                                  "time": 1560469436423
+                                },
+                                {
+                                  "Pressure": 71,
+                                  "Temperature": 61,
+                                  "time": 1560469437423
+                                },
+                                {
+                                  "Pressure": 89,
+                                  "Temperature": 60,
+                                  "time": 1560469438423
+                                },
+                                {
+                                  "Pressure": 66,
+                                  "Temperature": 58,
+                                  "time": 1560469439423
+                                },
+                                {
+                                  "Pressure": 33,
+                                  "Temperature": 1,
+                                  "time": 1560469440423
+                                }
+                              ],
+                              "name": "Boiler"
+                            }
+                          ]
+                        },
+                        "type": "ia.chart.timeseries"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_2"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Table"
+                        },
+                        "position": {
+                          "basis": "423px"
+                        },
+                        "props": {
+                          "data": [
+                            {
+                              "city": {
+                                "align": "center",
+                                "editable": true,
+                                "justify": "left",
+                                "style": {
+                                  "backgroundColor": "#F7901D",
+                                  "classes": "some-class"
+                                },
+                                "value": "Folsom"
+                              },
+                              "country": "United States",
+                              "population": 77271
+                            },
+                            {
+                              "city": "Helsinki",
+                              "country": "Finland",
+                              "population": 635591
+                            },
+                            {
+                              "city": "Jakarta",
+                              "country": "Indonesia",
+                              "population": 10187595
+                            },
+                            {
+                              "city": "Madrid",
+                              "country": "Spain",
+                              "population": 3233527
+                            },
+                            {
+                              "city": "Prague",
+                              "country": "Czech Republic",
+                              "population": 1241664
+                            },
+                            {
+                              "city": "San Diego",
+                              "country": "United States",
+                              "population": 1406630
+                            },
+                            {
+                              "city": "San Francisco",
+                              "country": "United States",
+                              "population": 884363
+                            },
+                            {
+                              "city": "Shanghai",
+                              "country": "China",
+                              "population": 24153000
+                            },
+                            {
+                              "city": "Tokyo",
+                              "country": "Japan",
+                              "population": 13617000
+                            },
+                            {
+                              "city": "Washington, DC",
+                              "country": "United States",
+                              "population": 658893
+                            },
+                            {
+                              "city": "Wellington",
+                              "country": "New Zealand",
+                              "population": 405000
+                            },
+                            {
+                              "city": "Delhi",
+                              "country": "India",
+                              "population": 11034555
+                            },
+                            {
+                              "city": "Dhaka",
+                              "country": "Bangladesh",
+                              "population": 14399000
+                            },
+                            {
+                              "city": "Lagos",
+                              "country": "Nigeria",
+                              "population": 16060303
+                            },
+                            {
+                              "city": "Karachi",
+                              "country": "Pakistan",
+                              "population": 14910352
+                            },
+                            {
+                              "city": "Istanbul",
+                              "country": "Turkey",
+                              "population": 14025000
+                            },
+                            {
+                              "city": "Cairo",
+                              "country": "Egypt",
+                              "population": 10230350
+                            },
+                            {
+                              "city": "Mexico City",
+                              "country": "Mexico",
+                              "population": 8974724
+                            },
+                            {
+                              "city": "London",
+                              "country": "United Kingdom",
+                              "population": 8825001
+                            },
+                            {
+                              "city": "New York City",
+                              "country": "United States",
+                              "population": 8622698
+                            },
+                            {
+                              "city": "Tehran",
+                              "country": "Iran",
+                              "population": 8154051
+                            },
+                            {
+                              "city": "Bogota",
+                              "country": "Colombia",
+                              "population": 7878783
+                            },
+                            {
+                              "city": "Rio de Janeiro",
+                              "country": "Brazil",
+                              "population": 6429923
+                            },
+                            {
+                              "city": "Riyadh",
+                              "country": "Saudi Arabia",
+                              "population": 5676621
+                            },
+                            {
+                              "city": "Singapore",
+                              "country": "Singapore",
+                              "population": 5535000
+                            },
+                            {
+                              "city": "Saint Petersburg",
+                              "country": "Russia",
+                              "population": 5191690
+                            },
+                            {
+                              "city": "Sydney",
+                              "country": "Australia",
+                              "population": 208374
+                            },
+                            {
+                              "city": "Abidjan",
+                              "country": "Ivory Coast",
+                              "population": 4765000
+                            },
+                            {
+                              "city": "Dar es Salaam",
+                              "country": "Tanzania",
+                              "population": 4364541
+                            },
+                            {
+                              "city": "Wellington",
+                              "country": "New Zealand",
+                              "population": 405000
+                            },
+                            {
+                              "city": "Los Angeles",
+                              "country": "United States",
+                              "population": 3884307
+                            },
+                            {
+                              "city": "Berlin",
+                              "country": "Germany",
+                              "population": 3517424
+                            },
+                            {
+                              "city": "Jeddah",
+                              "country": "Saudi Arabia",
+                              "population": 3456259
+                            },
+                            {
+                              "city": "Kabul",
+                              "country": "Afghanistan",
+                              "population": 3414100
+                            },
+                            {
+                              "city": "Mashhad",
+                              "country": "Iran",
+                              "population": 3001184
+                            },
+                            {
+                              "city": "Milan",
+                              "country": "Italy",
+                              "population": 1359905
+                            },
+                            {
+                              "city": "Kiev",
+                              "country": "Ukraine",
+                              "population": 2908703
+                            },
+                            {
+                              "city": "Rome",
+                              "country": "Italy",
+                              "population": 2877215
+                            },
+                            {
+                              "city": "Chicago",
+                              "country": "United States",
+                              "population": 2695598
+                            },
+                            {
+                              "city": "Osaka",
+                              "country": "Japan",
+                              "population": 2691742
+                            },
+                            {
+                              "city": "Bandung",
+                              "country": "Indonesia",
+                              "population": 2575478
+                            },
+                            {
+                              "city": "Managua",
+                              "country": "Nicaragua",
+                              "population": 2560789
+                            },
+                            {
+                              "city": "Paris",
+                              "country": "France",
+                              "population": 2229621
+                            },
+                            {
+                              "city": "Shiraz",
+                              "country": "Iran",
+                              "population": 1869001
+                            },
+                            {
+                              "city": "Manila",
+                              "country": "Philippines",
+                              "population": 1780148
+                            },
+                            {
+                              "city": "Montreal",
+                              "country": "Canada",
+                              "population": 1649519
+                            },
+                            {
+                              "city": "Guadalajara",
+                              "country": "Mexico",
+                              "population": 1495189
+                            },
+                            {
+                              "city": "Dallas",
+                              "country": "United States",
+                              "population": 1317929
+                            },
+                            {
+                              "city": "Yerevan",
+                              "country": "Armenia",
+                              "population": 1060138
+                            },
+                            {
+                              "city": "Tunis",
+                              "country": "Tunisia",
+                              "population": 1056247
+                            }
+                          ]
+                        },
+                        "type": "ia.display.table"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_3"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "basis": "434px"
+                },
+                "props": {
+                  "direction": "column",
+                  "justify": "space-evenly"
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "BreakpointContainer"
+        },
+        "position": {
+          "basis": "1000px",
+          "shrink": 0
+        },
+        "type": "ia.container.breakpt"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

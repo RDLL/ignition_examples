@@ -1,0 +1,133 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 597
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Reports"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "props": {
+          "text": "With powerful, easy-to-use tools for building dynamic, database-driven PDF reports with pixel-perfect layout, Ignition is perfect for creating virtually any kind of industrial report, including: SCADA reporting, industrial project reports, production management reports, OEE and downtime tracking, SPC reports, QA reports, compliance reports, historical data analysis reports, and more."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Simple Report"
+            },
+            "position": {
+              "tabIndex": 1
+            },
+            "props": {
+              "path": "ignition-101/feature-views/framework/reports/simple-report"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Tag History Report"
+            },
+            "props": {
+              "path": "ignition-101/feature-views/framework/reports/tag-history-report"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Barcode Label"
+            },
+            "position": {
+              "tabIndex": 2
+            },
+            "props": {
+              "path": "ignition-101/feature-views/framework/reports/barcode-label"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Audit Report"
+            },
+            "position": {
+              "tabIndex": 3
+            },
+            "props": {
+              "path": "ignition-101/feature-views/framework/reports/audit-report"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "TabContainer_0"
+        },
+        "position": {
+          "basis": "300px",
+          "grow": 1
+        },
+        "props": {
+          "contentStyle": {
+            "paddingLeft": "20px"
+          },
+          "style": {
+            "margin": "20px"
+          },
+          "tabSize": {
+            "width": 150
+          },
+          "tabs": [
+            "Tag History Report",
+            "Simple Report",
+            "Barcode Label",
+            "Audit Report"
+          ]
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

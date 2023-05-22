@@ -1,0 +1,21 @@
+{
+  "base": {
+    "style": {
+      "color": "#3682A6",
+      "fontFamily": "Verdana",
+      "fontSize": "12px",
+      "fontStyle": "italic",
+      "fontWeight": "bold",
+      "lineHeight": "32px",
+      "textTransform": "uppercase"
+    }
+  },
+  "variants": [
+    {
+      "pseudo": "hover",
+      "style": {
+        "backgroundColor": "#9BA2A4"
+      }
+    }
+  ]
+}

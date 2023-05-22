@@ -1,0 +1,1 @@
+{"onBarcodeDataReceived":"\tsession.custom.device.barcode = data","onBluetoothReceived":"\t","onAccelerometerDataReceived":"\t","onNdefDataReceived":"\tsession.custom.device.nfc = data"}

@@ -1,0 +1,90 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Map"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "props": {
+          "attribution": false,
+          "init": {
+            "center": {
+              "lat": 38.660867,
+              "lng": -121.159728
+            },
+            "zoom": 13
+          },
+          "layers": {
+            "raster": {
+              "tile": [
+                {
+                  "WMS": {
+                    "format": "image/jpeg",
+                    "layers": "",
+                    "styles": "",
+                    "transparent": false,
+                    "uppercase": false,
+                    "version": "1.1.1"
+                  },
+                  "options": {
+                    "attribution": "Map data \u0026copy; \u003ca href\u003d\u0027https://www.openstreetmap.org/\u0027\u003eOpenStreetMap\u003c/a\u003e contributors, \u003ca href\u003d\u0027https://creativecommons.org/licenses/by-sa/2.0/\u0027\u003eCC-BY-SA\u003c/a\u003e",
+                    "crossOrigin": false,
+                    "detectRetina": false,
+                    "errorTileUrl": "",
+                    "opacity": 1,
+                    "subdomains": [
+                      "a",
+                      "b",
+                      "c"
+                    ],
+                    "tileSize": {
+                      "height": 256,
+                      "width": 256
+                    },
+                    "tms": false,
+                    "update": {
+                      "interval": 200,
+                      "whenIdle": false,
+                      "whenZooming": true
+                    },
+                    "zIndex": 1,
+                    "zoom": {
+                      "max": 18,
+                      "min": 0,
+                      "native": {
+                        "max": null,
+                        "min": null
+                      },
+                      "offset": 0,
+                      "reverse": false
+                    }
+                  },
+                  "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                  "urlTemplateParams": {}
+                }
+              ]
+            }
+          },
+          "zoom": {
+            "controls": false
+          }
+        },
+        "type": "ia.display.map"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

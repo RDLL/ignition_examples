@@ -1,0 +1,602 @@
+{
+  "custom": {
+    "endDate": {
+      "$": [
+        "ts",
+        192,
+        1599852591506
+      ],
+      "$ts": 1599852591506
+    },
+    "pollingRate": 60,
+    "startDate": {
+      "$": [
+        "ts",
+        192,
+        1599852591506
+      ],
+      "$ts": 1599852291506
+    },
+    "tagPaths": [
+      {
+        "alias": "tag"
+      }
+    ]
+  },
+  "params": {
+    "chartType": "line",
+    "interpolation": "curveBasis",
+    "penColor": "",
+    "polling": true,
+    "pollingRate": 60,
+    "rangeMinutes": 5,
+    "showTimeRange": false,
+    "tagPath": "",
+    "timeAxis": {
+      "color": "",
+      "height": 35,
+      "style": {},
+      "tick": {
+        "color": "",
+        "label": {
+          "angled": false,
+          "font": {
+            "color": "",
+            "size": 10
+          },
+          "style": {}
+        },
+        "style": {}
+      },
+      "tickCount": 5,
+      "visible": true
+    },
+    "timeRange": {
+      "dateFormat": "M-D-YYYY",
+      "timeFormat": "h:mm:ss",
+      "visible": true
+    },
+    "timeRangeMinutes": 60,
+    "title": "",
+    "xTrace": {
+      "infoBox": {
+        "dataFormat": "0,0.##",
+        "fill": {
+          "color": "var(--neutral-10)",
+          "opacity": 0.9
+        },
+        "showTime": true,
+        "stroke": {
+          "color": "var(--neutral-90)",
+          "dashArray": 0,
+          "opacity": 0.5,
+          "width": 1
+        },
+        "style": {},
+        "visible": true,
+        "width": 100
+      },
+      "line": {
+        "color": "var(--neutral-90)",
+        "dashArray": 0,
+        "opacity": 0.5,
+        "style": {},
+        "visible": true,
+        "width": 1
+      },
+      "visible": true
+    },
+    "yAxisAutoRange": true,
+    "yAxisColor": "",
+    "yAxisLabel": "Value",
+    "yAxisMax": 100,
+    "yAxisMin": 0
+  },
+  "propConfig": {
+    "custom.endDate": {
+      "binding": {
+        "config": {
+          "expression": "if(toBoolean({view.params.showTimeRange}), {/root/ChartRangeSelector.props.selectedRange.end}, now({view.custom.pollingRate}*1000))"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.pollingRate": {
+      "binding": {
+        "config": {
+          "expression": "if(toBoolean({view.params.polling}), {view.params.pollingRate}, 0)"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.startDate": {
+      "binding": {
+        "config": {
+          "expression": "if(toBoolean({view.params.showTimeRange}), {/root/ChartRangeSelector.props.selectedRange.start}, dateArithmetic({view.custom.endDate}, -1*toInt({view.params.rangeMinutes}), \"min\"))"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.tagPaths": {
+      "persistent": true
+    },
+    "custom.tagPaths[0].path": {
+      "binding": {
+        "config": {
+          "path": "view.params.tagPath"
+        },
+        "type": "property"
+      }
+    },
+    "params.chartType": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.interpolation": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.penColor": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.polling": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.pollingRate": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.rangeMinutes": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.showTimeRange": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.timeAxis": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.timeRange": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.timeRangeMinutes": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.title": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.xTrace": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.yAxisAutoRange": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.yAxisColor": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.yAxisLabel": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.yAxisMax": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.yAxisMin": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 300,
+      "width": 633
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "TimeSeriesChart"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.defaultStyles.colorScheme": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "code": "\tif \"dark\" in value:\n\t\treturn \"Dark2\"\n\treturn \"RdBu\"",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.plots[0].axes[0].label.font.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.yAxisColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.plots[0].axes[0].label.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.yAxisLabel"
+              },
+              "type": "property"
+            }
+          },
+          "props.plots[0].axes[0].max": {
+            "binding": {
+              "config": {
+                "expression": "toDouble({view.params.yAxisMax})"
+              },
+              "type": "expr"
+            }
+          },
+          "props.plots[0].axes[0].min": {
+            "binding": {
+              "config": {
+                "expression": "toDouble({view.params.yAxisMin})"
+              },
+              "type": "expr"
+            }
+          },
+          "props.plots[0].axes[0].tick.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.yAxisColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.plots[0].axes[0].tick.label.font.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.yAxisColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.plots[0].trends[0].axis": {
+            "binding": {
+              "config": {
+                "expression": "if(toBoolean({view.params.yAxisAutoRange}), \"\", \"Axis\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.plots[0].trends[0].columns[0].color": {
+            "binding": {
+              "config": {
+                "path": "view.params.penColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.plots[0].trends[0].interpolation": {
+            "binding": {
+              "config": {
+                "path": "view.params.interpolation"
+              },
+              "type": "property"
+            }
+          },
+          "props.plots[0].trends[0].type": {
+            "binding": {
+              "config": {
+                "path": "view.params.chartType"
+              },
+              "type": "property"
+            }
+          },
+          "props.series[0].data": {
+            "binding": {
+              "config": {
+                "aggregate": "MinMax",
+                "avoidScanClassValidation": true,
+                "dateRange": {
+                  "endDate": "{view.custom.endDate}",
+                  "startDate": "{view.custom.startDate}"
+                },
+                "ignoreBadQuality": false,
+                "preventInterpolation": false,
+                "returnFormat": "Wide",
+                "returnSize": {
+                  "numRows": "300",
+                  "type": "FIXED"
+                },
+                "tags": "{view.custom.tagPaths}",
+                "valueFormat": "DATASET"
+              },
+              "type": "tag-history"
+            }
+          },
+          "props.timeAxis": {
+            "binding": {
+              "config": {
+                "path": "view.params.timeAxis"
+              },
+              "type": "property"
+            }
+          },
+          "props.timeRange": {
+            "binding": {
+              "config": {
+                "path": "view.params.timeRange"
+              },
+              "type": "property"
+            }
+          },
+          "props.title.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.title"
+              },
+              "type": "property"
+            }
+          },
+          "props.xTrace": {
+            "binding": {
+              "config": {
+                "path": "view.params.xTrace"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "defaultStyles": {},
+          "plots": [
+            {
+              "axes": [
+                {
+                  "alignment": "left",
+                  "label": {
+                    "font": {
+                      "size": 10
+                    },
+                    "offset": 0,
+                    "style": {},
+                    "visible": true
+                  },
+                  "name": "Axis",
+                  "style": {},
+                  "tick": {
+                    "label": {
+                      "font": {
+                        "size": 10
+                      },
+                      "style": {}
+                    },
+                    "style": {}
+                  },
+                  "width": 60
+                }
+              ],
+              "markers": [],
+              "trends": [
+                {
+                  "baselines": [],
+                  "breakLine": true,
+                  "columns": [
+                    {
+                      "key": "tag",
+                      "styles": {
+                        "highlighted": {
+                          "fill": {
+                            "color": "",
+                            "opacity": null
+                          },
+                          "stroke": {
+                            "color": "",
+                            "dashArray": null,
+                            "opacity": null,
+                            "width": null
+                          }
+                        },
+                        "muted": {
+                          "fill": {
+                            "color": "",
+                            "opacity": null
+                          },
+                          "stroke": {
+                            "color": "",
+                            "dashArray": null,
+                            "opacity": null,
+                            "width": null
+                          }
+                        },
+                        "normal": {
+                          "fill": {
+                            "color": "",
+                            "opacity": null
+                          },
+                          "stroke": {
+                            "color": "",
+                            "dashArray": null,
+                            "opacity": null,
+                            "width": null
+                          }
+                        },
+                        "selected": {
+                          "fill": {
+                            "color": "",
+                            "opacity": null
+                          },
+                          "stroke": {
+                            "color": "",
+                            "dashArray": null,
+                            "opacity": null,
+                            "width": null
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "radius": 2,
+                  "series": "Data",
+                  "stack": true,
+                  "visible": true
+                }
+              ]
+            }
+          ],
+          "series": [
+            {
+              "name": "Data"
+            }
+          ],
+          "title": {
+            "visible": true
+          }
+        },
+        "type": "ia.chart.timeseries"
+      },
+      {
+        "meta": {
+          "name": "ChartRangeSelector"
+        },
+        "position": {
+          "basis": "85px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "toBoolean({view.params.showTimeRange})"
+              },
+              "type": "expr"
+            }
+          },
+          "props.areaStyles.colorScheme": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "code": "\tif \"dark\" in value:\n\t\treturn \"Dark2\"\n\treturn \"RdBu\"",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.areaStyles.colors[0]": {
+            "binding": {
+              "config": {
+                "path": "view.params.penColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.data": {
+            "binding": {
+              "config": {
+                "aggregate": "MinMax",
+                "avoidScanClassValidation": true,
+                "dateRange": {
+                  "mostRecent": "if(toBoolean({view.params.showTimeRange}), \r toInt({view.params.timeRangeMinutes}),\r 0)",
+                  "mostRecentUnits": "MIN"
+                },
+                "ignoreBadQuality": false,
+                "polling": {
+                  "enabled": true,
+                  "rate": "if(toBoolean({view.params.showTimeRange}), \r toInt({view.custom.pollingRate}),\r 0)"
+                },
+                "preventInterpolation": false,
+                "returnFormat": "Wide",
+                "returnSize": {
+                  "numRows": "300",
+                  "type": "FIXED"
+                },
+                "tags": "{view.custom.tagPaths}",
+                "valueFormat": "DATASET"
+              },
+              "type": "tag-history"
+            }
+          },
+          "props.yAxis.label.font.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.yAxisColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.yAxis.tick.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.yAxisColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.yAxis.tick.label.font.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.yAxisColor"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "areaStyles": {
+            "colors": [
+              null
+            ]
+          },
+          "selectedRange": {
+            "end": 1565906607308,
+            "start": 1565905329904
+          },
+          "yAxis": {
+            "label": {
+              "font": {}
+            },
+            "tick": {
+              "label": {
+                "font": {}
+              }
+            }
+          }
+        },
+        "type": "ia.chart.chartrangeselector"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

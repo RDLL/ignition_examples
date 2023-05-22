@@ -1,0 +1,45 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 468,
+      "width": 403
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "144px"
+        },
+        "props": {
+          "text": "The Breakpoint container accommodates two views.  Normally the small view is used for a smaller screen such as a mobile device and the large view is used for a desktop or other larger display."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "324px"
+        },
+        "props": {
+          "text": "this is a small view suitable for a mobile device."
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

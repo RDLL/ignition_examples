@@ -18,7 +18,7 @@
     "cacheEnabled": false,
     "database": "MysqlDB",
     "fallbackEnabled": false,
-    "lastModificationSignature": "4749456f64a7f58265b2708deb4907b3c2c88812305972279f00139f792b1703",
+    "lastModificationSignature": "13c63515436079785e6f9f80acb0e752bf63c9c7f4008fc5a52bc633fb7fd204",
     "permissions": [
       {
         "zone": "",
@@ -27,8 +27,9 @@
     ],
     "lastModification": {
       "actor": "rdll",
-      "timestamp": "2023-05-16T21:20:59Z"
+      "timestamp": "2023-05-22T18:04:56Z"
     },
+    "syntaxProvider": "class com.adbs.syntax.MySQLSyntaxProvider",
     "parameters": [
       {
         "type": "Parameter",

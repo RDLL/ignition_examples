@@ -1,0 +1,331 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Markdown"
+        },
+        "position": {
+          "breakpoints": [
+            {
+              "colIndex": 0,
+              "name": "sm",
+              "order": 1,
+              "rowIndex": 0,
+              "span": 12
+            },
+            {
+              "colIndex": 0,
+              "name": "md",
+              "order": 1,
+              "rowIndex": 0,
+              "span": 12
+            },
+            {
+              "colIndex": 0,
+              "name": "lg",
+              "order": 1,
+              "rowIndex": 0,
+              "span": 12
+            }
+          ],
+          "height": 120
+        },
+        "props": {
+          "source": "## Mobile-Responsive Layouts\n\nA collection of mobile-responsive application design patterns to help you master Ignition\u0027s powerful layout capabilities."
+        },
+        "type": "ia.display.markdown"
+      },
+      {
+        "meta": {
+          "name": "layout--1-panes"
+        },
+        "position": {
+          "breakpoints": [
+            {
+              "colIndex": 0,
+              "name": "sm",
+              "order": 1,
+              "rowIndex": 1,
+              "span": 12
+            },
+            {
+              "colIndex": 0,
+              "name": "md",
+              "order": 1,
+              "rowIndex": 1,
+              "span": 6
+            },
+            {
+              "colIndex": 0,
+              "name": "lg",
+              "order": 1,
+              "rowIndex": 1,
+              "span": 4
+            }
+          ],
+          "height": 330
+        },
+        "props": {
+          "params": {
+            "desc": "Scrolling list layout to support a \"drilldown\" information architecture (categories \u003e items \u003e item details).",
+            "image": "/system/images/sample-images/layouts/layout--1-panes.png",
+            "link": "panes",
+            "title": "List Panes"
+          },
+          "path": "layouts/layout-card",
+          "style": {
+            "marginBottom": "16px"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "layout--4-scrollable"
+        },
+        "position": {
+          "breakpoints": [
+            {
+              "colIndex": 0,
+              "name": "sm",
+              "order": 4,
+              "rowIndex": 1,
+              "span": 12
+            },
+            {
+              "colIndex": 0,
+              "name": "md",
+              "order": 4,
+              "rowIndex": 1,
+              "span": 6
+            },
+            {
+              "colIndex": 0,
+              "name": "lg",
+              "order": 4,
+              "rowIndex": 1,
+              "span": 4
+            }
+          ],
+          "height": 330
+        },
+        "props": {
+          "params": {
+            "desc": "A large scrollable coordinate view canvas with fixed and relative positioned embedded views.",
+            "image": "/system/images/sample-images/layouts/layout--4-scrollable.png",
+            "link": "scrollable-canvas",
+            "title": "Scrollable Canvas"
+          },
+          "path": "layouts/layout-card",
+          "style": {
+            "marginBottom": "16px"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "layout--5-grid"
+        },
+        "position": {
+          "breakpoints": [
+            {
+              "colIndex": 0,
+              "name": "sm",
+              "order": 5,
+              "rowIndex": 1,
+              "span": 12
+            },
+            {
+              "colIndex": 6,
+              "name": "md",
+              "order": 5,
+              "rowIndex": 1,
+              "span": 6
+            },
+            {
+              "colIndex": 4,
+              "name": "lg",
+              "order": 5,
+              "rowIndex": 1,
+              "span": 4
+            }
+          ],
+          "height": 330
+        },
+        "props": {
+          "params": {
+            "desc": "Flexible grid of components with a mobile-first navigation design (btm on mobile, top on desktop).",
+            "image": "/system/images/sample-images/layouts/layout--5-grid.png",
+            "link": "grid",
+            "title": "Component Grid"
+          },
+          "path": "layouts/layout-card",
+          "style": {
+            "marginBottom": "16px"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "layout--3-fluidMax"
+        },
+        "position": {
+          "breakpoints": [
+            {
+              "colIndex": 0,
+              "name": "sm",
+              "order": 3,
+              "rowIndex": 1,
+              "span": 12
+            },
+            {
+              "colIndex": 6,
+              "name": "md",
+              "order": 3,
+              "rowIndex": 1,
+              "span": 6
+            },
+            {
+              "colIndex": 8,
+              "name": "lg",
+              "order": 3,
+              "rowIndex": 1,
+              "span": 4
+            }
+          ],
+          "height": 330
+        },
+        "props": {
+          "params": {
+            "desc": "Mirrors the \"Fluid Column\" layout with an added max-width set on the content area.",
+            "image": "/system/images/sample-images/layouts/layout--3-fluidMax.png",
+            "link": "fluid-max-width",
+            "title": "Boxed Fluid Columns"
+          },
+          "path": "layouts/layout-card",
+          "style": {
+            "marginBottom": "16px"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "layout--2-fluid"
+        },
+        "position": {
+          "breakpoints": [
+            {
+              "colIndex": 0,
+              "name": "sm",
+              "order": 2,
+              "rowIndex": 1,
+              "span": 12
+            },
+            {
+              "colIndex": 0,
+              "name": "md",
+              "order": 2,
+              "rowIndex": 1,
+              "span": 6
+            },
+            {
+              "colIndex": 4,
+              "name": "lg",
+              "order": 2,
+              "rowIndex": 1,
+              "span": 4
+            }
+          ],
+          "height": 330
+        },
+        "props": {
+          "params": {
+            "desc": "A fluid layout relying on the column container to reflow components and content.",
+            "image": "/system/images/sample-images/layouts/layout--2-fluid.png",
+            "link": "fluid",
+            "title": "Fluid Columns"
+          },
+          "path": "layouts/layout-card",
+          "style": {
+            "marginBottom": "16px"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "layout--6-coordinate"
+        },
+        "position": {
+          "breakpoints": [
+            {
+              "colIndex": 0,
+              "name": "sm",
+              "order": 6,
+              "rowIndex": 2,
+              "span": 12
+            },
+            {
+              "colIndex": 0,
+              "name": "md",
+              "order": 6,
+              "rowIndex": 1,
+              "span": 6
+            },
+            {
+              "colIndex": 8,
+              "name": "lg",
+              "order": 6,
+              "rowIndex": 1,
+              "span": 4
+            }
+          ],
+          "height": 330
+        },
+        "props": {
+          "params": {
+            "desc": "Coordinate layout with fixed (scrolling) mode on small screens and percent (scaling) on large.",
+            "image": "/system/images/sample-images/layouts/layout--6-coordinate.png",
+            "link": "coordinate",
+            "title": "Coordinate"
+          },
+          "path": "layouts/layout-card",
+          "style": {
+            "marginBottom": "16px"
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "breakpoints": [
+        {
+          "minWidth": 0,
+          "name": "sm"
+        },
+        {
+          "minWidth": 700,
+          "name": "md"
+        },
+        {
+          "minWidth": 1000,
+          "name": "lg"
+        }
+      ],
+      "style": {
+        "padding": "0 16px"
+      }
+    },
+    "type": "ia.container.column"
+  }
+}

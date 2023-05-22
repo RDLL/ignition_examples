@@ -1,0 +1,201 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "text": "Flex"
+          },
+          "path": "framework/page-title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The Flex container is powerful, with many configuration options, based on the CSS Flexbox layout. The flex container consists of a single series of adjacent components or containers, configured as either a column or a row. Resize your screen to see them in action."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "100px"
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-D layouts/container-label",
+                    "marginRight": "5px"
+                  },
+                  "text": "View 1"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "Label_0"
+                },
+                "position": {
+                  "basis": "50px",
+                  "grow": 1
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-D layouts/container-label",
+                    "marginLeft": "5px",
+                    "marginRight": "5px"
+                  },
+                  "text": "View 2"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "Label_1"
+                },
+                "position": {
+                  "basis": "300px"
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-D layouts/container-label",
+                    "marginLeft": "5px"
+                  },
+                  "text": "View 3"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "RowFlexContainer"
+            },
+            "props": {
+              "style": {
+                "margin": "10px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "100px"
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-D layouts/container-label",
+                    "marginBottom": "5px"
+                  },
+                  "text": "View 1"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "Label_0"
+                },
+                "position": {
+                  "basis": "50px",
+                  "grow": 1
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-D layouts/container-label",
+                    "marginBottom": "5px",
+                    "marginTop": "5px"
+                  },
+                  "text": "View 2"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "Label_1"
+                },
+                "position": {
+                  "basis": "300px"
+                },
+                "props": {
+                  "style": {
+                    "classes": "layouts/container-D layouts/container-label",
+                    "marginTop": "5px"
+                  },
+                  "text": "View 3"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "ColumnFlexContainer"
+            },
+            "position": {
+              "tabIndex": 1
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "margin": "10px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "300px",
+          "grow": 1
+        },
+        "props": {
+          "style": {
+            "marginTop": "20px"
+          },
+          "tabs": [
+            "Row",
+            "Column"
+          ]
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

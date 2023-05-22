@@ -1,0 +1,83 @@
+{
+  "custom": {
+    "section": "a"
+  },
+  "params": {},
+  "propConfig": {
+    "custom.section": {
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1000
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "small"
+        },
+        "propConfig": {
+          "props.params.section": {
+            "binding": {
+              "config": {
+                "path": "view.custom.section"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "layouts/panes/main-small"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "large"
+        },
+        "position": {
+          "size": "large"
+        },
+        "propConfig": {
+          "props.params.section": {
+            "binding": {
+              "config": {
+                "path": "view.custom.section"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "layouts/panes/main-large"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "breakpoint": 1000,
+      "style": {
+        "backgroundColor": "var(--neutral-20)"
+      }
+    },
+    "scripts": {
+      "customMethods": [],
+      "messageHandlers": [
+        {
+          "messageType": "update-section",
+          "pageScope": true,
+          "script": "\tself.view.custom.section \u003d payload",
+          "sessionScope": false,
+          "viewScope": false
+        }
+      ]
+    },
+    "type": "ia.container.breakpt"
+  }
+}
