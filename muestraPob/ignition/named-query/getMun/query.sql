@@ -1,0 +1,3 @@
+SELECT [MUN],[NOM_MUN],[LOC],[NOM_LOC]
+FROM [SLP].[dbo].[datosSLP]
+WHERE NOM_MUN = :nameMun

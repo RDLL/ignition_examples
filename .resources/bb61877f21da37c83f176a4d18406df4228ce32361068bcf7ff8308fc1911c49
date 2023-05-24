@@ -1,0 +1,110 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 799,
+      "width": 199
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tsystem.perspective.navigate(view \u003d \u0027consultaInf/infoMun\u0027 )"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Image"
+        },
+        "position": {
+          "basis": "100px"
+        },
+        "props": {
+          "fit": {
+            "mode": "fill"
+          },
+          "source": "/system/images/sideBar/map.jpg",
+          "style": {
+            "margin": "30px"
+          }
+        },
+        "type": "ia.display.image"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tsystem.perspective.navigate(view \u003d \u0027consultaInf/infoUbi\u0027 )"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Image_0"
+        },
+        "position": {
+          "basis": "100px"
+        },
+        "props": {
+          "fit": {
+            "mode": "fill"
+          },
+          "source": "/system/images/sideBar/ubi.png",
+          "style": {
+            "margin": "30px",
+            "marginTop": "150px"
+          }
+        },
+        "type": "ia.display.image"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tsystem.perspective.navigate(view \u003d \u0027consultaInf/infoPob\u0027 )"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Image_1"
+        },
+        "position": {
+          "basis": "100px"
+        },
+        "props": {
+          "fit": {
+            "mode": "fill"
+          },
+          "source": "/system/images/sideBar/pob.jpg",
+          "style": {
+            "margin": "30px",
+            "marginTop": "150px"
+          }
+        },
+        "type": "ia.display.image"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

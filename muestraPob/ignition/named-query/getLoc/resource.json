@@ -1,0 +1,40 @@
+{
+  "scope": "DG",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "query.sql"
+  ],
+  "attributes": {
+    "useMaxReturnSize": false,
+    "autoBatchEnabled": false,
+    "fallbackValue": "",
+    "maxReturnSize": 100,
+    "cacheUnit": "SEC",
+    "type": "Query",
+    "enabled": true,
+    "cacheAmount": 1,
+    "cacheEnabled": false,
+    "database": "MSSQLSERVER",
+    "fallbackEnabled": false,
+    "lastModificationSignature": "98ecab61fc5a29e5bfef2cbac2bfc2aed47bd5a4dc37c30381552d0f7b05d71d",
+    "permissions": [
+      {
+        "zone": "",
+        "role": ""
+      }
+    ],
+    "lastModification": {
+      "actor": "rdll",
+      "timestamp": "2023-05-24T15:39:18Z"
+    },
+    "parameters": [
+      {
+        "type": "Parameter",
+        "identifier": "nameLoc",
+        "sqlType": 7
+      }
+    ]
+  }
+}

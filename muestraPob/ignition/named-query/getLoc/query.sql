@@ -1,0 +1,3 @@
+SELECT [NOM_LOC],[POBTOT],[POBFEM],[POBMAS]
+FROM [SLP].[dbo].[datosSLP]
+WHERE NOM_LOC = :nameLoc

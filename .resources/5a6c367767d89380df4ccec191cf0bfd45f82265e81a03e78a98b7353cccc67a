@@ -1,0 +1,63 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 99
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Image"
+        },
+        "position": {
+          "basis": "120px"
+        },
+        "props": {
+          "fit": {
+            "mode": "fill"
+          },
+          "source": "/system/images/sideBar/logo.png",
+          "style": {
+            "margin": "5px"
+          }
+        },
+        "type": "ia.display.image"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "50px",
+          "grow": 1
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#65E800",
+            "color": "white",
+            "margin": "10px",
+            "paddingLeft": "40px"
+          },
+          "text": "Consulta de Información sobre la población de SLP",
+          "textStyle": {
+            "fontFamily": "Noto Sans",
+            "fontSize": 25
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "backgroundColor": "#65E800"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

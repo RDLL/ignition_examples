@@ -1,0 +1,70 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 669,
+      "width": 853
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "EmbeddedView"
+        },
+        "position": {
+          "basis": "308px"
+        },
+        "props": {
+          "params": {
+            "stationNumber": 1
+          },
+          "path": "Objects/overviewVessel",
+          "useDefaultViewHeight": true
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "overviewVessel"
+        },
+        "position": {
+          "basis": "320px"
+        },
+        "props": {
+          "params": {
+            "stationNumber": 2
+          },
+          "path": "Objects/overviewVessel",
+          "useDefaultViewHeight": true
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "overviewVessel_0"
+        },
+        "position": {
+          "basis": "320px"
+        },
+        "props": {
+          "params": {
+            "stationNumber": 3
+          },
+          "path": "Objects/overviewVessel",
+          "useDefaultViewHeight": true
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "alignItems": "center",
+      "justify": "center"
+    },
+    "type": "ia.container.flex"
+  }
+}

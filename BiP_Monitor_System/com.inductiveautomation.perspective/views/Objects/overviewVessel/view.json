@@ -1,0 +1,132 @@
+{
+  "custom": {},
+  "params": {
+    "stationNumber": 2
+  },
+  "propConfig": {
+    "params.stationNumber": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 399,
+      "width": 398
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "concat(\"Station \",{view.params.stationNumber})"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "fontSize": "24px",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Alarm_Banner"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "stationNumber": "{view.params.stationNumber}"
+                },
+                "tagPath": "[BiP_Tag_Provider]Station_{stationNumber}/pump_fault"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "var(--error)",
+            "color": "#FFFFFF",
+            "textAlign": "center"
+          },
+          "text": "Pump_Faulted"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Vessel"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.value.value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "stationNumber": "{view.params.stationNumber}"
+                },
+                "tagPath": "[BiP_Tag_Provider]Station_{stationNumber}/tank_capacity"
+              },
+              "transforms": [
+                {
+                  "formatType": "numeric",
+                  "formatValue": "##.##",
+                  "type": "format"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "appearance": "mimic",
+          "bottom": "rounded",
+          "label": {
+            "text": ""
+          },
+          "value": {
+            "displayValueAsPercent": false,
+            "style": {
+              "classes": "Text/Data",
+              "fontSize": "18px"
+            }
+          }
+        },
+        "type": "ia.symbol.vessel"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

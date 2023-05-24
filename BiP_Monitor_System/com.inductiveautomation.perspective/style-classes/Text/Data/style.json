@@ -1,0 +1,8 @@
+{
+  "base": {
+    "style": {
+      "color": "var(--info)",
+      "fontWeight": "bold"
+    }
+  }
+}

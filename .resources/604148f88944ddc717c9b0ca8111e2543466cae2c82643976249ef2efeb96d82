@@ -1,0 +1,47 @@
+{
+  "pages": {
+    "/": {
+      "title": "main",
+      "viewPath": "main/main"
+    },
+    "/mun": {
+      "title": "",
+      "viewPath": "consultaInf/infoMun"
+    }
+  },
+  "sharedDocks": {
+    "cornerPriority": "top-bottom",
+    "left": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 150,
+        "viewParams": {},
+        "viewPath": "sideBar/nav"
+      }
+    ],
+    "top": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 150,
+        "viewParams": {},
+        "viewPath": "header/header"
+      }
+    ]
+  }
+}

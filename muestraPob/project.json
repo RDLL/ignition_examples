@@ -1,0 +1,6 @@
+{
+  "title": "muestra",
+  "description": "Ejemplo básico de un menú con diferentes vistas embebidas y no embebidas para mostrar algunos datos ",
+  "enabled": true,
+  "inheritable": false
+}

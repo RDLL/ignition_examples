@@ -1,0 +1,108 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "38px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "color": "white",
+            "marginTop": "30px",
+            "paddingLeft": "130px"
+          },
+          "text": "Bienvenido al sistema de Información poblacional",
+          "textStyle": {
+            "fontFamily": "Noto Sans",
+            "fontSize": 24
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "38px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "color": "white",
+            "marginTop": "30px",
+            "paddingLeft": "250px"
+          },
+          "text": "del estado de San Luis Potosí",
+          "textStyle": {
+            "fontFamily": "Noto Sans",
+            "fontSize": 24
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "basis": "38px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "color": "white",
+            "marginTop": "130px",
+            "paddingLeft": "150px"
+          },
+          "text": "Para navegar usa los botones de navegación",
+          "textStyle": {
+            "fontFamily": "Noto Sans",
+            "fontSize": 24
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_2"
+        },
+        "position": {
+          "basis": "38px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "color": "white",
+            "marginTop": "30px",
+            "paddingLeft": "260px"
+          },
+          "text": "situados del lado izquierdo",
+          "textStyle": {
+            "fontFamily": "Noto Sans",
+            "fontSize": 24
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundImage": "url(\"/system/images/sideBar/portada.jpg\")",
+        "backgroundSize": "cover"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}
