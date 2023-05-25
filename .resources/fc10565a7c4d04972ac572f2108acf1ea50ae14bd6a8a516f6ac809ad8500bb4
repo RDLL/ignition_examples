@@ -1,0 +1,104 @@
+{
+  "custom": {},
+  "params": {
+    "stationNumber": 1
+  },
+  "propConfig": {
+    "params.stationNumber": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "concat(\"Station \", {view.params.stationNumber},\" Details\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "var(--neutral-80)",
+            "color": "var(--neutral-10)",
+            "fontSize": "20px",
+            "paddingLeft": "15px"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Station Details-Large"
+            },
+            "position": {
+              "size": "large"
+            },
+            "propConfig": {
+              "props.params.stationNumber": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.stationNumber"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "path": "Main/Station Details/Station Details-Large"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Stations Details-Small"
+            },
+            "propConfig": {
+              "props.params.stationNumber": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.stationNumber"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "path": "Main/Station Details/Stations Details-Small"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "BreakpointContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "type": "ia.container.breakpt"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

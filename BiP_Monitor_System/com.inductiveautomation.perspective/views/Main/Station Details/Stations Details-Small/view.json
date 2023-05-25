@@ -1,0 +1,252 @@
+{
+  "custom": {},
+  "params": {
+    "stationNumber": 1
+  },
+  "propConfig": {
+    "params.stationNumber": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "FlexRepeater"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.instances[0].value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "stationNumber": "{view.params.stationNumber}"
+                },
+                "tagPath": "[BiP_Tag_Provider]Station_{stationNumber}/ph"
+              },
+              "type": "tag"
+            }
+          },
+          "props.instances[1].value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "stationNumber": "{view.params.stationNumber}"
+                },
+                "tagPath": "[BiP_Tag_Provider]Station_{stationNumber}/temperature"
+              },
+              "type": "tag"
+            }
+          },
+          "props.instances[2].value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "stationNumber": "{view.params.stationNumber}"
+                },
+                "tagPath": "[BiP_Tag_Provider]Station_{stationNumber}/viscosity"
+              },
+              "type": "tag"
+            }
+          },
+          "props.instances[3].value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "stationNumber": "{view.params.stationNumber}"
+                },
+                "tagPath": "[BiP_Tag_Provider]Station_{stationNumber}/tank_capacity"
+              },
+              "type": "tag"
+            }
+          },
+          "props.instances[4].value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "stationNumber": "{view.params.stationNumber}"
+                },
+                "tagPath": "[BiP_Tag_Provider]Station_{stationNumber}/valve_flow"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "elementPosition": {
+            "basis": "75px"
+          },
+          "elementStyle": {
+            "fontSize": 30,
+            "margin": "8px"
+          },
+          "instances": [
+            {
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              },
+              "name": "pH",
+              "unit": ""
+            },
+            {
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              },
+              "name": "Temperature",
+              "unit": "°F"
+            },
+            {
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              },
+              "name": "Viscosity",
+              "unit": "Pa-s"
+            },
+            {
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              },
+              "name": "Tank Capacity",
+              "unit": "%"
+            },
+            {
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              },
+              "name": "Valve Flow",
+              "unit": "GPM"
+            }
+          ],
+          "justify": "space-evenly",
+          "path": "Objects/Data Card",
+          "useDefaultViewHeight": false,
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "page": "/station-details/1"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button 1"
+            },
+            "position": {
+              "basis": "80px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "fontSize": "30px",
+                "margin": "8px"
+              },
+              "text": "Station 1"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "page": "/station-details/2"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button 2"
+            },
+            "position": {
+              "basis": "80px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "fontSize": "30px",
+                "margin": "8px"
+              },
+              "text": "Station 2"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "page": "/station-details/3"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button 3"
+            },
+            "position": {
+              "basis": "80px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "fontSize": "30px",
+                "margin": "8px"
+              },
+              "text": "Station 3"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "125px"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

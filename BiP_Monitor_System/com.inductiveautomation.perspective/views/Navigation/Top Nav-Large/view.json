@@ -1,0 +1,95 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 80
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "HorizontalMenu"
+        },
+        "position": {
+          "basis": "46px",
+          "grow": 1
+        },
+        "props": {
+          "items": [
+            {
+              "enabled": true,
+              "icon": {
+                "path": "material/home"
+              },
+              "items": [],
+              "label": "Overview",
+              "style": {
+                "classes": ""
+              },
+              "target": "/"
+            },
+            {
+              "enabled": true,
+              "icon": {
+                "color": "#6C6C6C",
+                "path": "material/bar_chart"
+              },
+              "items": [],
+              "label": "History",
+              "style": {
+                "classes": ""
+              },
+              "target": "/history"
+            },
+            {
+              "enabled": true,
+              "icon": {
+                "path": "material/dvr"
+              },
+              "items": [],
+              "label": "Station 1",
+              "style": {
+                "classes": ""
+              },
+              "target": "/station-details/1"
+            },
+            {
+              "enabled": true,
+              "icon": {
+                "path": "material/dvr"
+              },
+              "items": [],
+              "label": "Station 2",
+              "style": {
+                "classes": ""
+              },
+              "target": "/station-details/2"
+            },
+            {
+              "enabled": true,
+              "icon": {
+                "path": "material/dvr"
+              },
+              "items": [],
+              "label": "Station 3",
+              "style": {
+                "classes": ""
+              },
+              "target": "/station-details/3"
+            }
+          ]
+        },
+        "type": "ia.navigation.horizontalmenu"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

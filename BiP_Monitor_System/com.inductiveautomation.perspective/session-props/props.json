@@ -51,10 +51,10 @@
     }
   },
   "props": {
-    "address": "127.0.0.1",
+    "address": "[0:0:0:0:0:0:0:1]",
     "device": {},
     "geolocation": {},
-    "locale": "es-MX",
+    "locale": "en-US",
     "timeZoneId": "GMT-06:00"
   }
 }
