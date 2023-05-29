@@ -1,0 +1,49 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\treportBytes \u003d system.report.executeReport(path\u003d\u0027script_Report\u0027,\\\n\tparameters\u003d{\u0027functionName\u0027:\u0027Using executeReport()\u0027}, fileType\u003d\u0027pdf\u0027)\n\t\n\tname \u003d \"executeReport() Report\"\n\t\n\tevent.source.parent.getComponent(\u0027PDF Viewer\u0027).loadPDFBytes(reportBytes,name)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "ReportViewer"
+        },
+        "position": {
+          "basis": "700px"
+        },
+        "props": {
+          "page": 1,
+          "pageCount": 1
+        },
+        "type": "ia.reporting.report-viewer"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

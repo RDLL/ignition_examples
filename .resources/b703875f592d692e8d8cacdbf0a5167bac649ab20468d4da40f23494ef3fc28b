@@ -1,0 +1,85 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 993
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Dropdown"
+        },
+        "position": {
+          "basis": "36px"
+        },
+        "propConfig": {
+          "props.options": {
+            "binding": {
+              "config": {
+                "queryPath": "getContinents"
+              },
+              "type": "query"
+            }
+          },
+          "props.value": {
+            "binding": {
+              "config": {
+                "queryPath": "getTankType"
+              },
+              "type": "query"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "margin": 15,
+            "paddingLeft": 20
+          }
+        },
+        "type": "ia.input.dropdown"
+      },
+      {
+        "meta": {
+          "name": "ReportViewer"
+        },
+        "position": {
+          "basis": "787px"
+        },
+        "propConfig": {
+          "props.params": {
+            "binding": {
+              "config": {
+                "path": "../Dropdown.props.value"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.continent": {
+            "binding": {
+              "config": {
+                "path": "../Dropdown.props.value"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "page": 15,
+          "pageCount": 15,
+          "source": "cities"
+        },
+        "type": "ia.reporting.report-viewer"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}
