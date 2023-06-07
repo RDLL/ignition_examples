@@ -1,0 +1,1 @@
+SELECT Nombre FROM Estado

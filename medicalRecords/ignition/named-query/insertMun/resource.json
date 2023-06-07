@@ -1,0 +1,45 @@
+{
+  "scope": "DG",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "query.sql"
+  ],
+  "attributes": {
+    "useMaxReturnSize": false,
+    "autoBatchEnabled": false,
+    "fallbackValue": "",
+    "maxReturnSize": 100,
+    "cacheUnit": "SEC",
+    "type": "UpdateQuery",
+    "enabled": true,
+    "cacheAmount": 1,
+    "cacheEnabled": false,
+    "database": "medicalRecords",
+    "fallbackEnabled": false,
+    "lastModificationSignature": "e9876631202034a6e5e314bc733f43cd3f4d90a5481a4e5c06dc15460eb04242",
+    "permissions": [
+      {
+        "zone": "",
+        "role": ""
+      }
+    ],
+    "lastModification": {
+      "actor": "rdll",
+      "timestamp": "2023-06-02T18:41:24Z"
+    },
+    "parameters": [
+      {
+        "type": "Parameter",
+        "identifier": "Nombre",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "Entidad",
+        "sqlType": 2
+      }
+    ]
+  }
+}

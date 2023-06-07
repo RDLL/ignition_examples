@@ -1,0 +1,15 @@
+{
+  "pages": {
+    "/add_Pacient": {
+      "title": "",
+      "viewPath": "add_Pacient/add_Pacient"
+    },
+    "/add_mun": {
+      "title": "",
+      "viewPath": "add_Mun/add_Mun"
+    }
+  },
+  "sharedDocks": {
+    "cornerPriority": "top-bottom"
+  }
+}

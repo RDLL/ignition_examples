@@ -1,0 +1,273 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Title"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#00B0FF",
+                "borderBottomLeftRadius": "8px",
+                "borderBottomRightRadius": "8px",
+                "borderTopLeftRadius": "8px",
+                "borderTopRightRadius": "8px",
+                "color": "white",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "margin": "10px",
+                "textAlign": "center"
+              },
+              "text": "Buscar Municipio"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Name"
+            },
+            "position": {
+              "basis": "20px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#00B0FF",
+                "borderBottomLeftRadius": "8px",
+                "borderBottomRightRadius": "8px",
+                "borderTopLeftRadius": "8px",
+                "borderTopRightRadius": "8px",
+                "color": "white",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "margin": "10px",
+                "textAlign": "center"
+              },
+              "text": "Nombre"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "NameText"
+            },
+            "position": {
+              "basis": "28px"
+            },
+            "props": {
+              "style": {
+                "margin": "10px",
+                "marginTop": "5px"
+              }
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "Entidad"
+            },
+            "position": {
+              "basis": "20px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#00B0FF",
+                "borderBottomLeftRadius": "8px",
+                "borderBottomRightRadius": "8px",
+                "borderTopLeftRadius": "8px",
+                "borderTopRightRadius": "8px",
+                "color": "white",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "margin": "10px",
+                "textAlign": "center"
+              },
+              "text": "Entidad"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Entidades"
+            },
+            "position": {
+              "basis": "36px"
+            },
+            "propConfig": {
+              "props.options": {
+                "binding": {
+                  "config": {
+                    "queryPath": "getEntidad"
+                  },
+                  "type": "query"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "margin": "10px",
+                "marginTop": "5px"
+              },
+              "value": "Chiapas"
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "IDMun"
+            },
+            "position": {
+              "basis": "20px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#00B0FF",
+                "borderBottomLeftRadius": "8px",
+                "borderBottomRightRadius": "8px",
+                "borderTopLeftRadius": "8px",
+                "borderTopRightRadius": "8px",
+                "color": "white",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "margin": "10px",
+                "textAlign": "center"
+              },
+              "text": "ID"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "IDInput"
+            },
+            "position": {
+              "basis": "28px"
+            },
+            "props": {
+              "style": {
+                "margin": "10px",
+                "marginTop": "5px"
+              }
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "basis": "34px"
+            },
+            "props": {
+              "style": {
+                "margin": "10px",
+                "marginTop": "5px"
+              },
+              "text": "Buscar"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "registro"
+        },
+        "position": {
+          "basis": "200px"
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onRowClick": {
+                  "config": {
+                    "script": "\tsystem.perspective.print(type(event.value))\n\t#self.parent.parent.getChild(\"registro\").getChild(\"NameText\").props.text\n\t#self.parent.parent.getChild(\"registro\").getChild(\"Entidades\").props.value\n\t#self.parent.parent.getChild(\"registro\").getChild(\"IDInput\").props.text"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Table"
+            },
+            "position": {
+              "basis": "400px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.data": {
+                "binding": {
+                  "config": {
+                    "parameters": {
+                      "entidad": "{.../FlexContainer/Entidades.props.value}"
+                    },
+                    "polling": {
+                      "enabled": true,
+                      "rate": "15"
+                    },
+                    "queryPath": "getMun"
+                  },
+                  "type": "query"
+                }
+              }
+            },
+            "props": {
+              "pager": {
+                "activePage": 5
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "events": {
+              "component": {
+                "onFileReceived": {
+                  "config": {
+                    "script": "\tfrom StringIO import StringIO\n\timport csv\n\t\n\tfileContents \u003d event.file.getString(\"UTF-8\")\n\treader \u003d csv.DictReader(StringIO(fileContents))\n\tdata \u003d list(reader)\n\tfor i in range(len(data)):\n\t\tsystem.db.runNamedQuery(\"insertMun\",data[i])\n\t\n\t"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "FileUpload"
+            },
+            "position": {
+              "basis": "145px"
+            },
+            "type": "ia.input.fileupload"
+          }
+        ],
+        "meta": {
+          "name": "upload"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

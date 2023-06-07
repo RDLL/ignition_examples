@@ -1,0 +1,40 @@
+{
+  "scope": "DG",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "query.sql"
+  ],
+  "attributes": {
+    "useMaxReturnSize": false,
+    "autoBatchEnabled": false,
+    "fallbackValue": "",
+    "maxReturnSize": 100,
+    "cacheUnit": "SEC",
+    "type": "Query",
+    "enabled": true,
+    "cacheAmount": 1,
+    "cacheEnabled": false,
+    "database": "medicalRecords",
+    "fallbackEnabled": false,
+    "lastModificationSignature": "32fa56d6ff3c4d174e8e833b6a985b9f21fdbf838c8c06fdc3bf608bda651fa3",
+    "permissions": [
+      {
+        "zone": "",
+        "role": ""
+      }
+    ],
+    "lastModification": {
+      "actor": "rdll",
+      "timestamp": "2023-06-01T17:58:00Z"
+    },
+    "parameters": [
+      {
+        "type": "Parameter",
+        "identifier": "nss",
+        "sqlType": 3
+      }
+    ]
+  }
+}
